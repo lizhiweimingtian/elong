@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>小驴找不到妈妈了</title>
+<script src="http://s1.lvjs.com.cn/js/v5/ibm/eluminate.js"></script>
+<script src="http://s2.lvjs.com.cn/js/v5/ibm/coremetrics-initalize.js"></script>
+<script>_LVMAMA_COREMETRICS.init(document.domain);</script>
+
+<link rel="stylesheet" href="http://s3.lvjs.com.cn/min/index.php?f=/styles/v6/header_new.css">
+</head>
+<body>
+<div class="lv_topbar js_box">
+    <div class="topbar_box">
+        <ul class="top_link">
+        	 <li class="dropdown">
+            	<a class="lv_link" href="http://www.lvmama.com/myspace/index.do" rel="nofollow">我的驴妈妈<i class="icon_arrow"></i></a>
+                <div class="top_down pd_0">
+                    <a href="http://www.lvmama.com/myspace/order.do" rel="nofollow">我的订单</a>
+				<a href="http://www.lvmama.com/myspace/account/points.do" rel="nofollow">我的积分</a>
+				<a href="http://www.lvmama.com/myspace/account/coupon.do" rel="nofollow">我的优惠券</a>
+				<a href="http://www.lvmama.com/login/loginBindCard.do" rel="nofollow" target="_blank">我的会员卡</a>
+				<a href="http://www.lvmama.com/stored/goStoredSearch.do" rel="nofollow" target="_blank">我的礼品卡</a>
+                </div>
+            </li>
+            <li>
+                 <a class="lv_link" href="http://www.lvmama.com/points" rel="nofollow">积分商城</a>
+             </li>
+            <li><a class="lv_link" href="http://www.lvmama.com/public/help" rel="nofollow">帮助</a></li>
+            <li class="border_l dropdown">
+            	<a class="lv_link" href="javascript:;" rel="nofollow"><i class="lv_icon icon_wx"></i>微信</a>
+                <div class="top_down">
+                    <img src="http://s1.lvjs.com.cn/img/v3/wechatcode.jpg" width="220" height="90" alt="">
+                </div>
+            </li>
+                <li><a class="lv_link" onclick="_gaq.push(['_trackEvent', 'weibo', 'click', 'weiboshouye', 5]);" href="http://e.weibo.com/lvmamas" rel="nofollow"><i class="lv_icon icon_wb"></i>+微博</a></li>
+
+            <li>
+            	<a class="lv_link"  target="_blank" href="http://shouji.lvmama.com/" rel="nofollow"><i class="lv_icon icon_mobile"></i>手机版</a>
+            </li>
+            <li class="border_l dropdown link_call">
+            	<a id ="onlyOne" class="lv_link" href="javascript:;" rel="nofollow"><i class="lv_icon icon_phone"></i><span></span> <i class="icon_arrow"></i></a>
+                <div class="top_down">
+                	<span class="lv_icon"></span>
+                	<p id ="onlyTwo" class="phone-num"> </p>
+                </div>
+            </li>
+           
+        </ul>
+        <div id="J_login" class="topbar_login">
+            <a href="#">请登录</a>
+            <a href="http://login.lvmama.com/nsso/register/registering.do" rel="nofollow">免费注册</a>
+        </div>
+	</div>
+</div>
+
+
+<div class="lv_header">
+    <div class="header_inner clearfix">
+        <div class="lv_logo">
+        	<a href="http://www.lvmama.com">驴妈妈旅游网</a>
+        </div>
+        <ul class="lv_baozhang">
+        	<li><i class="icon_bz1"></i>价格保证</li>
+            <li><i class="icon_bz2"></i>退订保障</li>
+            <li><i class="icon_bz3"></i>救援保障</li>
+            <li><i class="icon_bz4"></i>24时服务</li>
+        </ul>
+		
+        <div class="header_search" id="headerSearch_div1">
+                        <input type="hidden" id="fromPlaceName" value="">
+                <div class="lv_search_box">
+                    <div class="search_type">
+                        <div class="btn_type js_btn_type"><b data-type="ALL">所有产品</b><i class="icon_arrow"></i></div>
+                        <ul class="search_type_tab">
+                            <li data-type="ALL">所有产品</li>
+                            <li data-type="TICKET">景点门票</li>
+                            <li data-type="FREETOUR">自由行</li>
+                            <li data-type="ROUTE">旅游线路</li>
+                            <li data-type="SHIP">邮轮</li>
+                            <li data-type="HOTEL">酒店</li>
+                        </ul>
+                    </div>
+                    <div class="search_type_box" >
+                        <div class="search_type_list" style="display: block;" id="all_freetour_tourLine_fromPlaces">
+                            <div class="search_city">
+                                <div class="btn_city js_searchbox">
+                                       <b data-id="9">上海</b><span>出发</span><i class="icon_arrow"></i>
+                                </div>
+                                <!--首页——出发城市（所有产品、自由行、旅游线路） -----开始-->
+                                <div class="lv_city_down js_cf_city js_all_city" >
+                                    <p>热门出发城市</p>
+                                    
+                                </div>
+                                <!--首页——出发城市（所有产品、自由行、旅游线路） -----结束-->
+                                
+                            </div>
+                            <form class="form_search">
+                                <input class="lv_search w_260" x-webkit-speech value="目的地、主题、签证或景区名称" type="text"  autocomplete="off">
+                            </form>
+                            <!--热门搜索-->
+                            <div class="search_hot_tips l_111 js_hot_city" style="display: none">
+                                <div class="w_260"></div>
+                                <p>热门搜索</p>
+                                
+                            </div>
+                        </div>
+                        <div class="search_type_list">
+                            <form class="form_search">
+                                <input class="lv_search w_380" x-webkit-speech value="目的地、主题或景区名称" type="text">
+                            </form>
+                        </div>
+                        <div class="search_type_list" id="freetour_destroute_fromPlaces">
+                            <div class="search_city">
+                                <div class="btn_city js_searchbox"><b data-id="8">全国</b><span>出发</span><i class="icon_arrow"></i></div>
+                                
+                                <!--首页——出发城市（所有产品、自由行、旅游线路） -----开始-->
+                                <div class="lv_city_down js_cf_city js_all_city" >
+                                    <p>热门出发城市</p>
+                                    
+                                </div>
+                                <!--首页——出发城市（所有产品、自由行、旅游线路） -----结束-->
+                                
+                            </div>
+                            <form class="form_search">
+                                <input class="lv_search w_260" x-webkit-speech value="目的地、主题、签证或景区名称" type="text"  autocomplete="off">
+                            </form>
+                        </div>
+                        <div class="search_type_list" id="abroad_fromPlaces">
+                            <div class="search_city">
+                                <div class="btn_city js_searchbox">
+                                            <b data-id="9">上海</b><span>出发</span><i class="icon_arrow"></i>
+                                </div>
+                                
+                                <!--首页——出发城市（所有产品、自由行、旅游线路） -----开始-->
+                                <div class="lv_city_down js_cf_city js_all_city" >
+                                    <p>热门出发城市</p>
+                                    
+                                </div>
+                                <!--首页——出发城市（所有产品、自由行、旅游线路） -----结束-->
+                                
+                            </div>
+                            <form class="form_search">
+                                <input class="lv_search w_260" x-webkit-speech value="目的地、主题、签证或景区名称" type="text"  autocomplete="off">
+                            </form>
+                        </div>
+                        <div class="search_type_list">
+                            <form class="form_search">
+                                <input class="lv_search w_380" x-webkit-speech value="航线、邮轮公司或邮轮名称" type="text"  autocomplete="off">
+                            </form>
+                        </div>
+                        <!--酒店搜索-->
+                        <div class="search_type_list">
+                            <form class="form_search">
+                                <input class="lv_search2 js_searchDest w_160" value="输入国内或海外目的地" type="text">
+                                <input class="lv_search2 js_searchKeyword w_164" x-webkit-speech value="酒店名称/地标/商圈" type="text">
+                            </form>
+                            <!--热门搜索-->
+                            <div class="search_hotel_mdd" style="display: none;top:36px;">
+                                <p>支持中文/拼音/简拼输入</p>
+                                <ul class="mdd_tab">
+                                    <li class="active">热门<i class="hotel_icon"></i></li>
+                                    <li>ABCD<i class="hotel_icon"></i></li>
+                                    <li>EFGH<i class="hotel_icon"></i></li>
+                                    <li>JKLM<i class="hotel_icon"></i></li>
+                                    <li>NOPQRS<i class="hotel_icon"></i></li>
+                                    <li>TUVWX<i class="hotel_icon"></i></li>
+                                    <li>YZ<i class="hotel_icon"></i></li>
+                                </ul>
+                                <ul class="mdd_list js_hotel_city">
+                                    
+                                </ul>
+                                <span class="hotel_icon mdd_close"></span>
+                            </div>
+                            <div class="search_hotel_keyword" style="display:none;top:36px;left: 160px"></div>
+                            <div class="lv_search_tips">
+                                <p>请输入酒店所在目的地</p>
+                                <div class="lv_tips_arrow"><span>◆</span><i>◆</i></div>
+                            </div>
+                        </div><!--酒店搜索--end-->
+                    </div>
+                    <span class="lv_icon btn_lv_search"></span>
+                </div>
+        </div>
+	
+    </div>
+</div>
+
+<div class="lv_nav_bg">
+	<div class="lv_nav">
+    	<ul class="lv_nav_l css3_run">
+            <li id="home"><a href="http://www.lvmama.com" rel="nofollow">首页</a></li>
+            <li id="ticket"><a href="http://ticket.lvmama.com">景点门票<i class="icon_sbx"></i></a></li>
+            <li id="around" class="pnav_down">
+                <a href="http://www.lvmama.com/zhoubianyou/">周边游<i class="icon_arrow"></i></a>
+                <div class="down_nav">
+                    <p>
+                        <a href="http://www.lvmama.com/freetour/" class="downNav_j_j">酒+景</a>
+                        <a href="http://www.lvmama.com/around/" class="downNav_bus">周边巴士游</a>
+                        <a href="http://zijia.lvmama.com/">自驾游</a>
+                        <a href="http://lvyue.lvmama.com/">亲子游</a>
+                        <a href="http://www.lvmama.com/tuangou/all/surround-m0">特卖会</a>
+                    </p>
+                    <span class="lv_icon down_nav_t"></span>
+                </div>
+            </li>
+            <li id="destroute" class="pnav_down">
+                <a href="http://www.lvmama.com/destroute/">国内游<i class="icon_arrow"></i></a>
+                <div class="down_nav">
+                    <p>
+                        <a href="http://www.lvmama.com/around/" class="downNav_bus">周边巴士游</a>
+                        <a href="http://www.lvmama.com/destroute/" class="downNav_def">国内长途游</a>
+                    </p>
+                    <span class="lv_icon down_nav_t"></span>
+                </div>
+            </li>
+            <li id="abroad" class="pnav_down">
+                <a href="http://www.lvmama.com/abroad/">出境游<i class="icon_arrow"></i></a>
+                <div class="down_nav">
+                    <p>
+                        <a href="http://www.lvmama.com/abroad/" class="downNav_def">出境首页</a>
+                        <a href="http://www.lvmama.com/tuangou/all/abroad-m0?start=79#list">出境特卖</a>
+                        <a href="http://www.lvmama.com/youlun/">邮轮</a>
+                        <a href="http://www.lvmama.com/visa/">签证</a>
+                    </p>
+                    <span class="lv_icon down_nav_t"></span>
+                </div>
+            </li>
+            <li id="liner"><a href="http://www.lvmama.com/youlun/">邮轮</a></li>
+            <li id="zijia"><a href="http://zijia.lvmama.com/">自驾游</a><i class="icon_no1"></i></li>
+            <li id="lvyue"><a href="http://lvyue.lvmama.com/" target="_blank">亲子游</a><i class="icon_ly"></i></li>
+            <li id="hotel" class="pnav_down">
+                <a href="http://hotels.lvmama.com/hotel" rel="nofollow">酒店<i class="icon_arrow"></i></a>
+                <div class="down_nav">
+                    <p>
+                        <a href="http://hotels.lvmama.com/hotel" class="downNav_def">国内酒店</a>
+                        <a href="http://hotel.lvmama.com/">海外酒店</a>
+                    </p>
+                    <span class="lv_icon down_nav_t"></span>
+                </div>
+            </li>
+            <li id="flight" class="pnav_down"><a href="http://flight.lvmama.com" rel="nofollow">机票<i class="icon_arrow"></i></a>
+                <div class="down_nav">
+                    <p>
+                        <a href="http://www.lvmama.com/zt/promo/flight/" target="_blank">国内机票</a>
+                        <a href="http://flight.lvmama.com/" class="downNav_def">国际机票</a>
+                    </p>
+                    <span class="lv_icon down_nav_t"></span>
+                </div>
+            </li>
+            <li id="tuangou"><a href="http://www.lvmama.com/tuangou" title="团购">特卖会</a><i class="icon_tg"></i></li>
+            <li id="custom"><a href="http://www.lvmama.com/company" rel="nofollow">定制游</a></li>
+            <li id="lvyou" class="pnav_down"> 
+                <a href="http://www.lvmama.com/lvyou/">旅游攻略<i class="icon_arrow"></i></a> 
+                <div class="down_nav"> 
+                    <p>
+                        <a href="http://www.lvmama.com/lvyou/" class="downNav_def">目的地</a>
+                        <a href="http://www.lvmama.com/guide/" class="downNav_guide">攻略</a>
+                        <a href="http://www.lvmama.com/info/" class="downNav_info">资讯</a>
+                        <a href="http://bbs.lvmama.com/" target="_blank">论坛</a>
+                    </p>
+                    <span class="lv_icon down_nav_t"></span> 
+                </div> 
+            </li>
+            <li id="trip" class="pnav_down"> 
+                <a href="http://www.lvmama.com/trip/" target="_blank">游记<i class="icon_arrow"></i><i class="icon_hzq"></i></a> 
+                <div class="down_nav"> 
+                    <p>
+                        <a href="http://www.lvmama.com/trip/lvyoubao" target="_blank">驴游宝</a>
+                    </p>
+                    <span class="lv_icon down_nav_t"></span> 
+                </div> 
+            </li>
+        </ul>
+        
+    </div>
+</div>
+
+
+
+<div style="width:890px;margin:0 auto;background:url(http://s2.lvjs.com.cn/img/v7_404bg.jpg) no-repeat 0 0;padding-top:395px;">
+ 
+<!--     <div class="end_mod">
+    	<img src="http://s3.lvjs.com.cn/img/v7_404_bg.jpg" width="890" height="199" border="0" usemap="#Map">
+        <map name="Map" id="Map">
+          <area shape="rect" coords="326,79,485,113" href="http://itunes.apple.com/cn/app/id443926246?mt=8" target="_blank">
+          <area shape="rect" coords="504,79,662,114" href="http://www.windowsphone.com/zh-cn/store/app/%E9%A9%B4%E5%A6%88%E5%A6%88%E6%97%85%E6%B8%B8/e864b7e7-db6a-432d-8ab8-2e18ec690f41" target="_blank">
+          <area shape="rect" coords="326,129,485,164" href="http://m.lvmama.com/rewrite/d.php" target="_blank">
+          <area shape="rect" coords="505,131,664,166" href="http://itunes.apple.com/cn/app/id715334091?mt=8" target="_blank">
+        </map>
+    </div> -->
+</div>
+<div class="public_ft_box">
+<div class="wrap">
+    <a class="public_ft" href="http://www.lvmama.com/public/user_security" target="_blank">
+        <ul class="public_ft_list">
+            <li><i class="ft_ioc1"></i><strong>价格保证</strong>同类产品，保证低价</li>
+            <li><i class="ft_ioc2"></i><strong>退订保障</strong>因特殊情况影响出行，保证退订</li>
+            <li><i class="ft_ioc3"></i><strong>救援保障</strong>旅途中遇意外情况，保证援助</li>
+            <li><i class="ft_ioc4"></i><strong>7x24小时服务</strong>快速响应，全年无休</li>
+        </ul>
+    </a>
+</div>
+</div>
+<div class="footer_fuwu_box">
+    <div class="footer_fuwu">
+        <dl>
+            <dt>关于我们</dt>
+            <dd><a href="http://www.lvmama.com/public/about_lvmama" target="_blank" title="驴妈妈简介">驴妈妈简介</a></dd>
+             <dd><a href="http://www.lvmama.com/public/zizhi_lvmama" target="_blank" title="旅游度假资质">旅游度假资质</a></dd>
+            <dd><a href="http://www.lvmama.com/info/public/ued/" target="_blank" title="用户体验平台">用户体验平台</a></dd>
+            <dd><a href="http://www.lvmama.com/public/site_map" target="_blank" title="网站地图">网站地图</a></dd>
+        </dl>
+        <dl>
+            <dt>联系我们</dt>
+            <dd><a href="http://www.lvmama.com/userCenter/user/transItfeedBack.do" target="_blank" title="意见反馈">意见反馈</a></dd>
+            <dd>
+                 <i class="lv_icon icon_wb"></i><a href="http://weibo.com/lvmamas" target="_blank" title="驴妈妈微博">微博</a>
+            </dd>
+            <dd>24小时服务电话</a></dd>
+            <dd><span class="fot_call">1010-6060</span></dd>
+            <dd>免长话费，全年无休</dd>
+        </dl>
+        <dl>
+            <dt>订购指南</dt>
+             <dd><a href="http://www.lvmama.com/public/help_253" target="_blank" title="门票使用">门票使用</a></dd>
+            <dd><a href="http://www.lvmama.com/public/help" target="_blank" title="常见问题">常见问题</a></dd>
+        </dl>
+        <dl>
+            <dt>支付方式</dt>
+            <dd><a href="http://www.lvmama.com/public/help_284" target="_blank" title="驴妈妈账户支付">驴妈妈账户支付</a></dd>
+            <dd><a href="http://www.lvmama.com/public/help_center_517" target="_blank" title="驴妈妈礼品卡支付">驴妈妈礼品卡支付</a></dd>
+            <dd><a href="http://www.lvmama.com/public/help_401" target="_blank" title="电话预授权支付">电话预授权支付</a></dd>
+            <dd><a href="http://www.lvmama.com/public/help_381" target="_blank" title="分期付款">分期付款</a></dd>
+        </dl>
+        <dl>
+            <dt>特色服务</dt>
+            <dd><a href="http://www.lvmama.com/tuangouyuyue" target="_blank" title="团购预约">团购预约</a></dd>
+            <dd><a href="http://f.lvmama.com" target="_blank" title="分销系统">分销系统</a></dd>
+         </dl>
+        <dl>
+            <dt>售后服务</dt>
+            <dd><a href="http://www.lvmama.com/public/help_center_424" target="_blank" title="退换货说明">退换货说明</a></dd>
+            <dd><a href="http://www.lvmama.com/userCenter/user/transItfeedBack.do" target="_blank" title="投诉建议">投诉建议</a></dd>
+        </dl>
+         <div class="footer_dy">
+            <h4 class="mt_0">订阅特价、促销信息</h4>
+            <div class="footer_email y_s_one"><input class="y_input" placeholder="输入Email(如：a@b.c)" type="text"><a class="yjdy_btn" href="javascript:;">订阅</a><i class="lv_icon icon_xx"></i></div>
+            <p class="y_s_two hide"><img src="http://s1.lvjs.com.cn/img/new_v/ob_yjdy/y_loading.gif"></p>
+            <p class="y_s_three hide">订阅成功!<a href="javascript:void(0)" class="y_link_blue y_link_return">返回</a></p>
+            <div class="y_error_msg">
+                <i class="y_jiao"></i>
+                <label>请输入正确的Email地址</label>
+             </div>
+             
+            <div class="footer_ewm"><i class="lv_icon icon_ewm"></i><p>扫码下载驴妈妈客户端<br>手机预订，优惠多多</p></div>
+        </div>
+    </div>
+    
+</div>
+<div class="footer_beian">Copyright &copy; 2016 www.lvmama.com. 上海景域文化传播股份有限公司版权所有　<a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备13011172号-3</a>　增值电信业务经营许可证编号：<a href="http://s1.lvjs.com.cn/img/ICP.jpg" target="_blank">沪B2-20100030</a></div>
+<ul class="footer_safety">
+    <li><a href="http://www.miibeian.gov.cn/" target="_blank" title="网站备案"> <i class="lv_icon safety2"></i><p>网站备案</p></a></li>
+    <li><a href="http://www.cyberpolice.cn/wfjb/" target="_blank" title="网络110"> <i class="lv_icon safety3"></i><p>网络110</p></a></li>
+    <li><a href="https://www.alipay.com/aip/aip_validate_list.htm?trust_id=AIP0102495" target="_blank" title="支付宝特约商家"> <i class="lv_icon safety4"></i><p>支付宝特约商家</p></a></li>
+    <li><a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1664396140" target="_blank" title="AAA级信用企业"> <i class="lv_icon safety5"></i><p>AAA级信用企业</p></a></li>
+    <li><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20110930103539539" target="_blank" title="上海工商"> <i class="lv_icon safety6"></i><p>上海工商</p></a></li>
+    <li><a href="https://ss.knet.cn/verifyseal.dll?sn=2010101800100002662&comefrom=trust&trustKey=dn&trustValue=www.lvmama.com" target="_blank" title="可信网站"> <i class="lv_icon safety7"></i><p>可信网站</p></a></li>
+    <li><a href="https://credit.szfw.org/CX20160614015657160455.html" target="_blank" title="诚信认证"> <i class="lv_icon safety8"></i><p>诚信认证</p></a></li>
+    <li><a href="http://www.zx110.org/" target="_blank" title="网络社会征信网"> <i class="lv_icon safety9"></i><p>网络社会征信网</p></a></li>
+    <li><a href="http://webscan.360.cn/" target="_blank" title="360网站安全检测"> <i class="lv_icon safety10"></i><p>360网站安全检测</p></a></li>
+    <li><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001030" target="_blank" title="网监安全"> <i class="lv_icon safety11"></i><p>网监安全</p></a></li>
+    <li><a href="http://www.shjbzx.cn/" target="_blank" title="举报中心"><i class="lv_icon safety13"></i><p>举报中心</p></a></li>
+</ul>
+<script src="http://s1.lvjs.com.cn/min/index.php?f=js/new_v/jquery-1.7.2.min.js,/js/ui/lvmamaUI/lvmamaUI.js,/js/v6/header_new.js,/js/v6/public/searchComplete.js,/js/common/losc.js"></script>
+<script src="http://s2.lvjs.com.cn/js/common/losc.js"></script>
+<script>
+    cmCreatePageviewTag("错误页&from="+"http://www.lvmama.com/myspace/index.do"+"&to=http://www.lvmama.com/style/invoice_num_img.png", "U0001", null, null,"-_--_--_--_--_-其他页面");
+</script>
+</body>
+</html>
