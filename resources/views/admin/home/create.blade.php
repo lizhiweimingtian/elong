@@ -38,7 +38,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：用户管理&nbsp;&nbsp;>&nbsp;&nbsp;编辑用户</td>
+    <td width="99%" align="left" valign="top">您的位置：用户管理&nbsp;&nbsp;>&nbsp;&nbsp;添加用户</td>
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
@@ -47,27 +47,57 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="/adm/user/update" name="edit">
-    <input type="hidden" name="id" value="{{$userRec->id}}">
+    <form method="post" action="/adm/user/home/store" name="add">
     <input type="hidden" name="_token" value="{{csrf_token()}}" />
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">账号：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">用户名：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="name" value="{{$userRec->name}}" disabled class="text-word">
+        <input type="text" name="phone" value="" class="text-word">
         </td>
         </tr>
+         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">昵称：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="nickname" value="" class="text-word">
+        </td>
+      </tr>
+       
         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">性别：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         
-        <input type="radio" name="sex" value="男" @if($userRec->sex=="男") checked @endif />男,女<input type="radio" name="sex" value="女" @if($userRec->sex=="女") checked @endif />
+        <input type="radio" name="sex" id="male" value="男" checked><label for="male">男</label>，<label for="female">女</label><input type="radio" name="sex" id="female" value="女">
+        </td>
+        </tr>
+        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">年龄：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="age" value="" class="text-word">
+        </td>
+        </tr>
+        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">QQ：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="qq" value="" class="text-word">
+        </td>
+        </tr>
+        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">email：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="email" value="" class="text-word">
+        </td>
+        </tr>
+        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">手机号：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="nowphone" value="" class="text-word">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">用户密码：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="password" name="password" value="" class="text-word">（*置空则不修改*）
+        <input type="password" name="password" value="" class="text-word">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -76,30 +106,12 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         <input type="password" name="repassword" value="" class="text-word">
         </td>
       </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">昵称：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="nickname" value="{{$userRec->nickname}}" class="text-word">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <select name="groupid" id="level">
-         @foreach ($groups as $group)
-            @if ($userRec->group_id == $group->id)
-                <option value="{{$group->id}}" selected>{{$group->title}}</option>
-            @else
-                <option value="{{$group->id}}">{{$group->title}}</option>
-            @endif
-          @endforeach
-        </select>
-        </td>
-      </tr>
+     
+      
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input name="" type="submit" value="保存" class="text-but">
+        <input name="" type="submit" value="提交" class="text-but">
         <input name="" type="reset" value="重置" class="text-but"></td>
         </tr>
     </table>

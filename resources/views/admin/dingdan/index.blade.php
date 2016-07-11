@@ -57,22 +57,22 @@ form p input[type='text']{
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：用户管理</td>
+    <td width="99%" align="left" valign="top">您的位置：订单管理</td>
   </tr>
   <tr>
     <td align="left" valign="top">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
    		 <td width="90%" align="left" valign="middle">
-	         <form method="post" action="/adm/user">
-	         <span>管理员：</span>
+	         <form method="post" action="/adm/dingdan">
+	         <span>订单：</span>
            <input type="hidden" name="_token" value="{{csrf_token()}}" />
-           <p><input type="text" name="keyword" value="{{$keyword}}" placeholder="请输入账号或昵称" />
+           <p><input type="text" name="keyword" value="{{$keyword}}" placeholder="请输入用户名或订单号" />
            <input type="submit" value="查询" />
            </p>
           </form>
          </td>
-  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">新增管理员</a></td>
+  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="/adm/home/user/create" target="mainFrame" onFocus="this.blur()" class="add"></a></td>
   		</tr>
 	</table>
     </td>
@@ -83,55 +83,24 @@ form p input[type='text']{
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab" class="bordered">
     
       <tr>
-        <th align="center" valign="middle" class="borderright">编号</th>
-        <th align="center" valign="middle" class="borderright">帐号</th>
-        <th align="center" valign="middle" class="borderright">昵称</th>
-        <th align="center" valign="middle" class="borderright">所属分组</th>
-        <th align="center" valign="middle" class="borderright">状态</th>
-        <th align="center" valign="middle" class="borderright">头像</th>
-        <th align="center" valign="middle" class="borderright">创建时间</th>
-        <th align="center" valign="middle" class="borderright">最后登录时间</th>
+        <th align="center" valign="middle" class="borderright">订单号</th>
+        <th align="center" valign="middle" class="borderright">会员名</th>
+        <th align="center" valign="middle" class="borderright">会员手机</th>
+        <th align="center" valign="middle" class="borderright">下单时间</th>    
         <th align="center" valign="middle">操作</th>
       </tr>
 
       @foreach ($users as $tmp)
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->id}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->name}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->nickname}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">
+        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->phone}}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->nowphone}}</td>
+       
+        
+        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->xiadan_date}}</td>
 
-           <!-- $auth={{$tmp->auth}} -->
-          <select name="groups" uid="{{$tmp->id}}">
-            @foreach ($groups as $group)
-                @if ($tmp->group_id == $group->id)
-                    <option value="{{$group->id}}" selected>{{$group->title}}</option>
-                @else
-                    <option value="{{$group->id}}">{{$group->title}}</option>
-                @endif
-            @endforeach
-        </select>
-        </td>
-        <td align="center" valign="middle" class="borderright borderbottom">
-          
-          @if ($tmp->status==0)
-              禁用
-          @else
-              启用
-          @endif
-        </td>
-        <td align="center" valign="middle" class="borderright borderbottom"><img src="{{$tmp->avartar}}" width="80"></td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->created_at}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->updated_at}}</td>
-        <td align="center" valign="middle" class="borderbottom"><a href="/adm/user/edit/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/status/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">
-            @if($tmp->status==0)
-            
-              开启
-            @else
-              关闭 
-            
-            @endif
-        </a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/destroy/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        
+        <td align="center" valign="middle" class="borderbottom"><a href="" target="mainFrame" onFocus="this.blur()" class="add">详情</a><span class="gray">&nbsp;|&nbsp;</span><a href="" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
       @endforeach
     </table>
@@ -139,6 +108,6 @@ form p input[type='text']{
   {!!$users->appends(['keyword' => $keyword])->render()!!}
 </p>
 </table>
-<script src="{{asset("/admin/js/user_index.js")}}"></script>
+
 </body>
 </html>

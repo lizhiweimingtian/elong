@@ -4,7 +4,7 @@
         <title>Be right back.</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
+        <meta http-equiv="refresh" content="3,url={{session('url')}}" />
         <style>
             html, body {
                 height: 100%;
@@ -30,7 +30,7 @@
                 text-align: center;
                 display: inline-block;
             }
-
+  
             .title {
                 font-size: 72px;
                 margin-bottom: 40px;
@@ -40,8 +40,11 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">{{ $info or "Be right back." }}</div>
+                <div class="title">{{ session('info') }}</div>
             </div>
         </div>
+        <script>
+//            setTimeout("parent.location.href='<?php echo session('url') ?>';", 3000);
+        </script>
     </body>
 </html>

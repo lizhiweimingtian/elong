@@ -47,16 +47,22 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="/adm/user/update" name="edit">
+    <form method="post" action="/adm/home/user/update" name="edit">
     <input type="hidden" name="id" value="{{$userRec->id}}">
     <input type="hidden" name="_token" value="{{csrf_token()}}" />
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">账号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="name" value="{{$userRec->name}}" disabled class="text-word">
+        <input type="text" name="name" value="{{$userRec->phone}}" disabled class="text-word">
         </td>
         </tr>
+        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">昵称：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <input type="text" name="nickname" value="{{$userRec->nickname}}" class="text-word">
+        </td>
+      </tr>
         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">性别：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
@@ -65,37 +71,25 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户密码：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">年龄：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="password" name="password" value="" class="text-word">（*置空则不修改*）
-        </td>
-        </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">确认密码：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="password" name="repassword" value="" class="text-word">
+        <input type="text" name="age" value="{{$userRec->age}}" class="text-word">
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">昵称：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">email：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="nickname" value="{{$userRec->nickname}}" class="text-word">
+        <input type="text" name="email" value="{{$userRec->email}}" class="text-word">
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">手机号：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <select name="groupid" id="level">
-         @foreach ($groups as $group)
-            @if ($userRec->group_id == $group->id)
-                <option value="{{$group->id}}" selected>{{$group->title}}</option>
-            @else
-                <option value="{{$group->id}}">{{$group->title}}</option>
-            @endif
-          @endforeach
-        </select>
+        <input type="text" name="nowphone" value="{{$userRec->nowphone}}" class="text-word">
         </td>
       </tr>
+      
+      
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">

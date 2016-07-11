@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB, Hash;
 
-class IndexController extends CommonController
+class IndexController extends Controller
 {
     //后台主页
 	public function index()
@@ -21,15 +22,19 @@ class IndexController extends CommonController
 	}
 	public function left()
 	{
-		return view("admin.left");
+		// return view("admin.left");
+		$userRec=DB::table("admin_user")->where("id",session('userData')->id)->first();
+
+		return view("admin.left",compact("userRec"));
 	}
 	public function swich()
 	{
 		return view("admin.swich");
 	}
 	public function main()
-	{
-		return view("admin.main");
+	{	
+		
+		 return view("admin.main");
 	}
 	public function bottom()
 	{

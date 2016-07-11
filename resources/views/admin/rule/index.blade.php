@@ -2,21 +2,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主要内容区main</title>
-
+<script src="{{ asset('/admin/js/jquery-2.0.2.min.js') }}" type="text/javascript"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 <link type="text/css" rel="stylesheet" href="{{asset('/css/admin/user_index.css')}}" />
 <link type="text/css" rel="stylesheet" href="{{asset('/bootstrap/css/bootstrap.min.css')}}" />
 <link href="admin/css/css.css" type="text/css" rel="stylesheet" />
 <link href="admin/css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="admin/img/main/favicon.ico" />
-<script src="{{ asset('/admin/js/jquery-2.0.2.min.js') }}" type="text/javascript"></script>
-<meta name="csrf-token" content="{{ csrf_token() }}" />
 <script>
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-</script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    </script>
 <style>
 body{overflow-x:hidden; background:#f2f0f5; padding:15px 0px 10px 5px;}
 #searchmain{ font-size:12px;}
@@ -57,21 +56,13 @@ form p input[type='text']{
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：用户管理</td>
+    <td width="99%" align="left" valign="top">您的位置：权限列表</td>
   </tr>
   <tr>
     <td align="left" valign="top">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
-   		 <td width="90%" align="left" valign="middle">
-	         <form method="post" action="/adm/user">
-	         <span>管理员：</span>
-           <input type="hidden" name="_token" value="{{csrf_token()}}" />
-           <p><input type="text" name="keyword" value="{{$keyword}}" placeholder="请输入账号或昵称" />
-           <input type="submit" value="查询" />
-           </p>
-          </form>
-         </td>
+   		 
   		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">新增管理员</a></td>
   		</tr>
 	</table>
@@ -84,61 +75,27 @@ form p input[type='text']{
     
       <tr>
         <th align="center" valign="middle" class="borderright">编号</th>
-        <th align="center" valign="middle" class="borderright">帐号</th>
-        <th align="center" valign="middle" class="borderright">昵称</th>
-        <th align="center" valign="middle" class="borderright">所属分组</th>
-        <th align="center" valign="middle" class="borderright">状态</th>
-        <th align="center" valign="middle" class="borderright">头像</th>
-        <th align="center" valign="middle" class="borderright">创建时间</th>
-        <th align="center" valign="middle" class="borderright">最后登录时间</th>
+        <th align="center" valign="middle" class="borderright">规则</th>
+        <th align="center" valign="middle" class="borderright">名称</th>
+        <th align="center" valign="middle" class="borderright">是否启用</th>
         <th align="center" valign="middle">操作</th>
       </tr>
 
-      @foreach ($users as $tmp)
+     @foreach($rules as $rule)
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->id}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->name}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->nickname}}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$rule->id}}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$rule->name}}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$rule->title}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">
-
-           <!-- $auth={{$tmp->auth}} -->
-          <select name="groups" uid="{{$tmp->id}}">
-            @foreach ($groups as $group)
-                @if ($tmp->group_id == $group->id)
-                    <option value="{{$group->id}}" selected>{{$group->title}}</option>
-                @else
-                    <option value="{{$group->id}}">{{$group->title}}</option>
-                @endif
-            @endforeach
-        </select>
+          <input type="radio" name="status/{{$rule->id}}" id="status/{{$rule->id}}/1" value="1" rule="{{$rule->id}}" @if($rule->status==1) checked @endif ><label for="status/{{$rule->id}}/1">启用</label>
+          <input type="radio" name="status/{{$rule->id}}" id="status/{{$rule->id}}/0" value="0" rule="{{$rule->id}}" @if($rule->status == 0) checked @endif ><label for="status/{{$rule->id}}/0">禁用</label>
         </td>
-        <td align="center" valign="middle" class="borderright borderbottom">
-          
-          @if ($tmp->status==0)
-              禁用
-          @else
-              启用
-          @endif
-        </td>
-        <td align="center" valign="middle" class="borderright borderbottom"><img src="{{$tmp->avartar}}" width="80"></td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->created_at}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->updated_at}}</td>
-        <td align="center" valign="middle" class="borderbottom"><a href="/adm/user/edit/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/status/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">
-            @if($tmp->status==0)
-            
-              开启
-            @else
-              关闭 
-            
-            @endif
-        </a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/destroy/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        <td align="center" valign="middle" class="borderbottom"><a href="{{url('/adm/rule/'.$rule->id."/edit")}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/rule/delete/{{$rule->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
       @endforeach
     </table>
-    <p>
-  {!!$users->appends(['keyword' => $keyword])->render()!!}
-</p>
+  
 </table>
-<script src="{{asset("/admin/js/user_index.js")}}"></script>
+<script src="{{asset('/admin/js/rule_index.js')}}"></script>
 </body>
-</html>
+</html> 

@@ -21,20 +21,13 @@ body{overflow-x:hidden; background:url(admin/img/main/leftbg.jpg) left top repea
 </head>
 <body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
 <div id="left-top">
-<?php
-      $userModel = new \App\User();
-      $user = $userModel->find(Session::get('userData')->id);
-      
-?>
-	<div><img src="<?php echo $user->avartar ?>" width="44" height="44" /></div>
-    <span>用户：<?php echo $user->nickname ?><br>角色：
-          <?php
-              if($user->auth==0){
-                  echo "普通管理员";
-              }else{
-                  echo "超级管理员";
-              }
-           ?>
+
+	<div><img src="{{$userRec->avartar}}" width="44" height="44" /></div>
+    <span>用户：{{$userRec->nickname}}<br>角色：
+         
+              {{$userRec->auth ? '超级管理员' : '普通管理员'}}
+              
+                
   </span>
 </div>
     <div style="float: left" id="my_menu" class="sdmenu">
@@ -43,6 +36,7 @@ body{overflow-x:hidden; background:url(admin/img/main/leftbg.jpg) left top repea
         <a href="/main" target="mainFrame" onFocus="this.blur()">网站统计</a>
         <a href="/adm/user" target="mainFrame" onFocus="this.blur()">列表页</a>
         <a href="/adm/user/create" target="mainFrame" onFocus="this.blur()">添加用户</a>
+        <a href="/adm/home" target="mainFrame" onFocus="this.blur()">前台用户</a>
       </div>
        <div>
         <span>板块管理</span>
@@ -51,10 +45,19 @@ body{overflow-x:hidden; background:url(admin/img/main/leftbg.jpg) left top repea
         <a href="/type_addFather" target="mainFrame" onFocus="this.blur()">添加父分区</a>
       </div>
       <div>
-        <span>贴子管理</span>
-        <a href="/main_message" target="mainFrame" onFocus="this.blur()">贴子列表</a>
-        <a href="/main_message" target="mainFrame" onFocus="this.blur()">回收站</a>
-  
+        <span>分组管理</span>
+        <a href="/adm/group" target="mainFrame" onFocus="this.blur()">分组列表</a>
+        <a href="/adm/group/create" target="mainFrame" onFocus="this.blur()">添加分组</a>
+      </div>
+      <div>
+        <span>权限管理</span>
+        <a href="/adm/rule" target="mainFrame" onFocus="this.blur()">所有权限</a>
+        <a href="/adm/rule/create" target="mainFrame" onFocus="this.blur()">添加权限</a>
+      </div>
+      <div>
+        <span>订单管理</span>
+        <a href="/adm/dingdan" target="mainFrame" onFocus="this.blur()">订单列表</a>
+        <a href="/adm/rule/create" target="mainFrame" onFocus="this.blur()">添加权限</a>
       </div>
       <div>
         <span>网站配置</span>

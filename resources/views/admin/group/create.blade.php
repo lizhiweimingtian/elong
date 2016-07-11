@@ -38,7 +38,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：用户管理&nbsp;&nbsp;>&nbsp;&nbsp;编辑用户</td>
+    <td width="99%" align="left" valign="top">您的位置：用户管理&nbsp;&nbsp;>&nbsp;&nbsp;添加用户</td>
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
@@ -47,77 +47,41 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="/adm/user/update" name="edit">
-    <input type="hidden" name="id" value="{{$userRec->id}}">
+    {{session("info")}}
+    @if(count($errors) > 0)
+    <ul>
+        @foreach ($errors->all() as $e)
+        <li>{{$e}}</li>
+        @endforeach
+    </ul>
+    @endif
+    <form method="post" action="/adm/group/store" name="add">
     <input type="hidden" name="_token" value="{{csrf_token()}}" />
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">账号：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">名称：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="name" value="{{$userRec->name}}" disabled class="text-word">
+        <input type="text" name="title" value="" />
         </td>
         </tr>
         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">性别：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">权限：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
+        @foreach($rules as $rule)
+            <input type="checkbox" name="rules[]" value="{{$rule->id}}"/>{{$rule->title}}
+        @endforeach
         
-        <input type="radio" name="sex" value="男" @if($userRec->sex=="男") checked @endif />男,女<input type="radio" name="sex" value="女" @if($userRec->sex=="女") checked @endif />
         </td>
         </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户密码：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="password" name="password" value="" class="text-word">（*置空则不修改*）
-        </td>
-        </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">确认密码：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="password" name="repassword" value="" class="text-word">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">昵称：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="nickname" value="{{$userRec->nickname}}" class="text-word">
-        </td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <select name="groupid" id="level">
-         @foreach ($groups as $group)
-            @if ($userRec->group_id == $group->id)
-                <option value="{{$group->id}}" selected>{{$group->title}}</option>
-            @else
-                <option value="{{$group->id}}">{{$group->title}}</option>
-            @endif
-          @endforeach
-        </select>
-        </td>
-      </tr>
+     
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input name="" type="submit" value="保存" class="text-but">
+        <input name="" type="submit" value="提交" class="text-but">
         <input name="" type="reset" value="重置" class="text-but"></td>
         </tr>
     </table>
     </form>
-    <div class="fl">
-      @if(session("info"))
-      <ul> 
-        <li>{{session("info")}}<li>
-      </ul>
-      @endif 
-      @if (count($errors) > 0)
-      <ul>
-        @foreach($errors->all() as $tmp)
-        <li>{{$tmp}}</li>
-        @endforeach
-      </ul>
-      @endif
-    </div>
     </td>
     </tr>
 </table>

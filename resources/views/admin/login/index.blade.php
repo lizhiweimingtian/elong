@@ -26,7 +26,7 @@
                        <input id="Text2" style=" width: 200px; height:40px;" type="password"  name="password" />  
                     </span></li>
 					<li><span class="left login-text">验证码：</span> <span style="left">
-                       <input id="Text3" style=" width: 100px; height:40px;" type="text" name="code"/><img src="{{ url('/captcha')."/". rand() }}" id="code" onclick="this.src = this.src.replace(/\d+$/, '') + Math.random();" align="top" />			   
+                       <input id="Text3" style=" width: 100px; height:40px;" type="text" name="code"/><img src="{{ url('/login/captcha')."/". rand() }}" id="code" onclick="this.src = this.src.replace(/\d+$/, '') + Math.random();" align="top" />			   
                     </span></li>
                 </ul>
             </li>
