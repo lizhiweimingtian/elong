@@ -19,9 +19,9 @@ class CommonMiddleware
          //查询所有的权限列表
          $rules = DB::table("admin_group_access")->where("status", "1")->get();
         //非登录模块的路由 都需要【登陆验证】
-        if (!Session::has("userData") && !preg_match('/^\/log/',$_SERVER['REQUEST_URI'])) {
+        if (!Session::has("userData") && !preg_match('/^\/adm\/log/',$_SERVER['REQUEST_URI'])) {
             //如果用户没有登录 则跳转到登录页
-            return redirect("/login");
+            return redirect("/adm/login");
         
         }else if(!empty($rules))
         {
