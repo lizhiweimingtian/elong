@@ -46,10 +46,27 @@ class TourController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
-        //
+    public function show() {
+        $place_data = DB::table('place_detail')
+                ->join('place','place.id',"=","place_detail.place_id")
+                ->where(['saleYN'=>1,'isNindex'=>1])
+                ->get();
+        $place_gn = DB::table('place_detail')
+                ->join('place','place.id',"=","place_detail.place_id")
+                ->where(['saleYN'=>0,'isNindex'=>1])
+                ->get();
+        return view ("home/index",['place_data'=>$place_data,'place_gn'=>$place_gn]);
     }
-
+    /**
+     * 显示景点详情页（下单前）
+     */
+     public function xiadanqian(Request $request) {
+        $xq = DB::table('place_detail')->where('place_id',$request->id)->first();
+      
+        return view ('/home/xiadanqian',['xq'=>$xq]);
+     }
+    
+    
     /**
      * Show the form for editing the specified resource.
      *

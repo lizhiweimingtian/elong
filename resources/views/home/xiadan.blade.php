@@ -56,23 +56,25 @@
 </ol>
 <!-- 操作步骤 -->
 
-		        <form method="POST" action="http://www.lvmama.com/vst_front/order/ticket/create.do" name="orderForm" id="order_submit" autocomplete="smartystreets">
+		        <form method="POST" action="" >
 
-<input name="tokenName" readonly="readonly" value="291ec018-19ac-46e2-8974-7a988e82ac3a" type="hidden">				<input name="distributionId" value="" type="hidden">
+                            <input name="tokenName" readonly="readonly" value="" type="hidden">
+                                <input name="distributionId" value="" type="hidden">
 				<input name="suppGoodsFlag" value="true" type="hidden">
 				<input id="productIdTxt" name="productId" value="428689" autocomplete="off" type="hidden">
 				<input name="sameVisitTime" value="true" autocomplete="off" type="hidden">
-                <input name="suppGoodsId" value="2989144" type="hidden">
-		        <div class="order_box border_3 order_box_new">
+                                <input name="suppGoodsId" value="2989144" type="hidden">
+                            <div class="order_box border_3 order_box_new">
 		        		<h1 class="order_name"><span>北京怀柔白河峡谷漂流</span>
 									门票
 		        		（在线支付）</h1>
 		        	<dl class="order_dl">
 		            	<dt>日期</dt>
 		                <dd>
+                                    <script src='/plugins/My97DatePicker/WdatePicker.js'></script> 
 		                	<div class="input_time">
-		                    	<input id="visitTimeInput" maxlength="10" name="visitTime" data="2016-06-30" value="2016-08-27" autocomplete="off" readonly="readonly" placeholder="请选择游玩日期" type="hidden">
-                                <input id="showVisitTimeInput" name="showVisitTime" class="input js_youwanTime" autocomplete="off" placeholder="请选择游玩日期">
+		                    	<input id="visitTimeInput" maxlength="10" name="visitTime"  value="" autocomplete="off" readonly="readonly" placeholder="请选择游玩日期" type="hidden" >
+                                <input id="showVisitTimeInput" name="showVisitTime" class="input js_youwanTime" autocomplete="off" placeholder="请选择游玩日期" onClick="WdatePicker({skin:'whyGreen'})">
 		                        <i class="order_icon icon_titme"></i>
 		                    </div>
 		                </dd>

@@ -114,22 +114,50 @@ Route::post("/adm/user/home/store", "Admin\UserController@hstore");
  * 添加(删除)版块和分区
  ********************************************************/
 //添加父分区
+//显示添加页面
 Route::any("/type_addFather","Admin\TypeController@addFather");
+//执行添加，数据入库
 Route::any("/type_addFather/add","Admin\TypeController@add");
-//添加子版块
+
+//修改父分区
+//显示修改页面
+Route::any("/type_update_father","Admin\TypeController@update_father");
+//执行修改动作
+Route::any("/type_updateFather","Admin\TypeController@updateFather");
+
+/*****************************/
+//添加子版块（景点）
+//显示添加页面
 Route::any("/type_addChild","Admin\TypeController@addChild");
+//执行添加动作，数据入库
 Route::any("/type_addC","Admin\TypeController@addC");
-//查看分区
+/*****************************/
+//查看景区景点
 Route::any('/type_show','Admin\TypeController@show');
-//删除分区
+//删除景点
 Route::any('/type_delete','Admin\TypeController@delete');
+/****************************/
+//景点详情编辑
+//显示编辑页面
+Route::get('/type_place_edit','Admin\TypeController@place_edit');
+
+//景点图片上传
+Route::post("/type_place_upload",'Admin\TypeController@placeUpload');
+
+//提交编辑内容，入库
+Route::any('/type_placeEdit','Admin\TypeController@placeEdit');
+
+//查看景点详情
+Route::any('/type_placeScan','Admin\TypeController@placeScan');
 
 
+    
 
+/***************************/
 
 
 /*********************************************************
- * 《-----添加版块和分区结束
+ * 《-----添加版块景点和分区结束
  ********************************************************/
 
 
@@ -159,10 +187,17 @@ Route::post("/adm/page/avartar", "Admin\PageController@avartar");
 
 
   //进入旅游首页
+
         // Route::get('/tour', function() {
         //     return view('home.index');
         // });
       Route::get("/tour","home\IndexController@index");
+
+  Route::get('/tour','home\TourController@show');
+  
+  //点击图片去往详情
+   Route::get('/xiadanqian','home\TourController@xiadanqian');
+
         //进入瀑布流首页
         Route::get('/', function() {
             return view('home.index_1');
@@ -187,9 +222,7 @@ Route::post("/adm/page/avartar", "Admin\PageController@avartar");
         Route::get('chujinyou', function() {
             return view('home.chujinyou');
         });
-        Route::get('xiadanqian', function() {
-            return view('home.xiadanqian');
-        });
+       
 
         Route::get('zhuce', function() {
             return view('home.zhuce');
@@ -202,8 +235,8 @@ Route::post("/adm/page/avartar", "Admin\PageController@avartar");
         Route::get('dingdan', function() {
             return view('home.dingdan');
         });
-
-        Route::get('xiadan', function() {
+        //去下订单
+        Route::get('/xiadan', function() {
             return view('home.xiadan');
         });
 
@@ -274,7 +307,5 @@ Route::post("/adm/page/avartar", "Admin\PageController@avartar");
         Route::resource('/home/tour', 'home\TourController');
 
 
-
-
-
-
+        
+/******************************************************/
