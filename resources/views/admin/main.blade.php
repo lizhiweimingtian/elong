@@ -41,7 +41,7 @@ div.main-order{ line-height:30px; padding:10px 0 0 0;}
                   echo "超级管理员";
               }
            ?></u></span>
-    <div class="top"><span class="left">您上次的登灵时间：2012-05-03  12:00   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span><a href="index.html" target="mainFrame" onFocus="this.blur()">更改密码</a></div>
+    <div class="top"><span class="left">您上次的登灵时间：2012-05-03  12:00   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span><a href="/adm/user/edit1/{{Session::get('userData')->id}}" target="mainFrame" onFocus="this.blur()">更改密码</a></div>
     <div class="sec">这是您第<span class="num">80</span>次,登录！</div>
     </td>
   </tr>

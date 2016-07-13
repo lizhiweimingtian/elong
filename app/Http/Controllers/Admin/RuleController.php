@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests,Input;
 use App\Http\Controllers\Controller;
 use DB,Session,Hash;
 class RuleController extends Controller
@@ -86,8 +86,9 @@ class RuleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
+       $id = input::get('id');
        $rule=DB::table("admin_group_access")->where("id",$id)->first();
        return view("admin.rule.edit",compact("rule"));
     }
@@ -99,10 +100,10 @@ class RuleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
        $data=$request->only("title","name","status");
-       if(false !== DB::table("admin_group_access")->where("id",$id)->update($data))
+       if(false !== DB::table("admin_group_access")->where("id",$request->id)->update($data))
        {
         return redirect("/tips")->with(["info"=>"Update OK","url"=>"/adm/rule"]);
        }else
@@ -117,8 +118,9 @@ class RuleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
+        $id = input::get('id');
        //删除该权限
        if(false !==DB::table("admin_group_access")->where("id",$id)->delete())
        {

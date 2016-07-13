@@ -10,8 +10,9 @@
 
 <meta property="qc:admins" content="276353266764651516375">
 <meta name="baidu_ssp_verify" content="408500f95bb55fbf53b1e73e2c4faee9">
-<title>【驴妈妈旅游】_景点门票_自由行_跟团游_国内游_出境游_酒店_机票</title>
-<meta name="keywords" content="自由行,景点门票,跟团游,自驾游,机票,酒店">
+@foreach ($config as $tmp)
+<title>{{$tmp->webname}}</title>
+<meta name="keywords" content="{{$tmp->keywords}}">
 <meta name="description" content="驴妈妈旅游网-中国新型的B2C旅游电子商务网站，为旅游者提供景区门票、自由行、度假酒店、机票、国内游、出境游等一站式旅游服务，《自在游天下,就找驴妈妈!》
 ">
 <script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="/home/js/bcore.min.js"></script><script type="text/javascript" src="/home/js/yahoo-min.js"></script><script type="text/javascript" src="/home/js/cp-v3.js"></script><script charset="utf-8" src="/home/other/StdID.do" id=""></script><script type="text/javascript" src="/home/js/json-min.js"></script><script charset="utf-8" src="/home/other/PageView.do"></script>
@@ -40,7 +41,7 @@
 <div class="sytopBan"><ul class="sytopBan-ul"><li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z400,15466307,11112,5018&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=dPDVrqPXm23mw0BTeuy5xfhc4sWp&amp;url=http://www.lvmama.com/zt/promo/nanshen/" target="_blank"><img src="/home/img/dt-hynt.jpg" js_sc="http://lvmamim.qtmojo.com/main/s?d=lvmamim&amp;i=s400,15466307,11112,5018&amp;count=f&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=dPDVrqPXm23mw0BTeuy5xfhc4sWp" to_trd="null" height="60" width="1200"></a></li><li class="active"><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z540,15466776,14827,12934&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=dPDVrqPXm23mw0BTeuy5xfhc4sWp&amp;url=http://www.lvmama.com/zt/promo/mpjd/" target="_blank"><img src="/home/img/dt-dsn.jpg" js_sc="http://lvmamim.qtmojo.com/main/s?d=lvmamim&amp;i=s540,15466776,14827,12934&amp;count=f&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=dPDVrqPXm23mw0BTeuy5xfhc4sWp" to_trd="null" height="60" width="1200"></a></li></ul><div class="sytopBan-tab"><span class=""></span><span class="active"></span></div></div>   
 
 @include("home.common.header");
-
+@endforeach
  <script>
             var timer;  //用于优化滚动效果
             var imgWidth=300;

@@ -90,7 +90,7 @@ form p input[type='text']{
           <input type="radio" name="status/{{$rule->id}}" id="status/{{$rule->id}}/1" value="1" rule="{{$rule->id}}" @if($rule->status==1) checked @endif ><label for="status/{{$rule->id}}/1">启用</label>
           <input type="radio" name="status/{{$rule->id}}" id="status/{{$rule->id}}/0" value="0" rule="{{$rule->id}}" @if($rule->status == 0) checked @endif ><label for="status/{{$rule->id}}/0">禁用</label>
         </td>
-        <td align="center" valign="middle" class="borderbottom"><a href="{{url('/adm/rule/'.$rule->id."/edit")}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/rule/delete/{{$rule->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        <td align="center" valign="middle" class="borderbottom"><a href="/adm/rule/edit?id={{$rule->id}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/rule/delete?id={{$rule->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
       @endforeach
     </table>

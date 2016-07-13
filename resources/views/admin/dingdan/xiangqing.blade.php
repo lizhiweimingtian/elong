@@ -18,7 +18,6 @@ $.ajaxSetup({
 });
 </script>
 <style>
-
 body{overflow-x:hidden; background:#f2f0f5; padding:15px 0px 10px 5px;}
 #searchmain{ font-size:12px;}
 #search{ font-size:12px; background:#548fc9; margin:10px 10px 0 0; display:inline; width:100%; color:#FFF; float:left}
@@ -56,23 +55,19 @@ form p input[type='text']{
 </head>
 <body>
 <!--main_top-->
-{{ session("info") }}
+<a href="{{$_SERVER['HTTP_REFERER']}}">返回上一页</a>
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：订单管理</td>
+
+
+    <td width="99%" align="left" valign="top">您的位置：订单详情</td>
   </tr>
   <tr>
     <td align="left" valign="top">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
    		 <td width="90%" align="left" valign="middle">
-	         <form method="post" action="/adm/dingdan">
-	         <span>订单：</span>
-           <input type="hidden" name="_token" value="{{csrf_token()}}" />
-           <p><input type="text" name="keyword" value="{{$keyword}}" placeholder="请输入用户名或订单号" />
-           <input type="submit" value="查询" />
-           </p>
-          </form>
+	         
          </td>
   		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="/adm/home/user/create" target="mainFrame" onFocus="this.blur()" class="add"></a></td>
   		</tr>
@@ -81,34 +76,28 @@ form p input[type='text']{
   </tr>
   
     
-    
+  
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab" class="bordered">
     
       <tr>
-        <th align="center" valign="middle" class="borderright">订单号</th>
-        <th align="center" valign="middle" class="borderright">会员名</th>
-        <th align="center" valign="middle" class="borderright">会员手机</th>
-        <th align="center" valign="middle" class="borderright">下单时间</th>    
-        <th align="center" valign="middle">操作</th>
+        <th align="center" valign="middle" class="borderright">目的地</th>
+        <th align="center" valign="middle" class="borderright">旅游详情</th>
+        <th align="center" valign="middle" class="borderright">订单金额</th>
+        <th align="center" valign="middle" class="borderright">出发时间</th>    
       </tr>
 
-      @foreach ($users as $tmp)
+      
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->id}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->phone}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->nowphone}}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$userRec->place_name}}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$userRec->title}}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$userRec->old_price}}</td>
        
         
-        <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->xiadan_date}}</td>
-
-        
-        <td align="center" valign="middle" class="borderbottom"><a href="/adm/dingdan/xiangqing/{{$tmp->pid}}" target="mainFrame" onFocus="this.blur()" class="add">详情</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/dingdan/delete/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom"></td>
+       
       </tr>
-      @endforeach
     </table>
-    <p>
-  {!!$users->appends(['keyword' => $keyword])->render()!!}
-</p>
+   
 </table>
 
 </body>

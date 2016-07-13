@@ -6,9 +6,10 @@
     <link rel="dns-prefetch" href="http://s1.lvjs.com.cn/">
     <link rel="dns-prefetch" href="http://s2.lvjs.com.cn/">
     <link rel="dns-prefetch" href="http://s3.lvjs.com.cn/">
-        <title id="TITLE">火车票查询_火车票预订_火车票网上订票【驴妈妈火车票】</title>
+
+     <title id="TITLE">火车票查询_火车票预订_火车票网上订票【驴妈妈火车票】</title>
 	<meta name="description" id="DESC" content="驴妈妈车票官网提供火车票预订与代购,高铁票,动车票免费配送,铁路时刻表查询,足不出户订购全国高铁票,动车票.高铁订票网,动车订票网,时时动车高铁票价,火车票订购中心。">
-	<meta name="keywords" id="KEYWORDS" content="火车票预订,火车票查询,打折火车票">
+	   <meta name="keywords" id="KEYWORDS" content="火车票预订,火车票查询,打折火车票"
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
     <meta name="mobile-agent" content="format=html5; url=http://m.lvmama.com/train/shanghai-beijing-g">
 	<link rel="canonical" href="http://train.lvmama.com/booking/shanghai-hangzhou/gaotie">
@@ -56,7 +57,7 @@
     	<!-- 无搜索版，公共头部开始  -->
 
         @include("home.common.header");
-        
+  
 <!-- 无搜索版，公共头部结束 -->
 
 <!-- banWrap -->

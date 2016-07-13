@@ -2,7 +2,9 @@
 <html>
 <head><script src="adv.dat" async="" type="text/javascript"></script><script src="/home/other/presadv1.dat" async="" type="text/javascript"></script>
     <meta charset="UTF-8">
-    <title>旅游攻略_自助游攻略_行程游记_旅游社交网站【驴妈妈攻略】</title>
+ 
+   
+<title>旅游攻略_自助游攻略_行程游记_旅游社交网站【驴妈妈攻略】</title>
     <meta name="keywords" content="旅游攻略,自助游攻略,行程游记">
     <meta name="description" content="驴妈妈攻略：最活跃的旅游社交分享网站！这里有自助游背包客的行程足迹，国内外目的地实用旅游攻略、图片、美食、交通等信息；让我们热爱旅游的小伙伴们一起协创最大的平台吧！">
     <meta name="applicable-device" content="pc">
@@ -26,7 +28,6 @@
 <link rel="stylesheet" type="text/css" href="/home/css/zhijia.css" media="all">
 
 @include("home.common.header");
-
 
 <div class="lv_wy_t_nav clearfix">
 	<div class="lv_wy_side_nav fl">

@@ -89,7 +89,8 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function edit($id) {
+	public function edit(Request $request) {
+		$id = $request::get('id');
 		$userRec = DB::table("admin_user")->leftJoin("admin_group_rule", "admin_user.id", "=", "admin_group_rule.uid")->where("admin_user.id", $id)->select("admin_user.*", "admin_group_rule.group_id")->first();
 		$groups = DB::table("admin_group")->get();
 		return view("admin.bianji",["userRec" => $userRec, "groups" => $groups]);
@@ -146,7 +147,8 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id) {
+	public function destroy(Request $request) {
+		$id = $request::get('id');
 		if(DB::table("admin_user")->where("id",$id)->delete())
 		{
 			return redirect("adm/user");
@@ -222,7 +224,9 @@ class UserController extends Controller {
 		return view("admin.home.index",["users"=>$users,"keyword"=>$request->get("keyword")]);
   	}
   	//编辑
-  	public function hedit($id) {
+  	public function hedit(Request $request) {
+
+  		$id = $request::get('id');
 		$userRec = DB::table("user")->leftJoin("userdetail", "user.id", "=", "userdetail.id")->where("user.id", $id)->select("user.*", "userdetail.*")->first();
 		
 		return view("admin.home.bianji",["userRec" => $userRec]);
@@ -258,7 +262,8 @@ class UserController extends Controller {
 
 	}
 	//删除=======================================================================
-	public function hdestroy($id) {
+	public function hdestroy(Request $request) {
+		$id = $request::get('id');
 		if(DB::table("user")->where("id",$id)->delete())
 		{	
 			if(DB::table("userdetail")->where("id",$id)->delete()){

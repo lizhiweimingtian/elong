@@ -57,14 +57,11 @@ body{overflow-x:hidden; background:url(admin/img/main/leftbg.jpg) left top repea
       <div>
         <span>订单管理</span>
         <a href="/adm/dingdan" target="mainFrame" onFocus="this.blur()">订单列表</a>
-        <a href="/adm/rule/create" target="mainFrame" onFocus="this.blur()">添加权限</a>
+        
       </div>
       <div>
         <span>网站配置</span>
-        <a href="/main_message" target="mainFrame" onFocus="this.blur()">网站设置</a>
-        <a href="/main_message" target="mainFrame" onFocus="this.blur()">级别权限</a>
-        <a href="/main_message" target="mainFrame" onFocus="this.blur()">角色管理</a>
-        <a href="/main_message" target="mainFrame" onFocus="this.blur()">自定义权限</a>
+        <a href="/adm/page" target="mainFrame" onFocus="this.blur()">网站设置</a>
       </div>
     </div>
 </body>

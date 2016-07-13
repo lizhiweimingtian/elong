@@ -25,7 +25,6 @@
 
 @include("home.common.header");	 
 	 
-
 </div><!-- 无搜索版，公共头部结束 -->	<!-- // 页面头部 -->
 	
 	<!-- banner导航和焦点图 -->

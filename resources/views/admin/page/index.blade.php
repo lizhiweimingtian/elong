@@ -2,6 +2,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主要内容区main</title>
+<script src="{{ asset('/admin/js/jquery-2.0.2.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/uploadify/jquery.uploadify.min.js') }}"></script>
+<link type="text/css" rel="stylesheet" href="{{ asset('/plugins/uploadify/uploadify.css') }}" />
 <link href="admin/css/css.css" type="text/css" rel="stylesheet" />
 <link href="admin/css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="admin/img/main/favicon.ico" />
@@ -30,67 +33,95 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 .main-for input.text-word{ width:310px; height:36px; line-height:36px; border:#ebebeb 1px solid; background:#FFF; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; padding:0 10px;}
 .main-for select{ width:310px; height:36px; line-height:36px; border:#ebebeb 1px solid; background:#FFF; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#666;}
 .main-for input.text-but{ width:100px; height:40px; line-height:30px; border: 1px solid #cdcdcd; background:#e6e6e6; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#969696; float:left; margin:0 10px 0 0; display:inline; cursor:pointer; font-size:14px; font-weight:bold;}
-#addinfo a{ font-size:14px; font-weight:bold; background:url(admin/img/main/addinfoblack.jpg) no-repeat 0 1px; padding:0px 0 0px 20px; line-height:45px;}
-#addinfo a:hover{ background:url(admin/img/main/addinfoblue.jpg) no-repeat 0 1px;}
+#addinfo a{ font-size:14px; font-weight:bold; background:url(images/main/replayblack.jpg) no-repeat 0 0px; padding:0px 0 0px 20px; line-height:45px;}
+#addinfo a:hover{ background:url(images/main/replayblue.jpg) no-repeat 0 0px;}
 </style>
 </head>
 <body>
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：权限管理&nbsp;&nbsp;>&nbsp;&nbsp;编辑权限</td>
+    <td width="99%" align="left" valign="top">您的位置：网站配置&nbsp;&nbsp;>&nbsp;&nbsp;网站设置</td>
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
-    
+    <a href="./main_message.php" target="mainFrame" onFocus="this.blur()" class="add">返回上一级</a>
     </td>
   </tr>
   <tr>
     <td align="left" valign="top">
-    {{session("info")}}
-    @if(count($errors) > 0)
-    <ul>
-    @foreach ($errors->all() as $e)
-    <li>{{$e}}</li>
-    @endforeach
-    </ul>
-    @endif
-    <form method="post" action="/adm/rule/update" name="edit">
-    <input type="hidden" name="_token" value="{{csrf_token()}}" />
-    <input type="hidden" name="id" value="{{$rule->id}}" />
+  @foreach ($config as $tmp)
+  <form action="/adm/page/update" method="post" enctype="multipart/form-data" name="upload">
+  	<input type="hidden" name="_token" value="{{csrf_token()}}" />
+     <input type="hidden" name="id" value="{{$tmp->id}}" />
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">名称：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">网站名称：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="title" value="{{$rule->title}}" />
-        </td>
+		    <input type='text' name="webname" style="height:35px; width:280px;" value="{{$tmp->webname}}">    
+		</td>
         </tr>
+      
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">规则：</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">网站关键字：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="name" value="{{$rule->name}}" />
-        </td>
-        </tr>
-        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">状态：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="radio" name="status" value="1" @if($rule->status == 1) checked @endif />启用、
-        <input type="radio" name="status" value="0"  @if($rule->status == 0) checked @endif />禁用、
+		
+		  <input type='text' name="keywords" style="height:35px; width:280px;" value="{{$tmp->keywords}}">
+		</td>
+      </tr>
+     
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">网站logo：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for" style="line-height:24px;">
+		    
+         <input type='file' name="logo" id="logo" style="height:35px; width:280px;" value="">
+			 <img src="{{$tmp->logo}}" id="im" width="130px">
+		</td>
+      </tr>
+	  <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">网站版权：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for" style="line-height:24px;">
+		     <input type='text' name="copy" style="height:35px; width:280px;" value="{{$tmp->copy}}">
+		</td>
+      </tr>
+	  <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">网站状态：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for" style="line-height:24px;">
+		     
+			 <input type="radio" name="status" @if($tmp->status=='1') checked @endif value="1"/> 开启
+			 <input type="radio" name="status" @if($tmp->status=="0") checked @endif value="0"/>关闭
 
-        </td>
-        </tr>
- 
+		</td>
+      </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
+	  
+        <td align="right" valign="middle" class="borderright borderbottom bggray">操作：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input name="" type="submit" value="保存" class="text-but">
-        <input name="" type="reset" value="重置" class="text-but"></td>
-        </tr>
+		  <input type="submit" value="提交"/>
+		  <input type="reset" value="重置"/>
+		</td>
+      </tr>  
     </table>
-    </form>
-   
+  </form>
+ 
+  @endforeach
+  <div class="fl">
+      @if(session("info"))
+      <ul> 
+        <li>{{session("info")}}<li>
+      </ul>
+      @endif 
+      @if (count($errors) > 0)
+      <ul>
+        @foreach($errors->all() as $tmp)
+        <li>{{$tmp}}</li>
+        @endforeach
+      </ul>
+      @endif
+    </div>
     </td>
     </tr>
+     <script src="{{url('/admin/js/wangzhan.js')}}"></script>
 </table>
 </body>
 </html>

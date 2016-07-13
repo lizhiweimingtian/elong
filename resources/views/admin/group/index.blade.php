@@ -97,7 +97,7 @@ form p input[type='text']{
           @endforeach
 
         </td>
-        <td align="center" valign="middle" class="borderbottom"><a href="{{url('/adm/group/'.$group->id."/edit")}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/group/delete/{{$group->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        <td align="center" valign="middle" class="borderbottom"><a href="/adm/group/edit?id={{$group->id}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/group/delete?id={{$group->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
       @endforeach
     </table>

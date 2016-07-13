@@ -123,7 +123,7 @@ form p input[type='text']{
         <td align="center" valign="middle" class="borderright borderbottom"><img src="{{$tmp->avartar}}" width="80"></td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->created_at}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->updated_at}}</td>
-        <td align="center" valign="middle" class="borderbottom"><a href="/adm/user/edit/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/status/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">
+        <td align="center" valign="middle" class="borderbottom"><a href="/adm/user/edit?id={{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/status/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">
             @if($tmp->status==0)
             
               开启
@@ -131,7 +131,7 @@ form p input[type='text']{
               关闭 
             
             @endif
-        </a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/destroy/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        </a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/destroy?id={{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
       @endforeach
     </table>

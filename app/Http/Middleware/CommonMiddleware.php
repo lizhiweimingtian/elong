@@ -32,9 +32,9 @@ class CommonMiddleware
             }
             // dd($auth_list);
             $subject = preg_replace("/\?.+/", "", $_SERVER['REQUEST_URI']);
-             //dd($subject);
+             // dd($subject);
             $subject = preg_replace("/\/\d$/", "", $subject);
-            //dd($subject);
+            // dd($subject);
             if(array_key_exists($subject, $auth_list))
             {
                 //验证用户是否具备操作权限
@@ -45,9 +45,12 @@ class CommonMiddleware
                 // dd($groupid);
                 $rules=DB::table("admin_group")->where("id",$groupid)->pluck("rules");
                 $ruleid=DB::table("admin_group_access")->where("name",$subject)->pluck("id");
+                // dd($rules);
+                // dd($ruleid);
                 if(!in_array($ruleid,explode(",",$rules)))
                 {
-                    if(in_array($subject, ["/Admin/group/setRule", "/Admin/user/setGroup"]))  return response(["status" => 0, "info" => "对不起，你无权操作！"]);
+                    
+                    if(in_array($subject, ["/adm/group/setRule", "/adm/user/setGroup"]))  return response(["status" => 0, "info" => "对不起，你无权操作！"]);
                     return redirect("/tips")->with(["info" => "对不起，你无权操作！", "url" => $_SERVER['HTTP_REFERER']]);
                 }
             }

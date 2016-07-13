@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests,Input;
 use App\Http\Controllers\Controller;
 use DB,Session;
 class GroupController extends Controller
@@ -97,8 +97,12 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
+        // var_dump($request);
+    
+        $id = input::get('id');
+
         //获取该分组信息
         $group=DB::table("admin_group")->where("id",$id)->first();
         $rules=DB::table("admin_group_access")->get();
@@ -112,7 +116,7 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $this->validate($request,[
                 "title"=>"required",
@@ -123,7 +127,7 @@ class GroupController extends Controller
             ]);
         $data=$request->only("title","rules");
         $data["rules"]=join(",",$data["rules"]);
-        if(false !== $affectedRow=DB::table("admin_group")->where("id",$id)->update($data))
+        if(false !== $affectedRow=DB::table("admin_group")->where("id",$request->id)->update($data))
         {
             return redirect("/tips")->with(["info" => "修改成功".$affectedRow." Line.", "url" => "/adm/group"]);
         }else{
@@ -137,8 +141,9 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy()
+    {   $id = input::get('id');
+
        if(false !== DB::table("admin_group")->where("id",$id)->delete())
        {
         return redirect("/tips")->with(["info"=>"删除成功.","url"=>"/adm/group"]);

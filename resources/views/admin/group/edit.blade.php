@@ -55,8 +55,9 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
       @endforeach
     </ul>
     @endif
-    <form method="post" action="/adm/group/update/{{$group->id}}" name="edit">
+    <form method="post" action="/adm/group/update" name="edit">
     <input type="hidden" name="_token" value="{{csrf_token()}}" />
+    <input type="hidden" name="id" value="{{$group->id}}" />
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">名称：</td>

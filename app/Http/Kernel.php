@@ -21,7 +21,7 @@ class Kernel extends HttpKernel
 
         \App\Http\Middleware\CommonMiddleware::class,
 
-        \App\Http\Middleware\HomeMiddleware::class,
+         \App\Http\Middleware\HomeMiddleware::class,
     ];
 
     /**
