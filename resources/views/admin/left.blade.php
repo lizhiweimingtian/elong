@@ -45,10 +45,12 @@ body{overflow-x:hidden; background:url(admin/img/main/leftbg.jpg) left top repea
         <a href="/adm/user/create" target="mainFrame" onFocus="this.blur()">添加用户</a>
       </div>
        <div>
-        <span>板块管理</span>
+        <span>景区景点管理</span>
       
-        <a href="/type_show" target="mainFrame" onFocus="this.blur()">浏览分区</a>
+        <a href="/type_show" target="mainFrame" onFocus="this.blur()">浏览景区（点）</a>
         <a href="/type_addFather" target="mainFrame" onFocus="this.blur()">添加父分区</a>
+        <a href="/type_addChild" target="mainFrame" onFocus="this.blur()">添加景点</a>
+        
       </div>
       <div>
         <span>贴子管理</span>

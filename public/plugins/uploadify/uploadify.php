@@ -6,7 +6,7 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 */
 
 // Define a destination
-$targetFolder = '/uploads'; // Relative to the root
+$targetFolder = '/uploads/file'; // Relative to the root
 
 //验证表单提交是否合法
 if (!empty($_FILES) && $_POST['token'] == md5('unique_salt' . $_POST['timestamp'])) {
@@ -22,7 +22,7 @@ if (!empty($_FILES) && $_POST['token'] == md5('unique_salt' . $_POST['timestamp'
 	
 	if (in_array($fileParts['extension'],$fileTypes)) {
 		move_uploaded_file($tempFile,$targetFile);
-		echo '1';
+		echo 1;
 	} else {
 		echo 'Invalid file type.';
 	}

@@ -42,7 +42,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
-    <a href="show.php" target="mainFrame" onFocus="this.blur()" class="add">浏览分区</a>
+    <a href="" target="mainFrame" onFocus="this.blur()" class="add">请输入要添加分区的名称</a>
     </td>
   </tr>
   <tr>
@@ -61,7 +61,6 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input name="" type="submit" value="添加" class="text-but">
-        <input name="" type="reset" value="重置" class="text-but"></td>
         </tr>
     </table>
     </form>

@@ -19,7 +19,7 @@
 </head>
 <!-- 首屏 banner 及导航 -->
 <body class="home" allyes_city="BJ">
-<div class="sytopBan"><ul class="sytopBan-ul"><li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z400,15466307,11112,5018&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=dPDVrqPXm23mw0BTeuy5xfhc4sWp&amp;url=http://www.lvmama.com/zt/promo/nanshen/" target="_blank"><img src="/home/img/dt-hynt.jpg" js_sc="http://lvmamim.qtmojo.com/main/s?d=lvmamim&amp;i=s400,15466307,11112,5018&amp;count=f&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=dPDVrqPXm23mw0BTeuy5xfhc4sWp" to_trd="null" height="60" width="1200"></a></li><li class="active"><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z540,15466776,14827,12934&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=dPDVrqPXm23mw0BTeuy5xfhc4sWp&amp;url=http://www.lvmama.com/zt/promo/mpjd/" target="_blank"><img src="/home/img/dt-dsn.jpg" js_sc="http://lvmamim.qtmojo.com/main/s?d=lvmamim&amp;i=s540,15466776,14827,12934&amp;count=f&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=dPDVrqPXm23mw0BTeuy5xfhc4sWp" to_trd="null" height="60" width="1200"></a></li></ul><div class="sytopBan-tab"><span class=""></span><span class="active"></span></div></div>   
+<div class="sytopBan"><ul class="sytopBan-ul"><li class=""><a href="" target="_blank"><img src="/home/img/dt-hynt.jpg" to_trd="null" height="60" width="1200"></a></li><li class="active"><a href="" target="_blank"><img src="/home/img/dt-dsn.jpg"  to_trd="null" height="60" width="1200"></a></li></ul><div class="sytopBan-tab"><span class=""></span><span class="active"></span></div></div>   
 
 @include("home.common.header");
 
@@ -74,56 +74,56 @@
 	            	<dl>
 	                	<dt>国内热门</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%86%85%E8%92%99%E5%8F%A4&amp;k=0#list" target="_blank">内蒙古</a>
-		                    	<a href="http://dujia.lvmama.com/tour/sanya272/group-H13" target="_blank">三亚</a>
-		                    	<a href="http://dujia.lvmama.com/tour/yunnan312/group-H13" target="_blank">云南</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E4%B9%9D%E5%AF%A8%E6%B2%9F&amp;k=0#list" target="_blank">九寨沟</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E9%9D%92%E6%B5%B7&amp;k=0#list" target="_blank">青海</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%BC%A0%E5%AE%B6%E7%95%8C&amp;k=1#list" target="_blank">张家界</a>
-		                    	<a href="http://s.lvmama.com/group/D13H13K110000?keyword=%E4%B8%8A%E6%B5%B7#list" target="_blank">上海</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%8E%A6%E9%97%A8&amp;k=1#list" target="_blank">厦门</a>
-		                    	<a href="http://s.lvmama.com/group/D13H13K110000?keyword=%E9%BB%84%E5%B1%B1#list" target="_blank">黄山</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%A1%82%E6%9E%97&amp;k=1#list" target="_blank">桂林</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E4%B9%8C%E9%95%87&amp;k=1#list" target="_blank">乌镇</a>
-		                    	<a href="http://s.lvmama.com/group/D13H13K110000?keyword=%E5%B1%B1%E8%A5%BF#list" target="_blank">山西</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E8%A5%BF%E8%97%8F&amp;k=1#list" target="_blank">西藏</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%96%B0%E7%96%86&amp;k=0#list" target="_blank">新疆</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E9%95%BF%E7%99%BD%E5%B1%B1&amp;k=1#list" target="_blank">长白山</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E8%A5%BF%E5%AE%89&amp;k=0#list" target="_blank">西安</a>
+		                    	<a href="" target="_blank">内蒙古</a>
+		                    	<a href="" target="_blank">三亚</a>
+		                    	<a href="" target="_blank">云南</a>
+		                    	<a href="" target="_blank">九寨沟</a>
+		                    	<a href="" target="_blank">青海</a>
+		                    	<a href="" target="_blank">张家界</a>
+		                    	<a href="" target="_blank">上海</a>
+		                    	<a href="" target="_blank">厦门</a>
+		                    	<a href="" target="_blank">黄山</a>
+		                    	<a href="" target="_blank">桂林</a>
+		                    	<a href="" target="_blank">乌镇</a>
+		                    	<a href="" target="_blank">山西</a>
+		                    	<a href="" target="_blank">西藏</a>
+		                    	<a href="" target="_blank">新疆</a>
+		                    	<a href="" target="_blank">长白山</a>
+		                    	<a href="" target="_blank">西安</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>出境热门</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/group/H13K440100?keyword=%E6%B3%B0%E5%9B%BD&amp;k=0#list" target="_blank">泰国</a>
-		                    	<a href="http://s.lvmama.com/group/H13K440100?keyword=%E6%97%A5%E6%9C%AC&amp;k=0#list" target="_blank">日本</a>
-		                    	<a href="http://s.lvmama.com/group/H13K440100?keyword=%E9%9F%A9%E5%9B%BD&amp;k=0#list" target="_blank">韩国</a>
-		                    	<a href="http://s.lvmama.com/group/H13K440100?keyword=%E9%95%BF%E6%BB%A9%E5%B2%9B&amp;k=0#list" target="_blank">长滩岛</a>
-		                    	<a href="http://s.lvmama.com/group/H13K440100?keyword=%E6%AC%A7%E6%B4%B2&amp;k=0#list" target="_blank">欧洲</a>
-		                    	<a href="http://s.lvmama.com/group/H13K310000?keyword=%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A&amp;k=0#list" target="_blank">马来西亚</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%BE%B3%E6%B4%B2&amp;k=0#list" target="_blank">澳洲</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%9F%AC%E5%9F%94%E5%AF%A8&amp;k=0#list" target="_blank">柬埔寨</a>
-		                    	<a href="http://s.lvmama.com/group/H13K310000?keyword=%E7%BE%8E%E5%9B%BD&amp;k=0#list" target="_blank">美国</a>
-		                    	<a href="http://s.lvmama.com/group/H13K310000?keyword=%E5%8F%B0%E6%B9%BE&amp;k=0#list" target="_blank">中国台湾</a>
-		                    	<a href="http://s.lvmama.com/group/H13K440100?keyword=%E8%B6%8A%E5%8D%97&amp;k=0#list" target="_blank">越南</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E8%BF%AA%E6%8B%9C&amp;k=0#list" target="_blank">迪拜</a>
-		                    	<a href="http://s.lvmama.com/group/H13K440100?keyword=%E5%B7%B4%E5%8E%98%E5%B2%9B&amp;k=0#list" target="_blank">巴厘岛</a>
-		                    	<a href="http://s.lvmama.com/group/H13K310000?keyword=%E6%99%AE%E5%90%89%E5%B2%9B&amp;k=0#list" target="_blank">普吉岛</a>
+		                    	<a href="" target="_blank">泰国</a>
+		                    	<a href="" target="_blank">日本</a>
+		                    	<a href="" target="_blank">韩国</a>
+		                    	<a href="" target="_blank">长滩岛</a>
+		                    	<a href="" target="_blank">欧洲</a>
+		                    	<a href="" target="_blank">马来西亚</a>
+		                    	<a href="" target="_blank">澳洲</a>
+		                    	<a href="" target="_blank">柬埔寨</a>
+		                    	<a href="" target="_blank">美国</a>
+		                    	<a href="" target="_blank">中国台湾</a>
+		                    	<a href="" target="_blank">越南</a>
+		                    	<a href="" target="_blank">迪拜</a>
+		                    	<a href="" target="_blank">巴厘岛</a>
+		                    	<a href="" target="_blank">普吉岛</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>热门主题</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/local/H13K110000?keyword=%E7%94%98%E8%82%83#list" target="_blank">甘肃玩乐参团</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%BC%80%E5%BF%83%E9%A9%B4%E8%A1%8C&amp;k=0#list" target="_blank">开心驴行</a>
-		                    	<a href="http://dujia.lvmama.com/tour/s-64445f71/?keyword=%E6%91%84%E5%BD%B1#list" target="_blank">摄影</a>
-		                    	<a href="http://dujia.lvmama.com/tour/s-6e296cc9/route-Y4#list#list" target="_blank">出境温泉季</a>
-		                    	<a href="http://s.lvmama.com/group/H13K110000?keyword=%E9%80%81%E5%92%95%E5%92%9A%E6%B4%97%E8%A1%A3%E6%9C%BA&amp;k=1#list" target="_blank">送咕咚洗衣机</a>
-		                    	<a href="http://www.lvmama.com/zt/promo/biyeyou/#qf" target="_blank">毕业游</a>
-		                    	<a href="http://dujia.lvmama.com/package/795591" target="_blank">599家庭套房</a>
-		                    	<a href="http://dujia.lvmama.com/tour/s-90015e7388618f66" target="_blank">暑期欢乐送</a>
-		                    	<a href="http://s.lvmama.com/group/D13H13K110000?keyword=%E9%80%81%E7%BA%A2%E9%85%92#list" target="_blank">送红酒</a>
-		                    	<a href="http://s.lvmama.com/group/D13H13K110000?keyword=%E4%B8%8A%E6%B5%B7%E8%BF%AA%E5%A3%AB%E5%B0%BC%E4%B9%90%E5%9B%AD#list" target="_blank">上海迪士尼</a>
+		                    	<a href="" target="_blank">甘肃玩乐参团</a>
+		                    	<a href="" target="_blank">开心驴行</a>
+		                    	<a href="" target="_blank">摄影</a>
+		                    	<a href="" target="_blank">出境温泉季</a>
+		                    	<a href="" target="_blank">送咕咚洗衣机</a>
+		                    	<a href="" target="_blank">毕业游</a>
+		                    	<a href="" target="_blank">599家庭套房</a>
+		                    	<a href="" target="_blank">暑期欢乐送</a>
+		                    	<a href="" target="_blank">送红酒</a>
+		                    	<a href="" target="_blank">上海迪士尼</a>
 	                    </dd>
 	                </dl>
             </div>
@@ -172,37 +172,39 @@
 	            	<dl>
 	                	<dt>热搜城市</dt>
 	                    <dd>
-		                    	<a href="http://dujia.lvmama.com/tour/beijing1/scenictour" target="_blank">北京</a>
-		                    	<a href="http://dujia.lvmama.com/tour/tianjin2/scenictour" target="_blank">天津</a>
-		                    	<a href="http://dujia.lvmama.com/tour/qingdao161/scenictour" target="_blank">青岛</a>
-		                    	<a href="http://dujia.lvmama.com/tour/changbaishan3577/scenictour" target="_blank">长白山</a>
-		                    	<a href="http://dujia.lvmama.com/tour/qinhuangdao6/scenictour" target="_blank">秦皇岛</a>
-		                    	<a href="http://dujia.lvmama.com/tour/taian200181/scenictour" target="_blank">泰安</a>
-		                    	<a href="http://dujia.lvmama.com/tour/dalian43/scenictour" target="_blank">大连</a>
-		                    	<a href="http://dujia.lvmama.com/tour/hulunbeier34/scenictour" target="_blank">呼伦贝尔</a>
-		                    	<a href="http://dujia.lvmama.com/tour/jinan160/scenictour" target="_blank">济南</a>
-		                    	<a href="http://dujia.lvmama.com/tour/datong17/scenictour" target="_blank">大同</a>
+		                    	<a href="" target="_blank">北京</a>
+		                    	<a href="" target="_blank">天津</a>
+                                        <a href="" target="_blank">青岛</a>
+		                    	<a href="" target="_blank">长白山</a>
+                                        <a href="" target="_blank">秦皇岛</a>
+		                    	<a href="" target="_blank">泰安</a>
+                                        <a href="" target="_blank">大连</a>
+		                    	<a href="" target="_blank">呼伦贝尔</a>
+                                        <a href="" target="_blank">济南</a>
+		                    	<a href="" target="_blank">大同</a>
+		                    
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>精选主题</dt>
 	                    <dd>
-		                    	<a href="http://dujia.lvmama.com/tour/s-53174eac6e296cc9/scenictour" target="_blank">温泉</a>
-		                    	<a href="http://dujia.lvmama.com/tour/s-53174eac590f5b6390ca6e38/scenictour" target="_blank">初夏郊游</a>
-		                    	<a href="http://www.lvmama.com/zt/i/gubei" target="_blank">古镇村落</a>
-		                    	<a href="http://dujia.lvmama.com/tour/s-53174eac4e3b98984e5056ed/scenictour" target="_blank">主题乐园</a>
-		                    	<a href="http://dujia.lvmama.com/tour/qingdao161/scenictour" target="_blank">海滨岛屿</a>
+                                         <a href="" target="_blank">温泉</a>
+		                    	<a href="" target="_blank">初夏郊游</a>
+                                        <a href="" target="_blank">古镇村落</a>
+		                    	<a href="" target="_blank">主题乐园</a>
+		                    	<a href="" target="_blank">主题乐园</a>
+		                    	
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>热门景点</dt>
 	                    <dd>
-		                    	<a href="http://www.lvmama.com/zt/i/gubei" target="_blank">古北水镇</a>
-		                    	<a href="http://dujia.lvmama.com/tour/beijinghuanlegu122748/scenictour" target="_blank">北京欢乐谷</a>
-		                    	<a href="http://dujia.lvmama.com/tour/hulunbeier34/scenictour" target="_blank">呼伦贝尔草原</a>
-		                    	<a href="http://dujia.lvmama.com/tour/taian200181/scenictour" target="_blank">泰山</a>
-		                    	<a href="http://dujia.lvmama.com/tour/changbaishan3577/scenictour" target="_blank">长白山</a>
-		                    	<a href="http://dujia.lvmama.com/tour/dalianfaxianwangguo122822/scenictour" target="_blank">大连发现王国</a>
+                                        <a href="" target="_blank">古北水镇</a>
+		                    	<a href="" target="_blank">北京欢乐谷</a>
+                                        <a href="" target="_blank">呼伦贝尔草原</a>
+		                    	<a href="" target="_blank">泰山</a>
+                                        <a href="" target="_blank">长白山</a>
+		                    	<a href="" target="_blank">大连发现王国</a>
 	                    </dd>
 	                </dl>
             </div>
@@ -213,35 +215,34 @@
 	            	<dl>
 	                	<dt>国内热门</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/freetour/Z7H13K110000?keyword=%E4%B8%8A%E6%B5%B7#list" target="_blank">上海迪士尼乐园</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E4%B8%89%E4%BA%9A&amp;k=1#list" target="_blank">三亚</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E4%B8%BD%E6%B1%9F&amp;k=0#list" target="_blank">丽江</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E5%8E%A6%E9%97%A8&amp;k=1#list" target="_blank">厦门</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E6%A1%82%E6%9E%97&amp;k=0#list" target="_blank">桂林</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E8%A5%BF%E5%AE%89&amp;k=1#list" target="_blank">西安</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E6%B5%99%E6%B1%9F&amp;k=0#list" target="_blank">浙江</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E9%9D%92%E5%B2%9B&amp;k=1#list" target="_blank">青岛</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E4%B9%9D%E5%AF%A8%E6%B2%9F&amp;k=1#list" target="_blank">九寨沟</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E5%BC%A0%E5%AE%B6%E7%95%8C&amp;k=0#list" target="_blank">张家界</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E5%8D%97%E6%98%8C&amp;k=1#list" target="_blank">南昌</a>
-		                    	<a href="http://s.lvmama.com/freetour/Z7H13K110000?keyword=%E9%BB%84%E5%B1%B1#list" target="_blank">黄山</a>
+		                    	<a href="" target="_blank">丽江</a>
+		                    	<a href="" target="_blank">厦门</a>
+                                        <a href="" target="_blank">桂林</a>
+		                    	<a href="" target="_blank">西安</a>
+                                        <a href="" target="_blank">浙江</a>
+		                    	<a href="" target="_blank">青岛</a>
+		                    	
+		                    	<a href="" target="_blank">九寨沟</a>
+		                    	<a hrref="" target="_blank">张家界</a>
+		                    	<a href="" target="_blank">南昌</a>
+		                    	<a href="" target="_blank">黄山</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>出境热门</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E6%B3%B0%E5%9B%BD&amp;k=0#list" target="_blank">泰国</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E9%95%BF%E6%BB%A9%E5%B2%9B&amp;k=0#list" target="_blank">长滩岛</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E6%AF%9B%E9%87%8C%E6%B1%82%E6%96%AF&amp;k=0#list" target="_blank">毛里求斯</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E9%9F%A9%E5%9B%BD&amp;k=0#list" target="_blank">韩国</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E6%97%A5%E6%9C%AC&amp;k=0#list" target="_blank">日本</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E9%A9%AC%E5%B0%94%E4%BB%A3%E5%A4%AB&amp;k=0#list" target="_blank">马尔代夫</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E5%B7%B4%E5%8E%98%E5%B2%9B&amp;k=0#list" target="_blank">巴厘岛</a>
-		                    	<a href="http://s.lvmama.com/freetour/Z7H13K440100?keyword=%E8%B6%8A%E5%8D%97#list" target="_blank">越南</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E5%A1%9E%E8%88%8C%E5%B0%94&amp;k=0#list" target="_blank">塞舌尔</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A&amp;k=0#list" target="_blank">马来西亚</a>
-		                    	<a href="http://s.lvmama.com/freetour/H13K310000?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1&amp;k=0#list" target="_blank">新加坡</a>
-		                    	<a href="http://s.lvmama.com/freetour/Z7H13K310000?keyword=%E9%A6%99%E6%B8%AF#list" target="_blank">香港</a>
+		                    	<a href="" target="_blank">泰国</a>
+		                    	<a href="" target="_blank">长滩岛</a>
+		                    	<a href="" target="_blank">毛里求斯</a>
+		                    	<a href="" target="_blank">韩国</a>
+		                    	<a href="" target="_blank">日本</a>
+		                    	<a href="" target="_blank">马尔代夫</a>
+		                    	<a href="" target="_blank">巴厘岛</a>
+		                    	<a href="" target="_blank">越南</a>
+		                    	<a href="" target="_blank">塞舌尔</a>
+		                    	<a href="" target="_blank">马来西亚</a>
+		                    	<a href="" target="_blank">新加坡</a>
+		                    	<a href="" target="_blank">香港</a>
 	                    </dd>
 	                </dl>
             </div>
@@ -263,53 +264,53 @@
 	            	<dl>
 	                	<dt>热搜景点</dt>
 	                    <dd>
-		                    	<a href="http://www.lvmama.com/zt/promo/shdsn/" target="_blank">上海迪士尼乐园</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-100792" target="_blank">东方明珠</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-102843" target="_blank">野生动物园</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-157486" target="_blank">巧克力乐园</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-110109" target="_blank">杜莎蜡像馆</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-105194" target="_blank">长风海洋世界</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-10001132" target="_blank">公主学院乐园</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-120044" target="_blank">上海欢乐谷</a>
+		                    	<a href="" target="_blank">上海迪士尼乐园</a>
+		                    	<a href="" target="_blank">东方明珠</a>
+		                    	<a href="" target="_blank">野生动物园</a>
+		                    	<a href="" target="_blank">巧克力乐园</a>
+		                    	<a href="" target="_blank">杜莎蜡像馆</a>
+		                    	<a href="" target="_blank">长风海洋世界</a>
+		                    	<a href="" target="_blank">公主学院乐园</a>
+                                        <a href="" target="_blank">上海欢乐谷</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>国内热门</dt>
 	                    <dd>
-		                    	<a href="http://ticket.lvmama.com/a-shanghai79" target="_blank">上海</a>
-		                    	<a href="http://ticket.lvmama.com/a-beijing1" target="_blank">北京</a>
-		                    	<a href="http://ticket.lvmama.com/a-guangzhou229" target="_blank">广州</a>
-		                    	<a href="http://ticket.lvmama.com/a-chengdu279" target="_blank">成都</a>
-		                    	<a href="http://ticket.lvmama.com/a-hangzhou100" target="_blank">杭州</a>
-		                    	<a href="http://ticket.lvmama.com/a-wuxi83" target="_blank">无锡</a>
-		                    	<a href="http://ticket.lvmama.com/a-changzhou86" target="_blank">常州</a>
-		                    	<a href="http://ticket.lvmama.com/a-nanjing82" target="_blank">南京</a>
-		                    	<a href="http://ticket.lvmama.com/a-shenzhen231" target="_blank">深圳</a>
-		                    	<a href="http://ticket.lvmama.com/a-ningbo104" target="_blank">宁波</a>
-		                    	<a href="http://s.lvmama.com/ticket/K350200?keyword=%E5%8E%A6%E9%97%A8&amp;k=1#list" target="_blank">厦门</a>
-		                    	<a href="http://s.lvmama.com/ticket/K310000?keyword=%E4%B8%89%E4%BA%9A&amp;k=0#list" target="_blank">三亚</a>
+		                    	<a href="" target="_blank">上海</a>
+		                    	<a href="" target="_blank">北京</a>
+		                    	<a href="" target="_blank">广州</a>
+		                    	<a href="" target="_blank">成都</a>
+		                    	<a href="" target="_blank">杭州</a>
+		                    	<a href="" target="_blank">无锡</a>
+		                    	<a href="" target="_blank">常州</a>
+		                    	<a href="" target="_blank">南京</a>
+		                    	<a href="" target="_blank">深圳</a>
+		                    	<a href="" target="_blank">宁波</a>
+		                    	<a href="" target="_blank">厦门</a>
+		                    	<a href="" target="_blank">三亚</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>出境热门</dt>
 	                    <dd>
-		                    	<a href="http://ticket.lvmama.com/scenic-103686" target="_blank">香港海洋公园</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-105907" target="_blank">香港迪士尼乐园</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-157107" target="_blank">挪亚方舟</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-103576" target="_blank">香港杜莎夫人蜡像馆</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-103340" target="_blank">香港昂坪360缆车</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-103396" target="_blank">香港太平山顶</a>
-		                    	<a href="http://ticket.lvmama.com/scenic-154043" target="_blank">香港天际100观景台</a>
+		                    	<a href="" target="_blank">香港海洋公园</a>
+		                    	<a href="" target="_blank">香港迪士尼乐园</a>
+		                    	<a href="" target="_blank">挪亚方舟</a>
+                                        <a href="" target="_blank">香港杜莎夫人蜡像馆</a>
+		                    	<a href="" target="_blank">香港昂坪360缆车</a>
+		                    	<a href="" target="_blank">香港太平山顶</a>
+		                    	<a href="" target="_blank">香港天际100观景台</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>精选主题</dt>
 	                    <dd>
-		                    	<a href="http://www.lvmama.com/zt/promo/tttj/#mao1" target="_blank">天天特价</a>
-		                    	<a href="http://www.lvmama.com/zt/promo/shanghua/" target="_blank">赏花</a>
-		                    	<a href="http://ticket.lvmama.com/s-4e3b98984e5056ed" target="_blank">主题乐园</a>
-		                    	<a href="http://ticket.lvmama.com/s-52a8690d726956ed" target="_blank">动植物园</a>
-		                    	<a href="http://s.lvmama.com/ticket/K310000?keyword=%E4%B8%89%E4%BA%9A&amp;k=0#list" target="_blank">海滨岛屿</a>
+		                    	<a href="" target="_blank">天天特价</a>
+		                    	<a href="" target="_blank">赏花</a>
+		                    	<a href="" target="_blank">主题乐园</a>
+		                    	<a href="" target="_blank">动植物园</a>
+		                    	<a href="" target="_blank">海滨岛屿</a>
 	                    </dd>
 	                </dl>
             </div>
@@ -318,7 +319,7 @@
         
         <!--酒店板块-->
         <div class="lv_s_list">
-        	<div class="lv_s_tit"><a href="http://hotel.lvmama.com/" target="_blank">国际酒店<span> &gt;</span></a>国内酒店<small>(含港澳台)</small></div>
+        	<div class="lv_s_tit"><a href="" target="_blank">国际酒店<span> &gt;</span></a>国内酒店<small>(含港澳台)</small></div>
             <!--酒店搜索框-->
         	<!--出发地和搜索框-->
             <div class="lv_s_table clearfix">
@@ -382,22 +383,22 @@
 	            	<dl>
 	                	<dt>热门城市</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/hotel/U9?mdd=%E4%B8%8A%E6%B5%B7#list" target="_blank">上海</a>
-		                    	<a href="http://s.lvmama.com/hotel/U322?mdd=%E5%B9%BF%E5%B7%9E%2C%E5%B9%BF%E4%B8%9C#list" target="_blank">广州</a>
-		                    	<a href="http://s.lvmama.com/hotel/U13?mdd=%E5%8C%97%E4%BA%AC#list" target="_blank">北京</a>
-		                    	<a href="http://s.lvmama.com/hotel/U258?mdd=%E6%88%90%E9%83%BD%2C%E5%9B%9B%E5%B7%9D#list" target="_blank">成都</a>
-		                    	<a href="http://s.lvmama.com/hotel/U56?mdd=%E5%8D%97%E4%BA%AC%2C%E6%B1%9F%E8%8B%8F#list" target="_blank">南京</a>
-		                    	<a href="http://s.lvmama.com/hotel/U69?mdd=%E6%9D%AD%E5%B7%9E%2C%E6%B5%99%E6%B1%9F#list" target="_blank">杭州</a>
-		                    	<a href="http://s.lvmama.com/hotel/U57?mdd=%E6%97%A0%E9%94%A1%2C%E6%B1%9F%E8%8B%8F#list" target="_blank">无锡</a>
-		                    	<a href="http://s.lvmama.com/hotel/U73?keyword=&amp;mdd=%E6%B9%96%E5%B7%9E,%E6%B9%96%E5%B7%9E,%E6%B5%99%E6%B1%9F" target="_blank">湖州</a>
-		                    	<a href="http://s.lvmama.com/hotel/U155?mdd=%E5%8E%A6%E9%97%A8%2C%E7%A6%8F%E5%BB%BA#list" target="_blank">厦门</a>
-		                    	<a href="http://s.lvmama.com/hotel/U175?mdd=%E9%9D%92%E5%B2%9B%2C%E5%B1%B1%E4%B8%9C#list" target="_blank">青岛</a>
-		                    	<a href="http://s.lvmama.com/hotel/U74?mdd=%E7%BB%8D%E5%85%B4%2C%E6%B5%99%E6%B1%9F#list" target="_blank">绍兴</a>
-		                    	<a href="http://s.lvmama.com/hotel/U70?mdd=%E5%AE%81%E6%B3%A2%2C%E6%B5%99%E6%B1%9F#list" target="_blank">宁波</a>
-		                    	<a href="http://s.lvmama.com/hotel/U41C20160520O20160521?keyword=&amp;mdd=%E6%BE%B3%E9%97%A8" target="_blank">澳门</a>
-		                    	<a href="http://s.lvmama.com/hotel/U40C20160520O20160521?keyword=&amp;mdd=%E9%A6%99%E6%B8%AF" target="_blank">香港</a>
-		                    	<a href="http://s.lvmama.com/hotel/U256?mdd=%E8%A5%BF%E5%AE%89%2C%E9%99%95%E8%A5%BF#list" target="_blank">西安</a>
-		                    	<a href="http://s.lvmama.com/hotel/U257?mdd=%E4%B8%89%E4%BA%9A%2C%E6%B5%B7%E5%8D%97#list" target="_blank">三亚</a>
+		                    	<a href="" target="_blank">上海</a>
+		                    	<a href="" target="_blank">广州</a>
+		                    	<a href="" target="_blank">北京</a>
+		                    	<a href="" target="_blank">成都</a>
+		                    	<a href="" target="_blank">南京</a>
+		                    	<a href="" target="_blank">杭州</a>
+		                    	<a href="" target="_blank">无锡</a>
+		                    	<a href="" target="_blank">湖州</a>
+		                    	<a href="" target="_blank">厦门</a>
+		                    	<a href="" target="_blank">青岛</a>
+		                    	<a href="" target="_blank">绍兴</a>
+		                    	<a href="" target="_blank">宁波</a>
+		                    	<a href="" target="_blank">澳门</a>
+		                    	<a href="" target="_blank">香港</a>
+		                    	<a href="" target="_blank">西安</a>
+		                    	<a href="" target="_blank">三亚</a>
 	                    </dd>
 	                </dl>
             </div>
@@ -456,21 +457,21 @@
 		        	<dl>
 		            	<dt>热门城市</dt>
 		                <dd>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-SHA.html" target="_blank">上海</a>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-CTU.html" target="_blank">成都</a>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-SYX.html" target="_blank">三亚</a>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-XMN.html" target="_blank">厦门</a>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-XIY.html" target="_blank">西安</a>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-KMG.html" target="_blank">昆明</a>
+		                    	<a href="" target="_blank">上海</a>
+		                    	<a href="" target="_blank">成都</a>
+		                    	<a href="" target="_blank">三亚</a>
+		                    	<a href="" target="_blank">厦门</a>
+		                    	<a href="" target="_blank">西安</a>
+		                    	<a href="" target="_blank">昆明</a>
 		                </dd>
 		            </dl>
 		        	<dl>
 		            	<dt>热门航线</dt>
 		                <dd>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-SHA.html" target="_blank">北京-上海</a>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-CTU.html" target="_blank">北京-成都</a>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-SYX.html" target="_blank">北京-三亚</a>
-		                    	<a href="http://flight.lvmama.com/booking/PEK-XMN.html" target="_blank">北京-厦门</a>
+		                    	<a href="" target="_blank">北京-上海</a>
+		                    	<a href="" target="_blank">北京-成都</a>
+		                    	<a href="" target="_blank">北京-三亚</a>
+		                    	<a href="" target="_blank">北京-厦门</a>
 		                </dd>
 		            </dl>
             </div>
@@ -491,47 +492,47 @@
 	            	<dl>
 	                	<dt>热门航线</dt>
 	                    <dd>
-		                    	<a href="http://www.lvmama.com/youlun/line-l660-s0-b0-m0.html" target="_blank">日韩航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-%E6%97%A5%E6%9C%AC%E8%88%AA%E7%BA%BF.html" target="_blank">日本航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l663-s0-b0-m0.html" target="_blank">加勒比海航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l661-s0-b0-m0.html" target="_blank">东南亚航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l662-s0-b0-m0.html" target="_blank">地中海航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l675-s0-b0-m0.html" target="_blank">澳新航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l668-s0-b0-m0.html" target="_blank">中东航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l667-s0-b0-m0.html" target="_blank">阿拉斯加航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l672-s0-b0-m0.html" target="_blank">环球航线</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l666-s0-b0-m0.html" target="_blank">极地航线</a>
+		                    	<a href="" target="_blank">日韩航线</a>
+		                    	<a href="" target="_blank">日本航线</a>
+		                    	<a href="" target="_blank">加勒比海航线</a>
+		                    	<a href="" target="_blank">东南亚航线</a>
+		                    	<a href="" target="_blank">地中海航线</a>
+		                    	<a href="" target="_blank">澳新航线</a>
+		                    	<a href="" target="_blank">中东航线</a>
+		                    	<a href="" target="_blank">阿拉斯加航线</a>
+		                    	<a href=""  target="_blank">环球航线</a>
+		                    	<a href=""  target="_blank">极地航线</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>邮轮公司</dt>
 	                    <dd>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b19501-m0.html" target="_blank">天海邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b18682-m0.html" target="_blank">歌诗达邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b18702-m0.html" target="_blank">皇家加勒比邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b18720-m0.html" target="_blank">美国公主邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b18781-m0.html" target="_blank">NCL邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b18719-m0.html" target="_blank">丽星邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b18761-m0.html" target="_blank">MSC地中海邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b19165-m0.html" target="_blank">渤海邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b18805-m0.html" target="_blank">庞洛邮轮</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-all-l0-s0-b18806-m0.html" target="_blank">PAV邮轮</a>
+		                    	<a href=""  target="_blank">天海邮轮</a>
+		                    	<a href=""  target="_blank">歌诗达邮轮</a>
+		                    	<a href=""  target="_blank">皇家加勒比邮轮</a>
+		                    	<a href=""  target="_blank">美国公主邮轮</a>
+		                    	<a href=""  target="_blank">NCL邮轮</a>
+		                    	<a href=""  target="_blank">丽星邮轮</a>
+		                    	<a href=""  target="_blank">MSC地中海邮轮</a>
+		                    	<a href="" target="_blank">渤海邮轮</a>
+		                    	<a href="" target="_blank">庞洛邮轮</a>
+		                    	<a href="" target="_blank">PAV邮轮</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>出发港口</dt>
 	                    <dd>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s9-b0-m0.html" target="_blank">上海</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s14-b0-m0.html" target="_blank">天津</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s40-b0-m0.html" target="_blank">香港</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s221-b0-m0.html" target="_blank">海口</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s155-b0-m0.html" target="_blank">厦门</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s322-b0-m0.html" target="_blank">广州</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s175-b0-m0.html" target="_blank">青岛</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s4036-b0-m0.html" target="_blank">新加坡</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s7099-b0-m0.html" target="_blank">罗德岱堡</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s7102-b0-m0.html" target="_blank">迈阿密</a>
-		                    	<a href="http://www.lvmama.com/youlun/line-l0-s124-b0-m0.html" target="_blank">大连</a>
+		                    	<a href="" target="_blank">上海</a>
+		                    	<a href="" target="_blank">天津</a>
+		                    	<a href="" target="_blank">香港</a>
+		                    	<a href="" target="_blank">海口</a>
+		                    	<a href="" target="_blank">厦门</a>
+		                    	<a href="" target="_blank">广州</a>
+		                    	<a href="" target="_blank">青岛</a>
+		                    	<a href="" target="_blank">新加坡</a>
+		                    	<a href="" target="_blank">罗德岱堡</a>
+		                    	<a href="" target="_blank">迈阿密</a>
+		                    	<a href="" target="_blank">大连</a>
 	                    </dd>
 	                </dl>
             </div>
@@ -553,40 +554,40 @@
 	            	<dl>
 	                	<dt>亚洲热门</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E6%97%A5%E6%9C%AC#list" target="_blank">日本</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E9%9F%A9%E5%9B%BD#list" target="_blank">韩国</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E6%B3%B0%E5%9B%BD#list" target="_blank">泰国</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1#list" target="_blank">新加坡</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E8%8F%B2%E5%BE%8B%E5%AE%BE#list" target="_blank">菲律宾</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A#list" target="_blank">马来西亚</a>
-		                    	<a href="http://s.lvmama.com/visa/K310000S3?keyword=%E5%85%A5%E5%8F%B0%E8%AF%81#list" target="_blank">中国台湾</a>
+		                    	<a href="" target="_blank">日本</a>
+		                    	<a href="" target="_blank">韩国</a>
+		                    	<a href="" target="_blank">泰国</a>
+		                    	<a href="" target="_blank">新加坡</a>
+		                    	<a href="" target="_blank">菲律宾</a>
+		                    	<a href="" target="_blank">马来西亚</a>
+		                    	<a href="" target="_blank">中国台湾</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>欧洲热门</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E6%B3%95%E5%9B%BD#list" target="_blank">法国</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E6%84%8F%E5%A4%A7%E5%88%A9#list" target="_blank">意大利</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E8%8B%B1%E5%9B%BD#list" target="_blank">英国</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E5%B8%8C%E8%85%8A#list" target="_blank">希腊</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E5%BE%B7%E5%9B%BD#list" target="_blank">德国</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E7%91%9E%E5%A3%AB#list" target="_blank"> 瑞士</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E8%8D%B7%E5%85%B0#list" target="_blank">荷兰</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E8%A5%BF%E7%8F%AD%E7%89%99#list" target="_blank">西班牙</a>
+		                    	<a href="" target="_blank">法国</a>
+		                    	<a href="" target="_blank">意大利</a>
+		                    	<a href="" target="_blank">英国</a>
+		                    	<a href="" target="_blank">希腊</a>
+		                    	<a href="" target="_blank">德国</a>
+		                    	<a href="" target="_blank"> 瑞士</a>
+		                    	<a href="" target="_blank">荷兰</a>
+		                    	<a href="" target="_blank">西班牙</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>美洲热门</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E7%BE%8E%E5%9B%BD#list" target="_blank">美国</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E5%8A%A0%E6%8B%BF%E5%A4%A7#list" target="_blank">加拿大</a>
+		                    	<a href="" target="_blank">美国</a>
+		                    	<a href="" target="_blank">加拿大</a>
 	                    </dd>
 	                </dl>
 	            	<dl>
 	                	<dt>大洋洲热门</dt>
 	                    <dd>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A#list" target="_blank">澳大利亚</a>
-		                    	<a href="http://s.lvmama.com/visa/D721K110000?keyword=%E6%96%B0%E8%A5%BF%E5%85%B0#list" target="_blank">新西兰</a>
+		                    	<a href="" target="_blank">澳大利亚</a>
+		                    	<a href="" target="_blank">新西兰</a>
 	                    </dd>
 	                </dl>
             </div>
@@ -597,14 +598,14 @@
 	<div class="lv-ban-wrap-all">
 		<div class="lv-ban-wrap">
 			<ul class="lv-ban-imgs" id="js_allyes_1">
-				<li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z388,15706341,11137,5123&amp;k=key|BJ&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=d4DlrjPXn0K2v0BTeuy615pagsnK&amp;url=http://www.lvmama.com/zt/promo/shuqi/bj/#mao4" target="_blank"><img src="/home/img/sy01-hynt-qg.jpg" to_trd="null" height="400" width="1920"></a></li>
-				<li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z389,15552268,11138,5125&amp;k=key|BJ&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=d4DlrjPXn0K2v0BTeuy615pagsnK&amp;url=http://www.lvmama.com/zt/promo/zmcj/bj/" target="_blank"><img src="/home/img/sy02-zmy-sh.jpg" to_trd="null" height="400" width="1920"></a></li>
-				<li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z390,15698739,11139,5127&amp;k=key|BJ&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=d4DlrjPXn0K2v0BTeuy615pagsnK&amp;url=http://dujia.lvmama.com/tour/s-53e453176c349547/scenictour" target="_blank"><img src="/home/img/sy03-gb-bj.jpg" to_trd="null" height="400" width="1920"></a></li>
-				<li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z391,15551464,11140,5129&amp;k=key|BJ&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=d4DlrjPXn0K2v0BTeuy615pagsnK&amp;url=http://www.lvmama.com/zt/promo/cjshuqi/bj/?losc=084068&amp;ict=i" target="_blank"><img src="/home/img/sy04-sq-bj.jpg" to_trd="null" height="400" width="1920"></a></li>
-				<li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z392,15551062,11141,5131&amp;k=key|BJ&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=d4DlrjPXn0K2v0BTeuy615pagsnK&amp;url=http://www.lvmama.com/zt/promo/gnshuqi/bj/?losc=089481&amp;ict=i" target="_blank"><img src="/home/img/sy01-sqdc-ts.jpg" to_trd="null" height="400" width="1920"></a></li>
-				<li class="active"><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z393,15550660,11142,5133&amp;k=key|BJ&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=d4DlrjPXn0K2v0BTeuy615pagsnK&amp;url=http://www.lvmama.com/zt/promo/mddshuqi/" target="_blank"><img src="/home/img/sy06-hyzb-bj.jpg" to_trd="null" height="400" width="1920"></a></li>
-				<li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z526,15550258,14144,11477&amp;k=key|BJ&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=d4DlrjPXn0K2v0BTeuy615pagsnK&amp;url=http://ticket.lvmama.com/scenic-122748" target="_blank"><img src="/home/img/sy07-hy-bj.jpg" to_trd="null" height="400" width="1920"></a></li>
-				<li class=""><a href="http://lvmamim.qtmojo.com/c?d=lvmamim&amp;i=z527,15549856,14160,11509&amp;k=key|BJ&amp;rf=http%3A%2F%2Fwww.lvmama.com%2F&amp;a=d4DlrjPXn0K2v0BTeuy615pagsnK&amp;url=http://www.lvmama.com/zt/promo/May2016/" target="_blank"><img src="/home/img/sy08-sb-qz.jpg" to_trd="null" height="400" width="1920"></a></li>
+				<li class=""><a href="" target="_blank"><img src="/home/img/sy01-hynt-qg.jpg" to_trd="null" height="400" width="1920"></a></li>
+				<li class=""><a href="" target="_blank"><img src="/home/img/sy02-zmy-sh.jpg" to_trd="null" height="400" width="1920"></a></li>
+				<li class=""><a href="" target="_blank"><img src="/home/img/sy03-gb-bj.jpg" to_trd="null" height="400" width="1920"></a></li>
+				<li class=""><a href="" target="_blank"><img src="/home/img/sy04-sq-bj.jpg" to_trd="null" height="400" width="1920"></a></li>
+				<li class=""><a href="" target="_blank"><img src="/home/img/sy01-sqdc-ts.jpg" to_trd="null" height="400" width="1920"></a></li>
+				<li class="active"><a href="" target="_blank"><img src="/home/img/sy06-hyzb-bj.jpg" to_trd="null" height="400" width="1920"></a></li>
+				<li class=""><a href="" target="_blank"><img src="/home/img/sy07-hy-bj.jpg" to_trd="null" height="400" width="1920"></a></li>
+				<li class=""><a href="" target="_blank"><img src="/home/img/sy08-sb-qz.jpg" to_trd="null" height="400" width="1920"></a></li>
 			</ul>
 		
 			<!-- ban交互状态按钮 -->
@@ -624,502 +625,43 @@
             		<li onclick="onClickTag('首页_特卖版块横向1切换','特卖版块横向1切换');">境内特价<span class="tehui-arrow"></span></li>
             		<li onclick="onClickTag('首页_特卖版块横向2切换','特卖版块横向2切换');">境外特价<span class="tehui-arrow"></span></li>
             </ul>
-            <a class="public-tit-more fr" href="http://www.lvmama.com/tuangou" target="_blank">更多特卖<i class="icon-v7 icon-v7-more"></i></a>
+            <a class="public-tit-more fr" href="" target="_blank">更多特卖<i class="icon-v7 icon-v7-more"></i></a>
         </div>
         <div class="tehuiBox clearfix">
-            <div class="tehui-left fl">
+            <div class="tehui-left fl"b>
                 <ul class="tehuiLink">
-	    			<li><a href="http://www.lvmama.com/zt/promo/tmxibei/?losc=081566&amp;ict=i" target="_blank" title="全程无购物 放浪大西北">全程无购物 放浪大西北</a></li>
-	    			<li><a href="http://www.lvmama.com/zt/promo/tuangou/temai/?losc=081566&amp;ict=i" target="_blank" title="限时特卖 每日开抢">限时特卖 每日开抢</a></li>
-	    			<li><a href="http://www.lvmama.com/zt/promo/mddshuqi/?losc=081566&amp;ict=i" target="_blank" title="百元周边游 0元住酒店">百元周边游 0元住酒店</a></li>
+	    			<li><a href="" target="_blank" title="全程无购物 放浪大西北">全程无购物 放浪大西北</a></li>
+	    			<li><a href="" target="_blank" title="限时特卖 每日开抢">限时特卖 每日开抢</a></li>
+	    			<li><a href="" target="_blank" title="百元周边游 0元住酒店">百元周边游 0元住酒店</a></li>
                 </ul>
-            </div><!-- //tehuiBox-left -->
+            </div>
+	<!-- //tehuiBox-left -->
             <div class="tehuiPro fr">
-                <ul class="css3_liy-5 css3_run clearfix" style="display: block;">
+                
+                <ul class="css3_liy-5 css3_run clearfix" style="display: block">
+                    @foreach($place_data as $tmp)
                     <li>
-                        	<a class="tehuiPro-img" title="约翰内斯堡、开普敦、太阳城、比勒陀利亚5晚8日游（卡塔尔航空，特色茅草屋，比邻斯堡野生动物保护区，好望角，太阳城）★★★★【暑期特卖】" href="http://www.lvmama.com/tuangou/deal-379629?losc=081722&amp;ict=i" target="_blank"><img alt="约翰内斯堡、开普敦、太阳城、比勒陀利亚5晚8日游（卡塔尔航空，特色茅草屋，比邻斯堡野生动物保护区，好望角，太阳城）★★★★【暑期特卖】" src="/home/img/579dffa8-dfef-4be9-b7a1-3013a42b1adb_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>7.2</dfn>折</span>
+                        	<a class="tehuiPro-img" title="{{$tmp->title}}★★★★【暑期特卖】" href="/xiadanqian?id={{$tmp->id}}" target="_blank"><img alt="{{$tmp->title}}★★★★【暑期特卖】" src="{{$tmp->photo_path}}" height="143" width="215">
+                        	<span class="pro-tip"><dfn>{{$tmp->zkou}}</dfn>折</span>
                         	</a>
-                        	<a class="tehuiPro-tit" title="约翰内斯堡、开普敦、太阳城、比勒陀利亚5晚8日游（卡塔尔航空，特色茅草屋，比邻斯堡野生动物保护区，好望角，太阳城）★★★★【暑期特卖】" href="http://www.lvmama.com/tuangou/deal-379629?losc=081722&amp;ict=i" target="_blank">约翰内斯堡、开普敦、太阳城、比勒陀利亚5晚8日游（卡塔尔航空，特色茅草屋，比邻斯堡野生动物保护区，好望角，太阳城）★★★★【暑期特卖】</a>
+                        	<a class="tehuiPro-tit" title="{{$tmp->title}}★★★★【暑期特卖】" href="/xiadanqian?id={{$tmp->id}}" target="_blank">{{$tmp->title}}★★★★【暑期特卖】</a>
                         <p class="tehuiPro-info">
                             
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>5699</dfn>起 
-	                            <del><i>¥</i>7899</del>
+                            <span class="tehuiPro-info-price"><dfn><i>¥</i>{{$tmp->price}}</dfn>原价 
+	                            <del><i>¥</i>{{$tmp->old_price}}</del>
                             </span>
                         </p>
                     </li>
-                    <li>
-                        	<a class="tehuiPro-img" title="【大连金石滩发现王国·2天1晚自由行特卖】住大连发现王国度假酒店（5种房型可选）＋酒店早餐＋大连发现王国门票" href="http://www.lvmama.com/tuangou/sale-786378?losc=081722&amp;ict=i" target="_blank"><img alt="【大连金石滩发现王国·2天1晚自由行特卖】住大连发现王国度假酒店（5种房型可选）＋酒店早餐＋大连发现王国门票" src="/home/img/7cc5573c-9ea0-460e-81b4-9378ebf959a9_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>4.8</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【大连金石滩发现王国·2天1晚自由行特卖】住大连发现王国度假酒店（5种房型可选）＋酒店早餐＋大连发现王国门票" href="http://www.lvmama.com/tuangou/sale-786378?losc=081722&amp;ict=i" target="_blank">【大连金石滩发现王国·2天1晚自由行特卖】住大连发现王国度假酒店（5种房型可选）＋酒店早餐＋大连发现王国门票</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>660</dfn>起 
-	                            <del><i>¥</i>1369</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                        	<a class="tehuiPro-img" title="【2大免1小·北京4晚5天当地游】（住品牌连锁酒店，科技馆，海底世界，果园采摘，孔庙国子监，升旗仪式）" href="http://www.lvmama.com/tuangou/sale-808943?losc=081722&amp;ict=i" target="_blank"><img alt="【2大免1小·北京4晚5天当地游】（住品牌连锁酒店，科技馆，海底世界，果园采摘，孔庙国子监，升旗仪式）" src="/home/img/20c72523-c90f-49eb-8307-9bc0e99f1c80_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>5.8</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【2大免1小·北京4晚5天当地游】（住品牌连锁酒店，科技馆，海底世界，果园采摘，孔庙国子监，升旗仪式）" href="http://www.lvmama.com/tuangou/sale-808943?losc=081722&amp;ict=i" target="_blank">【2大免1小·北京4晚5天当地游】（住品牌连锁酒店，科技馆，海底世界，果园采摘，孔庙国子监，升旗仪式）</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>1145</dfn>起 
-	                            <del><i>¥</i>1980</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                        	<a class="tehuiPro-img" title="三亚双飞5天4晚自由行 住三亚嘉宾国际酒店（5叶绿色饭店）交通方便、享泳池园林、赠自助早餐" href="http://www.lvmama.com/tuangou/deal-685169?losc=081722&amp;ict=i" target="_blank"><img alt="三亚双飞5天4晚自由行 住三亚嘉宾国际酒店（5叶绿色饭店）交通方便、享泳池园林、赠自助早餐" src="/home/img/6424678d-4338-4023-81b6-ac3130532620_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>6.2</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="三亚双飞5天4晚自由行 住三亚嘉宾国际酒店（5叶绿色饭店）交通方便、享泳池园林、赠自助早餐" href="http://www.lvmama.com/tuangou/deal-685169?losc=081722&amp;ict=i" target="_blank">三亚双飞5天4晚自由行 住三亚嘉宾国际酒店（5叶绿色饭店）交通方便、享泳池园林、赠自助早餐</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>2060</dfn>起 
-	                            <del><i>¥</i>3299</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                        	<a class="tehuiPro-img" title="甩尾清仓限时抢 北京-三亚湾红树林木棉酒店5天4晚自由行，含双人自助早餐；赠送三亚凤凰机场-酒店的拼车接机服务【甩尾特卖】" href="http://www.lvmama.com/tuangou/sale-786989?losc=081722&amp;ict=i" target="_blank"><img alt="甩尾清仓限时抢 北京-三亚湾红树林木棉酒店5天4晚自由行，含双人自助早餐；赠送三亚凤凰机场-酒店的拼车接机服务【甩尾特卖】" src="/home/img/765c3e00-69f6-4761-8fa5-6664b90af0fc_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>8.6</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="甩尾清仓限时抢 北京-三亚湾红树林木棉酒店5天4晚自由行，含双人自助早餐；赠送三亚凤凰机场-酒店的拼车接机服务【甩尾特卖】" href="http://www.lvmama.com/tuangou/sale-786989?losc=081722&amp;ict=i" target="_blank">甩尾清仓限时抢 北京-三亚湾红树林木棉酒店5天4晚自由行，含双人自助早餐；赠送三亚凤凰机场-酒店的拼车接机服务【甩尾特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>2534</dfn>起 
-	                            <del><i>¥</i>2960</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                        	<a class="tehuiPro-img" title="【暑期特卖】昆明、大理、丽江、普达措、玉龙雪山大索道、三飞一卧6日跟团游(送平衡车，住国际连锁铂尔曼，挂牌5星酒店)" href="http://www.lvmama.com/tuangou/sale-788511?losc=081722&amp;ict=i" target="_blank"><img alt="【暑期特卖】昆明、大理、丽江、普达措、玉龙雪山大索道、三飞一卧6日跟团游(送平衡车，住国际连锁铂尔曼，挂牌5星酒店)" src="/home/img/1a24aa4a-f1c6-438b-aabd-48fd85cf8424_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>5.1</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【暑期特卖】昆明、大理、丽江、普达措、玉龙雪山大索道、三飞一卧6日跟团游(送平衡车，住国际连锁铂尔曼，挂牌5星酒店)" href="http://www.lvmama.com/tuangou/sale-788511?losc=081722&amp;ict=i" target="_blank">【暑期特卖】昆明、大理、丽江、普达措、玉龙雪山大索道、三飞一卧6日跟团游(送平衡车，住国际连锁铂尔曼，挂牌5星酒店)</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>2500</dfn>起 
-	                            <del><i>¥</i>4899</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                        	<a class="tehuiPro-img" title="【暑期已降500】日本东京、大阪、京都、富士山、箱根5晚6日游（一晚温泉酒店，富士山揽胜，“食”在日本，含天津北京大巴）【暑期特卖】" href="http://www.lvmama.com/tuangou/sale-288803?losc=081722&amp;ict=i" target="_blank"><img alt="【暑期已降500】日本东京、大阪、京都、富士山、箱根5晚6日游（一晚温泉酒店，富士山揽胜，“食”在日本，含天津北京大巴）【暑期特卖】" src="/home/img/850972a4-e996-4dfe-884c-ac13cd3ebcbd_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>8.3</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【暑期已降500】日本东京、大阪、京都、富士山、箱根5晚6日游（一晚温泉酒店，富士山揽胜，“食”在日本，含天津北京大巴）【暑期特卖】" href="http://www.lvmama.com/tuangou/sale-288803?losc=081722&amp;ict=i" target="_blank">【暑期已降500】日本东京、大阪、京都、富士山、箱根5晚6日游（一晚温泉酒店，富士山揽胜，“食”在日本，含天津北京大巴）【暑期特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>4960</dfn>起 
-	                            <del><i>¥</i>5999</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                        	<a class="tehuiPro-img" title="布达拉宫、大昭寺、巴松错、雅鲁藏布大峡谷、苯日神山、羊湖、卡若拉冰川、扎什伦布寺、纳木错9日游（一车一导、宿挂三星酒店，1晚住宿升级）【暑期爆款特卖】" href="http://www.lvmama.com/tuangou/sale-815660?losc=081722&amp;ict=i" target="_blank"><img alt="布达拉宫、大昭寺、巴松错、雅鲁藏布大峡谷、苯日神山、羊湖、卡若拉冰川、扎什伦布寺、纳木错9日游（一车一导、宿挂三星酒店，1晚住宿升级）【暑期爆款特卖】" src="/home/img/512bc8af-e06e-4c4f-bb39-5e4cb4dafce6_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>8.3</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="布达拉宫、大昭寺、巴松错、雅鲁藏布大峡谷、苯日神山、羊湖、卡若拉冰川、扎什伦布寺、纳木错9日游（一车一导、宿挂三星酒店，1晚住宿升级）【暑期爆款特卖】" href="http://www.lvmama.com/tuangou/sale-815660?losc=081722&amp;ict=i" target="_blank">布达拉宫、大昭寺、巴松错、雅鲁藏布大峡谷、苯日神山、羊湖、卡若拉冰川、扎什伦布寺、纳木错9日游（一车一导、宿挂三星酒店，1晚住宿升级）【暑期爆款特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>3299</dfn>起 
-	                            <del><i>¥</i>3998</del>
-                            </span>
-                        </p>
-                    </li>
+                   @endforeach  
                 </ul>
-                <ul class="css3_liy-5 css3_run clearfix">
-                    <li>
-                       	 	<a class="tehuiPro-img" title="【密云古北水镇浪漫之旅·自由行特卖】古北水镇入住北京古北水镇威廉埃德加＋古北水镇门票2张＋双人美味早餐【下单即享200元自驾养车礼包】" href="http://www.lvmama.com/tuangou/deal-600438?losc=081723&amp;ict=i" target="_blank"><img alt="【密云古北水镇浪漫之旅·自由行特卖】古北水镇入住北京古北水镇威廉埃德加＋古北水镇门票2张＋双人美味早餐【下单即享200元自驾养车礼包】" src="/home/img/bec7852e-c0c8-466f-a296-1844d9c7f77c_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>5.2</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【密云古北水镇浪漫之旅·自由行特卖】古北水镇入住北京古北水镇威廉埃德加＋古北水镇门票2张＋双人美味早餐【下单即享200元自驾养车礼包】" href="http://www.lvmama.com/tuangou/deal-600438?losc=081723&amp;ict=i" target="_blank">【密云古北水镇浪漫之旅·自由行特卖】古北水镇入住北京古北水镇威廉埃德加＋古北水镇门票2张＋双人美味早餐【下单即享200元自驾养车礼包】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>1190</dfn>起 
-	                            <del><i>¥</i>2280</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       	 	<a class="tehuiPro-img" title="古北水镇、雾灵西峰高山滑水2日跟团游(感受江南水镇与自然山水的完美结合，体验惊险刺激的高山流水)" href="http://www.lvmama.com/tuangou/deal-796766?losc=081723&amp;ict=i" target="_blank"><img alt="古北水镇、雾灵西峰高山滑水2日跟团游(感受江南水镇与自然山水的完美结合，体验惊险刺激的高山流水)" src="/home/img/ca1d3198-8672-438b-9609-459b40264acb_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>6.4</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="古北水镇、雾灵西峰高山滑水2日跟团游(感受江南水镇与自然山水的完美结合，体验惊险刺激的高山流水)" href="http://www.lvmama.com/tuangou/deal-796766?losc=081723&amp;ict=i" target="_blank">古北水镇、雾灵西峰高山滑水2日跟团游(感受江南水镇与自然山水的完美结合，体验惊险刺激的高山流水)</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>338</dfn>起 
-	                            <del><i>¥</i>528</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       	 	<a class="tehuiPro-img" title="【北京-三亚大卫传奇爱情度假酒店5天4晚·自由行】酒店临近机场、交通便利、性价比高；享受酒店内园林泳池、 赠送酒店早餐【春游季特卖】" href="http://www.lvmama.com/tuangou/sale-692128?losc=081723&amp;ict=i" target="_blank"><img alt="【北京-三亚大卫传奇爱情度假酒店5天4晚·自由行】酒店临近机场、交通便利、性价比高；享受酒店内园林泳池、 赠送酒店早餐【春游季特卖】" src="/home/img/0939505c-9997-41ab-8898-aa3d4b81e914_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>4.8</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【北京-三亚大卫传奇爱情度假酒店5天4晚·自由行】酒店临近机场、交通便利、性价比高；享受酒店内园林泳池、 赠送酒店早餐【春游季特卖】" href="http://www.lvmama.com/tuangou/sale-692128?losc=081723&amp;ict=i" target="_blank">【北京-三亚大卫传奇爱情度假酒店5天4晚·自由行】酒店临近机场、交通便利、性价比高；享受酒店内园林泳池、 赠送酒店早餐【春游季特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>2330</dfn>起 
-	                            <del><i>¥</i>4899</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       	 	<a class="tehuiPro-img" title="【天津三大乐园任选】入住1晚天津瑞湾开元大酒店高级大床房／高级双床房（2选1）＋2人自助早餐＋天津海昌极地海洋世界／天津欢乐谷／天津方特欢乐世界门票2张（3选1），不一样的旅行！【自由行特卖】" href="http://www.lvmama.com/tuangou/sale-816747?losc=081723&amp;ict=i" target="_blank"><img alt="【天津三大乐园任选】入住1晚天津瑞湾开元大酒店高级大床房／高级双床房（2选1）＋2人自助早餐＋天津海昌极地海洋世界／天津欢乐谷／天津方特欢乐世界门票2张（3选1），不一样的旅行！【自由行特卖】" src="/home/img/84a9c8b7-6fe6-47c1-a228-fdaf033d61db_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>3.3</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【天津三大乐园任选】入住1晚天津瑞湾开元大酒店高级大床房／高级双床房（2选1）＋2人自助早餐＋天津海昌极地海洋世界／天津欢乐谷／天津方特欢乐世界门票2张（3选1），不一样的旅行！【自由行特卖】" href="http://www.lvmama.com/tuangou/sale-816747?losc=081723&amp;ict=i" target="_blank">【天津三大乐园任选】入住1晚天津瑞湾开元大酒店高级大床房／高级双床房（2选1）＋2人自助早餐＋天津海昌极地海洋世界／天津欢乐谷／天津方特欢乐世界门票2张（3选1），不一样的旅行！【自由行特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>659</dfn>起 
-	                            <del><i>¥</i>1988</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       	 	<a class="tehuiPro-img" title="【国内特卖】茶卡盐湖、青海湖、祁连卓尔山、门源百里油菜花海巴士5日游" href="http://www.lvmama.com/tuangou/deal-677549?losc=081723&amp;ict=i" target="_blank"><img alt="【国内特卖】茶卡盐湖、青海湖、祁连卓尔山、门源百里油菜花海巴士5日游" src="/home/img/f35f0fbe-9eb3-455f-a666-db56739b2a35_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>5.9</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【国内特卖】茶卡盐湖、青海湖、祁连卓尔山、门源百里油菜花海巴士5日游" href="http://www.lvmama.com/tuangou/deal-677549?losc=081723&amp;ict=i" target="_blank">【国内特卖】茶卡盐湖、青海湖、祁连卓尔山、门源百里油菜花海巴士5日游</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>1760</dfn>起 
-	                            <del><i>¥</i>2988</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       	 	<a class="tehuiPro-img" title="【厦门3天2晚自由行特卖】住2晚城中小花园厦门悦华酒店（近东渡邮轮码头）（含双早）＋酒店免费接送机服务＋免费观光巴士＋免费健身房游泳池" href="http://www.lvmama.com/tuangou/deal-565556?losc=081723&amp;ict=i" target="_blank"><img alt="【厦门3天2晚自由行特卖】住2晚城中小花园厦门悦华酒店（近东渡邮轮码头）（含双早）＋酒店免费接送机服务＋免费观光巴士＋免费健身房游泳池" src="/home/img/de6798b5-7b1f-4ca6-ac14-5e84569e012a_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>4.4</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【厦门3天2晚自由行特卖】住2晚城中小花园厦门悦华酒店（近东渡邮轮码头）（含双早）＋酒店免费接送机服务＋免费观光巴士＋免费健身房游泳池" href="http://www.lvmama.com/tuangou/deal-565556?losc=081723&amp;ict=i" target="_blank">【厦门3天2晚自由行特卖】住2晚城中小花园厦门悦华酒店（近东渡邮轮码头）（含双早）＋酒店免费接送机服务＋免费观光巴士＋免费健身房游泳池</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>866</dfn>起 
-	                            <del><i>¥</i>1988</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       	 	<a class="tehuiPro-img" title="【云南当地住丽江悦榕庄7日·跟团游】昆明、丽江、大理，昆明直飞香格里拉，特色团餐，全程五星酒店全景游" href="http://www.lvmama.com/tuangou/sale-660620?losc=081723&amp;ict=i" target="_blank"><img alt="【云南当地住丽江悦榕庄7日·跟团游】昆明、丽江、大理，昆明直飞香格里拉，特色团餐，全程五星酒店全景游" src="/home/img/4ff56bba-e9fd-440d-8330-a0c6982547f0_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>4.5</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【云南当地住丽江悦榕庄7日·跟团游】昆明、丽江、大理，昆明直飞香格里拉，特色团餐，全程五星酒店全景游" href="http://www.lvmama.com/tuangou/sale-660620?losc=081723&amp;ict=i" target="_blank">【云南当地住丽江悦榕庄7日·跟团游】昆明、丽江、大理，昆明直飞香格里拉，特色团餐，全程五星酒店全景游</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>1210</dfn>起 
-	                            <del><i>¥</i>2699</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       	 	<a class="tehuiPro-img" title="【2晚希尔顿逸林亲子套餐：含乐园票、美味套餐、接送机、儿童拍照】住2晚西双版纳万达希尔顿酒店＋美味套餐＋乐园门票＋接送机＋儿童拍照（赠照片5张）＋香甜Cookie＋酒店早餐＋免费WIFI" href="http://www.lvmama.com/tuangou/sale-645683?losc=081723&amp;ict=i" target="_blank"><img alt="【2晚希尔顿逸林亲子套餐：含乐园票、美味套餐、接送机、儿童拍照】住2晚西双版纳万达希尔顿酒店＋美味套餐＋乐园门票＋接送机＋儿童拍照（赠照片5张）＋香甜Cookie＋酒店早餐＋免费WIFI" src="/home/img/a5c7ea3c-c812-47c9-9cec-f5907be3d9f5_300_200.jpg" height="143" width="215">
-                        	<span class="pro-tip"><dfn>4.6</dfn>折</span>
-                        	</a>
-                        	<a class="tehuiPro-tit" title="【2晚希尔顿逸林亲子套餐：含乐园票、美味套餐、接送机、儿童拍照】住2晚西双版纳万达希尔顿酒店＋美味套餐＋乐园门票＋接送机＋儿童拍照（赠照片5张）＋香甜Cookie＋酒店早餐＋免费WIFI" href="http://www.lvmama.com/tuangou/sale-645683?losc=081723&amp;ict=i" target="_blank">【2晚希尔顿逸林亲子套餐：含乐园票、美味套餐、接送机、儿童拍照】住2晚西双版纳万达希尔顿酒店＋美味套餐＋乐园门票＋接送机＋儿童拍照（赠照片5张）＋香甜Cookie＋酒店早餐＋免费WIFI</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>1700</dfn>起 
-	                            <del><i>¥</i>3689</del>
-                            </span>
-                        </p>
-                    </li>
-                </ul>
-                <ul class="css3_liy-5 css3_run clearfix">
-                    <li>
-                       		 <a class="tehuiPro-img" title="【已减800沙美岛泰新马9晚11日跟团游】全程泰式高档酒店，指定入住罗勇府塔姆纳帕高档度假村，沙美岛一日游【出境特卖】" href="http://www.lvmama.com/tuangou/deal-373555?losc=081726&amp;ict=i" target="_blank"><img alt="【已减800沙美岛泰新马9晚11日跟团游】全程泰式高档酒店，指定入住罗勇府塔姆纳帕高档度假村，沙美岛一日游【出境特卖】" src="/home/img/6a32eb98-bdd5-443b-8ff4-5e049b09027c_300_200.jpg" height="143" width="215">
-                        	 <span class="pro-tip"><dfn>3.9</dfn>折</span>
-                        	 </a>	
-                        	 <a class="tehuiPro-tit" title="【已减800沙美岛泰新马9晚11日跟团游】全程泰式高档酒店，指定入住罗勇府塔姆纳帕高档度假村，沙美岛一日游【出境特卖】" href="http://www.lvmama.com/tuangou/deal-373555?losc=081726&amp;ict=i" target="_blank">【已减800沙美岛泰新马9晚11日跟团游】全程泰式高档酒店，指定入住罗勇府塔姆纳帕高档度假村，沙美岛一日游【出境特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>2699</dfn>起 
-	                            <del><i>¥</i>6900</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       		 <a class="tehuiPro-img" title="【北京-欧洲6国10晚13日游】荷奥德法意瑞 (南航、巴黎圣母院、卢浮宫、佛罗伦萨、罗马、蓬皮杜艺术中心、威尼斯)【出境特卖】★★★★" href="http://www.lvmama.com/tuangou/deal-293927?losc=081726&amp;ict=i" target="_blank"><img alt="【北京-欧洲6国10晚13日游】荷奥德法意瑞 (南航、巴黎圣母院、卢浮宫、佛罗伦萨、罗马、蓬皮杜艺术中心、威尼斯)【出境特卖】★★★★" src="/home/img/9cbfb706-7ffd-492b-a7cf-ddc989957c08_300_200.jpg" height="143" width="215">
-                        	 <span class="pro-tip"><dfn>6.4</dfn>折</span>
-                        	 </a>	
-                        	 <a class="tehuiPro-tit" title="【北京-欧洲6国10晚13日游】荷奥德法意瑞 (南航、巴黎圣母院、卢浮宫、佛罗伦萨、罗马、蓬皮杜艺术中心、威尼斯)【出境特卖】★★★★" href="http://www.lvmama.com/tuangou/deal-293927?losc=081726&amp;ict=i" target="_blank">【北京-欧洲6国10晚13日游】荷奥德法意瑞 (南航、巴黎圣母院、卢浮宫、佛罗伦萨、罗马、蓬皮杜艺术中心、威尼斯)【出境特卖】★★★★</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>9500</dfn>起 
-	                            <del><i>¥</i>14900</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       		 <a class="tehuiPro-img" title="韩国首尔4晚5日自由行（含税机票、市内4晚酒店、赠送接机服务、WIFI、旅游意外险、两个免税店）【暑期特卖】" href="http://www.lvmama.com/tuangou/sale-685198?losc=081726&amp;ict=i" target="_blank"><img alt="韩国首尔4晚5日自由行（含税机票、市内4晚酒店、赠送接机服务、WIFI、旅游意外险、两个免税店）【暑期特卖】" src="/home/img/d203abeb-337c-4bb5-b2ba-4f747ab57eed_300_200.jpg" height="143" width="215">
-                        	 <span class="pro-tip"><dfn>6.4</dfn>折</span>
-                        	 </a>	
-                        	 <a class="tehuiPro-tit" title="韩国首尔4晚5日自由行（含税机票、市内4晚酒店、赠送接机服务、WIFI、旅游意外险、两个免税店）【暑期特卖】" href="http://www.lvmama.com/tuangou/sale-685198?losc=081726&amp;ict=i" target="_blank">韩国首尔4晚5日自由行（含税机票、市内4晚酒店、赠送接机服务、WIFI、旅游意外险、两个免税店）【暑期特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>3180</dfn>起 
-	                            <del><i>¥</i>4980</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       		 <a class="tehuiPro-img" title="【蓝韵土耳其8晚11日游】马汉航空，洞穴酒店，温泉酒店，当地特色美食【出境特卖】★★★★★" href="http://www.lvmama.com/tuangou/deal-175947?losc=081726&amp;ict=i" target="_blank"><img alt="【蓝韵土耳其8晚11日游】马汉航空，洞穴酒店，温泉酒店，当地特色美食【出境特卖】★★★★★" src="/home/img/581bf84f-97ba-4068-b8a2-ba4e14fe5c22_300_200.jpg" height="143" width="215">
-                        	 <span class="pro-tip"><dfn>4.6</dfn>折</span>
-                        	 </a>	
-                        	 <a class="tehuiPro-tit" title="【蓝韵土耳其8晚11日游】马汉航空，洞穴酒店，温泉酒店，当地特色美食【出境特卖】★★★★★" href="http://www.lvmama.com/tuangou/deal-175947?losc=081726&amp;ict=i" target="_blank">【蓝韵土耳其8晚11日游】马汉航空，洞穴酒店，温泉酒店，当地特色美食【出境特卖】★★★★★</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>7777</dfn>起 
-	                            <del><i>¥</i>16998</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       		 <a class="tehuiPro-img" title="【香港九龙珀丽酒店】香港3晚4日自由行（港龙航空往返 晚去晚回）【出境特卖】" href="http://www.lvmama.com/tuangou/deal-769366?losc=081726&amp;ict=i" target="_blank"><img alt="【香港九龙珀丽酒店】香港3晚4日自由行（港龙航空往返 晚去晚回）【出境特卖】" src="/home/img/6def6f3a-b8f9-4983-b4aa-6a5f443f8bde_300_200.jpg" height="143" width="215">
-                        	 <span class="pro-tip"><dfn>6.9</dfn>折</span>
-                        	 </a>	
-                        	 <a class="tehuiPro-tit" title="【香港九龙珀丽酒店】香港3晚4日自由行（港龙航空往返 晚去晚回）【出境特卖】" href="http://www.lvmama.com/tuangou/deal-769366?losc=081726&amp;ict=i" target="_blank">【香港九龙珀丽酒店】香港3晚4日自由行（港龙航空往返 晚去晚回）【出境特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>1499</dfn>起 
-	                            <del><i>¥</i>2188</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       		 <a class="tehuiPro-img" title="【暑期已降1600每人】俄罗斯一地三飞6晚8日游（VIM包机，金环三小镇，克里姆林宫，叶卡捷琳娜花园，夏宫花园，冬宫博物馆）【暑期特卖】" href="http://www.lvmama.com/tuangou/deal-172627?losc=081726&amp;ict=i" target="_blank"><img alt="【暑期已降1600每人】俄罗斯一地三飞6晚8日游（VIM包机，金环三小镇，克里姆林宫，叶卡捷琳娜花园，夏宫花园，冬宫博物馆）【暑期特卖】" src="/home/img/171d5765-2bba-4f4c-b56f-440ac8965805_300_200.jpg" height="143" width="215">
-                        	 <span class="pro-tip"><dfn>8.4</dfn>折</span>
-                        	 </a>	
-                        	 <a class="tehuiPro-tit" title="【暑期已降1600每人】俄罗斯一地三飞6晚8日游（VIM包机，金环三小镇，克里姆林宫，叶卡捷琳娜花园，夏宫花园，冬宫博物馆）【暑期特卖】" href="http://www.lvmama.com/tuangou/deal-172627?losc=081726&amp;ict=i" target="_blank">【暑期已降1600每人】俄罗斯一地三飞6晚8日游（VIM包机，金环三小镇，克里姆林宫，叶卡捷琳娜花园，夏宫花园，冬宫博物馆）【暑期特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>10888</dfn>起 
-	                            <del><i>¥</i>12980</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       		 <a class="tehuiPro-img" title="【暑期特惠】巴厘岛4晚6或7日游（经典行程，2天自由活动，全程入住当地精品酒店）★★★★【出境特卖】" href="http://www.lvmama.com/tuangou/deal-372774?losc=081726&amp;ict=i" target="_blank"><img alt="【暑期特惠】巴厘岛4晚6或7日游（经典行程，2天自由活动，全程入住当地精品酒店）★★★★【出境特卖】" src="/home/img/feaa0b97-e39e-409b-9b2f-020e43b5dcdb_300_200.jpg" height="143" width="215">
-                        	 <span class="pro-tip"><dfn>9.6</dfn>折</span>
-                        	 </a>	
-                        	 <a class="tehuiPro-tit" title="【暑期特惠】巴厘岛4晚6或7日游（经典行程，2天自由活动，全程入住当地精品酒店）★★★★【出境特卖】" href="http://www.lvmama.com/tuangou/deal-372774?losc=081726&amp;ict=i" target="_blank">【暑期特惠】巴厘岛4晚6或7日游（经典行程，2天自由活动，全程入住当地精品酒店）★★★★【出境特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>4780</dfn>起 
-	                            <del><i>¥</i>4980</del>
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                       		 <a class="tehuiPro-img" title="泰国、曼谷新加坡马来西亚9晚12日（泰国全程五星酒店、泰国享5个国际自助餐）★★★★【出境特卖】" href="http://www.lvmama.com/tuangou/deal-196409?losc=081726&amp;ict=i" target="_blank"><img alt="泰国、曼谷新加坡马来西亚9晚12日（泰国全程五星酒店、泰国享5个国际自助餐）★★★★【出境特卖】" src="/home/img/bed5eacb-9ceb-4b0f-ba09-8c506013370c_300_200.jpg" height="143" width="215">
-                        	 <span class="pro-tip"><dfn>5.3</dfn>折</span>
-                        	 </a>	
-                        	 <a class="tehuiPro-tit" title="泰国、曼谷新加坡马来西亚9晚12日（泰国全程五星酒店、泰国享5个国际自助餐）★★★★【出境特卖】" href="http://www.lvmama.com/tuangou/deal-196409?losc=081726&amp;ict=i" target="_blank">泰国、曼谷新加坡马来西亚9晚12日（泰国全程五星酒店、泰国享5个国际自助餐）★★★★【出境特卖】</a>
-                        <p class="tehuiPro-info">
-                            
-                            <span class="tehuiPro-info-price"><dfn><i>¥</i>3199</dfn>起 
-	                            <del><i>¥</i>5980</del>
-                            </span>
-                        </p>
-                    </li>
-                </ul>
+               
+                
+               
             </div><!-- //tehuiBox-pro -->
         </div><!-- //tehuiBox -->	</div>
 <!-- 特惠版块 结束 -->
 
-<!-- 出境游开始 -->
-	<div class="public-box clearfix count-first JS_chujing" data-count-first="出境游">
-<div class="public-tit">
-    	    <h3 class="fl"><strong>出境游</strong><span>世界有多大,我就玩多远</span></h3>
-    	    <ul class="JS_public public-sub">
-    	    	    	    			<li onclick="onClickTag('首页_出境版块横向0切换','出境版块横向0切换');" class="active" paramdatasearchname="跟团游" paramdatacode="cjy_ShortPlace_gty" paramid="tab1" parenttype="piccjy"> 跟团游<em class="icon-v7 icon-v7-sub"></em></li>
-    	    			<li onclick="onClickTag('首页_出境版块横向1切换','出境版块横向1切换');" paramdatasearchname="自由行" paramdatacode="cjy_ShortPlace_zyx" paramid="tab2" parenttype="piccjy"> 自由行<em class="icon-v7 icon-v7-sub"></em></li>
-    	    			<li onclick="onClickTag('首页_出境版块横向2切换','出境版块横向2切换');" paramdatasearchname="手机专享" paramdatacode="cjy_ShortPlace_wxzx" paramid="tab3" parenttype="piccjy"><i class="icon-v7 icon-v7-mobile"></i> 手机专享<em class="icon-v7 icon-v7-sub"></em></li>
-			</ul>
-    	    <a class="public-tit-more fr" href="http://www.lvmama.com/abroad" target="_blank">更多出境游<i class="icon-v7 icon-v7-more"></i></a>
-    	</div>
-		<div class="chujing-box clearfix">
-			<!-- 公共左边导航模块开始 -->
-			<div class="public-asidebg fl count-first" data-count-first="左侧导航">
-				<div class="public-asidenav">
-					<dl>
-						<dt>
-							<h3>海外热门</h3>
-							<strong>短途</strong>
-						</dt>
-							<dd><a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%97%A5%E6%9C%AC&amp;k=0#list" title="日本" target="_blank">日本</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E9%9F%A9%E5%9B%BD&amp;k=0#list" title="韩国" target="_blank">韩国</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%B3%B0%E5%9B%BD&amp;k=0#list" title="泰国" target="_blank">泰国</a>
-							<a class="r" href="http://s.lvmama.com/freetour/Z7H13K110000?keyword=%E6%B2%99%E5%B7%B4#list" title="沙巴" target="_blank">沙巴</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%B7%B4%E5%8E%98%E5%B2%9B&amp;k=0#list" title="巴厘岛" target="_blank">巴厘岛</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E5%A1%9E%E7%8F%AD%E5%B2%9B&amp;k=0#list" title="塞班岛" target="_blank">塞班岛</a></dd>
-							<dd><a href="http://dujia.lvmama.com/tour/xianggang398" title="香港" target="_blank">香港</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E8%B6%8A%E5%8D%97&amp;k=0#list" title="越南" target="_blank">越南</a></dd>
-							<dd><a href="http://s.lvmama.com/group/Z5H13K110000?keyword=%E6%99%AE%E5%90%89%E5%B2%9B#list" title="普吉岛" target="_blank">普吉岛</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E9%95%BF%E6%BB%A9%E5%B2%9B&amp;k=0#list" title="长滩岛" target="_blank">长滩岛</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K310000?keyword=%E5%8F%B0%E6%B9%BE&amp;k=0#list" title="中国台湾" target="_blank">中国台湾</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E6%96%B0%E5%8A%A0%E5%9D%A1&amp;k=0#list" title="新加坡" target="_blank">新加坡</a></dd>
-						<dt>
-							<strong>长途</strong>
-						</dt>
-							<dd><a href="http://s.lvmama.com/freetour/Z7H13K110000?keyword=%E9%A9%AC%E5%B0%94%E4%BB%A3%E5%A4%AB#list" title="马尔代夫" target="_blank">马尔代夫</a>
-							<a class="r" href="http://s.lvmama.com/freetour/H13K110000?keyword=%E6%AF%9B%E9%87%8C%E6%B1%82%E6%96%AF&amp;k=1#list" title="毛里求斯" target="_blank">毛里求斯</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K310000?keyword=%E6%96%B0%E8%A5%BF%E5%85%B0&amp;k=1#list" title="新西兰" target="_blank">新西兰</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A&amp;k=0#list" title="澳大利亚" target="_blank">澳大利亚</a></dd>
-							<dd><a href="http://dujia.lvmama.com/tour/xila3634/group#list" title="希腊" target="_blank">希腊</a>
-							<a class="r" href="http://dujia.lvmama.com/tour/yidali3562/group#list" title="意大利" target="_blank">意大利</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%B3%95%E5%9B%BD&amp;k=0#list" title="法国" target="_blank">法国</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E8%8B%B1%E5%9B%BD&amp;k=0#list" title="英国" target="_blank">英国</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K110000?keyword=%E8%BF%AA%E6%8B%9C&amp;k=0#list" title="迪拜" target="_blank">迪拜</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E6%96%AF%E9%87%8C%E5%85%B0%E5%8D%A1&amp;k=0#list" title="斯里兰卡" target="_blank">斯里兰卡</a></dd>
-						<dt>
-							<h3>主题旅游</h3>
-						</dt>
-							<dd><a href="http://dujia.lvmama.com/tour/aiji3572/route-H13" title="探秘埃及" target="_blank">探秘埃及</a>
-							<a class="r" href="http://dujia.lvmama.com/tour/taiguo3542/route-H13" title="泰国萨瓦迪卡" target="_blank">泰国萨瓦迪卡</a></dd>
-							<dd><a href="http://dujia.lvmama.com/tour/hanguo3544/route-H13" title="玩转韩国行" target="_blank">玩转韩国行</a>
-							<a class="r" href="http://dujia.lvmama.com/tour/saibandao3547/route-H13" title="唯美塞班" target="_blank">唯美塞班</a></dd>
-							<dd><a href="http://dujia.lvmama.com/tour/aodaliya3596/route-H13" title="澳新欢乐游" target="_blank">澳新欢乐游</a>
-							<a class="r" href="http://dujia.lvmama.com/tour/balidao3545/route-H13" title="情迷巴厘" target="_blank">情迷巴厘</a></dd>
-							<dd><a href="http://s.lvmama.com/freetour/Z7H13?keyword=%E9%A6%99%E6%B8%AF#list" title="港澳特惠" target="_blank">港澳特惠</a>
-							<a class="r" href="http://dujia.lvmama.com/tour/ouzhou3644/route-H13" title="畅游欧洲" target="_blank">畅游欧洲</a></dd>
-							<dd><a href="http://dujia.lvmama.com/tour/meiguo3571/route-H13" title="北美之旅" target="_blank">北美之旅</a>
-							<a class="r" href="http://dujia.lvmama.com/tour/riben3543/route-H13" title="玩转日本" target="_blank">玩转日本</a></dd>
-					</dl>
-				</div>
-			</div>
-			<!-- 公共左边导航模块结束 -->
 
-			<!-- 侧边产品list -->
-			<div class="public-pro clearfix fl count-first" data-count-first="右侧图片列表">
-				<div class="pro-list fl">
-					<ul class="css3_liy-5 css3_run">
-					
-							  	<li class="w485_243">
-									<p class="pro-list-pic">
-										<a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%B7%B4%E5%8E%98%E5%B2%9B&amp;k=0#list" title="巴厘岛" target="_blank">
-											<span class="pro-list-float"><strong>爱在巴厘</strong>浪漫蜜月圣地</span>
-											<img src="/home/img/1456830310181.jpg" alt="巴厘岛" height="243" width="485">
-										</a>
-									</p>
-									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>3099</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%B7%B4%E5%8E%98%E5%B2%9B&amp;k=0#list" title="巴厘岛" target="_blank">巴厘岛</a></p>
-								</li>
-							  	<li class="w235_243">
-									<p class="pro-list-pic"><a href="http://s.lvmama.com/group/H13K370200?keyword=%E6%97%A5%E6%9C%AC&amp;k=0#list" title="日本" target="_blank"><img src="/home/img/1435286239979.jpg" alt="日本" height="243" width="235"></a></p>
-									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>3399</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://s.lvmama.com/group/H13K370200?keyword=%E6%97%A5%E6%9C%AC&amp;k=0#list" title="日本" target="_blank">日本</a></p>
-								</li>
-								<li>
-									<p class="pro-list-pic"><a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%B3%B0%E5%9B%BD&amp;k=0#list" title="泰国" target="_blank"><img src="/home/img/a41e0581-b9ee-4765-8de1-44e6eb3ae417.jpg" alt="泰国" height="157" width="235"></a></p>
-									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>1799</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://s.lvmama.com/group/H13K110000?keyword=%E6%B3%B0%E5%9B%BD&amp;k=0#list" title="泰国" target="_blank">泰国</a></p>
-								</li>
-								<li>
-									<p class="pro-list-pic"><a href="http://s.lvmama.com/group/H13K370200?keyword=%E6%AC%A7%E6%B4%B2&amp;k=0#list" title="欧洲" target="_blank"><img src="/home/img/6.jpg" alt="欧洲" height="157" width="235"></a></p>
-									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>3888</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://s.lvmama.com/group/H13K370200?keyword=%E6%AC%A7%E6%B4%B2&amp;k=0#list" title="欧洲" target="_blank">欧洲</a></p>
-								</li>
-								<li>
-									<p class="pro-list-pic"><a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%9F%83%E5%8F%8A&amp;k=0#list" title="埃及" target="_blank"><img src="/home/img/a4eb1ca0-64ad-4ad6-a307-64be357023fa.jpg" alt="埃及" height="157" width="235"></a></p>
-									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>6199</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%9F%83%E5%8F%8A&amp;k=0#list" title="埃及" target="_blank">埃及</a></p>
-								</li>
-					</ul>
-				</div>
-				
-				<!-- 特卖会 -->
-				<div class="public-tuango fr">
-					<a href="http://www.lvmama.com/tuangou/deal-226993" title="已降1500元奥德法意瑞梵6国13日游" target="_blank">
-						<img src="/home/img/5a8f706e-b68e-4713-a524-a59ca2971be3.jpg" alt="已降1500元奥德法意瑞梵6国13日游" height="435" width="195">
-						<div class="tuango-info blue">
-							<strong>特卖</strong>
-							<p>已降1500元奥德法意瑞梵6国13日游</p>
-							<p class="tuango-price"><i>￥</i><em>9200</em>起</p>
-						</div>						
-					</a>
-				</div>
-			</div>
-
-			<!-- 游轮签证 -->
-			<div class="youlun-qianzheng clearfix fl">
-				<div class="youlun-box fl">
-					<div class="public-tit">
-						<a class="public-tit-more fr" href="http://www.lvmama.com/youlun/" target="_blank">更多<i class="icon-v7 icon-v7-more"></i></a>
-			    	    <h3><strong>邮轮</strong></h3>
-			    	</div>
-			    	<div class="youlun-list">
-			    		<ul class="css3_liy-5 css3_run clearfix">
-					    		<li>
-		                           <p class="pro-list-pic">
-		                           <a target="_blank" title="日韩航线" href="http://www.lvmama.com/youlun/line-l660-s14-b0-m0.html"><img alt="日韩航线" src="/home/img/1453bead-22a5-4bd5-946c-a71883d206ec.jpg" height="157" width="235">
-		                             </a>
-		                           </p>
-		                           <p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>2599</em>起</span><a target="_blank" title="日韩航线" href="http://www.lvmama.com/youlun/line-l660-s14-b0-m0.html">日韩航线</a></p>
-		                       </li>
-					    		<li>
-		                           <p class="pro-list-pic">
-		                           <a target="_blank" title="加勒比航线" href="http://www.lvmama.com/youlun/line-l663-s0-b0-m0.html?sort=18"><img alt="加勒比航线" src="/home/img/e8ef2e06-26aa-4c21-86c4-a1a163cc7bef.jpg" height="157" width="235">
-		                             </a>
-		                           </p>
-		                           <p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>5024</em>起</span><a target="_blank" title="加勒比航线" href="http://www.lvmama.com/youlun/line-l663-s0-b0-m0.html?sort=18">加勒比航线</a></p>
-		                       </li>
-				    	</ul>
-			    	</div>
-				</div>
-
-				<div class="qianzheng-box fr">
-					<div class="public-tit">
-						<a class="public-tit-more fr" href="http://www.lvmama.com/visa/" target="_blank">更多<i class="icon-v7 icon-v7-more"></i></a>
-			    	    <h3><strong>签证</strong></h3>
-						
-			    	</div>
-			    	<!-- 签证模块修改 -->
-                    <div class="qianzhengNew">
-                        <ul class="css3_liy-5 css3_run clearfix">
-                            <li>
-                                <p class="qianzheng-pic">
-                                    <em class="fr">出签率 99%</em>
-                                    <a target="_blank" href="http://s.lvmama.com/visa/D721K110000?keyword=%E7%BE%8E%E5%9B%BD#list" title="美国"><img src="/home/img/1422523023545.jpg" alt="美国" height="55" width="110"></a>
-                                </p>
-                                <p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>1169</em>起</span><a href="http://s.lvmama.com/visa/D721K110000?keyword=%E7%BE%8E%E5%9B%BD#list" title="美国" target="_blank">美国</a></p>
-                            </li>
-                            <li>
-                                <p class="qianzheng-pic">
-                                    <em class="fr">出签率 99.9%</em>
-                                    <a target="_blank" href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E6%97%A5%E6%9C%AC#list" title="日本"><img src="/home/img/1422523038077.jpg" alt="日本" height="55" width="110"></a>
-                                </p>
-                                <p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>269</em>起</span><a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E6%97%A5%E6%9C%AC#list" title="日本" target="_blank">日本</a></p>
-                            </li>
-                            <li>
-                                <p class="qianzheng-pic">
-                                    <em class="fr">出签率 99.9%</em>
-                                    <a target="_blank" href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E9%9F%A9%E5%9B%BD#list" title="韩国"><img src="/home/img/1422523053349.jpg" alt="韩国" height="55" width="110"></a>
-                                </p>
-                                <p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>279</em>起</span><a href="http://s.lvmama.com/visa/D721K110000S3?keyword=%E9%9F%A9%E5%9B%BD#list" title="韩国" target="_blank">韩国</a></p>
-                            </li>
-                            <li>
-                                <p class="qianzheng-pic">
-                                    <em class="fr">出签率100%</em>
-                                    <a target="_blank" href="http://s.lvmama.com/visa/D721K110000?keyword=%E6%B3%B0%E5%9B%BD#list" title="泰国"><img src="/home/img/1422523067526.jpg" alt="泰国" height="55" width="110"></a>
-                                </p>
-                                <p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>240</em>起</span><a href="http://s.lvmama.com/visa/D721K110000?keyword=%E6%B3%B0%E5%9B%BD#list" title="泰国" target="_blank">泰国</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 签证模块修改end -->
-			    	
-				</div>
-			</div>
-
-		</div>	</div>
-<!-- 出境游结束 -->
 
 <!-- 国内游开始 -->
 	<div class="public-box clearfix count-first" data-count-first="国内游">
@@ -1139,29 +681,29 @@
 						<dt>
 							<h3>热门目的地</h3>
 						</dt>
-							<dd><a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E4%B8%89%E4%BA%9A&amp;k=0#list" title="三亚" target="_blank">三亚</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E4%BA%91%E5%8D%97&amp;k=0#list" title="云南" target="_blank">云南</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K310000?keyword=%E5%86%85%E8%92%99%E5%8F%A4&amp;k=0#list" title="内蒙古" target="_blank">内蒙古</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E8%A5%BF%E8%97%8F&amp;k=1#list" title="西藏" target="_blank">西藏</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K310000?keyword=%E6%A1%82%E6%9E%97&amp;k=0#list" title="桂林" target="_blank">桂林</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K310000?keyword=%E4%B9%9D%E5%AF%A8%E6%B2%9F&amp;k=0#list" title="九寨沟" target="_blank">九寨沟</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K310000?keyword=%E5%8C%97%E4%BA%AC&amp;k=1#list" title="北京" target="_blank">北京</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K310000?keyword=%E5%8E%A6%E9%97%A8&amp;k=0#list" title="厦门" target="_blank">厦门</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K310000?keyword=%E5%BC%A0%E5%AE%B6%E7%95%8C#list" title="张家界" target="_blank">张家界</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K310000?keyword=%E9%BB%84%E5%B1%B1&amp;k=0#list" title="黄山" target="_blank">黄山</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K110000?keyword=%E5%B1%B1%E8%A5%BF&amp;k=1#list" title="山西" target="_blank">山西</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K310000?keyword=%E4%B9%8C%E9%95%87&amp;k=0#list" title="乌镇" target="_blank">乌镇</a></dd>
-							<dd><a href="http://s.lvmama.com/group/H13K310000?keyword=%E6%9D%AD%E5%B7%9E&amp;k=0#list" title="杭州" target="_blank">杭州</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K310000?keyword=%E5%A4%A9%E6%B4%A5&amp;k=1#list" title="天津" target="_blank">天津</a></dd>
+							<dd><a href="" title="三亚" target="_blank">三亚</a>
+							<a class="r" href="" title="云南" target="_blank">云南</a></dd>
+							<dd><a href="" title="内蒙古" target="_blank">内蒙古</a>
+							<a class="r" href="" title="西藏" target="_blank">西藏</a></dd>
+							<dd><a href="" title="桂林" target="_blank">桂林</a>
+							<a class="r" href="" title="九寨沟" target="_blank">九寨沟</a></dd>
+							<dd><a href="" title="北京" target="_blank">北京</a>
+							<a class="r" href="" title="厦门" target="_blank">厦门</a></dd>
+							<dd><a href="" title="张家界" target="_blank">张家界</a>
+							<a class="r" href="" title="黄山" target="_blank">黄山</a></dd>
+							<dd><a href="" title="山西" target="_blank">山西</a>
+							<a class="r" href="" title="乌镇" target="_blank">乌镇</a></dd>
+							<dd><a href="" title="杭州" target="_blank">杭州</a>
+							<a class="r" href="" title="天津" target="_blank">天津</a></dd>
 						<dt>
 							<h3>热门主题</h3>
 						</dt>
-							<dd><a href="http://www.lvmama.com/tuangou/sale-787353" title="草原专列" target="_blank">草原专列</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000Y3?keyword=%E5%BC%80%E5%BF%83%E9%A9%B4%E8%A1%8C#list#list" title="开心驴行" target="_blank">开心驴行</a></dd>
-							<dd><a href="http://www.lvmama.com/zt/promo/gnshuqi/bj/?losc=089481&amp;ict=i" title="暑期大促" target="_blank">暑期大促</a>
-							<a class="r" href="http://s.lvmama.com/freetour/H13K110000?keyword=%E6%B8%85%E4%BB%93&amp;k=0#list" title="三亚清仓" target="_blank">三亚清仓</a></dd>
-							<dd><a href="http://s.lvmama.com/group/D13H13K110000?keyword=%E9%80%81%E7%BA%A2%E9%85%92#list" title="送红酒" target="_blank">送红酒</a>
-							<a class="r" href="http://s.lvmama.com/group/H13K110000?keyword=%E9%80%81%E5%92%95%E5%92%9A%E6%B4%97%E8%A1%A3%E6%9C%BA&amp;k=1#list" title="送咕咚洗衣机" target="_blank">送咕咚洗衣机</a></dd>
+							<dd><a href="" title="草原专列" target="_blank">草原专列</a>
+							<a class="r" href="" title="开心驴行" target="_blank">开心驴行</a></dd>
+							<dd><a href="" title="暑期大促" target="_blank">暑期大促</a>
+							<a class="r" href="" title="三亚清仓" target="_blank">三亚清仓</a></dd>
+							<dd><a href="" title="送红酒" target="_blank">送红酒</a>
+							<a class="r" href="" title="送咕咚洗衣机" target="_blank">送咕咚洗衣机</a></dd>
 					</dl>
 				</div>
 			</div>
@@ -1171,46 +713,49 @@
 			<div class="public-pro clearfix fl count-first" data-count-first="右侧图片列表">
 				<div class="pro-list fl">
 					<ul class="css3_liy-5 css3_run">
+                                            
+                                           
 								<li class="w485_243">
-									<p class="pro-list-pic"><a href="http://www.lvmama.com/tuangou/sale-787353" title="草原专列 5年销量冠军 品质保证" target="_blank"><img src="/home/img/168482a8-aa2b-4560-b86c-d44f15c9bb26.jpg" alt="草原专列 5年销量冠军 品质保证" height="243" width="485"></a></p>
+									<p class="pro-list-pic"><a href="/xiadanqian?id={{$place_gn['0']->id}}" title="{{$place_gn['0']->title}}" target="_blank"><img src="{{$place_gn['0']->photo_path}}" alt="{{$place_gn['0']->title}}" height="243" width="485"></a></p>
 
 									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>2700</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://www.lvmama.com/tuangou/sale-787353" title="草原专列 5年销量冠军 品质保证" target="_blank">草原专列 5年销量冠军 品质保证</a></p>
+									</span><a href="" title="{{$place_gn['0']->title}}" target="_blank">{{$place_gn['0']->title}}</a></p>
 								</li>
 								<li class="w235_243">
-									<p class="pro-list-pic"><a href="http://s.lvmama.com/group/H13K120000?keyword=%E5%8E%A6%E9%97%A8#list" title="厦门" target="_blank"><img src="/home/img/26200f30-06a2-40f1-8657-5b59b3f85a3d.jpg" alt="厦门" height="243" width="235"></a></p>
+									<p class="pro-list-pic"><a href="/xiadanqian?id={{$place_gn['1']->id}}" title="{{$place_gn['1']->title}}" target="_blank"><img src="{{$place_gn['1']->photo_path}}" alt="{{$place_gn['1']->title}}" height="243" width="235"></a></p>
 
 									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>1849</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://s.lvmama.com/group/H13K120000?keyword=%E5%8E%A6%E9%97%A8#list" title="厦门" target="_blank">厦门</a></p>
+									</span><a href="" title="{{$place_gn['1']->title}}" target="_blank">{{$place_gn['1']->title}}</a></p>
 								</li>
 								<li>
-									<p class="pro-list-pic"><a href="http://s.lvmama.com/group/H13K110000?keyword=%E4%B8%8A%E6%B5%B7%E8%BF%AA%E5%A3%AB%E5%B0%BC%E4%B9%90%E5%9B%AD&amp;k=0#list" title="上海迪士尼" target="_blank"><img src="/home/img/d2443487-768c-49a1-a019-d04a745a4b67.jpg" alt="上海迪士尼" height="157" width="235"></a></p>
+									<p class="pro-list-pic"><a href="/xiadanqian?id={{$place_gn['2']->id}}" title="{{$place_gn['2']->title}}" target="_blank"><img src="{{$place_gn['2']->photo_path}}" alt="{{$place_gn['2']->title}}" height="157" width="235"></a></p>
 
 									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>2080</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://s.lvmama.com/group/H13K110000?keyword=%E4%B8%8A%E6%B5%B7%E8%BF%AA%E5%A3%AB%E5%B0%BC%E4%B9%90%E5%9B%AD&amp;k=0#list" title="上海迪士尼" target="_blank">上海迪士尼</a></p>
+									</span><a href="" title="{{$place_gn['2']->title}}" target="_blank">{{$place_gn['2']->title}}</a></p>
 								</li>
 								<li>
-									<p class="pro-list-pic"><a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E4%B8%89%E4%BA%9A&amp;k=0#list" title="三亚甩尾" target="_blank"><img src="/home/img/15f57885-611d-4b0c-919f-8725934c3aa4.jpg" alt="三亚甩尾" height="157" width="235"></a></p>
+									<p class="pro-list-pic"><a href="/xiadanqian?id={{$place_gn['3']->id}}" title="{{$place_gn['3']->title}}" target="_blank"><img src="{{$place_gn['3']->photo_path}}" alt="{{$place_gn['3']->title}}" height="157" width="235"></a></p>
 
 									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>1935</em>起</span><span class="pro-tag">自由行<em>|</em>
-									</span><a href="http://s.lvmama.com/freetour/H13K110000?keyword=%E4%B8%89%E4%BA%9A&amp;k=0#list" title="三亚甩尾" target="_blank">三亚甩尾</a></p>
+									</span><a href="" title="{{$place_gn['3']->title}}" target="_blank">{{$place_gn['3']->title}}</a></p>
 								</li>
 								<li>
-									<p class="pro-list-pic"><a href="http://s.lvmama.com/group/H13K110000?keyword=%E4%BA%91%E5%8D%97&amp;k=1#list" title="云南特惠" target="_blank"><img src="/home/img/7892d188-2549-4208-bce1-93f605813796.jpg" alt="云南特惠" height="157" width="235"></a></p>
+									<p class="pro-list-pic"><a href="/xiadanqian?id={{$place_gn['4']->id}}" title="{{$place_gn['4']->title}}" target="_blank"><img src="{{$place_gn['4']->photo_path}}" alt="{{$place_gn['4']->title}}" height="157" width="235"></a></p>
 
 									<p class="pro-list-tit"><span class="pro-list-price fr"><i>￥</i><em>1900</em>起</span><span class="pro-tag">跟团游<em>|</em>
-									</span><a href="http://s.lvmama.com/group/H13K110000?keyword=%E4%BA%91%E5%8D%97&amp;k=1#list" title="云南特惠" target="_blank">云南特惠</a></p>
+									</span><a href="" title="{{$place_gn['4']->title}}" target="_blank">{{$place_gn['4']->title}}</a></p>
 								</li>
+                                                                
 					</ul>
 				</div>
 				
 				<!-- 特卖会 -->
 				<div class="public-tuango fr">
-					<a href="http://www.lvmama.com/tuangou/sale-786989" title="北京--三亚湾红树林双飞5天自由行" target="_blank">
-						<img src="/home/img/148a6479-9ecd-4085-a33e-a5739a5ae9ab.jpg" alt="北京--三亚湾红树林双飞5天自由行" height="435" width="195">
+					<a href="" title="{{$place_gn['5']->title}}" target="_blank">
+						<img src="{{$place_gn['5']->photo_path}}" alt="{{$place_gn['5']->title}}" height="435" width="195">
 						<div class="tuango-info skyblue">
 							<strong>特卖</strong>
-							<p>北京--三亚湾红树林双飞5天自由行</p>
+							<p>{{$place_gn['5']->title}}</p>
 							<p class="tuango-price"><i>￥</i><em>1935</em>起</p>
 						</div>						
 					</a>

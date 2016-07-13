@@ -13,7 +13,7 @@ class CommonController extends Controller
 	{
 		if(!Session::has("userData"))
 		{
-			header("Location:/login");
+			header("Location:/adm/login");
 			exit;
 		}
 	}

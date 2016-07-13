@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>网站后台管理系统</title>
 <link rel="shortcut icon" href="admin/img/favicon.ico" />
-<link href="admin/css/css.css" type="text/css" rel="stylesheet" />
+<link href="/admin/css/css.css" type="text/css" rel="stylesheet" />
 </head>
 <!--框架样式-->
 <frameset rows="95,*,30" cols="*" frameborder="no" border="0" framespacing="0">
