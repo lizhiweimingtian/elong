@@ -90,10 +90,10 @@ form p input[type='text']{
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="center" valign="middle" class="borderright borderbottom">{{$userRec->place_name}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$userRec->title}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$userRec->old_price}}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$userRec->price}}</td>
        
         
-        <td align="center" valign="middle" class="borderright borderbottom"></td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{$dingdan->chufa_date}}</td>
        
       </tr>
     </table>

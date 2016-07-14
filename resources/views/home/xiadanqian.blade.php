@@ -320,7 +320,7 @@
                                 
                             </div>
                             <div class="preorder-confirm">
-                                <a hidefocus="false" id="preorder-confirm-button" class="btn cbtn-orange1 fr ml20" href="/xiadan?id={{$xq->place_id}}">开始预订</a>
+                                <a hidefocus="false" id="preorder-confirm-button" class="btn cbtn-orange1 fr ml20" href="/xiadan?id={{$xq->id}}">开始预订</a>
                                 <div class="preorder-total-price">
                                     <span class="tip-icon tip-icon-help js_tips" style="display: none;" id="DuiJie_TraffocTip" tip-content="机票价格更新频繁，以实际支付为准，为避免价格波动，请您尽快预订；"></span>
                                     <span class="total-price-value" id="total-price-value">--</span>

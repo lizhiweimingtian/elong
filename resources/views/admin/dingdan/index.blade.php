@@ -88,6 +88,7 @@ form p input[type='text']{
         <th align="center" valign="middle" class="borderright">订单号</th>
         <th align="center" valign="middle" class="borderright">会员名</th>
         <th align="center" valign="middle" class="borderright">会员手机</th>
+        <th align="center" valign="middle" class="borderright">订单状态</th>
         <th align="center" valign="middle" class="borderright">下单时间</th>    
         <th align="center" valign="middle">操作</th>
       </tr>
@@ -97,7 +98,14 @@ form p input[type='text']{
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->id}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->phone}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->nowphone}}</td>
-       
+        <td align="center" valign="middle" class="borderright borderbottom">
+        @if($tmp->status !== 1)
+          未付款
+        @else
+          已付款 
+        @endif       
+
+        </td>
         
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->xiadan_date}}</td>
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\home;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use App\Http\Requests,Input;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\HomeLoginRequest;
 use Session;
@@ -55,9 +55,16 @@ class TourController extends Controller {
                 ->join('place','place.id',"=","place_detail.place_id")
                 ->where(['saleYN'=>0,'isNindex'=>1])
                 ->get();
-        return view ("home/index",['place_data'=>$place_data,'place_gn'=>$place_gn]);
+        $config=DB::table("web_config")->get();
+
+        if($config[0]->status !== '1'){
+            return view("home.guanbi.index");
+        }else{
+            
+        return view ("home.index",['place_data'=>$place_data,'place_gn'=>$place_gn,"config" => $config]);
     }
-    /**
+}
+    /**"config" => $config
      * 显示景点详情页（下单前）
      */
      public function xiadanqian(Request $request) {
@@ -65,7 +72,71 @@ class TourController extends Controller {
       
         return view ('/home/xiadanqian',['xq'=>$xq]);
      }
+
+     /**"config" => $config
+     * 显示下单页（下单）
+     */
+     public function xiadan() {
+        $id = input::get('id');
+        // dd($id);
+        $xq = DB::table('place_detail')->where('id',$id)->first();
+        // dd($xq);
+        return view ('/home/xiadan',['xq'=>$xq]);
+     }
+
+      /**"config" => $config
+     * 显示付款页（付款）
+     */
+     public function zhifu(Request $request) {
+        // dd($request);
+        // dd($id);
+        $uid=Session::get("userData")->id;
+        $data=$request->only("pid","user_name","user_phone","chufa_date");
+        $data["uid"]=$uid;
+        $date=date("Y-m-d H:i:s");
+        $data["xiadan_date"]=$date;
+
+        // dd($data);
+        // dd($data);
+        if(false !== $id = DB::table('dingdan')->insertGetId($data)){
+            $xq = DB::table('place_detail')->where('id',$request->pid)->first();
+            $dingdan = DB::table('dingdan')->where('id',$id)->first();
+                return view ('home.zhifu',["xq"=>$xq,"dingdan"=>$dingdan]);
+        }else{
+                dd(121);
+        }
+        
+        
+        // dd($xq);
+        //return view ('home.zhifu',['xq'=>$xq]);
+     }
     
+    public function yizhifu(){
+        $id = input::get('id');
+        DB::table('dingdan')->where("id",$id)->update(["status"=>1]);
+        return view("home.yizhifu",["id"=>$id]);
+    }
+
+
+    public function dingdan(){
+        // $id = input::get('id');
+        // $dd=DB::table('dingdan')->where("id",$id)->first();
+        // $xq=DB::table('place_detail')->where("id",$dd->pid)->first();
+        // return view("home.yizhifu",["dd"=>$dd]);
+
+        $uid=Session::get("userData")->id;
+        // $dd=DB::table("dingdan")->where("uid",$uid)->get();
+        // dd($dd);
+
+
+        $users=DB::table("dingdan")
+            ->leftJoin("place_detail", "place_detail.id", "=", "dingdan.pid")          
+            ->select("dingdan.*","place_detail.title","place_detail.price")
+            ->where("dingdan.uid",$uid)
+            ->paginate(1);
+
+        return view("home.dingdan",["users"=>$users]);
+    }
     
     /**
      * Show the form for editing the specified resource.

@@ -1187,5 +1187,6 @@
 <!-- 旅游攻略结束 -->
 
 </div><!-- //wrap -->	
-
+@foreach ($config as $tmp)
 @include("home.common.footer1");
+@endforeach

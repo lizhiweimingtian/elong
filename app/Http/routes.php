@@ -191,7 +191,7 @@ Route::post("/adm/page/avartar", "Admin\PageController@avartar");
         // Route::get('/tour', function() {
         //     return view('home.index');
         // });
-      Route::get("/tour","home\IndexController@index");
+      // Route::get("/tour","home\IndexController@index");
 
   Route::get('/tour','home\TourController@show');
   
@@ -199,9 +199,10 @@ Route::post("/adm/page/avartar", "Admin\PageController@avartar");
    Route::get('/xiadanqian','home\TourController@xiadanqian');
 
         //进入瀑布流首页
-        Route::get('/', function() {
-            return view('home.index_1');
-        });
+   Route::get("/","home\IndexController@pubu");
+        // Route::get('/', function() {
+        //     return view('home.index_1');
+        // });
 
         Route::get('/fuwutiaokuan', function() {
             return view('home.other.fuwutiaokuan');
@@ -232,18 +233,21 @@ Route::post("/adm/page/avartar", "Admin\PageController@avartar");
             return view('home.login');
         });
 
-        Route::get('dingdan', function() {
-            return view('home.dingdan');
-        });
+        Route::get('/dingdan','home\TourController@dingdan');
+        // Route::get('dingdan', function() {
+        //     return view('home.dingdan');
+        // });
         //去下订单
-        Route::get('/xiadan', function() {
-            return view('home.xiadan');
-        });
+        Route::get('/xiadan','home\TourController@xiadan');
+        // Route::get('/xiadan', function() {
+        //     return view('home.xiadan');
+        // });
+        Route::post('/zhifu','home\TourController@zhifu');
+        // Route::get('zhifu', function() {
+        //     return view('home.zhifu');
+        // });
+        Route::get('/yizhifu','home\TourController@yizhifu');
 
-        Route::get('zhifu', function() {
-            return view('home.zhifu');
-        });
-        
          Route::get('huochepiao', function() {
             return view('home.huochepiao');
         });       

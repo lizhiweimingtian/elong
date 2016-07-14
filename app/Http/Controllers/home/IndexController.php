@@ -23,5 +23,14 @@ class IndexController extends Controller
 	}
 	
 		}
+//瀑布
+	public function pubu()
+	{   
+		$config=DB::table("web_config")->get();
+	    return view("home.index_1",["config" => $config]);
+		 // return view('home.index');
+	}
+	
+		
         
 }

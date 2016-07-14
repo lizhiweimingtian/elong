@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" class="csstransitions cssanimations ic_gecko ic_firefox ic_47">
-<head><script src="silentRegisterByMobile.do" async=""></script><script src="adv.dat" async="" type="text/javascript"></script><script src="/home/other/presadva.dat" async="" type="text/javascript"></script><script src="v.js" charset="utf-8"></script>
+<head><script src="silentRegisterByMobile.do" async=""></script><script src="adv.dat" async="" type="text/javascript"></script><script src="/home/other/presadva.dat" async="" type="text/javascript"></script><script src="/home/js/v.js" charset="utf-8"></script>
 
-		<script src="a.js" async="" type="text/javascript"></script><script src="mv.js" async="" type="text/javascript"></script><script src="mba.js" async="" type="text/javascript"></script><script src="push.js"></script><script src="fx.js" async="" type="text/javascript"></script><script src="mvl.js" async="" type="text/javascript"></script><script src="/home/js/hm11.js"></script><script src="eluminate.js"></script>
-	<script src="coremetrics-initalize.js"></script>
-	<script>_LVMAMA_COREMETRICS.init(document.domain);</script><script src="head.js"></script><script src="90409730.js" type="text/javascript" language="javascript"></script><script src="dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="yahoo-min.js"></script><script type="text/javascript" src="cp-v3.js"></script><script type="text/javascript" src="json-min.js"></script>	
-	
-	
-    
-    
+		<script src="/home/js/a.js" async="" type="text/javascript"></script><script src="/home/js/mv.js" async="" type="text/javascript"></script><script src="/home/js/mba.js" async="" type="text/javascript"></script><script src="/home/js/push.js"></script><script src="/home/js/fx.js" async="" type="text/javascript"></script><script src="/home/js/mvl.js" async="" type="text/javascript"></script><script src="/home/js/hm11.js"></script><script src="/home/js/eluminate.js"></script>
+	<script src="/home/js/coremetrics-initalize.js"></script>
+	<script>_LVMAMA_COREMETRICS.init(document.domain);</script><script src="/home/js/head.js"></script><script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="/home/js/yahoo-min.js"></script><script type="text/javascript" src="/home/js/cp-v3.js"></script><script type="text/javascript" src="/home/js/json-min.js"></script>	
 	
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>填写订单</title>
@@ -16,7 +12,7 @@
 
 
 	
-<script async="" src="pc.js"></script><script charset="utf-8" src="StdID.do" id=""></script><script type="text/javascript" src="bcore.min.js"></script><script charset="utf-8" src="PageView.do"></script>
+<script async="" src="/home/js/pc.js"></script><script charset="utf-8" src="StdID.do" id=""></script><script type="text/javascript" src="/home/js/bcore.min.js"></script><script charset="utf-8" src="PageView.do"></script>
 <link rel="stylesheet" type="text/css" href="/home/css/xiadan.css" media="all">
 </head>
 <body class="hotel-order"><script src="cvt.dat"></script>
@@ -56,17 +52,17 @@
 </ol>
 <!-- 操作步骤 -->
 
-		        <form method="POST" action="" >
+<form method="post" action="/zhifu" >
 
-                            <input name="tokenName" readonly="readonly" value="" type="hidden">
-                                <input name="distributionId" value="" type="hidden">
+            <input name="tokenName" readonly="readonly" value="" type="hidden">
+            <input name="distributionId" value="" type="hidden">
 				<input name="suppGoodsFlag" value="true" type="hidden">
 				<input id="productIdTxt" name="productId" value="428689" autocomplete="off" type="hidden">
 				<input name="sameVisitTime" value="true" autocomplete="off" type="hidden">
                                 <input name="suppGoodsId" value="2989144" type="hidden">
                             <div class="order_box border_3 order_box_new">
-		        		<h1 class="order_name"><span>北京怀柔白河峡谷漂流</span>
-									门票
+		        		<h1 class="order_name"><span>{{$xq->title}}</span>
+									
 		        		（在线支付）</h1>
 		        	<dl class="order_dl">
 		            	<dt>日期</dt>
@@ -74,13 +70,13 @@
                                     <script src='/plugins/My97DatePicker/WdatePicker.js'></script> 
 		                	<div class="input_time">
 		                    	<input id="visitTimeInput" maxlength="10" name="visitTime"  value="" autocomplete="off" readonly="readonly" placeholder="请选择游玩日期" type="hidden" >
-                                <input id="showVisitTimeInput" name="showVisitTime" class="input js_youwanTime" autocomplete="off" placeholder="请选择游玩日期" onClick="WdatePicker({skin:'whyGreen'})">
+                                <input id="showVisitTimeInput" name="chufa_date" class="input js_youwanTime" autocomplete="off" placeholder="请选择游玩日期" onClick="WdatePicker({skin:'whyGreen'})">
 		                        <i class="order_icon icon_titme"></i>
 		                    </div>
 		                </dd>
 		            </dl>
                     <!--马戏票场次-->
-		            <dl class="order_dl mb0">
+		          <!--   <dl class="order_dl mb0">
 		            	<dt>数量</dt>
 		                <dd>
 		                	<div class="table_list table_tit">
@@ -90,10 +86,10 @@
 		                        <li class="table_3">驴妈妈价</li>
 		                        <li class="table_4">数量</li>
 		                        </ul>
-		                    </div>
+		                    </div> -->
 		                    
 		                    <!--商品信息-->
-<div style="display: block;" class="table_list table_t ">
+<!-- <div style="display: block;" class="table_list table_t ">
 	<ul class="table_list_t">
 		<input name="itemMap[2989144].goodsId" value="2989144" autocomplete="off" type="hidden">
         <input name="itemMap[2989144].circusActInfo.circusActId" autocomplete="off" type="hidden">
@@ -115,7 +111,7 @@
         </li>
     </ul>
 	
-    <div class="pro_info clearfix">
+   <div class="pro_info clearfix">
     	<p>
         	<b>费用包含</b>
            	 1.青石岭短漂单人票1张（青石岭漂流（大约5公里）单人票1张）。
@@ -144,11 +140,11 @@
         <div class="info_arrow"><span>◆</span><i>◆</i></div>
     </div>
 </div>
-
+ -->
 <!-- 主商品 -->
 
-                                <div id="otherTicketDiv">        <div style="display: none;" class="table_list table_t">
-			<ul class="table_list_t">
+      <div id="otherTicketDiv">        <div style="display: none;" class="table_list table_t">
+			<!-- <ul class="table_list_t">
 				<input name="itemMap[1780991].goodsId" value="1780991" autocomplete="off" type="hidden">
 		        <li class="table_1">
 		            <a href="javascript:;" class="pro_name" hidefocus="false" title="白河峡谷虹鳟鱼自助烧烤+CS娱乐+影视外景基地门票套票">白河峡谷虹鳟鱼自助烧烤+CS娱乐+影视外景基地门票套票<i class="icon_arrow"></i></a>
@@ -166,9 +162,9 @@
 		                <a href="javascript:;" class="num_add" hidefocus="false">+</a>
 		            </span>
 		        </li>
-		    </ul>
+		    </ul> -->
 			
-		    <div class="pro_info clearfix">
+		   <!--  <div class="pro_info clearfix">
 				    	<p>
 				        	<b>费用包含</b>
 				           	 1.虹鳟鱼自助烧烤+CS娱乐+影视外景基地套票1张（虹鳟鱼自助烧烤（三个小时不限量）、赠送真人CS（激光）、让子弹飞 影视外景地景区门票、免费垂钓）。
@@ -188,7 +184,7 @@
 				        </p>
 		        <a href="javascript:;" class="pro_info_sq" hidefocus="false">收起</a>
 		        <div class="info_arrow"><span>◆</span><i>◆</i></div>
-		    </div>
+		    </div> -->
 		</div>
 		
         <div style="display: none;" class="table_list table_t">
@@ -324,12 +320,12 @@
 		</div>
 		
 </div>
-                                    <a href="javascript:void(0);" class="btn_qita" hidefocus="false">其他票种<i class="icon_arrow"></i></a>
-		                    <p class="pro_jiage">
+                                    <!-- <a href="javascript:void(0);" class="btn_qita" hidefocus="false">其他票种<i class="icon_arrow"></i></a> -->
+		                    <!-- <p class="pro_jiage">
 		                    	<b>门票总价：</b><span><small>¥</small>58.00</span>（
 		                   	  	在线支付
 			                    ）
-		                    </p>
+		                    </p> -->
 		                </dd>
 		            </dl>
 
@@ -351,7 +347,7 @@
 <input disabled="disabled" id="bxGoodsId" name="itemMap[0].goodsId" value="0" autocomplete="off" type="hidden">
 <input disabled="disabled" id="bxGoodsBookQuantity" name="itemMap[0].quantity" value="0" autocomplete="off" type="hidden">
 
-<div class="order_box clearfix order_box_new">
+<!-- <div class="order_box clearfix order_box_new">
     <h3 class="order_tit">保险信息</h3>
             <dl class="order_dl order_bx">
             <dt>保险</dt>
@@ -389,7 +385,7 @@
                             <div style="left: 104px;" class="info_arrow"><span>◆</span><i>◆</i></div>
                         </li>
         </ul>
-</div>
+</div> -->
 </div>
 		        
 		       
@@ -412,7 +408,10 @@
 		<dl class="user_dl">
 			<dt><span class="red">*</span>姓名：</dt>
 	    	<dd>
-	    		<input class="input js_yz" id="fullName0" travellersid="" type_name="text" name="travellers[0].fullName" maxlength="20" placeholder="姓名" type="text">
+	    		<input type="hidden" name="_token" value="{{csrf_token()}}" />
+	    		<input name="pid" value="{{$xq->id}}" type="hidden">
+	    		<input type="text" maxlength="20" placeholder="姓名" name="user_name" class="input js_yz">
+	    		<!-- <input class="input js_yz" id="fullName0" travellersid="" type_name="text" name="travellers[0].fullName" maxlength="20" placeholder="姓名" type="text"> -->
 	    		<span class="error_text"><i class="tip-icon tip-icon-error"></i>请输入姓名</span>
 	    	</dd>
 		</dl>
@@ -421,14 +420,14 @@
                     <dl class="user_dl">
                         <dt><span class="red">*</span>手机号码：</dt>
                         <dd>
-                            <input class="input js_yz js_textBig" id="mobile0" type_name="mobile" item_type="main" name="travellers[0].mobile" maxlength="11" autocomplete="smartystreets" placeholder="请输入手机号码" type="text">
+                            <input class="input js_yz js_textBig" id="mobile0" name="user_phone" item_type="main" name="travellers[0].mobile" maxlength="11" autocomplete="smartystreets" placeholder="请输入手机号码" type="text">
                             <span style="display: inline-block;" class="ts_text" zitem="init">此手机号为接收短信所用，作为订购与取票凭证，请准确填写。</span>
                             <span class="error_text" style="display: none;" zitem="register"><i class="tip-icon tip-icon-info"></i>该手机号非驴妈妈会员，系统将自动帮您注册为会员，账号密码稍后将以短信方式告知您。</span>
                             <span class="error_text" zitem="frozen" style="display: none;"><i class="tip-icon tip-icon-error"></i>此手机号已被驴妈妈冻结，不能下单，请更换手机号下单。</span>
                             <span style="display: none;" class="error_text" zitem="exception"><i class="tip-icon tip-icon-error"></i>手机号码不正确。</span>
                         </dd>
                     </dl>
-	<dl style="display: none;" class="user_dl bx_check">
+	<!-- <dl style="display: none;" class="user_dl bx_check">
         <dt>&nbsp;</dt>
         <dd>
         	<label class="check js_bx_check"><input class="checkbox" name="" value="0" onchange="LVMAMA.order.ticket.baoxianPersonNumCheck(this);" type="checkbox">被保险人</label>
@@ -437,7 +436,7 @@
    	 <h5 class="youwan_tit">游玩人1(取票人)</h5>
 	<div class="Preser_box">
         	<label class="check"><input id="saveCk0" checked="checked" class="checkbox" name="travellers[0].saveFlag" value="true" type="checkbox">保存</label>
-   </div>
+   </div> -->
 </div>
 </div>
 </div>
@@ -451,7 +450,7 @@
                         <div id="picCodeContainer">
 <div id="picCodeDiv">
 	<input id="checkCodeValid" value="0" type="hidden">
-	<dl class="user_dl">
+	<!-- <dl class="user_dl">
 		<dt><span class="red">*</span>验证码：</dt>
     	<dd>
     		<input value="" name="checkCode2" id="checkCode2" type="hidden">
@@ -459,9 +458,9 @@
     		<img src="initPic.dat" id="createCheckCode" onclick="javascript:reloadPicCode();" style="width: 100px; height: 30px; cursor: pointer;" align="middle">
     		<a hidefocus="false" href="javascript:reloadPicCode();" id="createCheckCodeHref" style="">&nbsp;看不清,换一个.</a>
     	</dd>
-	</dl>
+	</dl> -->
 </div>
-<script src="adv.js"></script><script src="jquery-1.7.min.js"></script>
+<script src="/home/js/adv.js"></script><script src="/home/js/jquery-1.7.min.js"></script>
 <script type="text/javascript">
 	//每次加载清空验证码
 	$(function () {
@@ -497,192 +496,29 @@
 	}
 </script>                   	 	</div>
 		        </div>
-<!--新增促销优惠券模块   开始----------------------->
+
         <div class="order_box">
-          <h3 class="order_tit">优惠信息</h3>
-		<p class="wxts">温馨提示：若您在下单后对出游时间或出游人数进行变更，将无法享受促销优惠。</p>
+         
 		<div class="user_info pt_10 no_bd mb_20">
 			<dl id="promPromotionDiv" class="user_dl isPromdl ">
 		    	<dt style="display: none;" class="isProm">可享促销：</dt>
 		    	
 		    </dl>
 </div>
-                        <div class="tiptext tip-info order_login">
-            	<span class="tip-icon tip-icon-info"></span> <a hidefocus="false" id="order_login" href="javascript:;">登录</a>
-                后可使用账户中优惠券，奖金以及存款
-            </div>
-            <div class="youhui_box">
-            	<ul class="youhui_list2">
-                	<li>
-                        <a class="youhui_tit" href="javascript:;" hidefocus="false">使用优惠券<i class="icon_arrow"></i></a><span id="countNums"></span>
-                        <div class="youhui_info">
-                        	<!--可用优惠券列表-->
-                        	<!----用于是否可以单选---->
-                        	<input value="" class="couponTypeFlag" type="hidden">
-                        	<!----用于奖金使用数额---->
-                        	<input value="0" class="bonusAmountHidden" name="bonusAmountHidden" type="hidden">
-                        	<!----用于现金使用数额---->
-                        	<input value="0" class="cashAmountHidden" name="cashAmountHidden" type="hidden">    	
-                        	<input value="" class="userIdHidden" name="payOderUserId" type="hidden"> 
-                            <input value="" people""="" class="productSaleType" name="productSaleType" type="hidden"> 
-                            <input value="1" class="youhuiQuantity" name="youhuiQuantity" type="hidden">	
-                            <input value="1" class="youhuiperson" name="youhuiperson" type="hidden">	
-                            	<table class="youhui_table youhui_table_new">
-                            
-                                </table>
-                                 <div class="youhui_table_box">
-                                <table class="youhui_table youhui_table_new">
-                                <tbody class="fixedCouponTbody">
-                                	<tr class="no_youhuiquanTr">
-                                    	<td colspan="5">
-                                        	<!--没有优惠券的时候提示-->
-                                            <div class="no_youhuiquan">
-                                                <i class="order_icon order_lvhead"></i><span id="no_use">很遗憾，您暂无可用优惠券</span>
-                                            </div>
-                                      
-                                        </td>
-                                    </tr>
-                                
-                               
-                                </tbody>
-                                <tbody class="border_t1_dotted freeCouponTbody">
-                               
-                                </tbody>
-                            </table>
-                            </div>
-                            <!--添加其他优惠券-->
-                            <div class="youhui_add"> 
-                            	<b>添加其他优惠券</b><input class="input" yz_input="true" placeholder="输入优惠券兑换号码" type="text"><span class="btn btn-small btn-orange js_yhq_yz">添加</span>
-                            	
-                            </div>
-                            
-                            <!--展开后的箭头-->
-                            <div class="info_arrow"><span>◆</span><i>◆</i></div>
-                        </div>
-                    </li>
-                    <li style="display: none;" class="BounsPayLi">
-                        <a class="youhui_tit" href="javascript:;" hidefocus="false">使用奖金抵扣<i class="icon_arrow"></i></a>
-                        <div class="youhui_info">
-                        	<!--使用奖金输入框-->
-                            <div class="dikou_box">
-                            	<b>本次使用</b><span class="yong_input"><input class="input js_dikou_input" id="input_bonus" type="text">元</span>
-                                <span class="yong_text"></span>
-                                <span class="btn btn-small btn-orange js_dikou_queren js_dikou_queren_bonus" id="sure_dikou_bonus">确认</span>
-                                <span class="btn btn-small btn-default js_dikou_quxiao js_dikou_queren_bonus">取消</span> 
-                            </div>
-                            
-                            <!--奖金账户，可使用奖金-->
-                            <div class="dikou_b">您的奖金账户余额：<span class="dikou_price"><samp><label id="CanPayBouns">0.00</label><input id="canPayBounsHidden" value="0" name="bounsAmt" type="hidden"></samp><dfn> 元</dfn></span>(本次最多可使用:<label class="maxCanPayBouns">0.00</label><input value="0" id="maxpayBounsAmt" class="maxpayBounsAmt" name="maxpayBounsAmt" type="hidden">元)</div>
-                            <!--不变的奖金余额-->
-                            <input id="canPayBounsHidden_1" value="0" type="hidden">
-                            <div class="info_arrow"><span>◆</span><i>◆</i></div>
-                        </div>
-                    </li>
-                    <li class="CashsPayLi">
-                        <a class="youhui_tit" href="javascript:;" hidefocus="false">使用账户存款抵扣<i class="icon_arrow"></i></a>
-                        <div class="youhui_info">
-                            <div class="dikou_box">
-                            	<!--使用账户存款输入框-->
-                            	<b>本次使用</b>
-                                <span class="yong_input"><input class="input js_dikou_input" name="accountMonery" id="accountMonery" type="text">元</span>
-                                <span class="yong_text"></span>
-                               	<span id="cashspay_orange_btn" class="btn btn-small btn-orange js_dikou_queren js_dikou_queren_cash">确认</span>
-                                <span id="cashspay_default_btn" class="btn btn-small btn-default js_dikou_quxiao js_dikou_queren_cash">取消</span> 
-                            </div>
-                            
-                            <!--存款账户，可使用奖金-->
-                            <div class="dikou_b">
-                            	您的账户存款余额：<span class="dikou_price" id="zhckPrice"><samp><label id="maxPayMoney">0</label><input id="maxPayMoneyHidden" value="0" name="maxPayMoney" type="hidden"></samp> 元</span>
-                            <input id="maxPayMoneyHidden_1" value="0" type="hidden">	
-                            </div>
-                            <div class="info_arrow"><span>◆</span><i>◆</i></div>
-                        </div>
-                    </li>
-                    <li class="showCZK">
-                        <a class="youhui_tit" href="javascript:;" hidefocus="false">使用储值卡<i class="icon_arrow"></i></a>
-                        <span class="c_999">　（可添加多个储值卡）</span>
-                        <div class="youhui_info">
-                        	<!--使用储值卡输入框-->
-                            <ul class="dikou_box lipinka_box">
-                            	<li>
-                                	<b>储值卡号</b><input id="storeCardInputId" class="input input_card" yz_input="true" type="text">
-                                </li>
-                                <li>
-                                	<span class="btn btn-small btn-orange js_card_yz" id="storeCardBtn">使用</span>
-                                    <span class="btn btn-small btn-default js_lpk_cancel" id="storeCardCalBtn">取消</span>
-                                </li>
-                            </ul>
-                        
-                        	<table class="youhui_table czk_table"></table>
-                            
-                        	
-                            
-                            <!--展开后，向上的箭头-->
-                            <div class="info_arrow"><span>◆</span><i>◆</i></div>
-                        </div>
-                    </li>
-                    <li class="showLPK">
-                        <a class="youhui_tit" href="javascript:;" hidefocus="false">使用礼品卡<i class="icon_arrow"></i></a>
-                        <span class="c_999">　（可添加五个礼品卡）</span>
-                        <div class="youhui_info">
-                        	<!--添加礼品卡输入框模块-->
-                            <ul class="dikou_box lipinka_box">
-                            	<li>
-                                	<b>礼品卡号</b><input id="lpCardInputId" class="input input_card" yz_input="true" type="text">
-                                </li>
-                            	<li>
-                                    <b>密码</b><input id="lpCardInputpwd" class="input input_password" yz_input="true" type="password">
-                                </li>
-                                <li>
-                                	<input id="lpk_checkCodeValid" value="0" type="hidden">
-                                    <b>验证码</b><input class="input input_yzm" placeholder="点击刷新" id="lpk_pic_checkCode" yz_input="true" type="text">
-                                    <img class="yzm_img" style="display: none;" id="lpk_createCheckCode" src="ticketReservation.do" height="24" width="36">
-                                    <span class="yzm_next" style="display: none;" id="createCheckCodeLPKHref">换一个</span>
-                                    
-                                </li>
-                                <li>
-                                	<span id="lpstoreCardBtn" class="btn btn-small btn-orange js_lpk_true">使用</span>
-                                    <span class="btn btn-small btn-default js_lpk_cancel">取消</span>
-                                </li>
-                            </ul>
-                            
-                        	<table class="youhui_table lpk_table"></table>
-                            
-                            <!--展开后，向上的箭头-->
-                            <div class="info_arrow"><span>◆</span><i>◆</i></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+                       <!--  <div class="tiptext tip-info order_login">
+            	
+            </div> -->
             
-            <div class="price_info" id="priceInfoDiv">
-            	<p class="fk_Amount"><b>产品总价：</b><span>¥58.00</span><input class="amountProuctHidden" name="amountProuctHidden" value="5800" type="hidden"></p>
-            	<p style="display: none;" class="fk_ExpressAmount"><b>快递：</b><span>¥ 0</span></p>
-            	<p style="display: none;" class="fk_Insurance"><b>保险：</b><span>¥ 0</span></p>
-                <p style="display: none;" class="fk_promotionAmount"><b>促销：</b><span>- ¥ 0</span></p>
-                <p style="display: none;" class="fk_couponAmount"><b>优惠券：</b><span>- ¥ 0</span></p>
-                <p style="display: none;" class="fk_bonusAmount"><b>奖金代扣：</b><span id="daikou_bonus">- ¥ 0</span></p>
-                <p style="display: none;" class="fk_cashAmount"><b>账户存款抵扣：</b><span id="daikou_cash">- ¥ 0</span></p>
-                <p style="display: none;" class="fk_paidAmount"><b>储值卡：</b><span>- ¥ 0</span></p>
-                <p style="display: none;" class="fk_giftCardAmount"><b>礼品卡：</b><span>- ¥ 0</span></p>
-            </div>
-            
-            <div class="price_box fk_box_free" id="orderPriceDiv">
-
-            	<p class="fk_p1"><b>应付金额：</b>¥<label class="oughtPay" style="display: inline;">58.00</label><input value="5800" class="oughtPayHidden" val="0" type="hidden"></p>
-
-            	<!--<p><b>应付总价：</b><span><dfn>￥</dfn>1000.00</span></p>-->
-            </div>
-            
-        </div>
         <!--新增促销优惠券模块---结束----------------------->		        <!--付款按钮-->
 		        <div class="fk_box">
-		        	<a submitflag="true" href="javascript:void(0);" class="btn_fk" hidefocus="false">同意以下协议，
-		        	 去付款 
-		        	</a>
+		        	
+
+						<input type="submit" value="同意以下协议,去付款 " class="btn_fk">				
+		        	
+		    
 		        	<div class="fk_l">
 		                <div id="orderPriceDiv" class="fk_jg">
-		                	<p class="fk_p1">应付总价<span><small>¥</small><lable class="orderamountPage">58.00</lable></span></p>
+		                	<p class="fk_p1">应付总价<span><small>¥</small><lable class="orderamountPage">{{$xq->price}}</lable></span></p>
 	                        <p style="display: none;" class="fk_p2">点评返现：<span>¥</span><span class="rebateAmountSpan">0.00</span></p>
 		                </div>
 		            </div>

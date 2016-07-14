@@ -25,8 +25,8 @@ class dingdanController extends Controller
     public function xiangqing($pid)
     {
         $userRec=DB::table("place_detail")->where("id",$pid)->first();
-        
-        return view("admin.dingdan.xiangqing",compact("userRec"));
+        $dingdan=DB::table("dingdan")->where("pid",$pid)->first();
+        return view("admin.dingdan.xiangqing",compact("userRec","dingdan"));
 
     }
     public function delete($id)
