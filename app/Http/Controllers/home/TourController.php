@@ -55,7 +55,27 @@ class TourController extends Controller {
                 ->join('place','place.id',"=","place_detail.place_id")
                 ->where(['saleYN'=>0,'isNindex'=>1])
                 ->get();
-        return view ("home/index",['place_data'=>$place_data,'place_gn'=>$place_gn]);
+        $place_zb = DB::table('place_detail')
+                ->join('place','place.id',"=","place_detail.place_id")
+                ->where(['zhoubian'=>1,'isNindex'=>1])
+                ->get();
+        $place_city =DB::table('city_2')
+                ->where('hot',1)
+                ->get();
+        $code_ag =DB::table('city_2')->where('code_head','A-G')->get();
+        $code_hn =DB::table('city_2')->where('code_head','H-N')->get();
+        $code_pt =DB::table('city_2')->where('code_head','P-T')->get();
+        $code_wz =DB::table('city_2')->where('code_head','W-Z')->get();
+        return view ("home/index",[
+            'place_data'=>$place_data,
+            'place_gn'=>$place_gn,
+            'place_zb'=>$place_zb,
+            'place_city'=>$place_city,
+            'code_ag'=>$code_ag,
+            'code_hn'=>$code_hn,
+            'code_pt'=>$code_pt,
+            'code_wz'=>$code_wz
+                ]);
     }
     /**
      * 显示景点详情页（下单前）

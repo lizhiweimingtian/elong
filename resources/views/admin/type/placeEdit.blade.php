@@ -96,9 +96,9 @@
                                 <td align="left" valign="middle" class="borderright borderbottom main-for">
                                     促 销：<input type="radio" name="saleYN" value="1" >
                                     平 价：<input type="radio" name="saleYN" checked value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    折 扣 点 数：<input type="text" name="saleinfo" value="" style="width:50px;height:25px">(两位小数)
-                                    <b>原 价：</b><input type="text" name="saleinfo" value="" style="width:70px;height:25px">&nbsp;&nbsp;
-                                    <b>现 价：</b><input type="text" name="saleinfo" value="" style="width:70px;height:25px">
+                                    折 扣 点 数：<input type="text" name="zkou" value="{{$detail->zkou or ""}}" style="width:50px;height:25px">(两位小数)
+                                    <b>原 价：</b><input type="text" name="old_price" value="{{$detail->old_price or ""}}" style="width:70px;height:25px">&nbsp;&nbsp;
+                                    <b>现 价：</b><input type="text" name="price" value="{{$detail->price or ""}}" style="width:70px;height:25px">
                                 </td>
                             </tr>
                             
@@ -127,6 +127,7 @@
                                         <script id="editor" name="editorValue" type="text/plain" style="width:900px;height:450px;" >{{$detail->editorValue or ""}}</script>
                                     
                                     <script type="text/javascript">
+                                        var URL = window.UEDITOR_HOME_URL = "/plugins/uedit/";
                                         var ue = UE.getEditor('editor');
                                     </script>
 
@@ -180,7 +181,7 @@
 //                    width: 50,
 //                    height: 23,
                     //上传要求的设置
-                    fileSizeLimit: 6 * 1024 * 1024,
+                    fileSizeLimit: 8 * 1024 * 1024,
                     fileTypeExts: "*.jpg;*.jpeg;*.png;*.gif",
                     //表单请求的方式
                     method: "post",

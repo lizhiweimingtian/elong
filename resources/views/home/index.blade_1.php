@@ -9,7 +9,6 @@
 <script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="/home/js/bcore.min.js"></script><script type="text/javascript" src="/home/js/yahoo-min.js"></script><script type="text/javascript" src="/home/js/cp-v3.js"></script><script charset="utf-8" src="/home/other/StdID.do" id=""></script><script type="text/javascript" src="/home/js/json-min.js"></script><script charset="utf-8" src="/home/other/PageView.do"></script>
 <link rel="stylesheet" type="text/css" href="/home/css/index.css" media="all">
 <script src="/home/js/lunbobanar.js"></script>
-<script src="/admin/js/jquery-2.0.2.min.js"></script>
 </head>
 <!-- 首屏 banner 及导航 -->
 <body class="home" allyes_city="BJ">
@@ -21,19 +20,28 @@
 <div class="lv-ban">
 	<!--首页搜索super 1-->
         <!--JavaScript部分-->
-  
+            <SCRIPT language=javascript>
+     function secBoard(n)
+  {
+    for(i=0;i<secTable.cells.length;i++)
+      secTable.cells[i].className="lv_s_list";
+    secTable.cells[n].className="active";
+    for(i=0;i<mainTable.tBodies.length;i++)
+      mainTable.tBodies[i].style.display="none";
+    mainTable.tBodies[n].style.display="block";
+  }
+      </SCRIPT>
 <div class="lv_s_all">
-    <ul class="lv_s_tab" id='ul_list'>
-	<li class="active" data-type="GROUP"onclick="secBoard(0);">跟团游</li>
-        <li   data-type="FREETOUR" onclick="secBoard(1);">自由行</li>
-    	<li   data-type="TICKET" onclick="secBoard(2);">景点门票</li>
-        <li   data-type="HOTEL" onclick="secBoard(3);">度假酒店</li>
-        <li   data-type="FLIGHT" onclick="secBoard(4);">机票</li>
-        <li   data-type="SHIP" onclick="secBoard(5);">邮轮</li>
-        <li   data-type="VISA" onclick="secBoard(6);">签证</li>
+    <ul class="lv_s_tab">
+	<li class="active" data-type="GROUP">跟团游</li>
+        <li data-type="FREETOUR" onclick=secBoard(0)>自由行</li>
+    	<li data-type="TICKET" onclick=secBoard(1)>景点门票</li>
+        <li data-type="HOTEL" onclick=secBoard(2)>度假酒店</li>
+        <li data-type="FLIGHT" onclick=secBoard(3)>机票</li>
+        <li data-type="SHIP" onclick=secBoard(4)>邮轮</li>
+        <li data-type="VISA" onclick=secBoard(5)>签证</li>
     </ul>
-   
-    <div id='div_list' class="lv_s_r">
+    <div class="lv_s_r">
     	<!--跟团游板块 -->
     	<div class="lv_s_list" style="display: block;">
         	<!--出发地和搜索框-->
@@ -43,69 +51,173 @@
                         <div class="lv_s_td">
                             <div class="lv_s_t">出发地：</div>
                             <div class="lv_s_city_all">
-                                
-                                <div class="lv_s_city_btn js_s_city_btn " onclick="goCity();" id="123" >
-<!--                                    <b data-id="13">北京</b><i class="lv_s_arrow"></i>-->
-                                    <input type="text" name="cf" value="" id="avi">
+                                <div class="lv_s_city_btn js_s_city_btn">
+                                    <b data-id="13">北京</b><i class="lv_s_arrow"></i>
                                 </div>
-                                <div class="lv_s_city js_all_city" style="display:none" id="goCity" onmouseout="out()">
+                                <div class="lv_s_city js_all_city">
                                     <p>热门出发城市</p>
-                                <div class="search_city_hot cfd_hot" id="abc"> 
-                                    <a class="w"  data-code="" id="abc" data-id="8" data-name="">全国</a> 
-                                    @foreach($place_city as $v)
-                                    <a class="w"  data-code="{{$v->code}}" data-id="{{$v->id}}" data-name="{{$v->name}}">{{$v->name}}</a>
-                                    @endforeach
+                                <div class="search_city_hot cfd_hot"> 
+                                    <a href="javascript:;" data-code="" data-id="8" data-name="">全国</a> 
+                                    <a href="javascript:;" data-code="SH" data-id="9" data-name="上海">上海</a> 
+                                    <a href="javascript:;" data-code="SZ" data-id="60" data-name="苏州">苏州</a>
+                                    <a href="javascript:;" data-code="HZ" data-id="69" data-name="杭州">杭州</a> 
+                                    <a href="javascript:;" data-code="BJ" data-id="13" data-name="北京">北京</a> 
+                                    <a href="javascript:;" data-code="TY" data-id="100" data-name="太原">太原</a> 
+                                    <a href="javascript:;" data-code="GZ" data-id="322" data-name="广州">广州</a> 
+                                    <a href="javascript:;" data-code="CD" data-id="258" data-name="成都">成都</a> 
+                                    <a href="javascript:;" data-code="ZQ" data-id="31" data-name="重庆">重庆</a> 
+                                    <a href="javascript:;" data-code="SY" data-id="257" data-name="三亚">三亚</a> 
+                                    <a href="javascript:;" data-code="CZ" data-id="59" data-name="常州">常州</a>
+                                    <a href="javascript:;" data-code="HZ" data-id="73" data-name="湖州">湖州</a>
+                                    <a href="javascript:;" data-code="QD" data-id="175" data-name="青岛">青岛</a>
+                                    <a href="javascript:;" data-code="TJ" data-id="14" data-name="天津">天津</a> 
+                                    <a href="javascript:;" data-code="SZ" data-id="324" data-name="深圳">深圳</a> 
+                                    <a href="javascript:;" data-code="KM" data-id="233" data-name="昆明">昆明</a>
+                                    <a href="javascript:;" data-code="HK" data-id="221" data-name="海口">海口</a> 
+                                    <a href="javascript:;" data-code="NJ" data-id="56" data-name="南京">南京</a> 
+                                    <a href="javascript:;" data-code="JX" data-id="72" data-name="嘉兴">嘉兴</a>
+                                    <a href="javascript:;" data-code="NT" data-id="61" data-name="南通">南通</a> 
+                                    <a href="javascript:;" data-code="WX" data-id="57" data-name="无锡">无锡</a> 
+                                    <a href="javascript:;" data-code="XA" data-id="256" data-name="西安">西安</a>
                                 </div>
                                     <dl class="city_down_list"> 
                                         <dt>A-G</dt> 
-                                        <dd> 
-                                            @foreach($code_ag as $ag) 
-                                            <a class="w" data-code="{{$ag->code}}" data-id="{{$ag->id}}" data-name="{{$ag->name}}" >{{$ag->name}}</a>  
-                                             @endforeach
+                                        <dd>  
+                                            <a href="javascript:;" data-code="AM" data-id="41" data-name="澳门">澳门</a>  
+                                            <a href="javascript:;" data-code="ALT" data-id="380" data-name="阿勒泰">阿勒泰</a> 
+                                            <a href="javascript:;" data-code="BJ" data-id="13" data-name="北京">北京</a> 
+                                            <a href="javascript:;" data-code="BT" data-id="112" data-name="包头">包头</a> 
+                                            <a href="javascript:;" data-code="BH" data-id="211" data-name="北海">北海</a> 
+                                            <a href="javascript:;" data-code="BZ" data-id="189" data-name="滨州">滨州</a> 
+                                            <a href="javascript:;" data-code="CS" data-id="308" data-name="长沙">长沙</a> 
+                                            <a href="javascript:;" data-code="CZ" data-id="59" data-name="常州">常州</a>  
+                                            <a href="javascript:;" data-code="CC" data-id="137" data-name="长春">长春</a> 
+                                            <a href="javascript:;" data-code="CD" data-id="258" data-name="成都">成都</a> 
+                                            <a href="javascript:;" data-code="ZQ" data-id="31" data-name="重庆">重庆</a>  
+                                            <a href="javascript:;" data-code="CZ" data-id="146" data-name="滁州">滁州</a> 
+                                            <a href="javascript:;" data-code="CD" data-id="314" data-name="常德">常德</a> 
+                                            <a href="javascript:;" data-code="DL" data-id="245" data-name="大理">大理</a> 
+                                            <a href="javascript:;" data-code="DZ" data-id="272" data-name="达州">达州</a> 
+                                            <a href="javascript:;" data-code="DG" data-id="202" data-name="东莞">东莞</a> 
+                                            
+                                            <a href="javascript:;" data-code="DY" data-id="178" data-name="东营">东营</a> 
+                                            <a href="javascript:;" data-code="DZ" data-id="187" data-name="德州">德州</a> 
+                                            
+                                            <a href="javascript:;" data-code="DT" data-id="101" data-name="大同">大同</a> 
+                                            <a href="javascript:;" data-code="FS" data-id="327" data-name="佛山">佛山</a> 
+                                            <a href="javascript:;" data-code="FY" data-id="147" data-name="阜阳">阜阳</a> 
+                                            <a href="javascript:;" data-code="FZ" data-id="154" data-name="福州">福州</a> 
+                                            <a href="javascript:;" data-code="GZ" data-id="322" data-name="广州">广州</a> 
+                                            <a href="javascript:;" data-code="GL" data-id="209" data-name="桂林">桂林</a> 
+                                            <a href="javascript:;" data-code="GY" data-id="264" data-name="广元">广元</a> 
+                                            <a href="javascript:;" data-code="GY" data-id="224" data-name="贵阳">贵阳</a> 
+                                            <a href="javascript:;" data-code="GZ" data-id="169" data-name="赣州">赣州</a> 
                                         </dd>
                                     </dl>
-                                  <dl class="city_down_list">
-                                        <dt>H-N</dt> 
-                                        <dd>
-                                            @foreach($code_hn as $hn)
-                                            <a class="w" data-code="{{$hn->code}}" data-id="{{$hn->id}}" data-name="{{$hn->name}}">{{$hn->name}}</a> 
-                                             @endforeach
+                                    <dl class="city_down_list">
+                                        <dt>H-N</dt> <dd>
+                                            <a href="javascript:;" data-code="HZ" data-id="69" data-name="杭州">杭州</a> 
+                                            <a href="javascript:;" data-code="HZ" data-id="73" data-name="湖州">湖州</a> 
+                                            <a href="javascript:;" data-code="HF" data-id="80" data-name="合肥">合肥</a> 
+                                            <a href="javascript:;" data-code="HS" data-id="88" data-name="黄山">黄山</a>
+                                            <a href="javascript:;" data-code="HEB" data-id="43" data-name="哈尔滨">哈尔滨</a> 
+                                            <a href="javascript:;" data-code="HHHT" data-id="111" data-name="呼和浩特">呼和浩特</a> 
+                                            <a href="javascript:;" data-code="HNBE" data-id="117" data-name="呼伦贝尔">呼伦贝尔</a> 
+                                            <a href="javascript:;" data-code="HK" data-id="221" data-name="海口">海口</a>  
+                                            <a href="javascript:;" data-code="HZ" data-id="196" data-name="惠州">惠州</a> 
+                                            <a href="javascript:;" data-code="HA" data-id="63" data-name="淮安">淮安</a> 
+                                            <a href="javascript:;" data-code="HD" data-id="92" data-name="邯郸">邯郸</a> 
+                                            <a href="javascript:;" data-code="HS" data-id="99" data-name="衡水">衡水</a> 
+                                            <a href="javascript:;" data-code="HZ" data-id="336" data-name="汉中">汉中</a> 
+                                            <a href="javascript:;" data-code="HY" data-id="311" data-name="衡阳">衡阳</a> 
+                                            <a href="javascript:;" data-code="JX" data-id="72" data-name="嘉兴">嘉兴</a>  
+                                            <a href="javascript:;" data-code="JL" data-id="19" data-name="吉林">吉林</a>  
+                                            <a href="javascript:;" data-code="JN" data-id="174" data-name="济南">济南</a>
+                                            <a href="javascript:;" data-code="JZ" data-id="280" data-name="焦作">焦作</a> 
+                                            <a href="javascript:;" data-code="JA" data-id="170" data-name="吉安">吉安</a> 
+                                            <a href="javascript:;" data-code="JYG" data-id="341" data-name="嘉峪关">嘉峪关</a> 
+                                            <a href="javascript:;" data-code="KM" data-id="233" data-name="昆明">昆明</a> 
+                                            <a href="javascript:;" data-code="LS" data-id="79" data-name="丽水">丽水</a> 
+                                            <a href="javascript:;" data-code="JH" data-id="75" data-name="金华">金华</a> 
+                                            <a href="javascript:;" data-code="JJ" data-id="166" data-name="九江">九江</a>
+                                            <a href="javascript:;" data-code="LZ" data-id="261" data-name="泸州">泸州</a>  
+                                            <a href="javascript:;" data-code="LS" data-id="249" data-name="拉萨">拉萨</a>  
+                                            <a href="javascript:;" data-code="LJ" data-id="238" data-name="丽江">丽江</a> 
+                                            <a href="javascript:;" data-code="LYG" data-id="62" data-name="连云港">连云港</a> 
+                                            <a href="javascript:;" data-code="LC" data-id="188" data-name="聊城">聊城</a> 
+                                            <a href="javascript:;" data-code="LY" data-id="193" data-name="洛阳">洛阳</a>  
+                                            <a href="javascript:;" data-code="LD" data-id="320" data-name="娄底">娄底</a>
+                                            <a href="javascript:;" data-code="LZ" data-id="340" data-name="兰州">兰州</a> 
+                                            <a href="javascript:;" data-code="MY" data-id="263" data-name="绵阳">绵阳</a> 
+                                            <a href="javascript:;" data-code="MDJ" data-id="52" data-name="牡丹江">牡丹江</a> 
+                                            <a href="javascript:;" data-code="NJ" data-id="56" data-name="南京">南京</a> 
+                                            <a href="javascript:;" data-code="NT" data-id="61" data-name="南通">南通</a> 
+                                            <a href="javascript:;" data-code="NB" data-id="70" data-name="宁波">宁波</a> 
+                                            <a href="javascript:;" data-code="NC" data-id="163" data-name="南昌">南昌</a> 
+                                            <a href="javascript:;" data-code="NN" data-id="207" data-name="南宁">南宁</a> 
                                         </dd>
                                     </dl>
                                     <dl class="city_down_list"> 
                                         <dt>P-T</dt> 
-                                        <dd> @foreach($code_pt as $pt)
-                                            <a class="w" data-code="{{$pt->code}}" data-id="{{$pt->id}}" data-name="{{$pt->name}}">{{$pt->name}}</a> 
-                                            @endforeach
+                                        <dd> 
+                                            <a href="javascript:;" data-code="QZ" data-id="76" data-name="衢州">衢州</a> 
+                                            <a href="javascript:;" data-code="QD" data-id="175" data-name="青岛">青岛</a> 
+                                            <a href="javascript:;" data-code="QY" data-id="201" data-name="清远">清远</a> 
+                                            <a href="javascript:;" data-code="QQHE" data-id="44" data-name="齐齐哈尔">齐齐哈尔</a> 
+                                            <a href="javascript:;" data-code="QZ" data-id="158" data-name="泉州">泉州</a> 
+                                            <a href="javascript:;" data-code="RZ" data-id="184" data-name="日照">日照</a> 
+                                            <a href="javascript:;" data-code="SH" data-id="9" data-name="上海">上海</a> 
+                                            <a href="javascript:;" data-code="SZ" data-id="60" data-name="苏州">苏州</a> 
+                                            <a href="javascript:;" data-code="SX" data-id="74" data-name="绍兴">绍兴</a> 
+                                            <a href="javascript:;" data-code="SJZ" data-id="89" data-name="石家庄">石家庄</a>  
+                                            <a href="javascript:;" data-code="SZ" data-id="324" data-name="深圳">深圳</a> 
+                                            <a href="javascript:;" data-code="SY" data-id="257" data-name="三亚">三亚</a> 
+                                            <a href="javascript:;" data-code="SM" data-id="157" data-name="三明">三明</a> 
+                                            <a href="javascript:;" data-code="SY" data-id="123" data-name="沈阳">沈阳</a> 
+                                            <a href="javascript:;" data-code="ST" data-id="326" data-name="汕头">汕头</a> 
+                                            <a href="javascript:;" data-code="TJ" data-id="14" data-name="天津">天津</a>  
+                                            <a href="javascript:;" data-code="TY" data-id="100" data-name="太原">太原</a> 
+                                            <a href="javascript:;" data-code="TCX" data-id="2118" data-name="腾冲">腾冲</a> 
+                                            <a href="javascript:;" data-code="TZ" data-id="78" data-name="台州">台州</a> 
+                                            <a href="javascript:;" data-code="TS" data-id="90" data-name="唐山">唐山</a> 
+                                            <a href="javascript:;" data-code="TA" data-id="182" data-name="泰安">泰安</a>
                                         </dd>
                                     </dl>
                                     <dl class="city_down_list"> 
-                                        <dt>W-Z</dt>
-                                        <dd> @foreach($code_wz as $wz)
-                                            <a class="w" data-code="{{$wz->code}}" data-id="{{$wz->id}}" data-name="{{$wz->name}}">{{$wz->name}}</a>
-                                            @endforeach
+                                        <dt>W-Z</dt> <dd> 
+                                            <a href="javascript:;" data-code="WX" data-id="57" data-name="无锡">无锡</a>  
+                                            <a href="javascript:;" data-code="WZ" data-id="71" data-name="温州">温州</a> 
+                                            <a href="javascript:;" data-code="WH" data-id="81" data-name="芜湖">芜湖</a> 
+                                            <a href="javascript:;" data-code="WLMQ" data-id="367" data-name="乌鲁木齐">乌鲁木齐</a> 
+                                            <a href="javascript:;" data-code="WH" data-id="291" data-name="武汉">武汉</a> 
+                                            <a href="javascript:;" data-code="XA" data-id="256" data-name="西安">西安</a> 
+                                            <a href="javascript:;" data-code="XC" data-id="1979" data-name="西昌">西昌</a>
+                                            <a href="javascript:;" data-code="XSBN" data-id="244" data-name="西双版纳">西双版纳</a> 
+                                            <a href="javascript:;" data-code="XGLLX" data-id="2210" data-name="香格里拉">香格里拉</a> 
+                                            <a href="javascript:;" data-code="XN" data-id="354" data-name="西宁">西宁</a> 
+                                            <a href="javascript:;" data-code="XG" data-id="40" data-name="香港">香港</a> 
+                                            <a href="javascript:;" data-code="XM" data-id="155" data-name="厦门">厦门</a>
+                                            <a href="javascript:;" data-code="XT" data-id="310" data-name="湘潭">湘潭</a> 
+                                            <a href="javascript:;" data-code="XT" data-id="93" data-name="邢台">邢台</a>  
+                                            <a href="javascript:;" data-code="YA" data-id="335" data-name="延安">延安</a> 
+                                            <a href="javascript:;" data-code="YY" data-id="313" data-name="岳阳">岳阳</a> 
+                                            <a href="javascript:;" data-code="YB" data-id="270" data-name="宜宾">宜宾</a> 
+                                            <a href="javascript:;" data-code="YB" data-id="145" data-name="延边">延边</a> 
+                                            <a href="javascript:;" data-code="YC" data-id="171" data-name="宜春">宜春</a> 
+                                            <a href="javascript:;" data-code="YC" data-id="64" data-name="盐城">盐城</a>  
+                                            <a href="javascript:;" data-code="YC" data-id="294" data-name="宜昌">宜昌</a> 
+                                            <a href="javascript:;" data-code="YL" data-id="337" data-name="榆林">榆林</a> 
+                                           <a href="javascript:;" data-code="ZZ" data-id="309" data-name="株洲">株洲</a>  
+                                            <a href="javascript:;" data-code="ZS" data-id="77" data-name="舟山">舟山</a> 
+                                            <a href="javascript:;" data-code="ZH" data-id="325" data-name="珠海">珠海</a>
+                                            <a href="javascript:;" data-code="ZS" data-id="203" data-name="中山">中山</a> 
+                                            <a href="javascript:;" data-code="ZJJ" data-id="315" data-name="张家界">张家界</a> 
+                                            <a href="javascript:;" data-code="ZB" data-id="176" data-name="淄博">淄博</a> 
+                                            <a href="javascript:;" data-code="ZZ" data-id="191" data-name="郑州">郑州</a> 
+                                            <a href="javascript:;" data-code="ZZ" data-id="159" data-name="漳州">漳州</a>
                                         </dd>
                                     </dl>
                                 </div>
-                                <script>
-                                   
-                                    function goCity(){
-                                       var goC = document.getElementById('goCity');
-                                       goC.style.display="block";
-                                    };
-//                                    function out(){
-//                                        alert('鼠标出来了');
-//                                        var goCity = document.getElementById('goCity'); 
-//                                         goCity.style.display="none";
-//                                    }
-                                    
-                                   
-                                    
-
-                               
-                                
-                                </script>
-    
                             </div>
                         </div>
                         <div class="lv_s_td ml10">
@@ -205,167 +317,7 @@
                                 </div>
                                 <div class="lv_s_city js_all_city">
                                     <p>热门出发城市</p>
-                                <div class="search_city_hot cfd_hot">
-                                    <a class="w" data-code="" data-id="8" data-name="">全国</a>
-                                    <a class="w" data-code="SH" data-id="9" data-name="上海">上海</a> 
-                                    <a class="w" data-code="SZ" data-id="60" data-name="苏州">苏州</a> 
-                                    <a class="w" data-code="HZ" data-id="69" data-name="杭州">杭州</a> 
-                                    <a class="w" data-code="BJ" data-id="13" data-name="北京">北京</a> 
-                                    <a class="w" data-code="TY" data-id="100" data-name="太原">太原</a> 
-                                    <a class="w" data-code="GZ" data-id="322" data-name="广州">广州</a> 
-                                    <a class="w" data-code="CD" data-id="258" data-name="成都">成都</a>
-                                    <a class="w" data-code="ZQ" data-id="31" data-name="重庆">重庆</a> 
-                                    <a class="w" data-code="SY" data-id="257" data-name="三亚">三亚</a> 
-                                    <a class="w" data-code="CZ" data-id="59" data-name="常州">常州</a> 
-                                    <a class="w" data-code="HZ" data-id="73" data-name="湖州">湖州</a> 
-                                    <a class="w" data-code="QD" data-id="175" data-name="青岛">青岛</a>
-                                    <a class="w" data-code="TJ" data-id="14" data-name="天津">天津</a> 
-                                    <a class="w" data-code="SZ" data-id="324" data-name="深圳">深圳</a>
-                                    <a class="w" data-code="KM" data-id="233" data-name="昆明">昆明</a> 
-                                    <a class="w" data-code="HK" data-id="221" data-name="海口">海口</a> 
-                                    <a class="w" data-code="NJ" data-id="56" data-name="南京">南京</a> 
-                                    <a class="w" data-code="JX" data-id="72" data-name="嘉兴">嘉兴</a> 
-                                    <a class="w" data-code="NT" data-id="61" data-name="南通">南通</a> 
-                                    <a class="w" data-code="WX" data-id="57" data-name="无锡">无锡</a> 
-                                    <a class="w" data-code="XA" data-id="256" data-name="西安">西安</a>
-                                </div>
-                                    <dl class="city_down_list"> 
-                                        <dt>A-G</dt> <dd>  
-                                            <a class="w" data-code="AM" data-id="41" data-name="澳门">澳门</a> 
-                                            <a class="w" data-code="ALT" data-id="380" data-name="阿勒泰">阿勒泰</a>
-                                            <a class="w" data-code="BJ" data-id="13" data-name="北京">北京</a> 
-                                            <a class="w" data-code="BT" data-id="112" data-name="包头">包头</a>  
-                                            <a class="w" data-code="BH" data-id="211" data-name="北海">北海</a> 
-                                            <a class="w" data-code="BZ" data-id="189" data-name="滨州">滨州</a> 
-                                            <a class="w" data-code="CS" data-id="308" data-name="长沙">长沙</a> 
-                                            <a class="w" data-code="CZ" data-id="59" data-name="常州">常州</a> 
-                                            <a class="w" data-code="CC" data-id="137" data-name="长春">长春</a> 
-                                            <a class="w" data-code="CD" data-id="258" data-name="成都">成都</a> 
-                                            <a class="w" data-code="ZQ" data-id="31" data-name="重庆">重庆</a> 
-                                            <a class="w" data-code="CZ" data-id="146" data-name="滁州">滁州</a>
-                                            <a class="w" data-code="CD" data-id="314" data-name="常德">常德</a> 
-                                            <a class="w" data-code="DL" data-id="245" data-name="大理">大理</a> 
-                                            <a class="w" data-code="DZ" data-id="272" data-name="达州">达州</a> 
-                                            <a class="w" data-code="DG" data-id="202" data-name="东莞">东莞</a> 
-                                            <a class="w" data-code="DL" data-id="124" data-name="大连">大连</a> 
-                                            <a class="w" data-code="DY" data-id="178" data-name="东营">东营</a> 
-                                            <a class="w" data-code="DZ" data-id="187" data-name="德州">德州</a> 
-                                            
-                                            <a class="w" data-code="FS" data-id="327" data-name="佛山">佛山</a> 
-                                            <a class="w" data-code="FY" data-id="147" data-name="阜阳">阜阳</a> 
-                                            <a class="w" data-code="FZ" data-id="154" data-name="福州">福州</a> 
-                                            <a class="w" data-code="GZ" data-id="322" data-name="广州">广州</a> 
-                                            <a class="w" data-code="GL" data-id="209" data-name="桂林">桂林</a> 
-                                            <a class="w" data-code="GY" data-id="264" data-name="广元">广元</a> 
-                                            <a class="w" data-code="GY" data-id="224" data-name="贵阳">贵阳</a> 
-                                            <a class="w" data-code="GZ" data-id="169" data-name="赣州">赣州</a> 
-                                        </dd>
-                                    </dl>
-                                    <dl class="city_down_list">
-                                        <dt>H-N</dt> <dd> 
-                                            <a class="w" data-code="HZ" data-id="69" data-name="杭州">杭州</a>  
-                                            <a class="w" data-code="HZ" data-id="73" data-name="湖州">湖州</a>  
-                                            <a class="w" data-code="HF" data-id="80" data-name="合肥">合肥</a> 
-                                            <a class="w" data-code="HS" data-id="88" data-name="黄山">黄山</a> 
-                                            <a class="w" data-code="HEB" data-id="43" data-name="哈尔滨">哈尔滨</a>
-                                            <a class="w" data-code="HHHT" data-id="111" data-name="呼和浩特">呼和浩特</a> 
-                                            <a class="w" data-code="HNBE" data-id="117" data-name="呼伦贝尔">呼伦贝尔</a> 
-                                            <a class="w" data-code="HK" data-id="221" data-name="海口">海口</a> 
-                                            <a class="w" data-code="HZ" data-id="196" data-name="惠州">惠州</a> 
-                                            <a class="w" data-code="HA" data-id="63" data-name="淮安">淮安</a>  
-                                            <a class="w" data-code="HD" data-id="92" data-name="邯郸">邯郸</a> 
-                                            <a class="w" data-code="HS" data-id="99" data-name="衡水">衡水</a> 
-                                            <a class="w" data-code="HZ" data-id="336" data-name="汉中">汉中</a> 
-                                            <a class="w" data-code="HY" data-id="311" data-name="衡阳">衡阳</a> 
-                                            <a class="w" data-code="JX" data-id="72" data-name="嘉兴">嘉兴</a>  
-                                            <a class="w" data-code="JL" data-id="19" data-name="吉林">吉林</a> 
-                                            <a class="w" data-code="JN" data-id="174" data-name="济南">济南</a> 
-                                            <a class="w" data-code="JZ" data-id="280" data-name="焦作">焦作</a> 
-                                            <a class="w" data-code="JA" data-id="170" data-name="吉安">吉安</a> 
-                                            <a class="w" data-code="JYG" data-id="341" data-name="嘉峪关">嘉峪关</a> 
-                                            <a class="w" data-code="KM" data-id="233" data-name="昆明">昆明</a> 
-                                            <a class="w" data-code="LS" data-id="79" data-name="丽水">丽水</a> 
-                                            <a class="w" data-code="JH" data-id="75" data-name="金华">金华</a> 
-                                            <a class="w" data-code="JJ" data-id="166" data-name="九江">九江</a>  
-                                            <a class="w" data-code="LZ" data-id="261" data-name="泸州">泸州</a> 
-                                            <a class="w" data-code="LS" data-id="249" data-name="拉萨">拉萨</a>
-                                            <a class="w" data-code="LJ" data-id="238" data-name="丽江">丽江</a> 
-                                            <a class="w" data-code="LYG" data-id="62" data-name="连云港">连云港</a> 
-                                            <a class="w" data-code="LC" data-id="188" data-name="聊城">聊城</a> 
-                                            <a class="w" data-code="LY" data-id="193" data-name="洛阳">洛阳</a> 
-                                            <a class="w" data-code="LD" data-id="320" data-name="娄底">娄底</a> 
-                                            <a class="w" data-code="LZ" data-id="340" data-name="兰州">兰州</a> 
-                                            <a class="w" data-code="MY" data-id="263" data-name="绵阳">绵阳</a> 
-                                            <a class="w" data-code="MDJ" data-id="52" data-name="牡丹江">牡丹江</a>  
-                                            <a class="w" data-code="NJ" data-id="56" data-name="南京">南京</a> 
-                                            <a class="w" data-code="NT" data-id="61" data-name="南通">南通</a> 
-                                            <a class="w" data-code="NB" data-id="70" data-name="宁波">宁波</a> 
-                                            <a class="w" data-code="NC" data-id="163" data-name="南昌">南昌</a> 
-                                            <a class="w" data-code="NN" data-id="207" data-name="南宁">南宁</a> 
-                                        </dd>
-                                    </dl>
-                                    <dl class="city_down_list">
-                                            <dt>P-T</dt> <dd> 
-                                                <a class="w" data-code="QZ" data-id="76" data-name="衢州">衢州</a>
-                                                <a class="w" data-code="QD" data-id="175" data-name="青岛">青岛</a> 
-                                                <a class="w" data-code="QY" data-id="201" data-name="清远">清远</a> 
-                                                <a class="w" data-code="QQHE" data-id="44" data-name="齐齐哈尔">齐齐哈尔</a>  
-                                                <a class="w" data-code="QZ" data-id="158" data-name="泉州">泉州</a> 
-                                                <a class="w" data-code="RZ" data-id="184" data-name="日照">日照</a> 
-                                                <a class="w" data-code="SH" data-id="9" data-name="上海">上海</a>  
-                                                <a class="w" data-code="SZ" data-id="60" data-name="苏州">苏州</a> 
-                                                <a class="w" data-code="SX" data-id="74" data-name="绍兴">绍兴</a> 
-                                                <a class="w" data-code="SJZ" data-id="89" data-name="石家庄">石家庄</a> 
-                                                <a class="w" data-code="SZ" data-id="324" data-name="深圳">深圳</a> 
-                                                <a class="w" data-code="SY" data-id="257" data-name="三亚">三亚</a> 
-                                                <a class="w" data-code="SM" data-id="157" data-name="三明">三明</a> 
-                                                <a class="w" data-code="SY" data-id="123" data-name="沈阳">沈阳</a> 
-                                                <a class="w" data-code="ST" data-id="326" data-name="汕头">汕头</a> 
-                                                <a class="w" data-code="TJ" data-id="14" data-name="天津">天津</a> 
-                                                <a class="w" data-code="TY" data-id="100" data-name="太原">太原</a>
-                                                <a class="w" data-code="TCX" data-id="2118" data-name="腾冲">腾冲</a> 
-                                                <a class="w" data-code="TZ" data-id="78" data-name="台州">台州</a>  
-                                                <a class="w" data-code="TS" data-id="90" data-name="唐山">唐山</a> 
-                                                <a class="w" data-code="TA" data-id="182" data-name="泰安">泰安</a> 
-                                            </dd>
-                                    </dl>
-                                    <dl class="city_down_list"> 
-                                        <dt>W-Z</dt> <dd> 
-                                            <a class="w" data-code="WX" data-id="57" data-name="无锡">无锡</a> 
-                                            <a class="w" data-code="WZ" data-id="71" data-name="温州">温州</a> 
-                                            <a class="w" data-code="WH" data-id="81" data-name="芜湖">芜湖</a>  
-                                            <a class="w" data-code="WLMQ" data-id="367" data-name="乌鲁木齐">乌鲁木齐</a> 
-                                            <a class="w" data-code="WH" data-id="291" data-name="武汉">武汉</a> 
-                                            <a class="w" data-code="XA" data-id="256" data-name="西安">西安</a> 
-                                            <a class="w" data-code="XC" data-id="1979" data-name="西昌">西昌</a> 
-                                            <a class="w" data-code="XSBN" data-id="244" data-name="西双版纳">西双版纳</a> 
-                                            <a class="w" data-code="XGLLX" data-id="2210" data-name="香格里拉">香格里拉</a> 
-                                            <a class="w" data-code="XN" data-id="354" data-name="西宁">西宁</a> 
-                                            <a class="w" data-code="XG" data-id="40" data-name="香港">香港</a>  
-                                            <a class="w" data-code="XM" data-id="155" data-name="厦门">厦门</a> 
-                                            <a class="w" data-code="XT" data-id="310" data-name="湘潭">湘潭</a> 
-                                            <a class="w" data-code="XT" data-id="93" data-name="邢台">邢台</a>  
-                                            <a class="w" data-code="YA" data-id="335" data-name="延安">延安</a> 
-                                            <a class="w" data-code="YY" data-id="313" data-name="岳阳">岳阳</a> 
-                                            <a class="w" data-code="YB" data-id="270" data-name="宜宾">宜宾</a> 
-                                            <a class="w" data-code="YB" data-id="145" data-name="延边">延边</a> 
-                                            <a class="w" data-code="YC" data-id="362" data-name="银川">银川</a>  
-                                            <a class="w" data-code="YC" data-id="171" data-name="宜春">宜春</a> 
-                                            <a class="w" data-code="YC" data-id="64" data-name="盐城">盐城</a> 
-                                            <a class="w" data-code="YC" data-id="294" data-name="宜昌">宜昌</a> 
-                                            <a class="w" data-code="YL" data-id="337" data-name="榆林">榆林</a> 
-                                            <a class="w" data-code="ZZ" data-id="309" data-name="株洲">株洲</a> 
-                                            <a class="w" data-code="ZS" data-id="77" data-name="舟山">舟山</a>  
-                                            <a class="w" data-code="ZH" data-id="325" data-name="珠海">珠海</a>  
-                                            
-                                            <a class="w" data-code="ZS" data-id="203" data-name="中山">中山</a>  
-                                           <a class="w" data-code="ZJJ" data-id="315" data-name="张家界">张家界</a> 
-                                           <a class="w" data-code="ZB" data-id="176" data-name="淄博">淄博</a>  
-                                           <a class="w" data-code="ZZ" data-id="191" data-name="郑州">郑州</a> 
-                                           <a class="w" data-code="ZZ" data-id="159" data-name="漳州">漳州</a>
-                                        </dd>
-                                    </dl>
-                                </div>
+                                <div class="search_city_hot cfd_hot"> <a href="javascript:;" data-code="" data-id="8" data-name="">全国</a> <a href="javascript:;" data-code="SH" data-id="9" data-name="上海">上海</a> <a href="javascript:;" data-code="SZ" data-id="60" data-name="苏州">苏州</a> <a href="javascript:;" data-code="HZ" data-id="69" data-name="杭州">杭州</a> <a href="javascript:;" data-code="BJ" data-id="13" data-name="北京">北京</a> <a href="javascript:;" data-code="TY" data-id="100" data-name="太原">太原</a> <a href="javascript:;" data-code="GZ" data-id="322" data-name="广州">广州</a> <a href="javascript:;" data-code="CD" data-id="258" data-name="成都">成都</a> <a href="javascript:;" data-code="ZQ" data-id="31" data-name="重庆">重庆</a> <a href="javascript:;" data-code="SY" data-id="257" data-name="三亚">三亚</a> <a href="javascript:;" data-code="CZ" data-id="59" data-name="常州">常州</a> <a href="javascript:;" data-code="HZ" data-id="73" data-name="湖州">湖州</a> <a href="javascript:;" data-code="QD" data-id="175" data-name="青岛">青岛</a> <a href="javascript:;" data-code="TJ" data-id="14" data-name="天津">天津</a> <a href="javascript:;" data-code="SZ" data-id="324" data-name="深圳">深圳</a> <a href="javascript:;" data-code="KM" data-id="233" data-name="昆明">昆明</a> <a href="javascript:;" data-code="HK" data-id="221" data-name="海口">海口</a> <a href="javascript:;" data-code="NJ" data-id="56" data-name="南京">南京</a> <a href="javascript:;" data-code="JX" data-id="72" data-name="嘉兴">嘉兴</a> <a href="javascript:;" data-code="NT" data-id="61" data-name="南通">南通</a> <a href="javascript:;" data-code="WX" data-id="57" data-name="无锡">无锡</a> <a href="javascript:;" data-code="XA" data-id="256" data-name="西安">西安</a></div><dl class="city_down_list"> <dt>A-G</dt> <dd>  <a href="javascript:;" data-code="AM" data-id="41" data-name="澳门">澳门</a>  <a href="javascript:;" data-code="ALT" data-id="380" data-name="阿勒泰">阿勒泰</a>  <a href="javascript:;" data-code="BJ" data-id="13" data-name="北京">北京</a>  <a href="javascript:;" data-code="BT" data-id="112" data-name="包头">包头</a>  <a href="javascript:;" data-code="BH" data-id="211" data-name="北海">北海</a>  <a href="javascript:;" data-code="BZ" data-id="189" data-name="滨州">滨州</a>  <a href="javascript:;" data-code="CS" data-id="308" data-name="长沙">长沙</a>  <a href="javascript:;" data-code="CZ" data-id="59" data-name="常州">常州</a>  <a href="javascript:;" data-code="CC" data-id="137" data-name="长春">长春</a>  <a href="javascript:;" data-code="CD" data-id="258" data-name="成都">成都</a>  <a href="javascript:;" data-code="ZQ" data-id="31" data-name="重庆">重庆</a>  <a href="javascript:;" data-code="CZ" data-id="146" data-name="滁州">滁州</a>  <a href="javascript:;" data-code="CD" data-id="314" data-name="常德">常德</a>  <a href="javascript:;" data-code="DL" data-id="245" data-name="大理">大理</a>  <a href="javascript:;" data-code="DZ" data-id="272" data-name="达州">达州</a>  <a href="javascript:;" data-code="DG" data-id="202" data-name="东莞">东莞</a>  <a href="javascript:;" data-code="DL" data-id="124" data-name="大连">大连</a>  <a href="javascript:;" data-code="DY" data-id="178" data-name="东营">东营</a>  <a href="javascript:;" data-code="DZ" data-id="187" data-name="德州">德州</a>  <a href="javascript:;" data-code="DT" data-id="101" data-name="大同">大同</a>  <a href="javascript:;" data-code="FS" data-id="327" data-name="佛山">佛山</a>  <a href="javascript:;" data-code="FY" data-id="147" data-name="阜阳">阜阳</a>  <a href="javascript:;" data-code="FZ" data-id="154" data-name="福州">福州</a>  <a href="javascript:;" data-code="GZ" data-id="322" data-name="广州">广州</a>  <a href="javascript:;" data-code="GL" data-id="209" data-name="桂林">桂林</a>  <a href="javascript:;" data-code="GY" data-id="264" data-name="广元">广元</a>  <a href="javascript:;" data-code="GY" data-id="224" data-name="贵阳">贵阳</a>  <a href="javascript:;" data-code="GZ" data-id="169" data-name="赣州">赣州</a> </dd></dl><dl class="city_down_list"> <dt>H-N</dt> <dd>  <a href="javascript:;" data-code="HZ" data-id="69" data-name="杭州">杭州</a>  <a href="javascript:;" data-code="HZ" data-id="73" data-name="湖州">湖州</a>  <a href="javascript:;" data-code="HF" data-id="80" data-name="合肥">合肥</a>  <a href="javascript:;" data-code="HS" data-id="88" data-name="黄山">黄山</a>  <a href="javascript:;" data-code="HEB" data-id="43" data-name="哈尔滨">哈尔滨</a>  <a href="javascript:;" data-code="HHHT" data-id="111" data-name="呼和浩特">呼和浩特</a>  <a href="javascript:;" data-code="HNBE" data-id="117" data-name="呼伦贝尔">呼伦贝尔</a>  <a href="javascript:;" data-code="HK" data-id="221" data-name="海口">海口</a>  <a href="javascript:;" data-code="HZ" data-id="196" data-name="惠州">惠州</a>  <a href="javascript:;" data-code="HA" data-id="63" data-name="淮安">淮安</a>  <a href="javascript:;" data-code="HD" data-id="92" data-name="邯郸">邯郸</a>  <a href="javascript:;" data-code="HS" data-id="99" data-name="衡水">衡水</a>  <a href="javascript:;" data-code="HZ" data-id="336" data-name="汉中">汉中</a>  <a href="javascript:;" data-code="HY" data-id="311" data-name="衡阳">衡阳</a>  <a href="javascript:;" data-code="JX" data-id="72" data-name="嘉兴">嘉兴</a>  <a href="javascript:;" data-code="JL" data-id="19" data-name="吉林">吉林</a>  <a href="javascript:;" data-code="JN" data-id="174" data-name="济南">济南</a>  <a href="javascript:;" data-code="JZ" data-id="280" data-name="焦作">焦作</a>  <a href="javascript:;" data-code="JA" data-id="170" data-name="吉安">吉安</a>  <a href="javascript:;" data-code="JYG" data-id="341" data-name="嘉峪关">嘉峪关</a>  <a href="javascript:;" data-code="KM" data-id="233" data-name="昆明">昆明</a>  <a href="javascript:;" data-code="LS" data-id="79" data-name="丽水">丽水</a>  <a href="javascript:;" data-code="JH" data-id="75" data-name="金华">金华</a>  <a href="javascript:;" data-code="JJ" data-id="166" data-name="九江">九江</a>  <a href="javascript:;" data-code="LZ" data-id="261" data-name="泸州">泸州</a>  <a href="javascript:;" data-code="LS" data-id="249" data-name="拉萨">拉萨</a>  <a href="javascript:;" data-code="LJ" data-id="238" data-name="丽江">丽江</a>  <a href="javascript:;" data-code="LYG" data-id="62" data-name="连云港">连云港</a>  <a href="javascript:;" data-code="LC" data-id="188" data-name="聊城">聊城</a>  <a href="javascript:;" data-code="LY" data-id="193" data-name="洛阳">洛阳</a>  <a href="javascript:;" data-code="LD" data-id="320" data-name="娄底">娄底</a>  <a href="javascript:;" data-code="LZ" data-id="340" data-name="兰州">兰州</a>  <a href="javascript:;" data-code="MY" data-id="263" data-name="绵阳">绵阳</a>  <a href="javascript:;" data-code="MDJ" data-id="52" data-name="牡丹江">牡丹江</a>  <a href="javascript:;" data-code="NJ" data-id="56" data-name="南京">南京</a>  <a href="javascript:;" data-code="NT" data-id="61" data-name="南通">南通</a>  <a href="javascript:;" data-code="NB" data-id="70" data-name="宁波">宁波</a>  <a href="javascript:;" data-code="NC" data-id="163" data-name="南昌">南昌</a>  <a href="javascript:;" data-code="NN" data-id="207" data-name="南宁">南宁</a> </dd></dl><dl class="city_down_list"> <dt>P-T</dt> <dd>  <a href="javascript:;" data-code="QZ" data-id="76" data-name="衢州">衢州</a>  <a href="javascript:;" data-code="QD" data-id="175" data-name="青岛">青岛</a>  <a href="javascript:;" data-code="QY" data-id="201" data-name="清远">清远</a>  <a href="javascript:;" data-code="QQHE" data-id="44" data-name="齐齐哈尔">齐齐哈尔</a>  <a href="javascript:;" data-code="QZ" data-id="158" data-name="泉州">泉州</a>  <a href="javascript:;" data-code="RZ" data-id="184" data-name="日照">日照</a>  <a href="javascript:;" data-code="SH" data-id="9" data-name="上海">上海</a>  <a href="javascript:;" data-code="SZ" data-id="60" data-name="苏州">苏州</a>  <a href="javascript:;" data-code="SX" data-id="74" data-name="绍兴">绍兴</a>  <a href="javascript:;" data-code="SJZ" data-id="89" data-name="石家庄">石家庄</a>  <a href="javascript:;" data-code="SZ" data-id="324" data-name="深圳">深圳</a>  <a href="javascript:;" data-code="SY" data-id="257" data-name="三亚">三亚</a>  <a href="javascript:;" data-code="SM" data-id="157" data-name="三明">三明</a>  <a href="javascript:;" data-code="SY" data-id="123" data-name="沈阳">沈阳</a>  <a href="javascript:;" data-code="ST" data-id="326" data-name="汕头">汕头</a>  <a href="javascript:;" data-code="TJ" data-id="14" data-name="天津">天津</a>  <a href="javascript:;" data-code="TY" data-id="100" data-name="太原">太原</a>  <a href="javascript:;" data-code="TCX" data-id="2118" data-name="腾冲">腾冲</a>  <a href="javascript:;" data-code="TZ" data-id="78" data-name="台州">台州</a>  <a href="javascript:;" data-code="TS" data-id="90" data-name="唐山">唐山</a>  <a href="javascript:;" data-code="TA" data-id="182" data-name="泰安">泰安</a> </dd></dl><dl class="city_down_list"> <dt>W-Z</dt> <dd>  <a href="javascript:;" data-code="WX" data-id="57" data-name="无锡">无锡</a>  <a href="javascript:;" data-code="WZ" data-id="71" data-name="温州">温州</a>  <a href="javascript:;" data-code="WH" data-id="81" data-name="芜湖">芜湖</a>  <a href="javascript:;" data-code="WLMQ" data-id="367" data-name="乌鲁木齐">乌鲁木齐</a>  <a href="javascript:;" data-code="WH" data-id="291" data-name="武汉">武汉</a>  <a href="javascript:;" data-code="XA" data-id="256" data-name="西安">西安</a>  <a href="javascript:;" data-code="XC" data-id="1979" data-name="西昌">西昌</a>  <a href="javascript:;" data-code="XSBN" data-id="244" data-name="西双版纳">西双版纳</a>  <a href="javascript:;" data-code="XGLLX" data-id="2210" data-name="香格里拉">香格里拉</a>  <a href="javascript:;" data-code="XN" data-id="354" data-name="西宁">西宁</a>  <a href="javascript:;" data-code="XG" data-id="40" data-name="香港">香港</a>  <a href="javascript:;" data-code="XM" data-id="155" data-name="厦门">厦门</a>  <a href="javascript:;" data-code="XT" data-id="310" data-name="湘潭">湘潭</a>  <a href="javascript:;" data-code="XT" data-id="93" data-name="邢台">邢台</a>  <a href="javascript:;" data-code="YA" data-id="335" data-name="延安">延安</a>  <a href="javascript:;" data-code="YY" data-id="313" data-name="岳阳">岳阳</a>  <a href="javascript:;" data-code="YB" data-id="270" data-name="宜宾">宜宾</a>  <a href="javascript:;" data-code="YB" data-id="145" data-name="延边">延边</a>  <a href="javascript:;" data-code="YC" data-id="362" data-name="银川">银川</a>  <a href="javascript:;" data-code="YC" data-id="171" data-name="宜春">宜春</a>  <a href="javascript:;" data-code="YC" data-id="64" data-name="盐城">盐城</a>  <a href="javascript:;" data-code="YC" data-id="294" data-name="宜昌">宜昌</a>  <a href="javascript:;" data-code="YL" data-id="337" data-name="榆林">榆林</a>  <a href="javascript:;" data-code="ZZ" data-id="309" data-name="株洲">株洲</a>  <a href="javascript:;" data-code="ZS" data-id="77" data-name="舟山">舟山</a>  <a href="javascript:;" data-code="ZH" data-id="325" data-name="珠海">珠海</a>  <a href="javascript:;" data-code="ZS" data-id="203" data-name="中山">中山</a>  <a href="javascript:;" data-code="ZJJ" data-id="315" data-name="张家界">张家界</a>  <a href="javascript:;" data-code="ZB" data-id="176" data-name="淄博">淄博</a>  <a href="javascript:;" data-code="ZZ" data-id="191" data-name="郑州">郑州</a>  <a href="javascript:;" data-code="ZZ" data-id="159" data-name="漳州">漳州</a> </dd></dl></div>
                             </div>
                         </div>
                         <div class="lv_s_td ml10">
@@ -554,7 +506,7 @@
                         </ul>
                         <ul class="mdd_list js_hotel_city">
                         
-                        <li style="display: block;"> <!--热门--> <a class="w" data-id="9" hidefocus="false">上海</a> <a class="w" data-id="56" hidefocus="false">南京</a> <a class="w" data-id="57" hidefocus="false">无锡</a> <a class="w" data-id="59" hidefocus="false">常州</a> <a class="w" data-id="60" hidefocus="false">苏州</a> <a class="w" data-id="65" hidefocus="false">扬州</a> <a class="w" data-id="66" hidefocus="false">镇江</a> <a class="w" data-id="67" hidefocus="false">泰州</a> <a class="w" data-id="69" hidefocus="false">杭州</a> <a class="w" data-id="70" hidefocus="false">宁波</a> <a class="w" data-id="71" hidefocus="false">温州</a> <a class="w" data-id="72" hidefocus="false">嘉兴</a> <a class="w" data-id="73" hidefocus="false">湖州</a> <a class="w" data-id="74" hidefocus="false">绍兴</a> <a class="w" data-id="77" hidefocus="false">舟山</a> <a class="w" data-id="78" hidefocus="false">台州</a> <a class="w" data-id="79" hidefocus="false">丽水</a> <a class="w" data-id="81" hidefocus="false">芜湖</a> <a class="w" data-id="87" hidefocus="false">安庆</a> <a class="w" data-id="149" hidefocus="false">巢湖</a> <a class="w" data-id="152" hidefocus="false">池州</a> <a class="w" data-id="154" hidefocus="false">福州</a> <a class="w" data-id="155" hidefocus="false">厦门</a> <a class="w" data-id="160" hidefocus="false">南平</a> <a class="w" data-id="168" hidefocus="false">鹰潭</a> <a class="w" data-id="173" hidefocus="false">上饶</a> <a class="w" data-id="175" hidefocus="false">青岛</a> <a class="w" data-id="322" hidefocus="false">广州</a> <a class="w" data-id="324" hidefocus="false">深圳</a> <a class="w" data-id="328" hidefocus="false">江门</a> <a class="w" data-id="196" hidefocus="false">惠州</a> <a class="w" data-id="200" hidefocus="false">阳江</a> <a class="w" data-id="201" hidefocus="false">清远</a> <a class="w" data-id="1820" hidefocus="false">阳西</a> <a class="w" data-id="88" hidefocus="false">黄山</a> <a class="w" data-id="138" hidefocus="false">吉林</a></li><li> <!--ABCD--> <a class="w" data-id="276" hidefocus="false">阿坝藏族羌族自治州</a> <a class="w" data-id="87" hidefocus="false">安庆</a> <a class="w" data-id="41" hidefocus="false">澳门</a> <a class="w" data-id="216" hidefocus="false">百色</a> <a class="w" data-id="82" hidefocus="false">蚌埠</a> <a class="w" data-id="94" hidefocus="false">保定</a> <a class="w" data-id="236" hidefocus="false">保山</a> <a class="w" data-id="211" hidefocus="false">北海</a> <a class="w" data-id="13" hidefocus="false">北京</a> <a class="w" data-id="230" hidefocus="false">毕节地区</a> <a class="w" data-id="189" hidefocus="false">滨州</a> <a class="w" data-id="97" hidefocus="false">沧州</a> <a class="w" data-id="314" hidefocus="false">常德</a> <a class="w" data-id="59" hidefocus="false">常州</a> <a class="w" data-id="137" hidefocus="false">长春</a> <a class="w" data-id="308" hidefocus="false">长沙</a> <a class="w" data-id="149" hidefocus="false">巢湖</a> <a class="w" data-id="258" hidefocus="false">成都</a> <a class="w" data-id="96" hidefocus="false">承德</a> <a class="w" data-id="152" hidefocus="false">池州</a> <a class="w" data-id="114" hidefocus="false">赤峰</a> <a class="w" data-id="146" hidefocus="false">滁州</a> <a class="w" data-id="245" hidefocus="false">大理白族自治州</a> <a class="w" data-id="124" hidefocus="false">大连</a> <a class="w" data-id="48" hidefocus="false">大庆</a> <a class="w" data-id="187" hidefocus="false">德州</a> <a class="w" data-id="178" hidefocus="false">东营</a> <a class="w" data-id="202" hidefocus="false">东莞</a></li><li> <!--EFGH--> <a class="w" data-id="303" hidefocus="false">恩施土家族苗族自治州</a> <a class="w" data-id="327" hidefocus="false">佛山</a> <a class="w" data-id="154" hidefocus="false">福州</a> <a class="w" data-id="172" hidefocus="false">抚州</a> <a class="w" data-id="169" hidefocus="false">赣州</a> <a class="w" data-id="322" hidefocus="false">广州</a> <a class="w" data-id="224" hidefocus="false">贵阳</a> <a class="w" data-id="209" hidefocus="false">桂林</a> <a class="w" data-id="43" hidefocus="false">哈尔滨</a> <a class="w" data-id="221" hidefocus="false">海口</a> <a class="w" data-id="92" hidefocus="false">邯郸</a> <a class="w" data-id="336" hidefocus="false">汉中</a> <a class="w" data-id="69" hidefocus="false">杭州</a> <a class="w" data-id="80" hidefocus="false">合肥</a> <a class="w" data-id="218" hidefocus="false">河池</a> <a class="w" data-id="199" hidefocus="false">河源</a> <a class="w" data-id="190" hidefocus="false">菏泽</a> <a class="w" data-id="311" hidefocus="false">衡阳</a> <a class="w" data-id="111" hidefocus="false">呼和浩特</a> <a class="w" data-id="117" hidefocus="false">呼伦贝尔</a> <a class="w" data-id="73" hidefocus="false">湖州</a> <a class="w" data-id="136" hidefocus="false">葫芦岛</a> <a class="w" data-id="63" hidefocus="false">淮安</a> <a class="w" data-id="300" hidefocus="false">黄冈</a> <a class="w" data-id="88" hidefocus="false">黄山</a> <a class="w" data-id="292" hidefocus="false">黄石</a> <a class="w" data-id="196" hidefocus="false">惠州</a></li><li> <!--JKLM--> <a class="w" data-id="170" hidefocus="false">吉安</a> <a class="w" data-id="138" hidefocus="false">吉林</a> <a class="w" data-id="174" hidefocus="false">济南</a> <a class="w" data-id="181" hidefocus="false">济宁</a> <a class="w" data-id="72" hidefocus="false">嘉兴</a> <a class="w" data-id="328" hidefocus="false">江门</a> <a class="w" data-id="75" hidefocus="false">金华</a> <a class="w" data-id="106" hidefocus="false">晋中</a> <a class="w" data-id="297" hidefocus="false">荆门</a> <a class="w" data-id="299" hidefocus="false">荆州</a> <a class="w" data-id="166" hidefocus="false">九江</a> <a class="w" data-id="192" hidefocus="false">开封</a> <a class="w" data-id="233" hidefocus="false">昆明</a> <a class="w" data-id="249" hidefocus="false">拉萨</a> <a class="w" data-id="340" hidefocus="false">兰州</a> <a class="w" data-id="98" hidefocus="false">廊坊</a> <a class="w" data-id="267" hidefocus="false">乐山</a> <a class="w" data-id="238" hidefocus="false">丽江</a> <a class="w" data-id="79" hidefocus="false">丽水</a> <a class="w" data-id="62" hidefocus="false">连云港</a> <a class="w" data-id="109" hidefocus="false">临汾</a> <a class="w" data-id="186" hidefocus="false">临沂</a> <a class="w" data-id="208" hidefocus="false">柳州</a> <a class="w" data-id="351" hidefocus="false">陇南</a> <a class="w" data-id="193" hidefocus="false">洛阳</a> <a class="w" data-id="263" hidefocus="false">绵阳</a> <a class="w" data-id="52" hidefocus="false">牡丹江</a></li><li> <!--NOPQRS--> <a class="w" data-id="163" hidefocus="false">南昌</a> <a class="w" data-id="268" hidefocus="false">南充</a> <a class="w" data-id="56" hidefocus="false">南京</a> <a class="w" data-id="207" hidefocus="false">南宁</a> <a class="w" data-id="160" hidefocus="false">南平</a> <a class="w" data-id="61" hidefocus="false">南通</a> <a class="w" data-id="285" hidefocus="false">南阳</a> <a class="w" data-id="70" hidefocus="false">宁波</a> <a class="w" data-id="162" hidefocus="false">宁德</a> <a class="w" data-id="44" hidefocus="false">齐齐哈尔</a> <a class="w" data-id="231" hidefocus="false">黔东南苗族侗族自治州</a> <a class="w" data-id="91" hidefocus="false">秦皇岛</a> <a class="w" data-id="175" hidefocus="false">青岛</a> <a class="w" data-id="201" hidefocus="false">清远</a> <a class="w" data-id="76" hidefocus="false">衢州</a> <a class="w" data-id="184" hidefocus="false">日照</a> <a class="w" data-id="157" hidefocus="false">三明</a> <a class="w" data-id="257" hidefocus="false">三亚</a> <a class="w" data-id="9" hidefocus="false">上海</a> <a class="w" data-id="173" hidefocus="false">上饶</a> <a class="w" data-id="323" hidefocus="false">韶关</a> <a class="w" data-id="74" hidefocus="false">绍兴</a> <a class="w" data-id="324" hidefocus="false">深圳</a> <a class="w" data-id="123" hidefocus="false">沈阳</a> <a class="w" data-id="89" hidefocus="false">石家庄</a> <a class="w" data-id="60" hidefocus="false">苏州</a> <a class="w" data-id="54" hidefocus="false">绥化</a></li><li> <!--TUVWX--> <a class="w" data-id="78" hidefocus="false">台州</a> <a class="w" data-id="100" hidefocus="false">太原</a> <a class="w" data-id="182" hidefocus="false">泰安</a> <a class="w" data-id="67" hidefocus="false">泰州</a> <a class="w" data-id="90" hidefocus="false">唐山</a> <a class="w" data-id="42" hidefocus="false">台湾</a> <a class="w" data-id="228" hidefocus="false">铜仁地区</a> <a class="w" data-id="183" hidefocus="false">威海</a> <a class="w" data-id="180" hidefocus="false">潍坊</a> <a class="w" data-id="334" hidefocus="false">渭南</a> <a class="w" data-id="71" hidefocus="false">温州</a> <a class="w" data-id="119" hidefocus="false">乌兰察布</a> <a class="w" data-id="367" hidefocus="false">乌鲁木齐</a> <a class="w" data-id="57" hidefocus="false">无锡</a> <a class="w" data-id="81" hidefocus="false">芜湖</a> <a class="w" data-id="291" hidefocus="false">武汉</a> <a class="w" data-id="256" hidefocus="false">西安</a> <a class="w" data-id="354" hidefocus="false">西宁</a> <a class="w" data-id="244" hidefocus="false">西双版纳傣族自治州</a> <a class="w" data-id="121" hidefocus="false">锡林郭勒盟</a> <a class="w" data-id="155" hidefocus="false">厦门</a> <a class="w" data-id="301" hidefocus="false">咸宁</a> <a class="w" data-id="321" hidefocus="false">湘西土家族苗族自治州</a> <a class="w" data-id="295" hidefocus="false">襄樊</a> <a class="w" data-id="298" hidefocus="false">孝感</a> <a class="w" data-id="279" hidefocus="false">新乡</a> <a class="w" data-id="93" hidefocus="false">邢台</a> <a class="w" data-id="58" hidefocus="false">徐州</a> <a class="w" data-id="40" hidefocus="false">香港</a></li><li> <!--YZ--> <a class="w" data-id="273" hidefocus="false">雅安</a> <a class="w" data-id="179" hidefocus="false">烟台</a> <a class="w" data-id="335" hidefocus="false">延安</a> <a class="w" data-id="145" hidefocus="false">延边朝鲜族自治州</a> <a class="w" data-id="64" hidefocus="false">盐城</a> <a class="w" data-id="65" hidefocus="false">扬州</a> <a class="w" data-id="200" hidefocus="false">阳江</a> <a class="w" data-id="1820" hidefocus="false">阳西</a> <a class="w" data-id="294" hidefocus="false">宜昌</a> <a class="w" data-id="171" hidefocus="false">宜春</a> <a class="w" data-id="362" hidefocus="false">银川</a> <a class="w" data-id="130" hidefocus="false">营口</a> <a class="w" data-id="337" hidefocus="false">榆林</a> <a class="w" data-id="313" hidefocus="false">岳阳</a> <a class="w" data-id="107" hidefocus="false">运城</a> <a class="w" data-id="329" hidefocus="false">湛江</a> <a class="w" data-id="315" hidefocus="false">张家界</a> <a class="w" data-id="95" hidefocus="false">张家口</a> <a class="w" data-id="159" hidefocus="false">漳州</a> <a class="w" data-id="195" hidefocus="false">肇庆</a> <a class="w" data-id="66" hidefocus="false">镇江</a> <a class="w" data-id="191" hidefocus="false">郑州</a> <a class="w" data-id="203" hidefocus="false">中山</a> <a class="w" data-id="77" hidefocus="false">舟山</a> <a class="w" data-id="325" hidefocus="false">珠海</a> <a class="w" data-id="176" hidefocus="false">淄博</a> <a class="w" data-id="226" hidefocus="false">遵义</a></li></ul>
+                        <li style="display: block;"> <!--热门--> <a href="javascript:;" data-id="9" hidefocus="false">上海</a> <a href="javascript:;" data-id="56" hidefocus="false">南京</a> <a href="javascript:;" data-id="57" hidefocus="false">无锡</a> <a href="javascript:;" data-id="59" hidefocus="false">常州</a> <a href="javascript:;" data-id="60" hidefocus="false">苏州</a> <a href="javascript:;" data-id="65" hidefocus="false">扬州</a> <a href="javascript:;" data-id="66" hidefocus="false">镇江</a> <a href="javascript:;" data-id="67" hidefocus="false">泰州</a> <a href="javascript:;" data-id="69" hidefocus="false">杭州</a> <a href="javascript:;" data-id="70" hidefocus="false">宁波</a> <a href="javascript:;" data-id="71" hidefocus="false">温州</a> <a href="javascript:;" data-id="72" hidefocus="false">嘉兴</a> <a href="javascript:;" data-id="73" hidefocus="false">湖州</a> <a href="javascript:;" data-id="74" hidefocus="false">绍兴</a> <a href="javascript:;" data-id="77" hidefocus="false">舟山</a> <a href="javascript:;" data-id="78" hidefocus="false">台州</a> <a href="javascript:;" data-id="79" hidefocus="false">丽水</a> <a href="javascript:;" data-id="81" hidefocus="false">芜湖</a> <a href="javascript:;" data-id="87" hidefocus="false">安庆</a> <a href="javascript:;" data-id="149" hidefocus="false">巢湖</a> <a href="javascript:;" data-id="152" hidefocus="false">池州</a> <a href="javascript:;" data-id="154" hidefocus="false">福州</a> <a href="javascript:;" data-id="155" hidefocus="false">厦门</a> <a href="javascript:;" data-id="160" hidefocus="false">南平</a> <a href="javascript:;" data-id="168" hidefocus="false">鹰潭</a> <a href="javascript:;" data-id="173" hidefocus="false">上饶</a> <a href="javascript:;" data-id="175" hidefocus="false">青岛</a> <a href="javascript:;" data-id="322" hidefocus="false">广州</a> <a href="javascript:;" data-id="324" hidefocus="false">深圳</a> <a href="javascript:;" data-id="328" hidefocus="false">江门</a> <a href="javascript:;" data-id="196" hidefocus="false">惠州</a> <a href="javascript:;" data-id="200" hidefocus="false">阳江</a> <a href="javascript:;" data-id="201" hidefocus="false">清远</a> <a href="javascript:;" data-id="1820" hidefocus="false">阳西</a> <a href="javascript:;" data-id="88" hidefocus="false">黄山</a> <a href="javascript:;" data-id="138" hidefocus="false">吉林</a></li><li> <!--ABCD--> <a href="javascript:;" data-id="276" hidefocus="false">阿坝藏族羌族自治州</a> <a href="javascript:;" data-id="87" hidefocus="false">安庆</a> <a href="javascript:;" data-id="41" hidefocus="false">澳门</a> <a href="javascript:;" data-id="216" hidefocus="false">百色</a> <a href="javascript:;" data-id="82" hidefocus="false">蚌埠</a> <a href="javascript:;" data-id="94" hidefocus="false">保定</a> <a href="javascript:;" data-id="236" hidefocus="false">保山</a> <a href="javascript:;" data-id="211" hidefocus="false">北海</a> <a href="javascript:;" data-id="13" hidefocus="false">北京</a> <a href="javascript:;" data-id="230" hidefocus="false">毕节地区</a> <a href="javascript:;" data-id="189" hidefocus="false">滨州</a> <a href="javascript:;" data-id="97" hidefocus="false">沧州</a> <a href="javascript:;" data-id="314" hidefocus="false">常德</a> <a href="javascript:;" data-id="59" hidefocus="false">常州</a> <a href="javascript:;" data-id="137" hidefocus="false">长春</a> <a href="javascript:;" data-id="308" hidefocus="false">长沙</a> <a href="javascript:;" data-id="149" hidefocus="false">巢湖</a> <a href="javascript:;" data-id="258" hidefocus="false">成都</a> <a href="javascript:;" data-id="96" hidefocus="false">承德</a> <a href="javascript:;" data-id="152" hidefocus="false">池州</a> <a href="javascript:;" data-id="114" hidefocus="false">赤峰</a> <a href="javascript:;" data-id="146" hidefocus="false">滁州</a> <a href="javascript:;" data-id="245" hidefocus="false">大理白族自治州</a> <a href="javascript:;" data-id="124" hidefocus="false">大连</a> <a href="javascript:;" data-id="48" hidefocus="false">大庆</a> <a href="javascript:;" data-id="187" hidefocus="false">德州</a> <a href="javascript:;" data-id="178" hidefocus="false">东营</a> <a href="javascript:;" data-id="202" hidefocus="false">东莞</a></li><li> <!--EFGH--> <a href="javascript:;" data-id="303" hidefocus="false">恩施土家族苗族自治州</a> <a href="javascript:;" data-id="327" hidefocus="false">佛山</a> <a href="javascript:;" data-id="154" hidefocus="false">福州</a> <a href="javascript:;" data-id="172" hidefocus="false">抚州</a> <a href="javascript:;" data-id="169" hidefocus="false">赣州</a> <a href="javascript:;" data-id="322" hidefocus="false">广州</a> <a href="javascript:;" data-id="224" hidefocus="false">贵阳</a> <a href="javascript:;" data-id="209" hidefocus="false">桂林</a> <a href="javascript:;" data-id="43" hidefocus="false">哈尔滨</a> <a href="javascript:;" data-id="221" hidefocus="false">海口</a> <a href="javascript:;" data-id="92" hidefocus="false">邯郸</a> <a href="javascript:;" data-id="336" hidefocus="false">汉中</a> <a href="javascript:;" data-id="69" hidefocus="false">杭州</a> <a href="javascript:;" data-id="80" hidefocus="false">合肥</a> <a href="javascript:;" data-id="218" hidefocus="false">河池</a> <a href="javascript:;" data-id="199" hidefocus="false">河源</a> <a href="javascript:;" data-id="190" hidefocus="false">菏泽</a> <a href="javascript:;" data-id="311" hidefocus="false">衡阳</a> <a href="javascript:;" data-id="111" hidefocus="false">呼和浩特</a> <a href="javascript:;" data-id="117" hidefocus="false">呼伦贝尔</a> <a href="javascript:;" data-id="73" hidefocus="false">湖州</a> <a href="javascript:;" data-id="136" hidefocus="false">葫芦岛</a> <a href="javascript:;" data-id="63" hidefocus="false">淮安</a> <a href="javascript:;" data-id="300" hidefocus="false">黄冈</a> <a href="javascript:;" data-id="88" hidefocus="false">黄山</a> <a href="javascript:;" data-id="292" hidefocus="false">黄石</a> <a href="javascript:;" data-id="196" hidefocus="false">惠州</a></li><li> <!--JKLM--> <a href="javascript:;" data-id="170" hidefocus="false">吉安</a> <a href="javascript:;" data-id="138" hidefocus="false">吉林</a> <a href="javascript:;" data-id="174" hidefocus="false">济南</a> <a href="javascript:;" data-id="181" hidefocus="false">济宁</a> <a href="javascript:;" data-id="72" hidefocus="false">嘉兴</a> <a href="javascript:;" data-id="328" hidefocus="false">江门</a> <a href="javascript:;" data-id="75" hidefocus="false">金华</a> <a href="javascript:;" data-id="106" hidefocus="false">晋中</a> <a href="javascript:;" data-id="297" hidefocus="false">荆门</a> <a href="javascript:;" data-id="299" hidefocus="false">荆州</a> <a href="javascript:;" data-id="166" hidefocus="false">九江</a> <a href="javascript:;" data-id="192" hidefocus="false">开封</a> <a href="javascript:;" data-id="233" hidefocus="false">昆明</a> <a href="javascript:;" data-id="249" hidefocus="false">拉萨</a> <a href="javascript:;" data-id="340" hidefocus="false">兰州</a> <a href="javascript:;" data-id="98" hidefocus="false">廊坊</a> <a href="javascript:;" data-id="267" hidefocus="false">乐山</a> <a href="javascript:;" data-id="238" hidefocus="false">丽江</a> <a href="javascript:;" data-id="79" hidefocus="false">丽水</a> <a href="javascript:;" data-id="62" hidefocus="false">连云港</a> <a href="javascript:;" data-id="109" hidefocus="false">临汾</a> <a href="javascript:;" data-id="186" hidefocus="false">临沂</a> <a href="javascript:;" data-id="208" hidefocus="false">柳州</a> <a href="javascript:;" data-id="351" hidefocus="false">陇南</a> <a href="javascript:;" data-id="193" hidefocus="false">洛阳</a> <a href="javascript:;" data-id="263" hidefocus="false">绵阳</a> <a href="javascript:;" data-id="52" hidefocus="false">牡丹江</a></li><li> <!--NOPQRS--> <a href="javascript:;" data-id="163" hidefocus="false">南昌</a> <a href="javascript:;" data-id="268" hidefocus="false">南充</a> <a href="javascript:;" data-id="56" hidefocus="false">南京</a> <a href="javascript:;" data-id="207" hidefocus="false">南宁</a> <a href="javascript:;" data-id="160" hidefocus="false">南平</a> <a href="javascript:;" data-id="61" hidefocus="false">南通</a> <a href="javascript:;" data-id="285" hidefocus="false">南阳</a> <a href="javascript:;" data-id="70" hidefocus="false">宁波</a> <a href="javascript:;" data-id="162" hidefocus="false">宁德</a> <a href="javascript:;" data-id="44" hidefocus="false">齐齐哈尔</a> <a href="javascript:;" data-id="231" hidefocus="false">黔东南苗族侗族自治州</a> <a href="javascript:;" data-id="91" hidefocus="false">秦皇岛</a> <a href="javascript:;" data-id="175" hidefocus="false">青岛</a> <a href="javascript:;" data-id="201" hidefocus="false">清远</a> <a href="javascript:;" data-id="76" hidefocus="false">衢州</a> <a href="javascript:;" data-id="184" hidefocus="false">日照</a> <a href="javascript:;" data-id="157" hidefocus="false">三明</a> <a href="javascript:;" data-id="257" hidefocus="false">三亚</a> <a href="javascript:;" data-id="9" hidefocus="false">上海</a> <a href="javascript:;" data-id="173" hidefocus="false">上饶</a> <a href="javascript:;" data-id="323" hidefocus="false">韶关</a> <a href="javascript:;" data-id="74" hidefocus="false">绍兴</a> <a href="javascript:;" data-id="324" hidefocus="false">深圳</a> <a href="javascript:;" data-id="123" hidefocus="false">沈阳</a> <a href="javascript:;" data-id="89" hidefocus="false">石家庄</a> <a href="javascript:;" data-id="60" hidefocus="false">苏州</a> <a href="javascript:;" data-id="54" hidefocus="false">绥化</a></li><li> <!--TUVWX--> <a href="javascript:;" data-id="78" hidefocus="false">台州</a> <a href="javascript:;" data-id="100" hidefocus="false">太原</a> <a href="javascript:;" data-id="182" hidefocus="false">泰安</a> <a href="javascript:;" data-id="67" hidefocus="false">泰州</a> <a href="javascript:;" data-id="90" hidefocus="false">唐山</a> <a href="javascript:;" data-id="42" hidefocus="false">台湾</a> <a href="javascript:;" data-id="228" hidefocus="false">铜仁地区</a> <a href="javascript:;" data-id="183" hidefocus="false">威海</a> <a href="javascript:;" data-id="180" hidefocus="false">潍坊</a> <a href="javascript:;" data-id="334" hidefocus="false">渭南</a> <a href="javascript:;" data-id="71" hidefocus="false">温州</a> <a href="javascript:;" data-id="119" hidefocus="false">乌兰察布</a> <a href="javascript:;" data-id="367" hidefocus="false">乌鲁木齐</a> <a href="javascript:;" data-id="57" hidefocus="false">无锡</a> <a href="javascript:;" data-id="81" hidefocus="false">芜湖</a> <a href="javascript:;" data-id="291" hidefocus="false">武汉</a> <a href="javascript:;" data-id="256" hidefocus="false">西安</a> <a href="javascript:;" data-id="354" hidefocus="false">西宁</a> <a href="javascript:;" data-id="244" hidefocus="false">西双版纳傣族自治州</a> <a href="javascript:;" data-id="121" hidefocus="false">锡林郭勒盟</a> <a href="javascript:;" data-id="155" hidefocus="false">厦门</a> <a href="javascript:;" data-id="301" hidefocus="false">咸宁</a> <a href="javascript:;" data-id="321" hidefocus="false">湘西土家族苗族自治州</a> <a href="javascript:;" data-id="295" hidefocus="false">襄樊</a> <a href="javascript:;" data-id="298" hidefocus="false">孝感</a> <a href="javascript:;" data-id="279" hidefocus="false">新乡</a> <a href="javascript:;" data-id="93" hidefocus="false">邢台</a> <a href="javascript:;" data-id="58" hidefocus="false">徐州</a> <a href="javascript:;" data-id="40" hidefocus="false">香港</a></li><li> <!--YZ--> <a href="javascript:;" data-id="273" hidefocus="false">雅安</a> <a href="javascript:;" data-id="179" hidefocus="false">烟台</a> <a href="javascript:;" data-id="335" hidefocus="false">延安</a> <a href="javascript:;" data-id="145" hidefocus="false">延边朝鲜族自治州</a> <a href="javascript:;" data-id="64" hidefocus="false">盐城</a> <a href="javascript:;" data-id="65" hidefocus="false">扬州</a> <a href="javascript:;" data-id="200" hidefocus="false">阳江</a> <a href="javascript:;" data-id="1820" hidefocus="false">阳西</a> <a href="javascript:;" data-id="294" hidefocus="false">宜昌</a> <a href="javascript:;" data-id="171" hidefocus="false">宜春</a> <a href="javascript:;" data-id="362" hidefocus="false">银川</a> <a href="javascript:;" data-id="130" hidefocus="false">营口</a> <a href="javascript:;" data-id="337" hidefocus="false">榆林</a> <a href="javascript:;" data-id="313" hidefocus="false">岳阳</a> <a href="javascript:;" data-id="107" hidefocus="false">运城</a> <a href="javascript:;" data-id="329" hidefocus="false">湛江</a> <a href="javascript:;" data-id="315" hidefocus="false">张家界</a> <a href="javascript:;" data-id="95" hidefocus="false">张家口</a> <a href="javascript:;" data-id="159" hidefocus="false">漳州</a> <a href="javascript:;" data-id="195" hidefocus="false">肇庆</a> <a href="javascript:;" data-id="66" hidefocus="false">镇江</a> <a href="javascript:;" data-id="191" hidefocus="false">郑州</a> <a href="javascript:;" data-id="203" hidefocus="false">中山</a> <a href="javascript:;" data-id="77" hidefocus="false">舟山</a> <a href="javascript:;" data-id="325" hidefocus="false">珠海</a> <a href="javascript:;" data-id="176" hidefocus="false">淄博</a> <a href="javascript:;" data-id="226" hidefocus="false">遵义</a></li></ul>
                         <span class="hotel_icon mdd_close"></span>
                     </div>
                     <div class="search_hotel_keyword" style="display: none; top: 69px; left: 160px;"></div>
@@ -625,8 +577,8 @@
         	<div class="ft-type clearfix">
                 <!-- 隐藏域 存储机票类型 往返:RT, 单程:OW 可在下面data-type进行配置-->
                 <input name="routeType" id="routeType" class="input-flight-type" value="OW" type="hidden">
-                <a id="owButton" class="active" class="w" data-type="OW"><i></i>单程</a>
-                <a id="rtButton" class="w" data-type="RT"><i></i>往返</a>
+                <a id="owButton" class="active" href="javascript:;" data-type="OW"><i></i>单程</a>
+                <a id="rtButton" href="javascript:;" data-type="RT"><i></i>往返</a>
             </div>
 
             <div class="ft-input-cities">
@@ -640,7 +592,7 @@
                     <input name="arrivalAirportCode" id="arrivalAirportCode" value="" type="hidden">
                     <em class="input-info">到：</em>
                 </div>
-                <a class="w"></a>
+                <a href="javascript:;"></a>
                 <div class="same-city-error"><i class="warning"></i>出发城市和到达城市不能相同<p><span>◆</span><i>◆</i></p></div>
                 <div class="invalid-city-error"><i class="warning"></i>没有找到该城市<p><span>◆</span><i>◆</i></p></div>
             </div>
@@ -1149,19 +1101,5 @@
 <!-- 旅游攻略结束 -->
 
 </div><!-- //wrap -->	
-<script>
-   $(function(){
-       //点击选择城市，使被点击城市的名字进入出发城市的框中
-       $(".w").each(function(i) {
-           
-           $(this).bind('click', function(){
-               $(this).html();
-              $('#avi').val($(this).html())  ;
-          });
-          
-       });
-     
-  });
 
-</script>
 @include("home.common.footer");

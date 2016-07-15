@@ -71,7 +71,16 @@
                                     {{$detail->saleinfo or ""}}
                                 </td>
                             </tr>
-
+                            <tr onMouseOut="this.style.backgroundColor = '#ffffff'" onMouseOver="this.style.backgroundColor = '#edf5ff'">
+                                <td align="right" valign="middle" class="borderright borderbottom bggray">价 格 折 扣：</td>
+                                <td align="left" valign="middle" class="borderright borderbottom main-for">
+                                    促 销：<input type="radio" readonly="true" name="saleYN" value="{{$detail->saleYN or ""}}" >
+                                    平 价：<input type="radio" readonly="true" name="saleYN" checked value="{{$detail->saleYN or ""}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    折 扣 点 数：<input type="text" readonly="true" name="zkou" value="{{$detail->zkou or ""}}" style="width:50px;height:25px">(两位小数)
+                                    <b>原 价：</b><input type="text" readonly="true" name="old_price" value="{{$detail->old_price or ""}}" style="width:70px;height:25px">&nbsp;&nbsp;
+                                    <b>现 价：</b><input type="text"  readonly="true"name="price" value="{{$detail->price or ""}}" style="width:70px;height:25px">
+                                </td>
+                            </tr>
 
                             <tr onMouseOut="this.style.backgroundColor = '#ffffff'" onMouseOver="this.style.backgroundColor = '#edf5ff'">
                                 <td align="right" valign="middle" class="borderright borderbottom bggray"> 美 图 预 览：</td>

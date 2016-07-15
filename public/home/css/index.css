@@ -66,7 +66,7 @@ body { margin: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; fon
 .fl { float: left; }
 .fr { float: right; }
 .topbar_box a:hover, .header_hot a:hover { color: rgb(255, 102, 0); }
-.lv_icon, .lv_baozhang i { display: inline-block; overflow: hidden; background: transparent url("header_icon.png") no-repeat scroll 0% 0%; }
+.lv_icon, .lv_baozhang i { display: inline-block; overflow: hidden; background: transparent url("/home/img/header_icon.png") no-repeat scroll 0% 0%; }
 .lv_topbar { width: 100%; height: 30px; line-height: 30px; background: rgb(250, 250, 250) none repeat scroll 0% 0%; position: relative; z-index: 50; }
 .topbar_box { height: 30px; margin: 0px auto; color: rgb(108, 108, 108); font-size: 12px; }
 .topbar_box a { color: rgb(108, 108, 108); outline: medium none; }
@@ -269,7 +269,7 @@ body.hotel .search_hotel_btn { display: none; }
 .search_hotel_keyword .keyword_list dd { color: rgb(51, 51, 51); float: left; width: 320px; }
 .search_hotel_keyword .keyword_list dd a { margin-right: 20px; color: rgb(51, 51, 51); float: left; white-space: nowrap; }
 .search_hotel_keyword .keyword_list dd a:hover { color: rgb(255, 102, 0); }
-.icon_termini_type { width: 18px; height: 18px; display: inline-block; margin-right: 5px; vertical-align: middle; background: transparent url("header_icon.png") repeat scroll 0% 0%; }
+.icon_termini_type { width: 18px; height: 18px; display: inline-block; margin-right: 5px; vertical-align: middle; background: transparent url("/home/img/header_icon.png") repeat scroll 0% 0%; }
 .icon_sm_VIEWSPOT { background-position: -40px -90px; }
 .icon_sm_HOTEL { background-position: -60px -90px; }
 .icon_sm_RESTAURANT { background-position: -80px -110px; }
@@ -351,7 +351,7 @@ body.hotel .search_hotel_btn { display: none; }
 .icon_disney { width: 61px; height: 19px; background-position: -250px -280px; right: 3px; }
 .icon_local_tour { width: 60px; height: 19px; background-position: -60px -300px; right: -12px; }
 .icon_new { width: 18px; height: 19px; background-position: -220px -170px; right: 12px; }
-.icon2_j_j, .icon_hui, .icon_sanya { display: inline-block; height: 16px; background: transparent url("header_icon.png") no-repeat scroll 0% 0%; position: relative; }
+.icon2_j_j, .icon_hui, .icon_sanya { display: inline-block; height: 16px; background: transparent url("/home/img/header_icon.png") no-repeat scroll 0% 0%; position: relative; }
 .icon2_j_j { width: 39px; background-position: -216px -224px; }
 .icon_hui { width: 20px; background-position: -127px -195px; margin-left: 4px; top: 3px; }
 .icon_sanya { width: 52px; background-position: 0px -300px; left: 4px; top: 3px; }
@@ -470,7 +470,7 @@ body.hotel .search_hotel_btn { display: none; }
 .public_ft:hover { text-decoration: none; }
 .public_ft_list { height: 50px; padding: 9px 0px; border: 1px solid rgb(238, 238, 238); background: rgb(251, 251, 251) none repeat scroll 0% 0%; font-size: 12px; position: relative; overflow: hidden; }
 .public_ft_list li { width: 25%; float: left; margin-left: -2px; height: 40px; padding: 5px 0px; position: relative; color: rgb(153, 153, 153); font-size: 12px; line-height: 16px; border-left: 1px solid rgb(238, 238, 238); overflow: hidden; white-space: nowrap; }
-.public_ft_list li i { float: left; width: 40px; height: 40px; margin: 0px 10px 0px 20px; background: transparent url("header_icon.png") no-repeat scroll 0% 0%; }
+.public_ft_list li i { float: left; width: 40px; height: 40px; margin: 0px 10px 0px 20px; background: transparent url("/home/img/header_icon.png") no-repeat scroll 0% 0%; }
 .public_ft_list li .ft_ioc1 { background-position: -100px 0px; }
 .public_ft_list li .ft_ioc2 { background-position: -150px 0px; }
 .public_ft_list li .ft_ioc3 { background-position: -200px 0px; }
@@ -498,17 +498,17 @@ body.hotel .search_hotel_btn { display: none; }
 .footer-link a, .lv-copyright a { text-decoration: none; font-weight: normal ! important; color: rgb(136, 136, 136); }
 .footer-link a { padding: 0px 10px; }
 .lv-footer a:hover { color: rgb(255, 102, 0); text-decoration: underline; }
-.lv-safety { background: transparent url("imghf8.png") no-repeat scroll 0px 0px; display: block; margin: 5px auto 0px; width: 750px; height: 35px; }
+.lv-safety { background: transparent url("/home/img/imghf8.png") no-repeat scroll 0px 0px; display: block; margin: 5px auto 0px; width: 750px; height: 35px; }
 .lv-safety a { display: inline-block; float: left; height: 100%; width: 52px; }
 .lv-safety a.safety4 { width: 75px; }
 .lv-safety a.safety7 { width: 90px; }
 .lv-safety a.safety8 { width: 90px; }
 .lv-safety a.safety11 { width: 90px; }
 .lv-safety a.safety13 { width: 90px; }
-.app_right { position: fixed; z-index: 999; bottom: 262px; right: 10px; width: 100px; height: 250px; overflow: hidden; background: transparent url("appright.png") no-repeat scroll 0% 0%; }
+.app_right { position: fixed; z-index: 999; bottom: 262px; right: 10px; width: 100px; height: 250px; overflow: hidden; background: transparent url("/home/img/appright.png") no-repeat scroll 0% 0%; }
 .app_href { display: block; width: 100px; height: 100%; text-indent: -9999px; }
 .app_close { display: block; width: 20px; height: 20px; position: absolute; top: 0px; left: 0px; z-index: 10; }
-#goTopBtn, #Feedback, #FeedbackNew, #collection, #sideInve { position: fixed; z-index: 102; right: 20px; cursor: pointer; width: 38px; height: 38px; outline: medium none; background-image: url("header_icon.png"); background-repeat: no-repeat; transition: background-color 0.3s linear 0s; }
+#goTopBtn, #Feedback, #FeedbackNew, #collection, #sideInve { position: fixed; z-index: 102; right: 20px; cursor: pointer; width: 38px; height: 38px; outline: medium none; background-image: url("/home/img/header_icon.png"); background-repeat: no-repeat; transition: background-color 0.3s linear 0s; }
 #goTopBtn { background-position: -336px -174px; background-color: rgb(153, 153, 153); bottom: 90px; }
 #Feedback { background-position: -286px -177px; background-color: rgb(153, 153, 153); bottom: 50px; }
 #FeedbackNew { background-position: -380px -170px; background-color: rgb(238, 51, 153); bottom: 50px; }
@@ -529,12 +529,12 @@ body.hotel .search_hotel_btn { display: none; }
 .css3_xz180:hover, .css3_xz180:hover i, .css3_xz180:hover span { transform: rotate(180deg); }
 .css3_xz360:hover, .css3_xz360:hover i, .css3_xz360:hover span { transform: rotate(360deg); }
 .liner_float_l { width: 45px; height: 205px; position: fixed; left: 50%; bottom: 20px; margin-left: -680px; z-index: 100; overflow: hidden; }
-.liner_float_l a { display: block; height: 205px; position: absolute; top: 0px; background: transparent url("sy_float.png") no-repeat scroll 0% 0%; }
+.liner_float_l a { display: block; height: 205px; position: absolute; top: 0px; background: transparent url("/home/img/sy_float.png") no-repeat scroll 0% 0%; }
 .liner_float_l .liner_float_b { left: 0px; z-index: 2; width: 37px; background-position: left 0px; }
 .liner_float_l .liner_float_s { top: 1px; left: 18px; width: 0px; background-position: right 0px; display: none; }
 .liner_float_close { display: block; width: 32px; height: 32px; position: absolute; right: 14px; top: 0px; cursor: pointer; }
 .home .liner_float_l { top: 384px; bottom: auto; display: none; }
-.shwg-float { display: none; width: 105px; height: 130px; position: fixed; left: 50%; top: 384px; margin-left: -680px; z-index: 100; overflow: hidden; background-image: url("shwg.png"); }
+.shwg-float { display: none; width: 105px; height: 130px; position: fixed; left: 50%; top: 384px; margin-left: -680px; z-index: 100; overflow: hidden; background-image: url("/home/img/shwg.png"); }
 .shwg-float a { display: block; width: 105px; height: 130px; }
 .lv_search_tips { display: none; border: 1px solid rgb(204, 204, 204); position: absolute; left: 0px; top: 44px; color: rgb(102, 102, 102); padding: 4px 10px; line-height: 20px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; box-shadow: 0px 1px 3px rgb(204, 204, 204); }
 .lv_tips_arrow { display: block; width: 16px; height: 10px; position: absolute; left: 15px; top: -7px; }
@@ -545,7 +545,7 @@ body.hotel .search_hotel_btn { display: none; }
 .footBar { position: fixed; z-index: 101; left: 0px; bottom: 0px; width: 100%; height: 140px; transform: translateY(140px); transition: all 0.5s ease-out 0s; }
 .footBar-overlay { position: absolute; left: 0px; bottom: 0px; z-index: 1; width: 100%; height: 140px; background: rgb(0, 19, 35) none repeat scroll 0% 0%; opacity: 0.8; }
 .footBar-wrap { position: relative; z-index: 2; width: 1000px; height: 140px; margin: 0px auto; font-size: 0px; line-height: 0; }
-.footBar-lv, .footBar-tit, .footBar-stit, .footBar-close, .footBar-lv-mob, .footBar-sao, .footBar-opt-app a { background: transparent url("channel_foot.png") no-repeat scroll 0% 0%; display: block; }
+.footBar-lv, .footBar-tit, .footBar-stit, .footBar-close, .footBar-lv-mob, .footBar-sao, .footBar-opt-app a { background: transparent url("/home/img/channel_foot.png") no-repeat scroll 0% 0%; display: block; }
 .footBar-lv { position: absolute; top: -81px; width: 189px; height: 221px; }
 .footBar-lv-mob { position: absolute; left: 124px; top: 120px; width: 63px; height: 80px; background-position: -196px -120px; }
 .footBar-tit { position: absolute; left: 196px; top: 27px; width: 638px; height: 48px; background-position: -196px -47px; }
@@ -599,12 +599,12 @@ body.hotel .search_hotel_btn { display: none; }
 .syfootBar.open { transform: translateY(0px); }
 .open .syfootBar-overlay { transform: translateY(0px); transition: all 0.5s ease-out 0s; }
 .syfootBar-wrap { position: relative; z-index: 2; width: 1200px; height: 140px; margin: 0px auto; font-size: 0px; line-height: 0; }
-.footBar-dsn { position: absolute; left: 65px; top: 10px; width: 701px; height: 113px; background: transparent url("sydsn.png") no-repeat scroll 0% 0%; }
+.footBar-dsn { position: absolute; left: 65px; top: 10px; width: 701px; height: 113px; background: transparent url("/home/img/sydsn.png") no-repeat scroll 0% 0%; }
 .footBar-gnsyl, .footBar-gnsyl_channel { position: absolute; left: -52px; top: 4px; width: 850px; height: 135px; }
-.footBar-gnsyl { background: transparent url("gnsyl.png") no-repeat scroll 0% 0%; }
-.footBar-gnsyl_channel { background: transparent url("gnsyl_channel.png") no-repeat scroll 0% 0%; }
-.footBar-gnsyl-lv { position: absolute; z-index: 1; left: -26px; top: -68px; width: 268px; height: 204px; background: transparent url("gnsyl-lv.png") no-repeat scroll 0% 0%; }
-.footBar-dsnkm { position: absolute; left: -20px; top: 0px; width: 780px; height: 150px; background: transparent url("dsnkm.png") no-repeat scroll 0% 0%; }
+.footBar-gnsyl { background: transparent url("/home/img/gnsyl.png") no-repeat scroll 0% 0%; }
+.footBar-gnsyl_channel { background: transparent url("/home/img/gnsyl_channel.png") no-repeat scroll 0% 0%; }
+.footBar-gnsyl-lv { position: absolute; z-index: 1; left: -26px; top: -68px; width: 268px; height: 204px; background: transparent url("/home/img/gnsyl-lv.png") no-repeat scroll 0% 0%; }
+.footBar-dsnkm { position: absolute; left: -20px; top: 0px; width: 780px; height: 150px; background: transparent url("/home/img/dsnkm.png") no-repeat scroll 0% 0%; }
 .iconCrm-v0, .iconCrm-v1, .iconCrm-v2, .iconCrm-v3, .iconCrm-v4 { width: 15px; height: 15px; }
 .iconCrm-vip { width: 21px; height: 15px; }
 .iconCrm-v0 { background-position: -79px -212px; }
@@ -618,13 +618,13 @@ body.hotel .search_hotel_btn { display: none; }
 .flight .iflt_main { margin-top: 40px ! important; }
 .icon_navzjy { background-position: -107px -266px; width: 139px; height: 33px; vertical-align: top; }
 .navZjy { position: absolute; top: 5px; left: 50%; margin-left: 290px; }
-.lvmama-union-icon { background-image: url("header_icon.png"); background-position: -250px -260px; display: inline-block; height: 16px; margin: 4px 0px 0px 3px; overflow: hidden; text-indent: -9999em; vertical-align: top; width: 63px; }
+.lvmama-union-icon { background-image: url("/home/img/header_icon.png"); background-position: -250px -260px; display: inline-block; height: 16px; margin: 4px 0px 0px 3px; overflow: hidden; text-indent: -9999em; vertical-align: top; width: 63px; }
 .vwAdverBody { position: fixed; left: 50%; top: 386px; z-index: 999; margin-left: -690px; }
 .vwAdverClose { cursor: pointer; position: absolute; top: -4px; right: -4px; background: rgb(187, 186, 191) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 16px; height: 16px; text-align: center; line-height: 16px; font-size: 12px; font-family: Arial; border-radius: 50%; }
 .vwAdverMt20 { margin: 20px 0px 0px; }
 .vwAdverMt20 img { display: block; margin: 0px; }
 .channel_float_l { width: 45px; height: 205px; position: fixed; left: 50%; bottom: 20px; margin-left: -680px; z-index: 100; overflow: hidden; }
-.channel_float_l a { display: block; height: 205px; position: absolute; top: 0px; background: transparent url("liner_float.png") no-repeat scroll 0% 0%; }
+.channel_float_l a { display: block; height: 205px; position: absolute; top: 0px; background: transparent url("/home/img/liner_float.png") no-repeat scroll 0% 0%; }
 .channel_float_l .channel_float_b { left: 0px; z-index: 2; width: 37px; background-position: left 0px; }
 .channel_float_l .channel_float_s { top: 1px; left: 18px; width: 0px; background-position: right 0px; display: none; }
 .channel_float_close { display: block; width: 30px; height: 30px; position: absolute; right: 2px; top: 0px; cursor: pointer; }
@@ -644,7 +644,7 @@ body.hotel .search_hotel_btn { display: none; }
 .lv-ban-imgs li { position: absolute; left: 0px; top: 0px; z-index: 0; width: 1920px; height: 400px; overflow: hidden; opacity: 0; transition: opacity 800ms linear 0s; }
 .lv-ban-imgs li.active { opacity: 1; z-index: 1; }
 .lv-ban-sider { position: absolute; left: 1388px; top: 32px; z-index: 2; width: 170px; height: 330px; overflow: hidden; }
-.lv-ban-sider li { display: none; height: 330px; background: transparent url("loading.gif") no-repeat scroll center 120px; }
+.lv-ban-sider li { display: none; height: 330px; background: transparent url("/home/img/loading.gif") no-repeat scroll center 120px; }
 .lv-ban-sider li.active, .lv-ban-sider li img { display: block; }
 @media not all {
   .lv-ban-sider:hover { left: 1383px; }
@@ -682,9 +682,9 @@ body.hotel .search_hotel_btn { display: none; }
 .side-nav-hnlist li i { margin-right: 5px; }
 .side-nav-hnlist li:hover i { background: rgb(255, 102, 0) none repeat scroll 0% 0%; }
 .side-nav-hnlist li i { display: inline-block; width: 4px; height: 4px; vertical-align: middle; background: rgb(51, 51, 51) none repeat scroll 0% 0%; }
-.lv-ban-imgs li { background: transparent url("loadingGIF46px.gif") no-repeat scroll center center; }
-.pro-list-pic, .gonlue-pic, .gonlue-other li, .public-tuango, .gonlue-hot-pic, .qianzheng-list span, .hotpro-pic { background: transparent url("loading.gif") no-repeat scroll center center; }
-.icon-v7, .hotpro-pic p, .zjy .hotpro-pic p, .public-asidenav dt h3, .public-asidenav dt strong, .public-asidenav dd, .tuango-info strong, .gonlue-pic p, .gonlue-other li p, .nav-right-nav li { background: transparent url("icon_index_new.png") no-repeat scroll 0% 0%; }
+.lv-ban-imgs li { background: transparent url("/home/img/loadingGIF46px.gif") no-repeat scroll center center; }
+.pro-list-pic, .gonlue-pic, .gonlue-other li, .public-tuango, .gonlue-hot-pic, .qianzheng-list span, .hotpro-pic { background: transparent url("/home/img/loading.gif") no-repeat scroll center center; }
+.icon-v7, .hotpro-pic p, .zjy .hotpro-pic p, .public-asidenav dt h3, .public-asidenav dt strong, .public-asidenav dd, .tuango-info strong, .gonlue-pic p, .gonlue-other li p, .nav-right-nav li { background: transparent url("/home/img/icon_index_new.png") no-repeat scroll 0% 0%; }
 .icon-v7 { width: 24px; height: 24px; display: inline-block; }
 .fl { float: left; display: inline-block; }
 .fr { float: right; display: inline-block; }
@@ -927,7 +927,7 @@ a:hover .icon-v7-weixin { background-position: -48px -168px; }
 .navAd { position: absolute; left: -20px; bottom: -80px; display: block; height: 121px; }
 .navAd-open { position: absolute; left: 10px; top: -1px; z-index: 1; width: 40px; height: 121px; display: none; }
 .navAd-default { position: relative; z-index: 2; }
-.navAd-open span { display: block; margin: 0px; background: transparent url("ad_index_sider.png") no-repeat scroll 0% 0%; }
+.navAd-open span { display: block; margin: 0px; background: transparent url("/home/img/ad_index_sider.png") no-repeat scroll 0% 0%; }
 span.navAd-openBg { width: 267px; height: 121px; background-position: 0px 0px; }
 span.navAd-openAnimate { position: absolute; left: 220px; top: 3px; width: 107px; height: 90px; background-position: -267px 0px; animation: 1500ms linear 0s normal none infinite running navAd; }
 @keyframes navAd {
@@ -987,7 +987,7 @@ span.navAd-openAnimate { position: absolute; left: 220px; top: 3px; width: 107px
 .sytopBan-tab { position: absolute; bottom: 10px; right: 20px; height: 8px; z-index: 3; }
 .sytopBan-tab span { display: block; float: left; width: 8px; height: 8px; margin: 0px 3px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 50%; cursor: pointer; }
 .sytopBan-tab span.active { background: rgb(221, 51, 119) none repeat scroll 0% 0%; }
-.tehuiBox { position: relative; height: 506px; background: rgb(214, 240, 253) url("tehui_bg.png") no-repeat scroll left 0px; }
+.tehuiBox { position: relative; height: 506px; background: rgb(214, 240, 253) url("/home/img/tehui_bg.png") no-repeat scroll left 0px; }
 .tehui-box .public-tit { border: medium none; }
 .tehui-sub { position: absolute; left: 245px; bottom: 0px; height: 30px; line-height: 24px; color: rgb(102, 102, 102); }
 .tehui-sub li { position: relative; display: inline-block; float: left; height: 30px; margin: 0px 8px; padding: 0px 8px; font-size: 14px; cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%; font-family: "Microsoft Yahei"; }
@@ -996,7 +996,7 @@ span.navAd-openAnimate { position: absolute; left: 220px; top: 3px; width: 107px
 .tehui-arrow { position: absolute; left: 50%; bottom: 0px; margin-left: -5px; display: none; width: 0px; height: 0px; border-width: 5px; border-style: solid; border-color: transparent transparent rgb(0, 153, 204); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
 .tehui-left { width: 255px; }
 .tehuiLink { width: 205px; margin: 364px auto 0px; font-family: "Microsoft Yahei"; font-size: 0px; line-height: 0; }
-.tehuiLink li { width: 205px; height: 31px; margin-bottom: 10px; line-height: 28px; font-size: 14px; background: transparent url("tehui_linkbg_blue.png") no-repeat scroll 0px top; }
+.tehuiLink li { width: 205px; height: 31px; margin-bottom: 10px; line-height: 28px; font-size: 14px; background: transparent url("/home/img/tehui_linkbg_blue.png") no-repeat scroll 0px top; }
 .tehuiLink li:hover { background-position: 0px -41px; }
 .tehuiLink a { height: 31px; padding-left: 18px; display: block; color: rgb(255, 255, 255); width: 155px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 .tehuiLink a:hover { color: rgb(255, 255, 255); text-decoration: underline; }
@@ -1037,7 +1037,7 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .lv_s_city_all { width: 120px; height: 36px; }
 .lv_s_city_btn { width: 98px; padding: 0px 10px; border: 1px solid rgb(204, 204, 204); height: 34px; line-height: 34px; position: relative; cursor: pointer; }
 .lv_s_city_btn b { font-size: 14px; color: rgb(51, 51, 51); font-family: "微软雅黑"; font-weight: normal; }
-.lv_s_arrow { display: block; width: 9px; height: 5px; position: absolute; right: 10px; top: 50%; margin-top: -2px; background: transparent url("lv_search.png") no-repeat scroll -355px 0px; }
+.lv_s_arrow { display: block; width: 9px; height: 5px; position: absolute; right: 10px; top: 50%; margin-top: -2px; background: transparent url("/home/img/lv_search.png") no-repeat scroll -355px 0px; }
 .search_city_hot { padding-left: 26px; position: relative; border-bottom: 1px solid rgb(229, 229, 229); padding-bottom: 8px; margin-bottom: 8px; }
 .cfd_hot { padding-left: 0px; }
 .search_city_hot span { float: left; width: 22px; margin-left: -26px; padding-left: 4px; font-family: Arial; font-size: 12px; color: rgb(153, 153, 153); }
@@ -1061,7 +1061,7 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .lv_s_search_btn, .ft-search-btn { cursor: pointer; float: right; background: rgb(238, 51, 136) none repeat scroll 0% 0%; width: 87px; height: 36px; line-height: 36px; color: rgb(255, 255, 255); border-radius: 3px; font-family: "微软雅黑"; font-size: 16px; text-align: center; }
 .lv_s_search_btn:hover, .ft-search-btn:hover { background: rgb(221, 51, 119) none repeat scroll 0% 0%; }
 .lv_s_search_quality_box { position: relative; margin: 15px 0px 0px; padding-bottom: 20px; }
-.lv_s_search_quality { background-image: url("header_icon.png"); background-position: 0px -320px; position: absolute; width: 220px; height: 56px; display: none; }
+.lv_s_search_quality { background-image: url("/home/img/header_icon.png"); background-position: 0px -320px; position: absolute; width: 220px; height: 56px; display: none; }
 .lv_s_hot { border-top: 1px dotted rgb(221, 221, 221); max-height: 185px; display: none; }
 .lv_s_hot dl { margin-top: 15px; padding-left: 70px; position: relative; overflow: hidden; }
 .lv_s_hot dt { color: rgb(153, 153, 153); width: 70px; position: absolute; left: 0px; top: 0px; }
@@ -1072,7 +1072,7 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .lv_s_ipt_tab li:hover { color: rgb(221, 51, 119); }
 .lv_s_ipt_tab li.active { color: rgb(221, 51, 119); border-bottom: 2px solid rgb(238, 51, 136); }
 .lv_s_ipt_tab li.active i { display: block; }
-.lv_s_tab_arrow { display: none; width: 11px; height: 6px; background: transparent url("lv_search.png") no-repeat scroll -340px 0px; position: absolute; left: 50%; margin-left: -5px; bottom: -2px; }
+.lv_s_tab_arrow { display: none; width: 11px; height: 6px; background: transparent url("/home/img/lv_search.png") no-repeat scroll -340px 0px; position: absolute; left: 50%; margin-left: -5px; bottom: -2px; }
 .lv_s_ipt {  }
 .lv_s_ipt li { display: none; }
 .lv_s_tit { height: 46px; line-height: 46px; font-family: "微软雅黑"; color: rgb(51, 51, 51); font-size: 20px; border-bottom: 2px solid rgb(221, 221, 221); }
@@ -1081,7 +1081,7 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .lv_s_tit a:hover { color: rgb(255, 102, 0); }
 .lv_s_tit small { font-size: 14px; color: rgb(187, 187, 187); margin-left: 5px; }
 .lv_s_time_info { width: 80px; position: absolute; right: 10px; bottom: 8px; height: 18px; line-height: 18px; color: rgb(153, 153, 153); z-index: 0; }
-.lv_s_time_icon { width: 19px; height: 17px; margin-left: 5px; float: right; background: transparent url("lv_search.png") no-repeat scroll -300px 0px; right: 10px; }
+.lv_s_time_icon { width: 19px; height: 17px; margin-left: 5px; float: right; background: transparent url("/home/img/lv_search.png") no-repeat scroll -300px 0px; right: 10px; }
 .lv_s_time_info span { float: right; }
 .lv_s_time { position: relative; z-index: 1; background: transparent none repeat scroll 0% 0%; }
 .lv_s_time_tips { width: 300px; color: rgb(255, 102, 0); display: none; position: absolute; left: 0px; bottom: -30px; }
@@ -1126,7 +1126,7 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .search_hotel_mdd .mdd_tab li { float: left; margin-right: 2px; padding: 0px 10px; font-weight: bold; position: relative; cursor: pointer; }
 .search_hotel_mdd .mdd_tab li.active, .search_hotel_mdd .mdd_tab li:hover { color: rgb(238, 51, 136); }
 .search_hotel_mdd .mdd_tab li.active { border-bottom: 1px solid rgb(238, 51, 136); }
-.search_hotel_mdd .mdd_tab li .hotel_icon { width: 9px; height: 6px; background: transparent url("lv_search.png") no-repeat scroll -341px 0px; position: absolute; left: 50%; margin-left: -5px; bottom: -1px; display: none; }
+.search_hotel_mdd .mdd_tab li .hotel_icon { width: 9px; height: 6px; background: transparent url("/home/img/lv_search.png") no-repeat scroll -341px 0px; position: absolute; left: 50%; margin-left: -5px; bottom: -1px; display: none; }
 .search_hotel_mdd .mdd_tab li.active .hotel_icon { display: block; }
 .search_hotel_mdd .mdd_list { margin-top: -1px; border-top: 1px solid rgb(229, 229, 229); }
 .search_hotel_mdd .mdd_list li { display: none; padding: 5px 0px; }
@@ -1143,12 +1143,12 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .ft-type a { font-family: "Microsoft Yahei",sans-serif; font-size: 14px; color: rgb(102, 102, 102); line-height: 18px; display: inline-block; padding: 9px 5px 9px 0px; margin-right: 9px; height: 18px; }
 .ft-type a:hover { text-decoration: none; }
 .ft-type a.active i { background-position: -40px 0px; }
-.ft-type a i { display: inline-block; width: 18px; height: 18px; background: transparent url("flight.png") repeat scroll -60px 0px; vertical-align: top; margin-right: 4px; }
+.ft-type a i { display: inline-block; width: 18px; height: 18px; background: transparent url("/home/img/flight.png") repeat scroll -60px 0px; vertical-align: top; margin-right: 4px; }
 .ft-input-cities { position: relative; float: left; width: 249px; }
-.ft-input-cities a { position: absolute; right: 12px; top: 11px; display: block; width: 25px; height: 64px; background: transparent url("flight.png") repeat scroll 0px -20px; }
+.ft-input-cities a { position: absolute; right: 12px; top: 11px; display: block; width: 25px; height: 64px; background: transparent url("/home/img/flight.png") repeat scroll 0px -20px; }
 .ft-input-cities a:hover { background-position: -25px -20px; }
 .ft-input-cities .same-city-error, .ft-input-cities .invalid-city-error { display: none; position: absolute; left: 0px; width: 194px; height: 34px; background: rgb(255, 250, 238) none repeat scroll 0% 0%; border: 1px solid rgb(255, 170, 0); font-family: "SimSun",sans-serif; font-size: 12px; color: rgb(51, 51, 51); line-height: 34px; }
-.ft-input-cities .same-city-error .warning, .ft-input-cities .invalid-city-error .warning { display: inline-block; width: 14px; height: 14px; margin: 0px 6px 0px 10px; vertical-align: -3px; background: transparent url("flight.png") repeat scroll -50px -20px; }
+.ft-input-cities .same-city-error .warning, .ft-input-cities .invalid-city-error .warning { display: inline-block; width: 14px; height: 14px; margin: 0px 6px 0px 10px; vertical-align: -3px; background: transparent url("/home/img/flight.png") repeat scroll -50px -20px; }
 .ft-input-cities .same-city-error p, .ft-input-cities .invalid-city-error p { width: 16px; height: 10px; position: absolute; left: 15px; top: -7px; }
 .ft-input-cities .same-city-error p span, .ft-input-cities .invalid-city-error p span, .ft-input-cities .same-city-error p i, .ft-input-cities .invalid-city-error p i { position: absolute; left: 0px; top: 0px; color: rgb(255, 170, 0); display: block; line-height: 14px; font-size: 14px; }
 .ft-input-cities .same-city-error p i, .ft-input-cities .invalid-city-error p i { top: 1px; color: rgb(255, 250, 238); }
@@ -1161,7 +1161,7 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .ft-input-group .input-info { position: absolute; top: 0px; left: 11px; font-family: "SimSun",sans-serif; font-size: 12px; color: rgb(153, 153, 153); line-height: 36px; }
 .ft-input-group .ft-calendar-info { position: absolute; top: 10px; right: 8px; }
 .ft-input-group .ft-calendar-info span { float: left; font-family: "SimSun",sans-serif; font-size: 12px; color: rgb(153, 153, 153); line-height: 16px; cursor: default; vertical-align: 3px; }
-.ft-input-group .ft-calendar-info i { float: left; width: 19px; height: 18px; margin-left: 6px; background: transparent url("flight.png") repeat scroll 0px 0px; }
+.ft-input-group .ft-calendar-info i { float: left; width: 19px; height: 18px; margin-left: 6px; background: transparent url("/home/img/flight.png") repeat scroll 0px 0px; }
 .ft-input-group .ft-city-error { border-color: rgb(238, 51, 136); background: rgb(254, 242, 249) none repeat scroll 0% 0%; }
 .ft-input-group-disable input { background: rgb(245, 245, 245) none repeat scroll 0% 0%; color: rgb(187, 187, 187); }
 .ft-input-group-disable .input-info { color: rgb(187, 187, 187); }
@@ -1169,7 +1169,7 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .lv_flightHot dd { white-space: nowrap; }
 .city_mdd { background: rgb(255, 255, 255) none repeat scroll 0% 0%; width: 391px; padding: 10px; border: 1px solid rgb(221, 221, 221); overflow: hidden; box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1); z-index: 9; position: absolute; display: none; }
 .city_mdd p { color: rgb(153, 153, 153); }
-.city_mdd .ico { background: transparent url("flighthotel.png") repeat scroll 0% 0%; }
+.city_mdd .ico { background: transparent url("/home/img/flighthotel.png") repeat scroll 0% 0%; }
 .city_mdd .mdd_tab { height: 32px; line-height: 30px; overflow: hidden; color: rgb(51, 51, 51); position: relative; z-index: 3; }
 .city_mdd .mdd_tab li { float: left; padding: 0px 11px; font-weight: bold; position: relative; cursor: pointer; text-align: center; font-family: Arial,sans-serif; }
 .city_mdd .mdd_tab li.active { color: rgb(237, 51, 135); border-bottom: 2px solid rgb(237, 51, 135); }
@@ -1250,7 +1250,7 @@ a.tehuiPro-tit { display: block; height: 36px; margin-top: 8px; overflow: hidden
 .login_auto_ul li { line-height: 22px; text-indent: 5px; font-family: "Arial"; cursor: pointer; font-weight: bold; color: rgb(51, 51, 51); }
 .login_auto_ul li.hover, .login_auto_ul li.curr { color: rgb(255, 255, 255); background-color: rgb(110, 182, 254); }
 .zhfs_state { color: rgb(136, 136, 136); padding-left: 5px; display: inline-block; font-size: 12px; }
-.zhfs_state i, .zhfs_v_error i, .zhfs_v_success i, .zhfs_success_s i { background-image: url("zhfs_suprise.jpg"); vertical-align: text-top; margin-right: 5px; }
+.zhfs_state i, .zhfs_v_error i, .zhfs_v_success i, .zhfs_success_s i { background-image: url("/home/img/zhfs_suprise.jpg"); vertical-align: text-top; margin-right: 5px; }
 .zhfs_v_info i { background-position: -92px 0px; display: inline-block; width: 12px; height: 12px; }
 .borderred { border: 1px solid red; }
 .zhfs_v_error { color: red ! important; }

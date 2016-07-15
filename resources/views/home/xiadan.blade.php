@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" class="csstransitions cssanimations ic_gecko ic_firefox ic_47">
 <head><script src="silentRegisterByMobile.do" async=""></script><script src="adv.dat" async="" type="text/javascript"></script><script src="/home/other/presadva.dat" async="" type="text/javascript"></script><script src="v.js" charset="utf-8"></script>
 
-		<script src="a.js" async="" type="text/javascript"></script><script src="mv.js" async="" type="text/javascript"></script><script src="mba.js" async="" type="text/javascript"></script><script src="push.js"></script><script src="fx.js" async="" type="text/javascript"></script><script src="mvl.js" async="" type="text/javascript"></script><script src="/home/js/hm11.js"></script><script src="eluminate.js"></script>
-	<script src="coremetrics-initalize.js"></script>
-	<script>_LVMAMA_COREMETRICS.init(document.domain);</script><script src="head.js"></script><script src="90409730.js" type="text/javascript" language="javascript"></script><script src="dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="yahoo-min.js"></script><script type="text/javascript" src="cp-v3.js"></script><script type="text/javascript" src="json-min.js"></script>	
+		<script src="/home/js/a.js" async="" type="text/javascript"></script><script src="/home/js/mv.js" async="" type="text/javascript"></script><script src="/home/js/mba.js" async="" type="text/javascript"></script><script src="/home/js/push.js"></script><script src="/home/js/fx.js" async="" type="text/javascript"></script><script src="/home/js/mvl.js" async="" type="text/javascript"></script><script src="/home/js/hm11.js"></script><script src="/home/js/eluminate.js"></script>
+	<script src="/home/js/coremetrics-initalize.js"></script>
+	<script>_LVMAMA_COREMETRICS.init(document.domain);</script><script src="/home/js/head.js"></script><script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="/home/js/yahoo-min.js"></script><script type="text/javascript" src="/home/js/cp-v3.js"></script><script type="text/javascript" src="/home/js/json-min.js"></script>	
 	
 	
     
@@ -16,7 +16,7 @@
 
 
 	
-<script async="" src="pc.js"></script><script charset="utf-8" src="StdID.do" id=""></script><script type="text/javascript" src="bcore.min.js"></script><script charset="utf-8" src="PageView.do"></script>
+<script async="" src="/home/js/pc.js"></script><script charset="utf-8" src="StdID.do" id=""></script><script type="text/javascript" src="/home/js/bcore.min.js"></script><script charset="utf-8" src="PageView.do"></script>
 <link rel="stylesheet" type="text/css" href="/home/css/xiadan.css" media="all">
 </head>
 <body class="hotel-order"><script src="cvt.dat"></script>
@@ -461,7 +461,7 @@
     	</dd>
 	</dl>
 </div>
-<script src="adv.js"></script><script src="jquery-1.7.min.js"></script>
+<script src="/home/js/adv.js"></script><script src="/home/js/jquery-1.7.min.js"></script>
 <script type="text/javascript">
 	//每次加载清空验证码
 	$(function () {
@@ -766,15 +766,15 @@
 	<script src="index10_001.php"></script>
 	<script type="text/javascript" src="index10_002.php"></script>
 	<!--临时去除<script src="http://s3.lvjs.com.cn/js/v6/order.js"></script>-->
-	<script src="order_new.js"></script>
-	<script src="promotion.js"></script>
-	<script src="bookTicket.js"></script>
-	<script src="travellers.js"></script>
-	<script src="express.js"></script>
-	<script src="payment_page.js"></script>
+	<script src="/home/js/order_new.js"></script>
+	<script src="/home/js/promotion.js"></script>
+	<script src="/home/js/bookTicket.js"></script>
+	<script src="/home/js/travellers.js"></script>
+	<script src="/home/js/express.js"></script>
+	<script src="/home/js/payment_page.js"></script>
 	
-<script src="ga.js" async="" type="text/javascript"></script><script src="lvmama.js" charset="utf-8" async="" type="text/javascript"></script><script src="losc.js"></script>
-<script src="index10_003.php"></script>
+<script src="/home/js/ga.js" async="" type="text/javascript"></script><script src="/home/js/lvmama.js" charset="utf-8" async="" type="text/javascript"></script><script src="/home/js/losc.js"></script>
+<script src="/home/js/index10_003.php"></script>
 	<script type="text/javascript">
 		var path="/vst_front/order/ticket/";
 		
