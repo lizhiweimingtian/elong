@@ -117,5 +117,16 @@ class TourController extends Controller {
     public function destroy($id) {
         //
     }
+    /**
+     * 搜索景点得到景点列表的方法
+     */
+    public function place_search(Request $request){
+        //dd($request->only('chufa','dest1'));
+        $mdd=DB::table('place_detail')
+                ->where('place_detail.title','LIKE','%'.$request->dest1.'%')
+                ->get();
+        
+        return view("home.placeSearch",['mdd'=>$mdd,'chufa'=>$request->chufa]);
+    }
 
 }

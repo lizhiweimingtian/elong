@@ -192,6 +192,9 @@ Route::any('/type_placeScan','Admin\TypeController@placeScan');
          Route::get('zhijia', function() {
             return view('home.zhijia');
          });
+         //搜索景点，到景点列表页
+         Route::get("/place_search","home\TourController@place_search");
+        
          
         //挷定至LoginController控制器的code（验证码)方法
         Route::get('/home/code/{tmp}', 'home\LoginController@code');

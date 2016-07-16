@@ -8,6 +8,7 @@
 <meta name="description" content="驴妈妈旅游网-中国新型的B2C旅游电子商务网站，为旅游者提供景区门票、自由行、度假酒店、机票、国内游、出境游等一站式旅游服务，《自在游天下,就找驴妈妈!》">
 <script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="/home/js/bcore.min.js"></script><script type="text/javascript" src="/home/js/yahoo-min.js"></script><script type="text/javascript" src="/home/js/cp-v3.js"></script><script charset="utf-8" src="/home/other/StdID.do" id=""></script><script type="text/javascript" src="/home/js/json-min.js"></script><script charset="utf-8" src="/home/other/PageView.do"></script>
 <link rel="stylesheet" type="text/css" href="/home/css/index.css" media="all">
+<script type=text/javascript src="/plugins/My97DatePicker/WdatePicker.js"></script>
 <script src="/home/js/lunbobanar.js"></script>
 <script src="/admin/js/jquery-2.0.2.min.js"></script>
 </head>
@@ -46,7 +47,7 @@
                                 
                                 <div class="lv_s_city_btn js_s_city_btn " onclick="goCity();" id="123" >
 <!--                                    <b data-id="13">北京</b><i class="lv_s_arrow"></i>-->
-                                    <input type="text" name="cf" value="" id="avi">
+                                    <input type="text" class="search" value="" id="avi">
                                 </div>
                                 <div class="lv_s_city js_all_city" style="display:none" id="goCity" onmouseout="out()">
                                     <p>热门出发城市</p>
@@ -98,19 +99,14 @@
 //                                        var goCity = document.getElementById('goCity'); 
 //                                         goCity.style.display="none";
 //                                    }
-                                    
-                                   
-                                    
-
-                               
-                                
+ 
                                 </script>
     
                             </div>
                         </div>
                         <div class="lv_s_td ml10">
                             <div class="lv_s_t">目的地：</div>
-                            <input style="color: rgb(187, 187, 187);" num="0" class="lv_s_input js_s_input w_308" value="" palaceholder="请输入目的地、主题、或关键词" autocomplete="off" type="text">
+                            <input style="color: rgb(187, 187, 187);" num="0" class="lv_s_input js_s_input w_308" id="dest1" value="" placeholder="请输入目的地、主题、或关键词" autocomplete="off" type="text">
                         </div>
                     </div>
                 </li>
@@ -120,7 +116,7 @@
             <!--搜索按钮--开始-->
             <div class="lv_s_search lv_s_search_quality_box">
                 <div class="lv_s_search_quality"></div>
-                <span class="lv_s_search_btn">搜索</span>
+                <span class="lv_s_search_btn" >搜索</span>
             </div><!--搜索按钮--结束-->
             
             <!--热门模块--开始-->
@@ -193,7 +189,7 @@
                 <li class="">机票+酒店<i class="lv_s_tab_arrow"></i></li>
             </ul>
             <ul class="lv_s_ipt">
-            	<li style="display: block;"><input style="color: rgb(187, 187, 187);" num="1" class="lv_s_input js_s_input w_438 mt20" value="请输入目的地、主题、或关键词" autocomplete="off" type="text"></li>
+            	<li style="display: block;"><input style="color: rgb(187, 187, 187);" num="1" class="lv_s_input js_s_input w_438 mt20" value="" placeholder="请输入目的地、主题、或关键词" autocomplete="off" type="text"></li>
                 <li>
                 	<!--出发地和搜索框-->
                     <div class="lv_s_table clearfix">
@@ -370,7 +366,7 @@
                         </div>
                         <div class="lv_s_td ml10">
                             <div class="lv_s_t">目的地：</div>
-                            <input style="color: rgb(187, 187, 187);" num="2" class="lv_s_input js_s_input w_308" value="请输入目的地、主题、或关键词" autocomplete="off" type="text">
+                            <input style="color: rgb(187, 187, 187);" num="2" class="lv_s_input js_s_input w_308" value="" placeholder="请输入目的地、主题、或关键词" autocomplete="off" type="text">
                         </div>
                     </div>
                 </li>  
@@ -466,7 +462,7 @@
         <!--景点门票板块-->
         <div class="lv_s_list" style="display:none">
         	<ul class="lv_s_ipt mt5">
-            	<li style="display: block;"><input style="color: rgb(187, 187, 187);" num="3" class="lv_s_input js_s_input w_438" value="请输入目的地、主题或景区名" autocomplete="off" type="text"></li>
+                    <li style="display: block;"><input style="color: rgb(187, 187, 187);" num="3" class="lv_s_input js_s_input w_438" value="" placeholder="请输入目的地、主题或景区名" autocomplete="off" type="text"></li>
             </ul>
             <!--搜索按钮--开始-->
             <div class="lv_s_search">
@@ -569,7 +565,7 @@
                 </div>
                 <div class="lv_s_td">
                     <div class="lv_s_t">入住日期：</div>
-                    <input class="lv_s_time w_203 J_calendar" data-check="checkIn" name="beginBookTime" readonly="readonly" value="2016-06-29" autocomplete="off" type="text">
+                    <input class="lv_s_time w_203 J_calendar" onClick="WdatePicker({skin:'whyGreen'})" readonly="readonly"  data-check="checkIn" name="beginBookTime" value="" autocomplete="off" type="text">
                     <div class="lv_s_time_info">
                         <i class="lv_s_time_icon"></i>
                         <span>明天</span>
@@ -578,7 +574,7 @@
                 </div>
                 <div class="lv_s_td ml10">
                     <div class="lv_s_t">退房日期：</div>
-                    <input class="lv_s_time w_203 J_calendar" data-check="checkIn" name="endBookTime" readonly="readonly" value="2016-06-30" autocomplete="off" type="text">
+                    <input class="lv_s_time w_203 J_calendar" onClick="WdatePicker({skin:'whyGreen'})" data-check="checkIn" name="endBookTime" readonly="readonly" value="" autocomplete="off" type="text">
                     <div class="lv_s_time_info">
                         <i class="lv_s_time_icon"></i>
                         <span>后天</span>
@@ -646,11 +642,11 @@
             </div>
             <div class="ft-input-days">
                 <div class="ft-input-group">
-                    <input name="goDate" id="goDate" class="input-calendar JS_calendar_depa" readonly="readonly" value="" type="text">
+                    <input name="goDate" id="goDate" class="input-calendar JS_calendar_depa" onClick="WdatePicker({skin:'whyGreen'})"  value="" type="text">
                     <em class="input-info">出发：</em>
                     <div class="ft-calendar-info">
-                        <span class="tomorrow">星期三</span>
-                        <i></i>
+                        
+                   
                     </div>
                 </div>
                 <div class="ft-input-group ft-return-day-group ft-input-group-disable">
@@ -694,7 +690,7 @@
         <!--邮轮板块-->
         <div class="lv_s_list"  style="display:none">
         	<ul class="lv_s_ipt mt5">
-            	<li style="display: block;"><input style="color: rgb(187, 187, 187);" num="6" class="lv_s_input js_s_input w_438" value="请输入邮轮公司、邮轮航线或出发港口" autocomplete="off" type="text"></li>
+                    <li style="display: block;"><input style="color: rgb(187, 187, 187);" num="6" class="lv_s_input js_s_input w_438" value="" placeholder="请输入邮轮公司、邮轮航线或出发港口" autocomplete="off" type="text"></li>
             </ul>
             <!--搜索按钮--开始-->
             <div class="lv_s_search">
@@ -1160,8 +1156,22 @@
           });
           
        });
-     
-  });
+       
+      //七大板块搜索按钮点击事件绑定
+                $(".lv_s_search_btn").click(function(){
+                  var cf =$("#avi").val() ;
+                alert(cf);
+                   var daoda = $('#dest1').val();
+
+                     alert(daoda);
+              
+                    window.location.href="/place_search?chufa="+cf+'&dest1='+daoda;
+                    
+                })
+            
+            
+    })  
+ 
 
 </script>
 @include("home.common.footer");
