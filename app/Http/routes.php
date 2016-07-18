@@ -34,10 +34,10 @@ Route::get("/main","Admin\IndexController@main");
 Route::get("/bottom","Admin\IndexController@bottom");
 Route::get("/adm/login", "Admin\LoginController@index");
 //left引入的页面
-Route::get("/main", "Admin\LoginController@index");
-Route::get('/main', function () {
-    return view('admin.main');
-});
+// Route::get("/main", "Admin\LoginController@index");
+// Route::get('/main', function () {
+//     return view('admin.main');
+// });
 Route::get('/main_list', function () {
     return view('admin.main_list');
 });
@@ -61,7 +61,7 @@ Route::get("/adm/logout", "Admin\LoginController@logout");
 
 // Route::get("hello","HelloController@index");
 //用户管理
-Route::get("/adm/user", "Admin\UserController@index");
+Route::any("/adm/user", "Admin\UserController@index");
 Route::get("/adm/user/create", "Admin\UserController@create");
 Route::post("/adm/user/store", "Admin\UserController@store");
 Route::get("/adm/user/destroy", "Admin\UserController@destroy");
@@ -69,6 +69,7 @@ Route::get("/adm/user/edit", "Admin\UserController@edit");
 Route::post("/adm/user/update", "Admin\UserController@update");
 //个人信息修改
 Route::get("/adm/user/edit1/{tmp}", "Admin\UserController@edit1");
+Route::post("/adm/user/update1", "Admin\UserController@update1");
 //修改头像
 Route::post("/adm/user/avartar", "Admin\UserController@avartar");
 //修改用户对应的分组
@@ -77,7 +78,7 @@ Route::post("/adm/user/setGroup","Admin\Usercontroller@setGroup");
 Route::get("/adm/user/status/{tmp}", "Admin\UserController@status");
 
 //后台的前台用户
-Route::get("/adm/home", "Admin\UserController@home");
+Route::any("/adm/home", "Admin\UserController@home");
 //编辑用户
 Route::get("/adm/home/user/edit", "Admin\UserController@hedit");
 Route::post("/adm/home/user/update", "Admin\UserController@hupdate");
@@ -247,6 +248,8 @@ Route::post("/adm/page/avartar", "Admin\PageController@avartar");
         //     return view('home.zhifu');
         // });
         Route::get('/yizhifu','home\TourController@yizhifu');
+        //退款
+        Route::get('/tuikuan','home\TourController@tuikuan');
 
          Route::get('huochepiao', function() {
             return view('home.huochepiao');

@@ -60,6 +60,14 @@ class LoginController extends Controller
     	$userRec=$userModel->where("name",$data["uname"])->get()->first();
     	// dd($userRec);
     	// exit;
+         // dd($userRec->status);
+        
+        if($userRec->status != 1){
+            $request->flash();
+            return back()->with(["info" => "对不起，尊敬的用户此账号因违法操作已被禁用，请勿使用。"]);
+        }
+
+
     	if(empty($userRec))
     	{
     		$request->flash();

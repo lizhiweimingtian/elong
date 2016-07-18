@@ -50,7 +50,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   </tr>
   <tr>
     <td align="left" valign="top">
-    <form method="post" action="/adm/user/update" name="edit">
+    <form method="post" action="/adm/user/update1" name="edit">
     <input type="hidden" name="id" value="{{$userRec->id}}">
     <input type="hidden" name="_token" value="{{csrf_token()}}" />
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">

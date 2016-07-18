@@ -46,7 +46,7 @@
 	</li>
 	<li class="ui-step3 ui-step-end ">
 		<div class="ui-step-arrow">
-			<i class="arrow_r1"></i> <i class="arrow_r2"></i>
+			<i class="arrow_r1"></i> <i class="arrow_r2"`></i>
 		</div> <span class="ui-step-text">预订成功</span>
 	</li>
 </ol>
