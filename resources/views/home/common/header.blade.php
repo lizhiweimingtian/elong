@@ -105,11 +105,13 @@
 	</div>
 </div>
 
-
+<style>
+.lv_logo { float: left; margin-top: 25px; background: transparent url("/home/img/lv_logo.png") no-repeat scroll 0% 0%;}
+</style>
 <div class="lv_header">
     <div class="header_inner clearfix">
         <div class="lv_logo">
-            <a href="http://www.lvmama.com/">驴妈妈旅游网</a>
+            
         </div>
         <ul class="lv_baozhang">
         	<li><i class="icon_bz1"></i>价格保证</li>

@@ -4,6 +4,9 @@
         <title>Be right back.</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+        <meta http-equiv="refresh" content="3,url={{session('url')}}" />
+
         <style>
             html, body {
                 height: 100%;
@@ -39,11 +42,19 @@
     <body>
         <div class="container">
             <div class="content">
+
+                <div class="title">{{ session('info') }}</div>
+            </div>
+        </div>
+        <script>
+//            setTimeout("parent.location.href='<?php echo session('url') ?>';", 3000);
+
                 <div class="title">{{ Session("info") }}</div>
             </div>
         </div>
         <script>
             setTimeout("parent.location.href='<?php echo session('url') ?>';", 3000);
+
         </script>
     </body>
 </html>

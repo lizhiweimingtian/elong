@@ -82,16 +82,20 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         <input type="text" name="nickname" value="{{$userRec->nickname}}" class="text-word">
         </td>
       </tr>
-      <!-- <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">用户权限：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <select name="level" id="level">
-	    <option value="1" >&nbsp;&nbsp;信息录入员</option>
-	    <option value="2" >&nbsp;&nbsp;一般管理员</option>
-	    <option value="3" >&nbsp;&nbsp;超级管理员</option>
+        <select name="groupid" id="level">
+         @foreach ($groups as $group)
+            @if ($userRec->group_id == $group->id)
+                <option value="{{$group->id}}" selected>{{$group->title}}</option>
+            @else
+                <option value="{{$group->id}}">{{$group->title}}</option>
+            @endif
+          @endforeach
         </select>
         </td>
-      </tr> -->
+      </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">

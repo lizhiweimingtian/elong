@@ -3,8 +3,8 @@
 <head><script src="adv.dat" async="" type="text/javascript"></script><script src="presadv.dat" async="" type="text/javascript"></script><script src="/home/js/a.js" async="" type="text/javascript"></script>
 <meta charset="UTF-8">
 <meta name="mobile-agent" content="format=html5; url=http://m.lvmama.com/channel/abroad/">
-	<title>出境游_境外旅游线路_最新出境游旅游线路推荐 _驴妈妈旅游网</title>
-	<meta name="keywords" content="出境游,出国旅游,国外旅游">
+<title>出境游_境外旅游线路_最新出境游旅游线路推荐 _驴妈妈旅游网</title>
+    <meta name="keywords" content="出境游,出国旅游,国外旅游">
 	<meta name="description" content="驴妈妈出境游(www.lvmama.com)-提供更多到日本,韩国,土耳其,香港 ,加拿大,台湾,马尔代夫,巴厘岛,泰国,夏威夷,越南,澳大利亚出 境游信息,同事包含更多出境游旅游线路,国外旅游攻略。">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="dns-prefetch" href="http://s1.lvjs.com.cn/">

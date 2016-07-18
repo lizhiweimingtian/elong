@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Gregwar\Captcha\CaptchaBuilder;
 use Session;
 use Validator;
+use DB, Hash;
 class LoginController extends Controller
 {
 	public function index(Request $request)
@@ -63,12 +64,15 @@ class LoginController extends Controller
     	{
     		$request->flash();
     		return back()->with(["info"=>"账号不存在"]);
-    	}else if($userRec["password"]!=$data["password"])
+    	}else if(!hash::check($data["password"],$userRec["password"]))
     	{
     		$request->flash();
     		return back()->with(["info"=>"密码不正确"]);
     	}else
     	{
+            // $userModel->where("name",$data["uname"])->update(["updated_at"=>date()]);
+            $time=date("Y-m-d H:i:s");
+            DB::table("admin_user")->where("name",$data["uname"])->update(["updated_at"=>$time]);
     		session(["userData"=>$userRec]);
     		return redirect("/adm");
     	}

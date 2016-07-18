@@ -3,9 +3,19 @@
 <head><script src="adv.dat" async="" type="text/javascript"></script><script src="/home/other/presadv.dat" async="" type="text/javascript"></script><script src="/home/js/a.js" async="" type="text/javascript"></script><script src="/home/js/v.js" charset="utf-8"></script><script src="/home/js/mv.js" async="" type="text/javascript"></script><script src="/home/js/mba.js" async="" type="text/javascript"></script><script src="/home/js/s.js" async="" type="text/javascript"></script><script src="/home/js/push.js"></script><script src="/home/js/fx.js" async="" type="text/javascript"></script><script src="/home/js/mvl.js" async="" type="text/javascript"></script><script src="/home/js/hm.js"></script><script src="/home/js/ga.js" async="" type="text/javascript"></script>
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+
 <title>【驴妈妈旅游】_景点门票_自由行_跟团游_国内游_出境游_酒店_机票</title>
 <meta name="keywords" content="自由行,景点门票,跟团游,自驾游,机票,酒店">
 <meta name="description" content="驴妈妈旅游网-中国新型的B2C旅游电子商务网站，为旅游者提供景区门票、自由行、度假酒店、机票、国内游、出境游等一站式旅游服务，《自在游天下,就找驴妈妈!》">
+
+<meta property="qc:admins" content="276353266764651516375">
+<meta name="baidu_ssp_verify" content="408500f95bb55fbf53b1e73e2c4faee9">
+@foreach ($config as $tmp)
+<title>{{$tmp->webname}}</title>
+<meta name="keywords" content="{{$tmp->keywords}}">
+<meta name="description" content="驴妈妈旅游网-中国新型的B2C旅游电子商务网站，为旅游者提供景区门票、自由行、度假酒店、机票、国内游、出境游等一站式旅游服务，《自在游天下,就找驴妈妈!》
+">
+
 <script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/dispatcher-v3.js" type="text/javascript" language="javascript"></script><script type="text/javascript" src="/home/js/bcore.min.js"></script><script type="text/javascript" src="/home/js/yahoo-min.js"></script><script type="text/javascript" src="/home/js/cp-v3.js"></script><script charset="utf-8" src="/home/other/StdID.do" id=""></script><script type="text/javascript" src="/home/js/json-min.js"></script><script charset="utf-8" src="/home/other/PageView.do"></script>
 <link rel="stylesheet" type="text/css" href="/home/css/index.css" media="all">
 <script type=text/javascript src="/plugins/My97DatePicker/WdatePicker.js"></script>
@@ -16,8 +26,9 @@
 <body class="home" allyes_city="BJ">
 <div class="sytopBan"><ul class="sytopBan-ul"><li class=""><a href="" target="_blank"><img src="/home/img/dt-hynt.jpg" to_trd="null" height="60" width="1200"></a></li><li class="active"><a href="" target="_blank"><img src="/home/img/dt-dsn.jpg"  to_trd="null" height="60" width="1200"></a></li></ul><div class="sytopBan-tab"><span class=""></span><span class="active"></span></div></div>   
 
-@include("home.common.header");
+@include("home.common.header1");
 
+@endforeach
 <!-- 首屏 banner 及导航 -->
 <div class="lv-ban">
 	<!--首页搜索super 1-->
@@ -1004,6 +1015,7 @@
 <!-- 旅游攻略结束 -->
 
 </div><!-- //wrap -->	
+
 <script>
     //鼠标点击输入框，弹出城市列表
       function goCity(){
@@ -1040,4 +1052,8 @@
                 });
     }); 
 </script>
-@include("home.common.footer");
+
+@foreach ($config as $tmp)
+@include("home.common.footer1");
+@endforeach
+

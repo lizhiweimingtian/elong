@@ -158,7 +158,7 @@ body { margin: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; fon
 body .lv_header { height: 103px; position: relative; z-index: 45; background: transparent none repeat scroll 0% 0%; }
 .header_inner {  }
 .lv_logo, .lv_logo a { width: 213px; height: 46px; position: relative; }
-.lv_logo { float: left; margin-top: 25px; background: transparent url("/home/img/lv_logo.png") no-repeat scroll 0% 0%; }
+/*.lv_logo { float: left; margin-top: 25px; background: transparent url("/home/img/lv_logo.png") no-repeat scroll 0% 0%; }*/
 .lv_logo a { display: block; text-indent: -999px; }
 .header_search { float: right; margin: 25px 70px 0px 0px; }
 .lv_search_box { width: 521px; height: 36px; border: 2px solid rgb(221, 51, 119); }

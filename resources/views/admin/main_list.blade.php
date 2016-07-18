@@ -8,6 +8,15 @@
 <link href="admin/css/css.css" type="text/css" rel="stylesheet" />
 <link href="admin/css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="admin/img/main/favicon.ico" />
+<script src="{{ asset('/admin/js/jquery-2.0.2.min.js') }}" type="text/javascript"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+<script>
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+</script>
 <style>
 body{overflow-x:hidden; background:#f2f0f5; padding:15px 0px 10px 5px;}
 #searchmain{ font-size:12px;}
@@ -71,13 +80,13 @@ form p input[type='text']{
   
     
     
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab" class="bordered">
     
       <tr>
         <th align="center" valign="middle" class="borderright">编号</th>
         <th align="center" valign="middle" class="borderright">帐号</th>
         <th align="center" valign="middle" class="borderright">昵称</th>
-        <th align="center" valign="middle" class="borderright">权限</th>
+        <th align="center" valign="middle" class="borderright">所属分组</th>
         <th align="center" valign="middle" class="borderright">状态</th>
         <th align="center" valign="middle" class="borderright">头像</th>
         <th align="center" valign="middle" class="borderright">创建时间</th>
@@ -93,27 +102,36 @@ form p input[type='text']{
         <td align="center" valign="middle" class="borderright borderbottom">
 
            <!-- $auth={{$tmp->auth}} -->
-          <?php
-              if($tmp->auth==0){
-                  echo "普通管理员";
-              }else{
-                  echo "超级管理员";
-              }
-           ?>
+          <select name="groups" uid="{{$tmp->id}}">
+            @foreach ($groups as $group)
+                @if ($tmp->group_id == $group->id)
+                    <option value="{{$group->id}}" selected>{{$group->title}}</option>
+                @else
+                    <option value="{{$group->id}}">{{$group->title}}</option>
+                @endif
+            @endforeach
+        </select>
         </td>
         <td align="center" valign="middle" class="borderright borderbottom">
-           <?php
-              if($tmp->status==0){
-                  echo "禁用";
-              }else{
-                  echo "启用";
-              }
-           ?>
+          
+          @if ($tmp->status==0)
+              禁用
+          @else
+              启用
+          @endif
         </td>
         <td align="center" valign="middle" class="borderright borderbottom"><img src="{{$tmp->avartar}}" width="80"></td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->created_at}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$tmp->updated_at}}</td>
-        <td align="center" valign="middle" class="borderbottom"><a href="/adm/user/edit/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/destroy/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        <td align="center" valign="middle" class="borderbottom"><a href="/adm/user/edit?id={{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/status/{{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">
+            @if($tmp->status==0)
+            
+              开启
+            @else
+              关闭 
+            
+            @endif
+        </a><span class="gray">&nbsp;|&nbsp;</span><a href="/adm/user/destroy?id={{$tmp->id}}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
       @endforeach
     </table>
@@ -121,5 +139,6 @@ form p input[type='text']{
   {!!$users->appends(['keyword' => $keyword])->render()!!}
 </p>
 </table>
+<script src="{{asset("/admin/js/user_index.js")}}"></script>
 </body>
 </html>

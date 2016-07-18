@@ -75,7 +75,7 @@
     </div>
     
 </div>
-<div class="footer_beian">上海驴妈妈兴旅国际旅行社有限公司。旅行社业务经营许可证编号：L-SH-CJ00056<br>Copyright © 2016 www.lvmama.com. 上海景域文化传播股份有限公司版权所有　<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备13011172号-3</a>　增值电信业务经营许可证编号：<a href="http://s2.lvjs.com.cn/img/ICP.jpg" target="_blank">沪B2-20100030</a>
+<div class="footer_beian">上海驴妈妈兴旅国际旅行社有限公司。旅行社业务经营许可证编号：L-SH-CJ00056<br>Copyright © 2016 www.zzz.com. IT兄弟连所有　<a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备13011172号-3</a>　增值电信业务经营许可证编号：<a href="http://s2.lvjs.com.cn/img/ICP.jpg" target="_blank">京B2-20100030</a>
 </div>
 <ul class="footer_safety">
     <li><a href="http://www.miibeian.gov.cn/" target="_blank" title="网站备案"> <i class="lv_icon safety2"></i><p>网站备案</p></a></li>

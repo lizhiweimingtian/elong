@@ -2,6 +2,7 @@
 <html class="csstransitions cssanimations ic_gecko ic_firefox ic_47">
 <!--<![endif]--><head><script src="adv.dat" async="" type="text/javascript"></script><script src="/home/other/presadva.dat" async="" type="text/javascript"></script><script src="/home/js/v.js" charset="utf-8"></script>
     <meta charset="UTF-8">
+    
     <title>我的订单-驴妈妈旅游网</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -18,6 +19,7 @@
 <script>cmSetClientID("90409730",true,"data.cn.coremetrics.com","lvmama.com");</script><script src="/home/js/head_001.js"></script><script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script>
 <script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script src="/home/js/90409730.js" type="text/javascript" language="javascript"></script><script async="" src="/home/js/pc.js"></script><script charset="utf-8" src="StdID.do" id=""></script><script type="text/javascript" src="/home/js/bcore.min.js"></script><script charset="utf-8" src="PageView.do"></script>
 <link rel="stylesheet" type="text/css" href="/home/css/dingdan.css" media="all">
+<link type="text/css" rel="stylesheet" href="{{asset('/bootstrap/css/bootstrap.min.css')}}" />
 </head>
 <body class="lv_newhome lvnav_order">
 <div id="wrap" class="ui-container lvmama-bg">
@@ -363,7 +365,7 @@
 	<table class="order_table">
 		<thead>
 			<tr class="col-name">
-				<th width="400">产品信息</th>
+    			<th width="400">产品信息</th>
 				<th width="80">订单金额</th>
 				<th width="72">出行时间</th>
 				<th width="70">订单状态</th>
@@ -374,6 +376,7 @@
 		</thead>
 		<tbody>
 						        <!-- super订单----------super---------super---------super----－-----super---－------super---------super---- -->
+            @foreach ($users as $tmp)
 						<tr class="sep-row">
 							<!-- 产品基本信息(vst) -->
 							<td class="product-name">
@@ -381,37 +384,42 @@
 								<div class="desc">
 									<!-- 产品名称，可链接的a标签 -->
 									<p>
-		                                    <a hidefocus="false" target="_blank" href="http://ticket.lvmama.com/scenic-10632414">北京怀柔白河峡谷漂流</a>
+		                                    <a hidefocus="false" target="_blank" href="http://ticket.lvmama.com/scenic-10632414">{{$tmp->title}}</a>
 										<span class="tagsback tagsback-orange tag" tip-title="游记返现" tip-content="门票产品审核通过即返20元；线路产品审核通过即返20元，加精华标签返100元。"><i>游记返现</i></span>
 									</p>
 									<span>
-										订单号：31020202
-										<em>下单时间：2016-06-30 13:35</em>
+										订单号：{{$tmp->id}}
+										<em>下单时间：{{$tmp->xiadan_date}}</em>
 									</span>
 								</div>
 							</td>
 							
 							<!-- 订单金额(vst) -->
 							<td class="price">
-								¥58.00
+							     {{$tmp->price}}
 							</td>
 							
 							<!-- 出行时间(vst) -->
 							<td class="date">
-                                2016-08-27
+                                {{$tmp->chufa_date}}
 							</td>
 							
 							<!-- 订单状态(vst) -->
 							<td class="order_status">
-								<span class="status wait">已支付</span>
-                        		<!-- 机+酒订单跳转特定URL-->
-                                    <a hidefocus="false" target="_blank" class="status detail-link" href="http://hotels.lvmama.com/order/viewDetail?orderId=31020202">订单详情</a>
+								<span class="status wait">
+                                     @if($tmp->status !== 1)
+                                          未付款
+                                        @else
+                                          已付款 
+                                        @endif 
+                                </span>
+                        		
 							</td>
 							
 							<!-- 合同状态(vst) -->
 							<td class="contract">
 									
-									
+								
 									
 									
 							</td>
@@ -423,7 +431,7 @@
 			                        <a hidefocus="false" href="javascript:void(0);" onclick="sendSms(this,'31020202','18732991130','16669443');" name="sent_mms" class="ui-btn ui-btn2">
 			                        	<i>重发短信凭证</i>
 			                        </a>
-
+                              <br/>
                                 <!-- 迪士尼门票订单 显示下载门票凭证-->
 
                                 <!-- 退款申请(vst) -->
@@ -454,11 +462,13 @@
                                 
 							</td>
 						</tr>
+                        @endforeach
 					<!-- 艺龙订单 ------------艺龙------------艺龙------------艺龙------------艺龙------------艺龙------------艺龙---- -->
 		</tbody>
 	</table>
+    {!!$users->render()!!}
 </div>
-<!-- 新的订单列表结束----------------------------------------------------------------------------------------------------- -->
+<!-- 新的订单列表结束----------------------------------------------------------------------------------------------------- --> 
 
 <!-- 点击 申请退款 弹框 start-->
 <div id="refundApplyDiv" class="dialog dialog-default dialog-refund" style="left: 50%; top: 50%; display: none;">
@@ -1212,7 +1222,7 @@
 <script>
 	$(".tag").poptip();
 </script>
-            <div class="page_box mart20"><div id="pages_" class="pages" style="null"> <div id="lv_page"><div class="Pages"><a hidefocus="false" href="#" title="上一页" class="PrevPage">上一页</a><span class="PageSel">1</span><a hidefocus="false" href="#" title="下一页" class="NextPage">下一页</a><br></div></div></div></div>
+            <!-- <div class="page_box mart20"><div id="pages_" class="pages" style="null"> <div id="lv_page"><div class="Pages"><a hidefocus="false" href="#" title="上一页" class="PrevPage">上一页</a><span class="PageSel">1</span><a hidefocus="false" href="#" title="下一页" class="NextPage">下一页</a><br></div></div></div></div> -->
         </div>
     </div>
     <!--  右边部分结束 -->
@@ -1240,7 +1250,7 @@
 
 
 
-<script src="/home/js/footer.js"></script><!-- 公共底部  --><!-- footer\ --><div class="wrap" style="clear: both;"><a hidefocus="false" class="public_ft" href="http://www.lvmama.com/public/user_security" target="_blank"><ul class="public_ft_list"><li><i class="ft_ioc1"></i><strong>价格保证</strong>同类产品，保证低价</li><li><i class="ft_ioc2"></i><strong>退订保障</strong>因特殊情况影响出行，保证退订</li><li><i class="ft_ioc3"></i><strong>救援保障</strong>旅途中遇意外情况，保证援助</li><li><i class="ft_ioc4"></i><strong>7x24小时服务</strong>快速响应，全年无休</li></ul></a></div><!-- copyright\ --><div class="lv-footer clearfix wrap" style="margin: 0px auto;">    <p class="footer-link">       <a hidefocus="false" href="http://www.lvmama.com/public/about_lvmama" rel="nofollow">关于我们</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/lianxi_us" rel="nofollow">联系我们</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/site_map">网站地图</a> |        <a hidefocus="false" href="http://hotels.lvmama.com/brand/">酒店品牌</a> |        <a hidefocus="false" href="http://hotels.lvmama.com/area/">酒店查询</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/help" rel="nofollow">帮助中心</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/links">友情链接</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/jobs" rel="nofollow">诚聘英才</a> |    <a hidefocus="false" href="http://www.lvmama.com/public/zizhi_lvmama" rel="nofollow">旅游度假资质</a> |        <a hidefocus="false" href="http://www.lvmama.com/userCenter/user/transItfeedBack.do" rel="nofollow">意见反馈</a> |        <a hidefocus="false" rel="nofollow" href="http://www.lvmama.com/public/adwy">广告业务</a>    </p>    <p class="lv-copyright">Copyright © 2016 www.lvmama.com. 上海景域文化传播股份有限公司版权所有　<a hidefocus="false" href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备13011172号-3</a>　增值电信业务经营许可证编号：<a hidefocus="false" rel="nofollow" href="http://pic.lvmama.com/img/ICP.jpg" target="_blank">沪B2-20100030</a></p>   <div class="lv-safety">      <a hidefocus="false" class="safety2" target="_blank" rel="nofollow" title="经营性网站备案信息" href="http://www.miibeian.gov.cn/"></a>      <a hidefocus="false" class="safety3" target="_blank" rel="nofollow" title="网络110报警服务" href="http://www.cyberpolice.cn/"></a>      <a hidefocus="false" class="safety4" target="_blank" rel="nofollow" title="支付宝特约商家" href="https://www.alipay.com/aip/aip_validate_list.htm?trust_id=AIP0102495"></a>      <a hidefocus="false" class="safety5" target="_blank" rel="nofollow" title="AAA级信用企业" href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1664396140"></a>      <a hidefocus="false" class="safety6" target="_blank" rel="nofollow" title="上海工商" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110930103539539"></a>      <a hidefocus="false" class="safety7" target="_blank" rel="nofollow" title="可信网站" href="https://ss.cnnic.cn/verifyseal.dll?sn=2010101800100002662&amp;ct=df&amp;pa=590007"></a>      <a class="safety8" target="_blank" rel="nofollow" title="诚信认证示范企业" href="https://credit.szfw.org/CX20160614015657160455.html" id="___szfw_logo___" hidefocus="false"></a>      <a hidefocus="false" class="safety9" target="_blank" rel="nofollow" title="网络社会征信网" href="http://www.zx110.org/"></a>      <a hidefocus="false" class="safety10" target="_blank" rel="nofollow" title="360网站安全检测" href="http://webscan.360.cn/"></a>      <a hidefocus="false" class="safety11" target="_blank" rel="nofollow" title="网监安全" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001030"></a>      <a hidefocus="false" class="safety13" target="_blank" rel="nofollow" title="举报中心" href="http://www.shjbzx.cn/"></a>   </div></div><!-- //footer --><!-- 公共底部结束  -->
+<!-- 公共底部  --><!-- footer\ --><div class="wrap" style="clear: both;"><a hidefocus="false" class="public_ft" href="http://www.lvmama.com/public/user_security" target="_blank"><ul class="public_ft_list"><li><i class="ft_ioc1"></i><strong>价格保证</strong>同类产品，保证低价</li><li><i class="ft_ioc2"></i><strong>退订保障</strong>因特殊情况影响出行，保证退订</li><li><i class="ft_ioc3"></i><strong>救援保障</strong>旅途中遇意外情况，保证援助</li><li><i class="ft_ioc4"></i><strong>7x24小时服务</strong>快速响应，全年无休</li></ul></a></div><!-- copyright\ --><div class="lv-footer clearfix wrap" style="margin: 0px auto;">    <p class="footer-link">       <a hidefocus="false" href="http://www.lvmama.com/public/about_lvmama" rel="nofollow">关于我们</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/lianxi_us" rel="nofollow">联系我们</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/site_map">网站地图</a> |        <a hidefocus="false" href="http://hotels.lvmama.com/brand/">酒店品牌</a> |        <a hidefocus="false" href="http://hotels.lvmama.com/area/">酒店查询</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/help" rel="nofollow">帮助中心</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/links">友情链接</a> |        <a hidefocus="false" href="http://www.lvmama.com/public/jobs" rel="nofollow">诚聘英才</a> |    <a hidefocus="false" href="http://www.lvmama.com/public/zizhi_lvmama" rel="nofollow">旅游度假资质</a> |        <a hidefocus="false" href="http://www.lvmama.com/userCenter/user/transItfeedBack.do" rel="nofollow">意见反馈</a> |        <a hidefocus="false" rel="nofollow" href="http://www.lvmama.com/public/adwy">广告业务</a>    </p>    <p class="lv-copyright">Copyright © 2016 www.lvmama.com. 上海景域文化传播股份有限公司版权所有　<a hidefocus="false" href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备13011172号-3</a>　增值电信业务经营许可证编号：<a hidefocus="false" rel="nofollow" href="http://pic.lvmama.com/img/ICP.jpg" target="_blank">沪B2-20100030</a></p>   <div class="lv-safety">      <a hidefocus="false" class="safety2" target="_blank" rel="nofollow" title="经营性网站备案信息" href="http://www.miibeian.gov.cn/"></a>      <a hidefocus="false" class="safety3" target="_blank" rel="nofollow" title="网络110报警服务" href="http://www.cyberpolice.cn/"></a>      <a hidefocus="false" class="safety4" target="_blank" rel="nofollow" title="支付宝特约商家" href="https://www.alipay.com/aip/aip_validate_list.htm?trust_id=AIP0102495"></a>      <a hidefocus="false" class="safety5" target="_blank" rel="nofollow" title="AAA级信用企业" href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1664396140"></a>      <a hidefocus="false" class="safety6" target="_blank" rel="nofollow" title="上海工商" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110930103539539"></a>      <a hidefocus="false" class="safety7" target="_blank" rel="nofollow" title="可信网站" href="https://ss.cnnic.cn/verifyseal.dll?sn=2010101800100002662&amp;ct=df&amp;pa=590007"></a>      <a class="safety8" target="_blank" rel="nofollow" title="诚信认证示范企业" href="https://credit.szfw.org/CX20160614015657160455.html" id="___szfw_logo___" hidefocus="false"></a>      <a hidefocus="false" class="safety9" target="_blank" rel="nofollow" title="网络社会征信网" href="http://www.zx110.org/"></a>      <a hidefocus="false" class="safety10" target="_blank" rel="nofollow" title="360网站安全检测" href="http://webscan.360.cn/"></a>      <a hidefocus="false" class="safety11" target="_blank" rel="nofollow" title="网监安全" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001030"></a>      <a hidefocus="false" class="safety13" target="_blank" rel="nofollow" title="举报中心" href="http://www.shjbzx.cn/"></a>   </div></div><!-- //footer --><!-- 公共底部结束  -->
 
 </div><div id="ads"></div> <div class="poptip tip-light poptip-default" style="display: none;" id="poptip1">     <div class="tip-arrow tip-arrow-11">         <em>◆</em>         <i>◆</i>     </div>     <div class="tip-content">         <h5 class="tip-title"></h5>         <p></p>     </div> </div>
 <!--
