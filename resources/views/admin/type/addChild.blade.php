@@ -37,7 +37,15 @@
     <body>
 
         <!--main_top-->
-        
+         @if(session("info"))
+        <ul>
+            <li>{{session("info")}}</li>
+        </ul>
+        @endif
+        @if(count($errors)>0)
+        <li><b><font color="red">{{$errors->addChild->first('name')}}</font></b></li>
+        <li><b><font color="red">{{  $errors->addChild->first('pid')}}</font></b></li>
+        @endif
         <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
             <tr>
                 <td width="99%" align="left" valign="top">您的位置：版块管理&nbsp;&nbsp;>&nbsp;&nbsp;添加景点</td>
@@ -45,14 +53,14 @@
             <tr>
                 <td align="left" valign="top" id="addinfo">
                     <a href="/type_addFather" target="mainFrame" onFocus="this.blur()" class="add">返回父分区</a>
-                    <b><font color="red">{{$errors->addChild->first('name')}}{{  $errors->addChild->first('pid')}}</font></b>
+                    
                 </td>
             </tr>
 
 
             <tr>
                 <td align="left" valign="top">
-                    <form method="post" action="/type_addC" enctype='multipart/form-data'>
+                    <form method="post" action="/type_addC" enctype='multipart/form-data' onsubmit="check();">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
                             <tr onMouseOut="this.style.backgroundColor = '#ffffff'" onMouseOver="this.style.backgroundColor = '#edf5ff'">
                                 <td align="right" valign="middle" class="borderright borderbottom bggray">景点名称：</td>
@@ -114,18 +122,24 @@
             </tr>
         </table>
         <script>
-            $(function(){
+           
                 function check(){
-                   var place = document.getElementById('place').value;
+                  var place = document.getElementById('place').value;
                   var pid = document.getElementById('pid').value;
+               
+                  var msg="";
                    if(place.match(/^\.*$/)){
-                       alert("景点名称不能为空 ！");
+                       msg +="景点名称不能为空 ！\n";
                    }
                    if(pid===""){
-                        alert("请选择景点所属分区！！");
+                      msg +="请选择景点所属分区！！";
                    };
+                   if (msg.length > 0){
+                       alert(msg);
+                   }
+                   return false;
                 }
-            });
+           
         
         
         </script>

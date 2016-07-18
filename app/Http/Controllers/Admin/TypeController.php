@@ -46,14 +46,20 @@ class TypeController extends Controller {
      */
     public function addFather(Request $request) {
         $father =DB::table("place")->where("pid",0)->get();
-       
+  
         return view("admin/type/addFather");
     }
 
     //执行添加父分区
     public function add(Request $request) {
+        $this->Validate($request,
+                        ["name"=>"required|unique:place"],
+                        ["name.required"=>"分区名不能为空！！",
+                          "name.unique"=>"该分区已存在！！"  
+                            ]);
         $name = $request->get('name');
-        if (($id = (DB::table('place')->insertGetId(["name" => $name]))) > 0) {
+        $created_at = date("Y-m-d H:i:s",time());
+    if (($id = (DB::table('place')->insertGetId(['name'=>$name,"created_at"=>$created_at]))) > 0) {
             if (false != ( DB::table('place')->where('id', $id)->update(["path" => '0-' . $id]) )){
               
                // return redirect("/type_show");
@@ -61,7 +67,7 @@ class TypeController extends Controller {
                 echo "<script>window.location.href='/type_show'</script>";
             }
         }else {
-            alert('添加失败！！');
+            return back()->with(["info"=>"添加失败"]);
         }
     }
     /**
@@ -76,10 +82,13 @@ class TypeController extends Controller {
     }
     //执行修改父分区，并更新数据库
      public function updateFather(Request $request) {
-       $updated_at =time();
-      $affected = DB::table('place')->where('id',$request->id)->update(['name'=>$request->name,'updated_at'=>$updated]);
+       $updated_at =date("Y-m-d H:i:s",time());
+      $affected = DB::table('place')
+              ->where('id',$request->id)
+              ->update(['name'=>$request->name,'updated_at'=>$updated_at]);
       if($affected == true){
-        return redirect('/type_show')->with(['info'=>'修改成功！']);
+           echo"<script>alert('添加成功！！')</script>";
+         echo "<script>window.location.href='/type_show'</script>";
       }
     }
 
@@ -97,7 +106,7 @@ class TypeController extends Controller {
     //执行添加添加景点的方法
     public function addC(Request $request) {  
         $child = $request->except('_token');
-        $child['created_at']=time();
+        $child['created_at']=date("Y-m-d H:i:s",time());
         $rules=[
              'name'=>"required|unique:place|max:255",
             'pid'=>"required"
@@ -115,10 +124,11 @@ class TypeController extends Controller {
         }
         if (($id = DB::table('place')->insertGetId($child))>0){
             if (false != (DB::table('place')->where('id', $id)->update(['path' => ( '0-' . $request->pid . '-' . $id)])))
-                return redirect("/type_show");
+                 echo"<script>alert('添加成功！！')</script>";
+                echo "<script>window.location.href='/type_show'</script>";
         }else {
-
-            return back()->with("errors","添加景点失败");
+            
+            return back()->with(["info"=>"添加景点失败"]);
         }
     }
 
@@ -153,10 +163,11 @@ class TypeController extends Controller {
 
     /**
      * Show the form for editing the specified resource.
-     * 编辑景点详情并入库
+     * 1 显示编辑页面
+     * 2 编辑景点详情并入库
      * @return \Illuminate\Http\Response
      */
-    //显示编辑页面
+    //  1  显示编辑页面
     public function place_edit(Request $request) {
         $detail = DB::table('place_detail')->where('place_id', $request->id)->first();
         if($detail != false){
@@ -167,14 +178,13 @@ class TypeController extends Controller {
         }   
     }
 
-    //执行编辑的数据入库
+    //  2  执行编辑的数据入库
     public function placeEdit(Request $request) {
 
         //尝试编辑和修改用同一页面
         //如果数据库中没有要编辑的景点的详情则直接编辑详情并入库
        if(false ==DB::table('place_detail')->where('place_id',$request->place_id)->first())     
        {     
-           $inser = $request->except('_token');
            $rules=[
                'place_name'=>'required|unique:place_detail',
                'title'=>'required|max:255',
@@ -188,19 +198,19 @@ class TypeController extends Controller {
                "title.max"=>"标题过长，请重新填写",
                "photo_path.required"=>"景点图片没上传",
                'editorValue.required'=>'景点详情（行程）介绍，未填写！'
-           ];
-           $validator =Validator::make($inser,$rules,$messages);
-         
-           if($validator->fails()){
+       ];
             
-             // return redirect("/type_place_edit")->withErrors($validator,"addChild");
-            return redirect("/type_place_edit")->withErrors($validator,'edit');
-           }
+           $this->Validate($request,$rules,$messages);
+           $inser = $request->except('_token');
+           $inser["created_at"]=date("Y-m-d H:i:s",time());
+        
            $id = DB::table('place_detail')->insertGetId($inser);
            //如果数据入库成功，则查询对应的详情数据，带到查看详情的页面
             if ($id > 0) {
                 $detail = DB::table('place_detail')->where('id',$id)->first();
                 return view('admin/type/placeScan',['detail'=>$detail]);
+            }else{
+                return back()->with(["info"=>"提交失败"]);
             }
        }else{
            //否则修改已有数据，提交入库更新数据库的内容（景点详情）
@@ -209,7 +219,7 @@ class TypeController extends Controller {
                 $detail = DB::table('place_detail')->where('place_id',$request->place_id)->first();
                 return view('admin/type/placeScan',['detail'=>$detail]);
             }else{
-                return back("修改失败");
+                return back()->with(["info"=>"修改失败"]);
             }
        }
         
