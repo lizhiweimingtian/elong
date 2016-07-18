@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use App\Http\Requests,Input;
 use App\Http\Controllers\Controller;
 use DB, Hash;
 class UserController extends Controller {
@@ -90,7 +90,8 @@ class UserController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function edit(Request $request) {
-		$id = $request::get('id');
+		// $id = $request::get('id');
+		$id = input::get('id');
 		$userRec = DB::table("admin_user")->leftJoin("admin_group_rule", "admin_user.id", "=", "admin_group_rule.uid")->where("admin_user.id", $id)->select("admin_user.*", "admin_group_rule.group_id")->first();
 		$groups = DB::table("admin_group")->get();
 		return view("admin.bianji",["userRec" => $userRec, "groups" => $groups]);
@@ -125,7 +126,7 @@ class UserController extends Controller {
 				"password.between"=>"密码长度应为6-15位",
 				"repassword.same"=>"两次密码输入不一致",
 			]);
-		$data=$request->except("id","_token","repassword", "groupid"	);
+		$data=$request->except("id","_token","repassword", "groupid");
 		if(!empty($data["password"]))
 		{
 			$data["password"]=Hash::make($data["password"]);
@@ -140,6 +141,30 @@ class UserController extends Controller {
         }
 
 	}
+	//后台个人中心修改==========================================================================
+	public function update1(Request $request) {
+		$this->validate($request,[
+				"password"=>"between:6,15",
+				"repassword"=>"same:password",
+				"nickname"=>"required",
+			],[
+				"password.between"=>"密码长度应为6-15位",
+				"repassword.same"=>"两次密码输入不一致",
+			]);
+		$data=$request->except("id","_token","repassword", "groupid");
+		if(!empty($data["password"]))
+		{
+			$data["password"]=Hash::make($data["password"]);
+		}else
+		{
+			unset($data["password"]);
+		}
+		if (FALSE !== $result = DB::table("admin_user")->where("id", $request->get("id"))->update($data)) {
+           
+            return redirect("adm/user");
+        }
+
+	}
 
 	/**
 	 * Remove the specified resource from storage.
@@ -148,7 +173,8 @@ class UserController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function destroy(Request $request) {
-		$id = $request::get('id');
+		// $id = $request::get('id');
+		$id = input::get('id');
 		if(DB::table("admin_user")->where("id",$id)->delete())
 		{
 			return redirect("adm/user");
@@ -226,7 +252,8 @@ class UserController extends Controller {
   	//编辑
   	public function hedit(Request $request) {
 
-  		$id = $request::get('id');
+  		// $id = $request::get('id');
+  		$id = input::get('id');
 		$userRec = DB::table("user")->leftJoin("userdetail", "user.id", "=", "userdetail.id")->where("user.id", $id)->select("user.*", "userdetail.*")->first();
 		
 		return view("admin.home.bianji",["userRec" => $userRec]);
@@ -263,7 +290,8 @@ class UserController extends Controller {
 	}
 	//删除=======================================================================
 	public function hdestroy(Request $request) {
-		$id = $request::get('id');
+		// $id = $request::get('id');
+		$id = input::get('id');
 		if(DB::table("user")->where("id",$id)->delete())
 		{	
 			if(DB::table("userdetail")->where("id",$id)->delete()){

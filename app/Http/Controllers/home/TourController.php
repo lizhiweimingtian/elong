@@ -168,10 +168,24 @@ class TourController extends Controller {
             ->leftJoin("place_detail", "place_detail.id", "=", "dingdan.pid")          
             ->select("dingdan.*","place_detail.title","place_detail.price")
             ->where("dingdan.uid",$uid)
-            ->paginate(1);
+            ->paginate(2);
 
         return view("home.dingdan",["users"=>$users]);
     }
+//退款=================================================================================
+    public function tuikuan() {
+        $id = input::get('id');
+        // dd($id);
+        if(DB::table('dingdan')->where('id',$id)->delete())
+        {
+            return redirect("/tips")->with(["info"=>"删除成功","url"=>"/dingdan"]);
+        }else
+        {
+            return redirect("/tips")->with(["info"=>"删除失败，原因：缓存问题，请重新删除。","url"=>"/dingdan"]);
+        }
+        
+        
+     }
     
     /**
      * Show the form for editing the specified resource.

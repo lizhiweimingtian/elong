@@ -265,7 +265,7 @@
             </li>
             <li class="newmember_list"><a hidefocus="false" href="http://www.lvmama.com/points" class="a_list" target="_blank">积分商城</a></li>
         </ul>
-        <a hidefocus="false" href="http://www.lvmama.com/" class="newmember_home fr">返回驴妈妈首页</a>
+        <a hidefocus="false" href="/tour" class="newmember_home fr">返回驴妈妈首页</a>
     </div>
 </div>
 <!---会员中心导航结束--->
@@ -436,13 +436,13 @@
 
                                 <!-- 退款申请(vst) -->
 																		<!-- 退款按钮 -->
-										<a hidefocus="false" class="refundApplyClass" id="refundApply" check="31020202BIZ_VST" href="javascript:;" onclick="toRefundApplyAjax(31020202);">
+										<a hidefocus="false" class="refundApplyClass" id="refundApply" check="31020202BIZ_VST" href="/tuikuan?id={{$tmp->id}} " onclick="toRefundApplyAjax(31020202);">
 											<span>退款申请</span>
 										</a>
 
 
 									<!-- 支付(vst) -->
-
+ 
 									<!-- 取消订单(vst) -->
 
 									<!-- 下载合同(vst)  状态：已签约未生效，已生效-->

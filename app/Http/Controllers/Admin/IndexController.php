@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB, Hash;
+use Session;
 
 class IndexController extends Controller
 {
@@ -22,10 +23,12 @@ class IndexController extends Controller
 	}
 	public function left()
 	{
+		$id=Session::get('userData')->id;
 		// return view("admin.left");
 		$userRec=DB::table("admin_user")->where("id",session('userData')->id)->first();
+		$group=DB::table("admin_group_rule")->where("uid",$id)->first();
 
-		return view("admin.left",compact("userRec"));
+		return view("admin.left",["userRec"=>$userRec,"group"=>$group]);
 	}
 	public function swich()
 	{
@@ -33,8 +36,16 @@ class IndexController extends Controller
 	}
 	public function main()
 	{	
-		
-		 return view("admin.main");
+		$id=Session::get('userData')->id;
+       
+		// $users=DB::table("admin_user")
+		// 	->leftJoin("admin_group_rule", "admin_user.id", "=", "admin_group_rule.uid")
+		// 	->select("admin_user.*","admin_group_rule.group_id")
+		// 	->where("admin_user.id",$id);
+		// dd($users);
+		$users=DB::table("admin_user")->where("id",$id)->first();
+		$group=DB::table("admin_group_rule")->where("uid",$id)->first();
+		 return view("admin.main",["users"=>$users,"group"=>$group]);
 	}
 	public function bottom()
 	{

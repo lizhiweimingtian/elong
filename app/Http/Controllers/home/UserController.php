@@ -36,7 +36,15 @@ class UserController extends Controller {
         $data = $request->only("phone", "password");
         $phone = $data['phone'];
         $result = DB::table("user")->where("phone", $data['phone'])->first();
-   
+
+        // dd($result->status);
+        //判断用户状态
+        // dd($result);
+        if($result->status != 1){
+            $request->flash();
+            return back()->with(["info" => "对不起，尊敬的用户此账号因违法操作已被禁用，请勿使用。"]);
+        }
+
         if (empty($result)) {
             $request->flash();
             return back()->with(["info" => "帐号错误"]);

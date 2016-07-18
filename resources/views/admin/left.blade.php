@@ -24,9 +24,11 @@ body{overflow-x:hidden; background:url(admin/img/main/leftbg.jpg) left top repea
 
 	<div><img src="{{$userRec->avartar}}" width="44" height="44" /></div>
     <span>用户：{{$userRec->nickname}}<br>角色：
-         
-              {{$userRec->auth ? '超级管理员' : '普通管理员'}}
-              
+          @if ($group->group_id==1)
+              超级管理员
+          @else
+              普通管理员
+          @endif
                 
   </span>
 </div>

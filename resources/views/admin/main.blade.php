@@ -30,19 +30,18 @@ div.main-order{ line-height:30px; padding:10px 0 0 0;}
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="main">
   <tr>
     <td colspan="2" align="left" valign="top">
-    <span class="time"><a href="/adm/user/edit1/{{Session::get('userData')->id}}"><strong>上午好！<?php echo $user->nickname ?></strong></a><u>
-        
-          <?php
-              $userModel = new \App\User();
-              $user = $userModel->find(Session::get('userData')->id);
-              if($user->auth==0){
-                  echo "普通管理员";
-              }else{
-                  echo "超级管理员";
-              }
-           ?></u></span>
-    <div class="top"><span class="left">您上次的登灵时间：2012-05-03  12:00   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span><a href="/adm/user/edit1/{{Session::get('userData')->id}}" target="mainFrame" onFocus="this.blur()">更改密码</a></div>
-    <div class="sec">这是您第<span class="num">80</span>次,登录！</div>
+   <!-- dd($users); -->
+
+    <span class="time"><a href="/adm/user/edit1/{{Session::get('userData')->id}}"><strong>上午好！{{$users->nickname}}</strong></a><u>
+          @if ($group->group_id==1)
+              超级管理员
+          @else
+              普通管理员
+          @endif
+           </u></span>
+    <div class="top"><span class="left">您上次的登灵时间：{{$users->updated_at}}   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span><a href="/adm/user/edit1/{{Session::get('userData')->id}}" target="mainFrame" onFocus="this.blur()">更改密码</a></div>
+    <div class="sec">这是您第<span class="num">88</span>次,登录！</div>
+
     </td>
   </tr>
   <tr>

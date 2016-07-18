@@ -24,6 +24,8 @@
 </head>
 <!-- 首屏 banner 及导航 -->
 <body class="home" allyes_city="BJ">
+
+
 <div class="sytopBan"><ul class="sytopBan-ul"><li class=""><a href="" target="_blank"><img src="/home/img/dt-hynt.jpg" to_trd="null" height="60" width="1200"></a></li><li class="active"><a href="" target="_blank"><img src="/home/img/dt-dsn.jpg"  to_trd="null" height="60" width="1200"></a></li></ul><div class="sytopBan-tab"><span class=""></span><span class="active"></span></div></div>   
 
 @include("home.common.header1");

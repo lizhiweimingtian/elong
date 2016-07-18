@@ -14,17 +14,20 @@ class CommonMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
+   
     public function handle($request, Closure $next)
     {
-         //查询所有的权限列表
-         $rules = DB::table("admin_group_access")->where("status", "1")->get();
-        //非登录模块的路由 都需要【登陆验证】
-        if (!Session::has("userData") && !preg_match('/^\/adm\/log/',$_SERVER['REQUEST_URI'])) {
-            //如果用户没有登录 则跳转到登录页
-            return redirect("/adm/login");
-        
-        }else if(!empty($rules))
-        {
+
+    if(preg_match("/^\/adm/",$_SERVER['REQUEST_URI'])){
+             //查询所有的权限列表
+             $rules = DB::table("admin_group_access")->where("status", "1")->get();
+            //非登录模块的路由 都需要【登陆验证】
+            if (!Session::has("userData") && !preg_match('/^\/adm\/log/',$_SERVER['REQUEST_URI'])) {
+                //如果用户没有登录 则跳转到登录页
+                return redirect("/adm/login");
+            
+            }else if(!empty($rules))
+            {
             $auth_list=array();
             foreach($rules as $rule)
             {
@@ -56,6 +59,8 @@ class CommonMiddleware
             }
 
         }
+       }
+        
         return $next($request);
     }
 }
