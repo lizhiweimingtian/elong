@@ -53,6 +53,8 @@
     <body>
       
         <!--main_top-->
+       <b><font color="red">{{$errors->first('place_name')}}{{  $errors->edit->first('title["0"]')}}</font></b>
+       <b><font color="red">{{$errors->edit->first('photo_path["0"]')}}{{  $errors->edit->first('editorValue["0"]')}}</font></b>
         <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
             <tr>
                 <td width="99%" align="left" valign="top">您的位置：景点管理&nbsp;&nbsp;>&nbsp;&nbsp;景点详情编辑</td>
@@ -62,10 +64,7 @@
                     <a href="/type_show" target="mainFrame" onFocus="this.blur()" class="add">返回景区（点）列表</a>
                 </td>
             </tr>
-
-
             <tr>
-               
                 <td align="left" valign="top">
                     <form  name='fm' method="post" action="/type_placeEdit" enctype='multipart/form-data' onsubmit="check();">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
@@ -96,6 +95,8 @@
                                 <td align="left" valign="middle" class="borderright borderbottom main-for">
                                     促 销：<input type="radio" name="saleYN" value="1" >
                                     平 价：<input type="radio" name="saleYN" checked value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    首页显示： <input type="radio" name="isNindex" value="1" >
+                                    不首页显示：<input type="radio" name="isNindex" checked value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     折 扣 点 数：<input type="text" name="zkou" value="{{$detail->zkou or ""}}" style="width:50px;height:25px">(两位小数)
                                     <b>原 价：</b><input type="text" name="old_price" value="{{$detail->old_price or ""}}" style="width:70px;height:25px">&nbsp;&nbsp;
                                     <b>现 价：</b><input type="text" name="price" value="{{$detail->price or ""}}" style="width:70px;height:25px">

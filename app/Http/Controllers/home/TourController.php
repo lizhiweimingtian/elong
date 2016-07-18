@@ -48,15 +48,15 @@ class TourController extends Controller {
      */
     public function show() {
         $place_data = DB::table('place_detail')
-                ->join('place','place.id',"=","place_detail.place_id")
+                ->leftjoin('place','place.id',"=","place_detail.place_id")
                 ->where(['saleYN'=>1,'isNindex'=>1])
                 ->get();
         $place_gn = DB::table('place_detail')
-                ->join('place','place.id',"=","place_detail.place_id")
+                ->leftjoin('place','place.id',"=","place_detail.place_id")
                 ->where(['saleYN'=>0,'isNindex'=>1])
                 ->get();
         $place_zb = DB::table('place_detail')
-                ->join('place','place.id',"=","place_detail.place_id")
+                ->leftjoin('place','place.id',"=","place_detail.place_id")
                 ->where(['zhoubian'=>1,'isNindex'=>1])
                 ->get();
         $place_city =DB::table('city_2')
@@ -66,6 +66,7 @@ class TourController extends Controller {
         $code_hn =DB::table('city_2')->where('code_head','H-N')->get();
         $code_pt =DB::table('city_2')->where('code_head','P-T')->get();
         $code_wz =DB::table('city_2')->where('code_head','W-Z')->get();
+        //dd($place_zb);
         return view ("home/index",[
             'place_data'=>$place_data,
             'place_gn'=>$place_gn,
@@ -82,8 +83,18 @@ class TourController extends Controller {
      */
      public function xiadanqian(Request $request) {
         $xq = DB::table('place_detail')->where('place_id',$request->id)->first();
-      
-        return view ('/home/xiadanqian',['xq'=>$xq]);
+        $code_ag =DB::table('city_2')->where('code_head','A-G')->get();
+        $code_hn =DB::table('city_2')->where('code_head','H-N')->get();
+        $code_pt =DB::table('city_2')->where('code_head','P-T')->get();
+        $code_wz =DB::table('city_2')->where('code_head','W-Z')->get();
+        return view ('/home/xiadanqian',
+                    [
+                        'xq'=>$xq,
+                         'code_ag'=>$code_ag,
+                        'code_hn'=>$code_hn,
+                        'code_pt'=>$code_pt,
+                        'code_wz'=>$code_wz
+                ]);
      }
     
     

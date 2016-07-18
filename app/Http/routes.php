@@ -105,8 +105,17 @@ Route::any('/type_placeEdit','Admin\TypeController@placeEdit');
 //查看景点详情
 Route::any('/type_placeScan','Admin\TypeController@placeScan');
 
+//ajax 修改景点的是否前台显示，和是否促销
+Route::post("/place_ajax1","Admin\TypeController@ajax1");
+Route::post("/place_ajax2","Admin\TypeController@ajax2");
 
-    
+//后台景点详情列表
+Route::get("/place_detail_list","Admin\TypeController@place_detail_list");
+
+
+//只查看促销景点，只查看首页显示景点
+Route::get("/type_zhikan","Admin\TypeController@zhikan");
+Route::get("/type_zhikan2","Admin\TypeController@zhikan2");
 
 /***************************/
 

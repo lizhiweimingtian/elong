@@ -37,6 +37,7 @@
     <body>
 
         <!--main_top-->
+        
         <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
             <tr>
                 <td width="99%" align="left" valign="top">您的位置：版块管理&nbsp;&nbsp;>&nbsp;&nbsp;添加景点</td>
@@ -44,6 +45,7 @@
             <tr>
                 <td align="left" valign="top" id="addinfo">
                     <a href="/type_addFather" target="mainFrame" onFocus="this.blur()" class="add">返回父分区</a>
+                    <b><font color="red">{{$errors->addChild->first('name')}}{{  $errors->addChild->first('pid')}}</font></b>
                 </td>
             </tr>
 
@@ -65,14 +67,14 @@
                                     <select name="pid" id="pid">
                                         @if($id != false)
                                             <option value="">--选择区域--</option>
-                                            @for($i=1;$i<=$id;$i++)
+                                            
                                             <option selected value="{{$id}}">{{$name}}</option>
-                                            @endfor
+                                            
                                         @else
                                         <option value="">--选择区域--</option>
-                                        <option value="1">华北 + 东北</option>
-                                        <option value="2">华南 + 华中</option>
-                                        <option value="3">西南 + 西北</option>
+                                        @foreach($father as $tmp)
+                                        <option value="{{$tmp->id}}">{{$tmp->name}}</option>
+                                        @endforeach
                                         @endif
                                     </select>   
                                 </td>
@@ -99,23 +101,6 @@
                                     不支持：<input type="radio" name="gtuan" value="0">
                                 </td>
                             </tr>
-                            
-                            <tr onMouseOut="this.style.backgroundColor = '#ffffff'" onMouseOver="this.style.backgroundColor = '#edf5ff'">
-                                <td align="right" valign="middle" class="borderright borderbottom bggray">是否首页显示：</td>
-                                <td align="left" valign="middle" class="borderright borderbottom main-for">
-                                    首页显示：<input type="radio" name="isNindex"  value="1">
-                                    不显示：<input type="radio" name="isNindex" checked value="0">
-                                </td>
-                            </tr>
-                           
-<!--                            <tr onMouseOut="this.style.backgroundColor = '#ffffff'" onMouseOver="this.style.backgroundColor = '#edf5ff'">
-                                <td align="right" valign="middle" class="borderright borderbottom bggray">版块LOGO：</td>
-
-                                <td align="left" valign="middle" class="borderright borderbottom main-for">
-
-                                    <input type="file" name="blogo" value="" class="text-word">
-                                </td>
-                            </tr>-->
 
                             <tr onMouseOut="this.style.backgroundColor = '#ffffff'" onMouseOver="this.style.backgroundColor = '#edf5ff'">
                                 <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Validator;
 use Symfony\Component\Console\Input\Input,
     Illuminate\Support\Facades\Redirect,
     DB;
@@ -13,20 +14,39 @@ class TypeController extends Controller {
 
     /**
      * Display a listing of the resource.
-     *
+     *景点分区和景点列表
      * @return \Illuminate\Http\Response
      */
-    public function show() {
-        $places = DB::table("place")->orderBy('path')->paginate(10);
-        return view("admin/type/show", ["places" => $places]);
+    public function show(Request $request) {
+        $places = DB::table("place")
+                ->where('place.name','LIKE',"%".$request->keyword."%")
+                ->orderBy('path')
+                 ->paginate(10);
+        return view("admin/type/show", ["places" => $places])->with('keyword',$request->keyword);
     }
 
+    /**
+     * 景点详情列表页
+     * @param \Illuminate\Http\Request $request
+     * @return type
+     */
+     public function place_detail_list(Request $request) {
+        $places = DB::table("place")
+                ->leftjoin('place_detail','place_detail.place_id',"=",'place.id')
+                ->where('place.name','LIKE',"%".$request->keyword."%")
+                ->orderBy('path')
+                ->paginate(10);
+        return view("admin/type/placeDetailList", ["places" => $places])->with('keyword',$request->keyword);
+    }
+    
     /**
      * Show the form for creating a new resource.
      *  添加分区（也就是首页分类的大块）
      * @return \Illuminate\Http\Response
      */
     public function addFather(Request $request) {
+        $father =DB::table("place")->where("pid",0)->get();
+       
         return view("admin/type/addFather");
     }
 
@@ -34,8 +54,12 @@ class TypeController extends Controller {
     public function add(Request $request) {
         $name = $request->get('name');
         if (($id = (DB::table('place')->insertGetId(["name" => $name]))) > 0) {
-            if (false != ( DB::table('place')->where('id', $id)->update(["path" => '0-' . $id]) ))
-                return redirect("/type_show");
+            if (false != ( DB::table('place')->where('id', $id)->update(["path" => '0-' . $id]) )){
+              
+               // return redirect("/type_show");
+                echo"<script>alert('添加成功！！')</script>";
+                echo "<script>window.location.href='/type_show'</script>";
+            }
         }else {
             alert('添加失败！！');
         }
@@ -52,8 +76,8 @@ class TypeController extends Controller {
     }
     //执行修改父分区，并更新数据库
      public function updateFather(Request $request) {
-       
-      $affected = DB::table('place')->where('id',$request->id)->update(['name'=>$request->name]);
+       $updated_at =time();
+      $affected = DB::table('place')->where('id',$request->id)->update(['name'=>$request->name,'updated_at'=>$updated]);
       if($affected == true){
         return redirect('/type_show')->with(['info'=>'修改成功！']);
       }
@@ -66,18 +90,35 @@ class TypeController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function addChild(Request $request) {
-        return view("admin/type/addChild", ['id' => $request->id, 'name' => $request->name]);
+      $father = DB::table("place")->where("pid",0)->get();
+        return view("admin/type/addChild", ['id' => $request->id, 'name' => $request->name,'father'=>$father]);
     }
 
     //执行添加添加景点的方法
     public function addC(Request $request) {  
         $child = $request->except('_token');
+        $child['created_at']=time();
+        $rules=[
+             'name'=>"required|unique:place|max:255",
+            'pid'=>"required"
+        ];
+        $messages=[
+            'name.required'=>"景点名称未填写",
+            'pid.required'=> "未选择景点所属分区",
+             'name.unique'=>"该景点已存在"
+        ];
+        $validator = Validator::make($child,$rules,$messages);
+           
+     
+        if($validator->fails()){
+            return redirect("/type_addChild")->withErrors($validator,"addChild");
+        }
         if (($id = DB::table('place')->insertGetId($child))>0){
             if (false != (DB::table('place')->where('id', $id)->update(['path' => ( '0-' . $request->pid . '-' . $id)])))
                 return redirect("/type_show");
         }else {
 
-            return redirect("/type_addChild");
+            return back()->with("errors","添加景点失败");
         }
     }
 
@@ -99,23 +140,16 @@ class TypeController extends Controller {
 
                 if (false != DB::table('place')->where('id', $request->id)->delete()){
                     
-                     return redirect("/type_show")->with(['info'=>'删除成功！！']);
-                
+                      echo"<script>alert('删除成功！！')</script>";
+                      echo "<script>window.location.href='/type_show'</script>";
                 }
-        }else{
-               return redirect('/type_show')->with(['info'=>'分区下有子元素，禁止删除！']);
+        }else{  
+                
+                echo"<script>alert('分区下有子元素，禁止删除！！')</script>";
+              echo "<script>window.location.href='/type_show'</script>";
         }       
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id) {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -141,6 +175,26 @@ class TypeController extends Controller {
        if(false ==DB::table('place_detail')->where('place_id',$request->place_id)->first())     
        {     
            $inser = $request->except('_token');
+           $rules=[
+               'place_name'=>'required|unique:place_detail',
+               'title'=>'required|max:255',
+               'photo_path'=>'required',
+               'editorValue'=>'required'
+           ];
+           $messages=[
+               'place_name.required'=>"景点名称不能为空！",
+               'place_name.unique'=>"该景点名称已存在",
+               "title.required"=>"景点标题不能为空！",
+               "title.max"=>"标题过长，请重新填写",
+               "photo_path.required"=>"景点图片没上传",
+               'editorValue.required'=>'景点详情（行程）介绍，未填写！'
+           ];
+           $validator =Validator::make($inser,$rules,$messages);
+         
+           if($validator->fails()){
+               
+            return back()->withErrors(['validator'=>$validator]);
+           }
            $id = DB::table('place_detail')->insertGetId($inser);
            //如果数据入库成功，则查询对应的详情数据，带到查看详情的页面
             if ($id > 0) {
@@ -154,7 +208,7 @@ class TypeController extends Controller {
                 $detail = DB::table('place_detail')->where('place_id',$request->place_id)->first();
                 return view('admin/type/placeScan',['detail'=>$detail]);
             }else{
-                return ("修改失败");
+                return back("修改失败");
             }
        }
         
@@ -190,16 +244,59 @@ class TypeController extends Controller {
             return view('admin/type/placeScan',['data'=>$data]);
         }
     }
-
+    
+    //AJAX修改，是否促销
+    public function ajax1(Request $request ){
+        $data = $request->except("_token");
+       if(!false == DB::table("place_detail")->where("place_id",$request->place_id)->update(["saleYN"=>$request->saleYN])){
+                
+            return response()->json(["status"=>1,"info"=>"修改成功！"]);
+       }else{
+           return response()->json(["status"=>0,"info"=>"修改失败"]);
+       }
+    }
+     //AJAX修改是否前台显示
+     public function ajax2(Request $request ){
+        $data = $request->except("_token");
+       if(!false == DB::table("place_detail")->where("place_id",$request->place_id)->update(["isNindex"=>$request->isNindex])){
+                
+            return response()->json(["status"=>1,"info"=>"修改成功！"]);
+       }else{
+           return response()->json(["status"=>0,"info"=>"修改失败"]);
+       }
+    }
+    
+    
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * 只查看符合条件的景点（促销的，首页显示的）
      */
-//   
-
+    public function zhikan(){
+       
+      $places=  DB::table("place")
+                ->leftjoin("place_detail","place.id","=","place_detail.place_id")
+                ->where("saleYN",1)
+                ->orderBy('path')
+                ->paginate(5);
+               
+        return view("admin/type/show", ["places" => $places]);
+    }
+    
+     public function zhikan2(){
+       
+      $places=  DB::table("place")
+                ->leftjoin("place_detail","place.id","=","place_detail.place_id")
+                ->where("isNindex",1)
+                ->orderBy('path')
+                ->paginate(8);
+               
+        return view("admin/type/show", ["places" => $places]);
+    }
+    
+    
+    
+    
+    
+    
     /**
      * Remove the specified resource from storage.
      *

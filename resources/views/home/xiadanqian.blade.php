@@ -395,50 +395,7 @@
                     <!--产品概要-->
                     <!--线路详情页产品详情-产品概要-->
 
-                    <div class="product-summary">
-                        <h5>产品概要</h5>
-                        <div class="instance_list2_box">    
-
-                            <div class="instance_list2" style="display: block;">           	
-                                <ul class="clearfix">
-                                    <!--住宿--->
-
-                                    <li class="product-summary-li-first">
-                                        <i class="icon-product-summary-hotel"></i>
-                                        含4晚住宿
-                                    </li>
-
-                                    <!--景点-->
-                                    <li><i class="icon-product-summary-view-port"></i>
-                                        含6个景点
-                                    </li>
-
-                                    <!--交通-->
-                                    <li><i class="icon-product-summary-traffic"></i>
-                                        含
-                                        飞机
-                                    </li>
-                                    <!--用餐-->
-                                    <li class="product-summary-li-first"><i class="icon-product-summary-restaurant"></i>
-
-                                        含 4早餐、4正餐
-                                        <!-- 7自理 -->
-                                        <!-- 2午餐2晚餐、--
-                                    </l
-                                    <!--购物点-->
-                                    <li><i class="icon-product-summary-shop"></i>
-                                        推荐项目详见行程介绍
-                                    </li>
-
-                                    <!---自由活动---->
-                                    <li><i class="icon-product-summary-free-time"></i>
-                                        自由活动详见行程介绍
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
+                   
 
                     <div class="detail-instance-body">
                         <span><h3>
@@ -544,42 +501,17 @@
 
                                             <span class="ufeed-level"><i data-level="4" data-mark="" style="width: 80%;"></i></span>
                                             <span class="ufeed-item"> <em>景点&nbsp;</em>
-                                                <i>4
-
-
-
-                                                    (满意)
-
-                                                </i>
+                                                <i>4(满意)</i>
                                             </span>
                                             <span class="ufeed-item"> <em>酒店&nbsp;</em>
-                                                <i>4
-
-
-
-                                                    (满意)
-
-                                                </i>
+                                                <i>4(满意)</i>
                                             </span>
                                             <span class="ufeed-item"> <em>服务&nbsp;</em>
-                                                <i>4
-
-
-
-                                                    (满意)
-
-                                                </i>
+                                                <i>4(满意)</i>
                                             </span>
                                             <span class="ufeed-item"> <em>交通&nbsp;</em>
-                                                <i>4
-
-
-
-                                                    (满意)
-
-                                                </i>
+                                                <i>4(满意)</i>
                                             </span>
-
                                             <span class="ufeed-tag">体验</span>
                                         </p>
                                     </div><!-- //ufeed-info -->

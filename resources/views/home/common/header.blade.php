@@ -1,19 +1,47 @@
-	 
+<script src="/admin/js/jquery-2.0.2.min.js"></script>	 
 <!-- 无搜索版，公共头部开始  -->
 <div class="lv_topbar js_box">
     <div class="topbar_box">
     	<div class="lv_city_box">
         	<div class="lv_city_up">
             	<i class="lv_icon icon_city"></i>
-                <b class="lv_city" data-city-name="北京" data-city-id="1" data-id="13" data-source="home" fromchannel="" id="currentCity">北京</b>
-                <a class="lv_city_btn" href="javascript:;">[切换]</a>
+                <input id="currentCity" type="text" placeholder="请选择城市" style='width:70px'/>
+                <a class="lv_city_btn" onclick="qiehuan()" >[切换]</a>
             </div>
-            <div class="lv_city_down Js_LISTFIRST">
+            <div class="lv_city_down Js_LISTFIRST"  id="ndy" style='display:none' onclick='ndn()'>
                 <!-- 开始 -->
-					<p class="my_city_t">可选城市列表</p>
+		<p class="my_city_t">可选城市列表</p>
 				        
-				<!-- 结束 -->
-            <dl class="city_down_list"><dt>华北</dt><dd><a cityid="110000" provinceid="110000" href="#">北京</a> <a cityid="120000" provinceid="120000" href="#">天津</a> <a cityid="140100" provinceid="140000" href="#">太原</a> <a cityid="130200" provinceid="130000" href="#">唐山</a> <a cityid="150100" provinceid="150000" href="#">呼和浩特</a> <a cityid="150200" provinceid="150000" href="#">包头</a> <a cityid="130100" provinceid="130000" href="#">石家庄</a> <a cityid="150700" provinceid="150000" href="#">呼伦贝尔</a> <a cityid="140200" provinceid="140000" href="#">大同</a> </dd></dl><dl class="city_down_list"><dt>华东</dt><dd><a cityid="310000" provinceid="310000" href="#">上海</a> <a cityid="320100" provinceid="320000" href="#">南京</a> <a cityid="330100" provinceid="330000" href="#">杭州</a> <a cityid="340100" provinceid="340000" href="#">合肥</a> <a cityid="350200" provinceid="350000" href="#">厦门</a> <a cityid="370100" provinceid="370000" href="#">济南</a> <a cityid="360100" provinceid="360000" href="#">南昌</a> <a cityid="320500" provinceid="320000" href="#">苏州</a> <a cityid="320200" provinceid="320000" href="#">无锡</a> <a cityid="330200" provinceid="330000" href="#">宁波</a> <a cityid="320400" provinceid="320000" href="#">常州</a> <a cityid="330400" provinceid="330000" href="#">嘉兴</a> <a cityid="320600" provinceid="320000" href="#">南通</a> <a cityid="321000" provinceid="320000" href="#">扬州</a> <a cityid="321100" provinceid="320000" href="#">镇江</a> <a cityid="330600" provinceid="330000" href="#">绍兴</a> <a cityid="330300" provinceid="330000" href="#">温州</a> <a cityid="330700" provinceid="330000" href="#">金华</a> <a cityid="331000" provinceid="330000" href="#">台州</a> <a cityid="320900" provinceid="320000" href="#">盐城</a> <a cityid="370200" provinceid="370000" href="#">青岛</a> <a cityid="370900" provinceid="370000" href="#">泰安</a> <a cityid="340200" provinceid="340000" href="#">芜湖</a> <a cityid="341000" provinceid="340000" href="#">黄山</a> <a cityid="341200" provinceid="340000" href="#">阜阳</a> <a cityid="350100" provinceid="350000" href="#">福州</a> <a cityid="360700" provinceid="360000" href="#">赣州</a> <a cityid="360900" provinceid="360000" href="#">宜春</a> <a cityid="361130" provinceid="360000" href="#">婺源</a> <a cityid="371100" provinceid="370000" href="#">日照</a> </dd></dl><dl class="city_down_list"><dt>东北</dt><dd><a cityid="210100" provinceid="210000" href="#">沈阳</a> <a cityid="210200" provinceid="210000" href="#">大连</a> <a cityid="230100" provinceid="230000" href="#">哈尔滨</a> <a cityid="220100" provinceid="220000" href="#">长春</a> <a cityid="230200" provinceid="230000" href="#">齐齐哈尔</a> <a cityid="222400" provinceid="220000" href="#">延边</a> </dd></dl><dl class="city_down_list"><dt>华中</dt><dd><a cityid="420100" provinceid="420000" href="#">武汉</a> <a cityid="410300" provinceid="410000" href="#">洛阳</a> <a cityid="430800" provinceid="430000" href="#">张家界</a> <a cityid="430100" provinceid="430000" href="#">长沙</a> <a cityid="410100" provinceid="410000" href="#">郑州</a> <a cityid="410800" provinceid="410000" href="#">焦作</a> <a cityid="420500" provinceid="420000" href="#">宜昌</a> <a cityid="429021" provinceid="420000" href="#">神农架</a> </dd></dl><dl class="city_down_list"><dt>华南</dt><dd><a cityid="440100" provinceid="440000" href="#">广州</a> <a cityid="440300" provinceid="440000" href="#">深圳</a> <a cityid="450100" provinceid="450000" href="#">南宁</a> <a cityid="450300" provinceid="450000" href="#">桂林</a> <a cityid="460100" provinceid="460000" href="#">海口</a> <a cityid="460200" provinceid="460000" href="#">三亚</a> <a cityid="440400" provinceid="440000" href="#">珠海</a> <a cityid="441800" provinceid="440000" href="#">清远</a> <a cityid="441900" provinceid="440000" href="#">东莞</a> </dd></dl><dl class="city_down_list"><dt>西南</dt><dd><a cityid="510100" provinceid="510000" href="#">成都</a> <a cityid="500108" provinceid="500000" href="#">重庆</a> <a cityid="530100" provinceid="530000" href="#">昆明</a> <a cityid="530700" provinceid="530000" href="#">丽江</a> <a cityid="532900" provinceid="530000" href="#">大理</a> <a cityid="532800" provinceid="530000" href="#">西双版纳</a> <a cityid="530001" provinceid="530000" href="#">香格里拉</a> <a cityid="520100" provinceid="520000" href="#">贵阳</a> <a cityid="540100" provinceid="540000" href="#">拉萨</a> <a cityid="513225" provinceid="510000" href="#">九寨沟</a> <a cityid="513401" provinceid="510000" href="#">西昌</a> </dd></dl><dl class="city_down_list"><dt>西北</dt><dd><a cityid="610100" provinceid="610000" href="#">西安</a> <a cityid="640100" provinceid="640000" href="#">银川</a> <a cityid="630100" provinceid="630000" href="#">西宁</a> <a cityid="650100" provinceid="650000" href="#">乌鲁木齐</a> <a cityid="620100" provinceid="620000" href="#">兰州</a> <a cityid="620200" provinceid="620000" href="#">嘉峪关</a> <a cityid="610800" provinceid="610000" href="#">榆林</a> <a cityid="610600" provinceid="610000" href="#">延安</a> <a cityid="653100" provinceid="650000" href="#">喀什</a> <a cityid="654321" provinceid="650000" href="#">喀纳斯</a> </dd></dl><dl class="city_down_list"><dt>港澳台</dt><dd><a cityid="F10001" provinceid="F10000" href="#">香港</a> <a cityid="F20001" provinceid="F20000" href="#">澳门</a> </dd></dl></div>
+		<!-- 结束 -->
+                            <dl class="city_down_list" >
+                <dt>A-G</dt>
+                @foreach($code_ag as $ag) 
+                  <a class="qh" data-code="{{$ag->code}}" data-id="{{$ag->id}}" data-name="{{$ag->name}}" >{{$ag->name}}</a>  
+                @endforeach
+            </dl>
+             <dl class="city_down_list">
+               <dt>H-N</dt>
+               <dd>
+                   @foreach($code_hn as $hn)
+                   <a class="qh" data-code="{{$hn->code}}" data-id="{{$hn->id}}" data-name="{{$hn->name}}">{{$hn->name}}</a> 
+                   @endforeach
+                </dd>
+             </dl>
+             <dl class="city_down_list"> 
+             <dt>P-T</dt> 
+                   <dd> @foreach($code_pt as $pt)
+                        <a class="qh" data-code="{{$pt->code}}" data-id="{{$pt->id}}" data-name="{{$pt->name}}">{{$pt->name}}</a> 
+                        @endforeach
+                   </dd>
+                   </dl>
+           <dl class="city_down_list"> 
+                <dt>W-Z</dt>
+                 <dd> @foreach($code_wz as $wz)
+                     <a class="qh" data-code="{{$wz->code}}" data-id="{{$wz->id}}" data-name="{{$wz->name}}">{{$wz->name}}</a>
+                      @endforeach
+                </dd>
+           </dl>
+            </div>
        </div>
 
         <ul class="top_link">
@@ -32,15 +60,37 @@
              </li>
             <li><a class="lv_link" href="http://www.lvmama.com/public/help" rel="nofollow">帮助</a></li>
             <li class="border_l dropdown">
-            	<a class="lv_link" href="javascript:;" rel="nofollow"><i class="lv_icon icon_wx"></i>微信</a>
-                <div class="top_down">
-                    <img src="/home/img/wechatcode.jpg" alt="" height="90" width="220">
+            	<a class="lv_link" href=""  rel="nofollow" onmouseover='chulai()'><i class="lv_icon icon_wx" onmouseover="mOver(this);" onmouseout="mOut(this)" ></i>微信</a>
+                <div  class="top_down" id='weixin' >
+                    <img src="/home/img/wechatcode.jpg" alt="关注有礼" height="90" width="220"  >
                 </div>
             </li>
-                <li><a class="lv_link" onclick="_gaq.push(['_trackEvent', 'weibo', 'click', 'weiboshouye', 5]);" href="http://e.weibo.com/lvmamas" rel="nofollow"><i class="lv_icon icon_wb"></i>+微博</a></li>
+            <script>             
+                    //鼠标移入微信图标和移出图标显示和隐藏网站微信图片
+                    
+                    function mOver(obj)
+                    {
+                    document.getElementById('weixin').style.display='block';
+                    }
+
+                    function mOut(obj)
+                    {
+                    document.getElementById('weixin').style.display='none';
+                    }
+                    function qiehuan(){
+                        document.getElementById('ndy').style.display='block';
+                    }
+                    function ndn(){
+                        document.getElementById('ndy').style.display='none';
+                    }
+                 
+                 
+                 
+            </script>
+                <li><a class="lv_link" onclick="_gaq.push(['_trackEvent', 'weibo', 'click', 'weiboshouye', 5]);" href="" rel="nofollow"><i class="lv_icon icon_wb"></i>+微博</a></li>
 
             <li>
-            	<a class="lv_link" target="_blank" href="http://shouji.lvmama.com/" rel="nofollow"><i class="lv_icon icon_mobile"></i>手机版</a>
+            	<a class="lv_link" target="_blank" href="" rel="nofollow"><i class="lv_icon icon_mobile"></i>手机版</a>
             </li>
             <li class="border_l dropdown link_call">
             	<a id="onlyOne" class="lv_link" href="javascript:;" rel="nofollow"><i class="lv_icon icon_phone"></i><span>1010-6060</span> <i class="icon_arrow"></i></a>

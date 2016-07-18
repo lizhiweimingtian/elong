@@ -6,6 +6,15 @@
         <link href="../../public/admin/css/main.css" type="text/css" rel="stylesheet" />
         <link rel="shortcut icon" href="../.././public/admin/images/main/favicon.ico" />
         <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+        <script src="/admin/js/jquery-2.0.2.min.js"></script>
+        <meta name="csrf-token" content="{{csrf_token()}}"/>
+        <script>
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+        </script>
         <style>
             body{overflow-x:hidden; background:#f2f0f5; padding:15px 0px 10px 5px;}
             #searchmain{ font-size:12px;}
@@ -21,7 +30,7 @@
             #main-tab td a{ font-size:12px; color:#548fc9;}
             #main-tab td a:hover{color:#565656; text-decoration:underline;}
             .bordertop{ border-top:1px solid #ebebeb}
-            .borderright{ border-right:1px solid #ebebeb}
+            .borderright{ border-right:1px solid #ebebeb;text-align:center;}
             .borderbottom{ border-bottom:1px solid #ebebeb}
             .borderleft{ border-left:1px solid #ebebeb}
             .gray{ color:#dbdbdb;}
@@ -33,55 +42,54 @@
             .tdb{ padding-left:20px;}
             td#xiugai{ padding:10px 0 0 0;}
             td#xiugai input{ width:100px; height:40px; line-height:30px; border:none; border:1px solid #cdcdcd; background:#e6e6e6; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#969696; float:left; margin:0 10px 0 0; display:inline; cursor:pointer; font-size:14px; font-weight:bold;}
-        </style>
-        
+            .zhikan{margin-left:50px;}
+        </style> 
     </head>
     <body>
         <!--main_top-->
-        <font color="red">{{$info or ""}}</font>
-        <form method="post" action="">
+        <p>您的位置：分区景点管理</p> 
+        <form method="post" action="/type_show">  
             <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
                 <tr>
-                    <td width="99%" align="left" valign="top" id="addinfo">您的位置：浏览分区</td>
+                <span>管理员：</span><input type="hidden" name="_token" value="{{csrf_token()}}" />
+                <span>
+                    <input type="text" name="keyword" value="{{$keyword or ""}}" placeholder="请输入景区（点）名称" />
+                    <input type="submit" value="查询" /><input type="button" onclick="javascript:window.history.go(-1);" value="返回"/>
+                </span>  
                 </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
+                <tr align="center">
+                    <th align="center" valign="middle" class="borderright borderbottom tdb" > 分 类 树 </th>
+                    <th align="center" valign="middle" class="borderright borderbottom tdb">ID</th>
+                    <th align="center" valign="middle" class="borderright borderbottom tdb"> 分 区 及 其 下 景 点 </th>
+                    <th align="center" valign="middle" class="borderright borderbottom tdb"> 对 分 区 及 其 下 景 点 操  作 </th>
+                </tr>
+                @foreach($places as $tmp)	
+                @if($tmp->pid == 0 )
+                <tr class="bggray">
+                    <td align="left" valign="middle" class=" borderbottom tdb"><img src="/admin/img/main/dirfirst.gif" width="15" height="13"></td>
+                    <td align="center" valign="middle" class="borderright borderbottom"><b><font color="blue">{{ $tmp->id }}</font></b></td>
+                    <td align="center" valign="middle" class="borderright borderbottom tdb"><b><font color="blue">{{ $tmp->name }}</font></b></td>
+                    <td align="center" valign="middle" class="borderbottom">
+                        <a href="/type_update_father?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span>
+                        <a href="/type_addChild?id={{ $tmp->id }}&name={{$tmp->name}}" target="mainFrame" onFocus="this.blur()" class="add">添加子版块</a><span class="gray">&nbsp;|&nbsp;</span>
+                        <a href="/type_delete?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+                </tr>
+                @endif
+                @if($tmp->pid != 0 )
                 <tr>
-                    <td align="left" valign="top">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
-                            <tr>
-                                <th align="center" valign="middle" class="borderright tda">分类树</th>
-                                <th align="center" valign="middle" class="borderright tda">ID</th>
-                                <th align="center" valign="middle" class="borderright ">栏目名</th>
-                                <th align="center" valign="middle">栏目管理</th>
-                            </tr>
-                                @foreach($places as $tmp)	
-                               @if($tmp->pid == 0 )
-                            <tr class="bggray">
-                                <td align="left" valign="middle" class="borderright borderbottom tdb"><img src="/admin/img/main/dirfirst.gif" width="15" height="13"></td>
-                                <td align="center" valign="middle" class="borderright borderbottom">{{ $tmp->id }}</td>
-                                <td align="left" valign="middle" class="borderright borderbottom tdb">{{ $tmp->name }}</td>
-                                <td align="center" valign="middle" class="borderbottom">
-                                    <a href="/type_update_father?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span>
-                                    <a href="/type_addChild?id={{ $tmp->id }}&name={{$tmp->name}}" target="mainFrame" onFocus="this.blur()" class="add">添加子版块</a><span class="gray">&nbsp;|&nbsp;</span>
-                                    <a href="/type_delete?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
-                            </tr>
-                            @endif
-                            @if($tmp->pid != 0 )
-                            <tr>
-                                <td align="left" valign="middle" class="borderright borderbottom tdb"><img src="/admin/img/main/dirsecond.gif" width="28" height="28"></td>
-                                <td align="center" valign="middle" class="borderright borderbottom">{{ $tmp->id }}</td>
-                                <td align="left" valign="middle" class="borderright borderbottom tdb">{{ $tmp->name }}</td>
-                                <td align="center" valign="middle" class="borderbottom">
-                                <a href="/type_place_edit?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span>
-                                <a href="/type_placeScan?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">查看</a><span class="gray">&nbsp;|&nbsp;</span>
-                                <a href="/type_delete?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">删除</a>
-                                </td>
-                            </tr>    
-                          @endif
-                          @endforeach
-
-                        </table></td>
-                        
-                </tr>
+                    <td align="left" valign="middle" class="borderright borderbottom tdb"><img src="/admin/img/main/dirsecond.gif" width="28" height="28"></td>
+                    <td align="center" valign="middle" class="borderright borderbottom">{{ $tmp->id }}</td>
+                    <td align="center" valign="middle" class="borderright borderbottom tdb">{{ $tmp->name }}</td>
+                    <td align="center" valign="middle" class="borderbottom">
+                        <a href="/type_place_edit?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span>
+                        <a href="/type_placeScan?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">查看</a><span class="gray">&nbsp;|&nbsp;</span>
+                        <a href="/type_delete?id={{ $tmp->id }}" target="mainFrame" onFocus="this.blur()" class="add">删除</a>
+                    </td>
+                </tr>    
+                @endif
+                @endforeach
 
             </table>
             <p>{!!$places->render()!!}</p>

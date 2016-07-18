@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="/home/css/index.css" media="all">
 <script type=text/javascript src="/plugins/My97DatePicker/WdatePicker.js"></script>
 <script src="/home/js/lunbobanar.js"></script>
-<script src="/admin/js/jquery-2.0.2.min.js"></script>
+
 </head>
 <!-- 首屏 banner 及导航 -->
 <body class="home" allyes_city="BJ">
@@ -49,7 +49,7 @@
 <!--                                    <b data-id="13">北京</b><i class="lv_s_arrow"></i>-->
                                     <input type="text" class="search" value="" id="avi">
                                 </div>
-                                <div class="lv_s_city js_all_city" style="display:none" id="goCity" onmouseout="out()">
+                                <div class="lv_s_city js_all_city" style="display:none" id="goCity" onclick="yincang(this)">
                                     <p>热门出发城市</p>
                                 <div class="search_city_hot cfd_hot" id="abc"> 
                                     <a class="w"  data-code="" id="abc" data-id="8" data-name="">全国</a> 
@@ -88,20 +88,6 @@
                                         </dd>
                                     </dl>
                                 </div>
-                                <script>
-                                   
-                                    function goCity(){
-                                       var goC = document.getElementById('goCity');
-                                       goC.style.display="block";
-                                    };
-//                                    function out(){
-//                                        alert('鼠标出来了');
-//                                        var goCity = document.getElementById('goCity'); 
-//                                         goCity.style.display="none";
-//                                    }
- 
-                                </script>
-    
                             </div>
                         </div>
                         <div class="lv_s_td ml10">
@@ -203,162 +189,38 @@
                                     <p>热门出发城市</p>
                                 <div class="search_city_hot cfd_hot">
                                     <a class="w" data-code="" data-id="8" data-name="">全国</a>
-                                    <a class="w" data-code="SH" data-id="9" data-name="上海">上海</a> 
-                                    <a class="w" data-code="SZ" data-id="60" data-name="苏州">苏州</a> 
-                                    <a class="w" data-code="HZ" data-id="69" data-name="杭州">杭州</a> 
-                                    <a class="w" data-code="BJ" data-id="13" data-name="北京">北京</a> 
-                                    <a class="w" data-code="TY" data-id="100" data-name="太原">太原</a> 
-                                    <a class="w" data-code="GZ" data-id="322" data-name="广州">广州</a> 
-                                    <a class="w" data-code="CD" data-id="258" data-name="成都">成都</a>
-                                    <a class="w" data-code="ZQ" data-id="31" data-name="重庆">重庆</a> 
-                                    <a class="w" data-code="SY" data-id="257" data-name="三亚">三亚</a> 
-                                    <a class="w" data-code="CZ" data-id="59" data-name="常州">常州</a> 
-                                    <a class="w" data-code="HZ" data-id="73" data-name="湖州">湖州</a> 
-                                    <a class="w" data-code="QD" data-id="175" data-name="青岛">青岛</a>
-                                    <a class="w" data-code="TJ" data-id="14" data-name="天津">天津</a> 
-                                    <a class="w" data-code="SZ" data-id="324" data-name="深圳">深圳</a>
-                                    <a class="w" data-code="KM" data-id="233" data-name="昆明">昆明</a> 
-                                    <a class="w" data-code="HK" data-id="221" data-name="海口">海口</a> 
-                                    <a class="w" data-code="NJ" data-id="56" data-name="南京">南京</a> 
-                                    <a class="w" data-code="JX" data-id="72" data-name="嘉兴">嘉兴</a> 
-                                    <a class="w" data-code="NT" data-id="61" data-name="南通">南通</a> 
-                                    <a class="w" data-code="WX" data-id="57" data-name="无锡">无锡</a> 
-                                    <a class="w" data-code="XA" data-id="256" data-name="西安">西安</a>
+                                     @foreach($place_city as $v)
+                                    <a class="w"  data-code="{{$v->code}}" data-id="{{$v->id}}" data-name="{{$v->name}}">{{$v->name}}</a>
+                                    @endforeach
                                 </div>
                                     <dl class="city_down_list"> 
-                                        <dt>A-G</dt> <dd>  
-                                            <a class="w" data-code="AM" data-id="41" data-name="澳门">澳门</a> 
-                                            <a class="w" data-code="ALT" data-id="380" data-name="阿勒泰">阿勒泰</a>
-                                            <a class="w" data-code="BJ" data-id="13" data-name="北京">北京</a> 
-                                            <a class="w" data-code="BT" data-id="112" data-name="包头">包头</a>  
-                                            <a class="w" data-code="BH" data-id="211" data-name="北海">北海</a> 
-                                            <a class="w" data-code="BZ" data-id="189" data-name="滨州">滨州</a> 
-                                            <a class="w" data-code="CS" data-id="308" data-name="长沙">长沙</a> 
-                                            <a class="w" data-code="CZ" data-id="59" data-name="常州">常州</a> 
-                                            <a class="w" data-code="CC" data-id="137" data-name="长春">长春</a> 
-                                            <a class="w" data-code="CD" data-id="258" data-name="成都">成都</a> 
-                                            <a class="w" data-code="ZQ" data-id="31" data-name="重庆">重庆</a> 
-                                            <a class="w" data-code="CZ" data-id="146" data-name="滁州">滁州</a>
-                                            <a class="w" data-code="CD" data-id="314" data-name="常德">常德</a> 
-                                            <a class="w" data-code="DL" data-id="245" data-name="大理">大理</a> 
-                                            <a class="w" data-code="DZ" data-id="272" data-name="达州">达州</a> 
-                                            <a class="w" data-code="DG" data-id="202" data-name="东莞">东莞</a> 
-                                            <a class="w" data-code="DL" data-id="124" data-name="大连">大连</a> 
-                                            <a class="w" data-code="DY" data-id="178" data-name="东营">东营</a> 
-                                            <a class="w" data-code="DZ" data-id="187" data-name="德州">德州</a> 
-                                            
-                                            <a class="w" data-code="FS" data-id="327" data-name="佛山">佛山</a> 
-                                            <a class="w" data-code="FY" data-id="147" data-name="阜阳">阜阳</a> 
-                                            <a class="w" data-code="FZ" data-id="154" data-name="福州">福州</a> 
-                                            <a class="w" data-code="GZ" data-id="322" data-name="广州">广州</a> 
-                                            <a class="w" data-code="GL" data-id="209" data-name="桂林">桂林</a> 
-                                            <a class="w" data-code="GY" data-id="264" data-name="广元">广元</a> 
-                                            <a class="w" data-code="GY" data-id="224" data-name="贵阳">贵阳</a> 
-                                            <a class="w" data-code="GZ" data-id="169" data-name="赣州">赣州</a> 
+                                        <dt>A-G</dt> 
+                                        <dd> 
+                                            @foreach($code_ag as $ag) 
+                                            <a class="w" data-code="{{$ag->code}}" data-id="{{$ag->id}}" data-name="{{$ag->name}}" >{{$ag->name}}</a>  
+                                             @endforeach
                                         </dd>
                                     </dl>
-                                    <dl class="city_down_list">
-                                        <dt>H-N</dt> <dd> 
-                                            <a class="w" data-code="HZ" data-id="69" data-name="杭州">杭州</a>  
-                                            <a class="w" data-code="HZ" data-id="73" data-name="湖州">湖州</a>  
-                                            <a class="w" data-code="HF" data-id="80" data-name="合肥">合肥</a> 
-                                            <a class="w" data-code="HS" data-id="88" data-name="黄山">黄山</a> 
-                                            <a class="w" data-code="HEB" data-id="43" data-name="哈尔滨">哈尔滨</a>
-                                            <a class="w" data-code="HHHT" data-id="111" data-name="呼和浩特">呼和浩特</a> 
-                                            <a class="w" data-code="HNBE" data-id="117" data-name="呼伦贝尔">呼伦贝尔</a> 
-                                            <a class="w" data-code="HK" data-id="221" data-name="海口">海口</a> 
-                                            <a class="w" data-code="HZ" data-id="196" data-name="惠州">惠州</a> 
-                                            <a class="w" data-code="HA" data-id="63" data-name="淮安">淮安</a>  
-                                            <a class="w" data-code="HD" data-id="92" data-name="邯郸">邯郸</a> 
-                                            <a class="w" data-code="HS" data-id="99" data-name="衡水">衡水</a> 
-                                            <a class="w" data-code="HZ" data-id="336" data-name="汉中">汉中</a> 
-                                            <a class="w" data-code="HY" data-id="311" data-name="衡阳">衡阳</a> 
-                                            <a class="w" data-code="JX" data-id="72" data-name="嘉兴">嘉兴</a>  
-                                            <a class="w" data-code="JL" data-id="19" data-name="吉林">吉林</a> 
-                                            <a class="w" data-code="JN" data-id="174" data-name="济南">济南</a> 
-                                            <a class="w" data-code="JZ" data-id="280" data-name="焦作">焦作</a> 
-                                            <a class="w" data-code="JA" data-id="170" data-name="吉安">吉安</a> 
-                                            <a class="w" data-code="JYG" data-id="341" data-name="嘉峪关">嘉峪关</a> 
-                                            <a class="w" data-code="KM" data-id="233" data-name="昆明">昆明</a> 
-                                            <a class="w" data-code="LS" data-id="79" data-name="丽水">丽水</a> 
-                                            <a class="w" data-code="JH" data-id="75" data-name="金华">金华</a> 
-                                            <a class="w" data-code="JJ" data-id="166" data-name="九江">九江</a>  
-                                            <a class="w" data-code="LZ" data-id="261" data-name="泸州">泸州</a> 
-                                            <a class="w" data-code="LS" data-id="249" data-name="拉萨">拉萨</a>
-                                            <a class="w" data-code="LJ" data-id="238" data-name="丽江">丽江</a> 
-                                            <a class="w" data-code="LYG" data-id="62" data-name="连云港">连云港</a> 
-                                            <a class="w" data-code="LC" data-id="188" data-name="聊城">聊城</a> 
-                                            <a class="w" data-code="LY" data-id="193" data-name="洛阳">洛阳</a> 
-                                            <a class="w" data-code="LD" data-id="320" data-name="娄底">娄底</a> 
-                                            <a class="w" data-code="LZ" data-id="340" data-name="兰州">兰州</a> 
-                                            <a class="w" data-code="MY" data-id="263" data-name="绵阳">绵阳</a> 
-                                            <a class="w" data-code="MDJ" data-id="52" data-name="牡丹江">牡丹江</a>  
-                                            <a class="w" data-code="NJ" data-id="56" data-name="南京">南京</a> 
-                                            <a class="w" data-code="NT" data-id="61" data-name="南通">南通</a> 
-                                            <a class="w" data-code="NB" data-id="70" data-name="宁波">宁波</a> 
-                                            <a class="w" data-code="NC" data-id="163" data-name="南昌">南昌</a> 
-                                            <a class="w" data-code="NN" data-id="207" data-name="南宁">南宁</a> 
+                                  <dl class="city_down_list">
+                                        <dt>H-N</dt> 
+                                        <dd>
+                                            @foreach($code_hn as $hn)
+                                            <a class="w" data-code="{{$hn->code}}" data-id="{{$hn->id}}" data-name="{{$hn->name}}">{{$hn->name}}</a> 
+                                             @endforeach
                                         </dd>
-                                    </dl>
-                                    <dl class="city_down_list">
-                                            <dt>P-T</dt> <dd> 
-                                                <a class="w" data-code="QZ" data-id="76" data-name="衢州">衢州</a>
-                                                <a class="w" data-code="QD" data-id="175" data-name="青岛">青岛</a> 
-                                                <a class="w" data-code="QY" data-id="201" data-name="清远">清远</a> 
-                                                <a class="w" data-code="QQHE" data-id="44" data-name="齐齐哈尔">齐齐哈尔</a>  
-                                                <a class="w" data-code="QZ" data-id="158" data-name="泉州">泉州</a> 
-                                                <a class="w" data-code="RZ" data-id="184" data-name="日照">日照</a> 
-                                                <a class="w" data-code="SH" data-id="9" data-name="上海">上海</a>  
-                                                <a class="w" data-code="SZ" data-id="60" data-name="苏州">苏州</a> 
-                                                <a class="w" data-code="SX" data-id="74" data-name="绍兴">绍兴</a> 
-                                                <a class="w" data-code="SJZ" data-id="89" data-name="石家庄">石家庄</a> 
-                                                <a class="w" data-code="SZ" data-id="324" data-name="深圳">深圳</a> 
-                                                <a class="w" data-code="SY" data-id="257" data-name="三亚">三亚</a> 
-                                                <a class="w" data-code="SM" data-id="157" data-name="三明">三明</a> 
-                                                <a class="w" data-code="SY" data-id="123" data-name="沈阳">沈阳</a> 
-                                                <a class="w" data-code="ST" data-id="326" data-name="汕头">汕头</a> 
-                                                <a class="w" data-code="TJ" data-id="14" data-name="天津">天津</a> 
-                                                <a class="w" data-code="TY" data-id="100" data-name="太原">太原</a>
-                                                <a class="w" data-code="TCX" data-id="2118" data-name="腾冲">腾冲</a> 
-                                                <a class="w" data-code="TZ" data-id="78" data-name="台州">台州</a>  
-                                                <a class="w" data-code="TS" data-id="90" data-name="唐山">唐山</a> 
-                                                <a class="w" data-code="TA" data-id="182" data-name="泰安">泰安</a> 
-                                            </dd>
                                     </dl>
                                     <dl class="city_down_list"> 
-                                        <dt>W-Z</dt> <dd> 
-                                            <a class="w" data-code="WX" data-id="57" data-name="无锡">无锡</a> 
-                                            <a class="w" data-code="WZ" data-id="71" data-name="温州">温州</a> 
-                                            <a class="w" data-code="WH" data-id="81" data-name="芜湖">芜湖</a>  
-                                            <a class="w" data-code="WLMQ" data-id="367" data-name="乌鲁木齐">乌鲁木齐</a> 
-                                            <a class="w" data-code="WH" data-id="291" data-name="武汉">武汉</a> 
-                                            <a class="w" data-code="XA" data-id="256" data-name="西安">西安</a> 
-                                            <a class="w" data-code="XC" data-id="1979" data-name="西昌">西昌</a> 
-                                            <a class="w" data-code="XSBN" data-id="244" data-name="西双版纳">西双版纳</a> 
-                                            <a class="w" data-code="XGLLX" data-id="2210" data-name="香格里拉">香格里拉</a> 
-                                            <a class="w" data-code="XN" data-id="354" data-name="西宁">西宁</a> 
-                                            <a class="w" data-code="XG" data-id="40" data-name="香港">香港</a>  
-                                            <a class="w" data-code="XM" data-id="155" data-name="厦门">厦门</a> 
-                                            <a class="w" data-code="XT" data-id="310" data-name="湘潭">湘潭</a> 
-                                            <a class="w" data-code="XT" data-id="93" data-name="邢台">邢台</a>  
-                                            <a class="w" data-code="YA" data-id="335" data-name="延安">延安</a> 
-                                            <a class="w" data-code="YY" data-id="313" data-name="岳阳">岳阳</a> 
-                                            <a class="w" data-code="YB" data-id="270" data-name="宜宾">宜宾</a> 
-                                            <a class="w" data-code="YB" data-id="145" data-name="延边">延边</a> 
-                                            <a class="w" data-code="YC" data-id="362" data-name="银川">银川</a>  
-                                            <a class="w" data-code="YC" data-id="171" data-name="宜春">宜春</a> 
-                                            <a class="w" data-code="YC" data-id="64" data-name="盐城">盐城</a> 
-                                            <a class="w" data-code="YC" data-id="294" data-name="宜昌">宜昌</a> 
-                                            <a class="w" data-code="YL" data-id="337" data-name="榆林">榆林</a> 
-                                            <a class="w" data-code="ZZ" data-id="309" data-name="株洲">株洲</a> 
-                                            <a class="w" data-code="ZS" data-id="77" data-name="舟山">舟山</a>  
-                                            <a class="w" data-code="ZH" data-id="325" data-name="珠海">珠海</a>  
-                                            
-                                            <a class="w" data-code="ZS" data-id="203" data-name="中山">中山</a>  
-                                           <a class="w" data-code="ZJJ" data-id="315" data-name="张家界">张家界</a> 
-                                           <a class="w" data-code="ZB" data-id="176" data-name="淄博">淄博</a>  
-                                           <a class="w" data-code="ZZ" data-id="191" data-name="郑州">郑州</a> 
-                                           <a class="w" data-code="ZZ" data-id="159" data-name="漳州">漳州</a>
+                                        <dt>P-T</dt> 
+                                        <dd> @foreach($code_pt as $pt)
+                                            <a class="w" data-code="{{$pt->code}}" data-id="{{$pt->id}}" data-name="{{$pt->name}}">{{$pt->name}}</a> 
+                                            @endforeach
+                                        </dd>
+                                    </dl>
+                                    <dl class="city_down_list"> 
+                                        <dt>W-Z</dt>
+                                        <dd> @foreach($code_wz as $wz)
+                                            <a class="w" data-code="{{$wz->code}}" data-id="{{$wz->id}}" data-name="{{$wz->name}}">{{$wz->name}}</a>
+                                            @endforeach
                                         </dd>
                                     </dl>
                                 </div>
@@ -863,9 +725,6 @@
                     </li>
                    @endforeach  
                 </ul>
-               
-                
-               
             </div><!-- //tehuiBox-pro -->
         </div><!-- //tehuiBox -->	</div>
 <!-- 特惠版块 结束 -->
@@ -1146,6 +1005,15 @@
 
 </div><!-- //wrap -->	
 <script>
+    //鼠标点击输入框，弹出城市列表
+      function goCity(){
+              var goC = document.getElementById('goCity');
+               goC.style.display="block";
+             };
+      //鼠标点击城市选择的列表中的城市或者在其上店点击，将列表隐藏起来        
+        function yincang(obj){
+            document.getElementById('goCity').style.display="none";
+        }     
    $(function(){
        //点击选择城市，使被点击城市的名字进入出发城市的框中
        $(".w").each(function(i) {
@@ -1156,22 +1024,20 @@
           });
           
        });
-       
+    
+       //顶部条点击切换城市
+       $(".qh").each(function(i) {
+           $(this).bind('click', function(){
+              $('#currentCity').val($(this).html())  ;
+          });
+          
+       });
       //七大板块搜索按钮点击事件绑定
                 $(".lv_s_search_btn").click(function(){
                   var cf =$("#avi").val() ;
-                alert(cf);
                    var daoda = $('#dest1').val();
-
-                     alert(daoda);
-              
                     window.location.href="/place_search?chufa="+cf+'&dest1='+daoda;
-                    
-                })
-            
-            
-    })  
- 
-
+                });
+    }); 
 </script>
 @include("home.common.footer");

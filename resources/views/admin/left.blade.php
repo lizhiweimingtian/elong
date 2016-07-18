@@ -47,10 +47,10 @@ body{overflow-x:hidden; background:url(admin/img/main/leftbg.jpg) left top repea
        <div>
         <span>景区景点管理</span>
       
-        <a href="/type_show" target="mainFrame" onFocus="this.blur()">浏览景区（点）</a>
+        <a href="/type_show" target="mainFrame" onFocus="this.blur()">分区景点管理</a>
         <a href="/type_addFather" target="mainFrame" onFocus="this.blur()">添加父分区</a>
         <a href="/type_addChild" target="mainFrame" onFocus="this.blur()">添加景点</a>
-        
+        <a href="/place_detail_list" target="mainFrame" onFocus="this.blur()">景点详情列表</a>
       </div>
       <div>
         <span>贴子管理</span>
