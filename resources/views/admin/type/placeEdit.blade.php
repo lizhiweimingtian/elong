@@ -53,8 +53,9 @@
     <body>
       
         <!--main_top-->
-       <b><font color="red">{{$errors->first('place_name')}}{{  $errors->edit->first('title["0"]')}}</font></b>
-       <b><font color="red">{{$errors->edit->first('photo_path["0"]')}}{{  $errors->edit->first('editorValue["0"]')}}</font></b>
+        @if(count($errors)>0)
+       <b><font color="red">{{$errors->edit->messages['place_name']}}</font></b>
+      @endif
         <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
             <tr>
                 <td width="99%" align="left" valign="top">您的位置：景点管理&nbsp;&nbsp;>&nbsp;&nbsp;景点详情编辑</td>

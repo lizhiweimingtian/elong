@@ -68,24 +68,24 @@ class TourController extends Controller {
         $code_pt =DB::table('city_2')->where('code_head','P-T')->get();
         $code_wz =DB::table('city_2')->where('code_head','W-Z')->get();
         //dd($place_zb);
-        return view ("home/index",[
-            'place_data'=>$place_data,
-            'place_gn'=>$place_gn,
-            'place_zb'=>$place_zb,
-            'place_city'=>$place_city,
-            'code_ag'=>$code_ag,
-            'code_hn'=>$code_hn,
-            'code_pt'=>$code_pt,
-            'code_wz'=>$code_wz
-                ]);
-
+      
         $config=DB::table("web_config")->get();
 
         if($config[0]->status !== '1'){
             return view("home.guanbi.index");
         }else{
             
-        return view ("home.index",['place_data'=>$place_data,'place_gn'=>$place_gn,"config" => $config]);
+        return view ("home.index",
+            [
+            "config" => $config,
+           'place_data'=>$place_data,
+            'place_gn'=>$place_gn,
+            'place_zb'=>$place_zb,
+            'place_city'=>$place_city,
+            'code_ag'=>$code_ag,
+            'code_hn'=>$code_hn,
+            'code_pt'=>$code_pt,
+            'code_wz'=>$code_wz]);
 
     }
 }

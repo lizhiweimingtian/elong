@@ -192,8 +192,9 @@ class TypeController extends Controller {
            $validator =Validator::make($inser,$rules,$messages);
          
            if($validator->fails()){
-               
-            return back()->withErrors(['validator'=>$validator]);
+            
+             // return redirect("/type_place_edit")->withErrors($validator,"addChild");
+            return redirect("/type_place_edit")->withErrors($validator,'edit');
            }
            $id = DB::table('place_detail')->insertGetId($inser);
            //如果数据入库成功，则查询对应的详情数据，带到查看详情的页面
